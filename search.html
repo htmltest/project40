@@ -1,0 +1,182 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+
+<html>
+    <head>
+    <title>Новые Ватутинки</title>
+    <link href="local/layout/css/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="local/layout/css/css.css" rel="stylesheet" type="text/css" />
+    <link href="local/layout/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="local/layout/css/print.css" rel="stylesheet" type="text/css" media="print" />
+    <meta name="format-detection" content="telephone=no"/>
+    <script type="text/javascript" src="local/layout/js/main.js" language="JavaScript"></script>
+    <script type="text/javascript" src="local/layout/js/jquery.js"></script>
+    <link rel="stylesheet" href="local/layout/css/main_jslider.css" type="text/css">
+    <script type="text/javascript" src="local/layout/js/jshashtable-2.1_src.js"></script>
+    <script type="text/javascript" src="local/layout/js/jquery.numberformatter-1.2.3.js"></script>
+    <script type="text/javascript" src="local/layout/js/tmpl.js"></script>
+    <script type="text/javascript" src="local/layout/js/jquery.dependClass-0.1.js"></script>
+    <script type="text/javascript" src="local/layout/js/draggable-0.1.js"></script>
+    <script type="text/javascript" src="local/layout/js/jquery.slider.js"></script>
+    <style type="text/css">
+		body {
+			background: #2b3038;
+		}
+	</style>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Новые Ватутинки" />
+<meta name="description" content="Новые Ватутинки" />
+
+</head>
+
+<body>
+<div id="panel"></div>
+<div id="print-head"><img src="local/layout/images/print_head.gif"></div>
+<table cellspacing="0" class="top">
+      <tr valign="top">
+    <td align="center"><table cellspacing="0" width="1100">
+        <tr valign="top">
+          <td style="padding-top:32px"><a href="/"><img src="local/layout/images/main/logo.png"></a><br></td>
+                    <td style="padding-top:37px" align="right"><div class="phone" id="comagic">+7 (495) 151-26-72</div></td>
+        </tr>
+      </table>
+          <table cellspacing="0" width="1100">
+        <tr valign="top">
+              <td style="padding-top:13px;padding-right:50px" nowrap><a href="/" style="color:#fff;font-size:18px;text-decoration:none">Главная</a><br></td>
+              <td style="padding-top:13px;padding-right:50px" nowrap><a href="/centralniy/" style="color:#fff;font-size:18px;text-decoration:none">Микрорайон &laquo;Центральный&raquo;</a><br></td>
+              <td style="padding-top:13px;padding-right:50px" nowrap><a href="/yuzhniy/" style="color:#fff;font-size:18px;text-decoration:none">Квартал &laquo;Южный&raquo;</a><br></td>
+              <td width="100%"></td>
+            </tr>
+      </table></td>
+  </tr>
+    </table>
+<table cellspacing="0" width="100%" style="background:#f2f6fa">
+      <tr valign="top">
+    <td align="center" style="padding-bottom:30px"><div style="width:1100px" align="left">
+	<div style="color:#8c416b;font-size:30px;padding:23px 0px 30px 0px">Поиск квартир в районах &laquo;Центральный&raquo; и &laquo;Южный&raquo;</div>
+
+	<form method="post" name="fullsearch">
+		<input type="hidden" name="search" value="1">
+		<input type="hidden" name="rayon1" id="rayon1" value="">
+		<input type="hidden" name="rayon2" id="rayon2" value="">
+
+		<table cellspacing="0">
+		<tr><td>
+			<span class="param">Район</span><br>
+		</td><td style="padding:17px 10px 17px 50px">
+			<img src="local/layout/images/main/checkbox.gif" class="cur" onclick="SetRayonSearch(1, this);"><br>
+		</td><td style="font-size:19px;color:#010101;padding-right:25px;line-height:19px;">
+			&laquo;Центральный&raquo;<br>
+		</td><td style="padding:17px 10px 17px 50px">
+			<img src="local/layout/images/main/checkbox.gif" class="cur" onclick="SetRayonSearch(2, this);"><br>
+		</td><td style="font-size:19px;color:#010101;padding-right:25px;line-height:19px;">
+			&laquo;Южный&raquo;<br>
+		</td></tr>
+		</table>
+
+		<div class="search-sep"></div>
+
+		<table cellspacing="0">
+		<tr valign="top"><td style="padding:10px 50px 0px 0px">
+			<span class="param">Квартиры</span><br>
+		</td>
+			      <td style="padding-right:100px">
+      	<input type="hidden" name="k1" id="k1" value="1">
+      	<table cellspacing="0">
+      	<tr valign="top"><td style="padding:6px 9px 0px 0px">
+      		<img src="local/layout/images/main/checkbox_act.gif" class="cur" onclick="SetKomnatSearch(1, this, 'main');"><br>
+      	</td><td nowrap>
+      		<div class="che-flat-type">1-комнатные</div>
+      		<div class="che-flat-num">177</div>
+
+      		<div class="che-flat-price">от 3 939 740.-</div>
+
+      	</td></tr>
+      	</table>
+
+      </td>
+      <td style="padding-right:100px">
+      	<input type="hidden" name="k2" id="k2" value="1">
+      	<table cellspacing="0">
+      	<tr valign="top"><td style="padding:6px 9px 0px 0px">
+      		<img src="local/layout/images/main/checkbox_act.gif" class="cur" onclick="SetKomnatSearch(2, this, 'main');"><br>
+      	</td><td nowrap>
+      		<div class="che-flat-type">2-комнатные</div>
+      		<div class="che-flat-num">262</div>
+
+      		<div class="che-flat-price">от 5 166 720.-</div>
+
+      	</td></tr>
+      	</table>
+
+      </td>
+      <td style="padding-right:100px">
+      	<input type="hidden" name="k3" id="k3" value="1">
+      	<table cellspacing="0">
+      	<tr valign="top"><td style="padding:6px 9px 0px 0px">
+      		<img src="local/layout/images/main/checkbox_act.gif" class="cur" onclick="SetKomnatSearch(3, this, 'main');"><br>
+      	</td><td nowrap>
+      		<div class="che-flat-type">3-комнатные</div>
+      		<div class="che-flat-num">53</div>
+
+      		<div class="che-flat-price">от 7 030 800.-</div>
+
+      	</td></tr>
+      	</table>
+
+      </td>
+		<td width="100%"></td></tr>
+		</table>
+
+		<div class="search-sep"></div>
+
+				<input type="hidden" name="price_param" id="price_param" value="1">
+		<table cellspacing="0">
+		<tr><td>
+			<span class="param">Стоимость</span><br>
+		</td><td style="padding:17px 10px 17px 50px">
+			<img src="local/layout/images/main/radio_act.gif" class="cur" id="price1" onclick="SetPriceSearch(1, 'main');"><br>
+		</td><td style="font-size:19px;color:#010101;padding-right:25px;line-height:19px;">
+			любая<br>
+		</td><td style="border-left:1px solid #c3c3c3;padding:0px 10px 0px 25px">
+			<img src="local/layout/images/main/radio.gif" class="cur" id="price2" onclick="SetPriceSearch(2, 'main');"><br>
+		</td><td style="font-size:19px;color:#010101;line-height:19px;">
+			диапазон<br>
+		</td><td style="padding-left:10px">
+			<div class="layout-slider" style="width:400px"><span style="display:inline-block;width:400px;padding:0px 5px;"><input id="price" type="slider" name="price" value="3939740;9752000"></span></div>
+			<script type="text/javascript" charset="utf-8">
+				jQuery("#price").slider({ from:3939740, to:9752000, step:10, smooth:true, round:0, dimension:".-", limits:false, onstatechange: function(){ SetPriceSearch(2, 'main'); } });
+			</script>
+		</td></tr>
+		</table>
+
+		<center>
+			<table cellspacing="0" class="full-search-btn" onclick="FrmSbmFull();">
+			<tr valign="top"><td>
+				Искать<br>
+			</td></tr>
+			</table>
+		</center>
+	</form>      </div></td>
+  </tr>
+    </table>
+<table cellspacing="0" class="foot" style="background:#2b3038 url('local/layout/images/foot.gif');">
+      <tr valign="top">
+    <td align="center"><div class="clear" style="width:100%;max-width:100%"></div>
+          <table cellspacing="0" width="1100px">
+        <tr valign="top">
+              <td style="padding:21px 30px 0px 0px"><a href="/"><img src="local/layout/images/nv.gif"></a><br>
+            <div class="copy">&copy; Новые Ватутинки .<br>
+                  Все права защищены.</div></td>
+              <td width="100%"></td>
+              <td nowrap>
+    				    				<div class="phone-bottom" id="comagic">+7 (495) 151-26-72</div>
+            <br><br>
+                <div data-background-alpha="0.0" data-orientation="horizontal" data-text-color="#000000" data-share-shape="SHARP" data-buttons-color="#FFFFFF" data-sn-ids="fb.vk.ok.gp." data-counter-background-color="#ffffff" data-share-size="LARGE" data-background-color="#ffffff" data-mobile-sn-ids="fb.vk.ok.gp." data-preview-mobile="false" data-pid="1382290" data-counter-background-alpha="1.0" data-mode="like" data-following-enable="false" data-exclude-show-more="false" data-like-text-enable="false" data-selection-enable="true" data-mobile-view="true" data-icon-color="#ffffff" class="uptolike-buttons" ></div>                            <div style="padding:70px 0px 0px 0px" align="right">
+                  <a href="http://www.bilingo.ru" target="_blank" style="color:#4e5159;font-size:10px;text-decoration:none">разработка сайта</a><br>                </div></td>
+            </tr>
+      </table></td>
+  </tr>
+    </table>
+</body>
+</html>

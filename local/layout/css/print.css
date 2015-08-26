@@ -1,0 +1,16 @@
+table.menu, table.green-top, table.karta-flat-btn, table.print-flat-btn, table.flat-ipoteka-tbl-buy, table.add-basket-flat-btn, td.basket-row, table.foot, table.btn, table.btn2, table.park-bottom, table.bluesearch-btn, #basket-row1, #basket-row2, #basket-row3, #basket-row4, #basket-row5, table.submenu-str, table.submenu, table.park, #flatslist, #abrakadabra, table.top, #randmod, #sb, table.change-search-btn {
+	display:none;
+}
+
+#cprn {
+	padding-top:10px;
+}
+
+#sbm {
+	display:block;
+}
+
+#print-head {
+	display:block;
+}
+

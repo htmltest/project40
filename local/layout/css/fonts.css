@@ -1,0 +1,22 @@
+@font-face {
+	font-family:'v33r';
+	src:url('fonts/vida33pro-webfont.eot');
+	src:url('fonts/vida33pro-webfont.eot?#iefix') format('embedded-opentype'),
+		url('fonts/vida33pro-webfont.woff') format('woff'),
+		url('fonts/vida33pro-webfont.ttf') format('truetype'),
+		url('fonts/vida33pro-webfont.svg#vida_33_proregular') format('svg');
+	font-weight:400;
+	font-style:normal;
+}
+
+@font-face {
+	font-family:'v31r';
+	src:url('fonts/vida31pro-webfont.eot');
+	src:url('fonts/vida31pro-webfont.eot?#iefix') format('embedded-opentype'),
+		url('fonts/vida31pro-webfont.woff') format('woff'),
+		url('fonts/vida31pro-webfont.ttf') format('truetype'),
+		url('fonts/vida31pro-webfont.svg#vida_31_proregular') format('svg');
+	font-weight:400;
+	font-style:normal;
+}
+

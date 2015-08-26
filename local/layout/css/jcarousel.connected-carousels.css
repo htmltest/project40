@@ -1,0 +1,141 @@
+/** Stage container **/
+
+.wrapper {
+    max-width: 1100px;
+	width:1100px;
+    padding: 0px;
+    margin: 0px;
+	overflow:hidden;
+}
+
+.connected-carousels .stage {
+    width: 1100px;
+    margin: 0px;
+    position: relative;
+}
+
+/** Navigation container **/
+
+.connected-carousels .navigation {
+    width: 1000px;
+    margin: 30px 0px 0px 44px;
+    position: relative;
+}
+
+/** Shared carousel styles **/
+
+.connected-carousels .carousel {
+    overflow: hidden;
+    position: relative;
+}
+
+.connected-carousels .carousel ul {
+    width: 20000em;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.connected-carousels .carousel li {
+    float: left;
+}
+
+/** Stage carousel specific styles **/
+
+.connected-carousels .carousel-stage {
+    height: 733px;
+}
+
+/** Navigation carousel specific styles **/
+
+.connected-carousels .carousel-navigation {
+    height: 66px;
+    width: 1000px;
+}
+
+.connected-carousels .carousel-navigation li {
+    cursor: pointer;
+}
+
+.connected-carousels .carousel-navigation li img {
+    display: block;
+	border-left:1px solid #1f1f1f;
+	opacity:0.7;
+}
+
+.connected-carousels .carousel-navigation li.active img {
+	opacity:1.0;
+}
+
+/** Stage carousel controls **/
+.connected-carousels .prev-stage,
+.connected-carousels .next-stage {
+    display: block;
+    position: absolute;
+    top: 350px;
+    color: #fff;
+}
+
+.connected-carousels .prev-stage {
+    left:30px;
+}
+
+.connected-carousels .next-stage {
+    right:30px;
+}
+
+.connected-carousels .prev-stage.inactive,
+.connected-carousels .next-stage.inactive {
+    display: none;
+}
+
+.connected-carousels .prev-stage span,
+.connected-carousels .next-stage span {
+    display: none;
+    position: absolute;
+    top:350px;
+    width:30px;
+    height:31px;
+}
+
+.connected-carousels .prev-stage span {
+    left: 30px;
+}
+
+.connected-carousels .next-stage span {
+    right: 30px;
+}
+
+.connected-carousels .prev-stage:hover span,
+.connected-carousels .next-stage:hover span {
+    display: block;
+}
+
+/** Navigation carousel controls **/
+
+.connected-carousels .prev-navigation,
+.connected-carousels .next-navigation {
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 16px;
+}
+
+.connected-carousels .prev-navigation {
+    left: -31px;
+    top: 24px;
+}
+
+.connected-carousels .next-navigation {
+    right: -31px;
+    top: 24px;
+}
+
+.connected-carousels .prev-navigation.inactive,
+.connected-carousels .next-navigation.inactive {
+    opacity: .5;
+    cursor: default;
+}
+
+/* ------------------------------- */
