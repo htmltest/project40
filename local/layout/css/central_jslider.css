@@ -38,3 +38,11 @@
   .jslider-single .jslider-value-to,
   .jslider-single .jslider-bg .v,
   .jslider-limitless .jslider-label { display: none; }
+
+
+  .new-central-top-field .jslider {width:188px; height:5px; top:9px; vertical-align:top; margin-left:4px}
+  .new-central-top-field .jslider .jslider-bg {width:186px; height:3px; border:1px solid #b4b4b4; background:#fff; border-radius:2px}
+  .new-central-top-field .jslider .jslider-bg i {display:none}
+  .new-central-top-field .jslider .jslider-pointer {width:13px; height:21px; top:-9px; margin-left:-6px; background:url(../images/central/new-central-top-jslider-pointer.png)}
+  .new-central-top-field .jslider .jslider-value {font:10px/12px v31r, sans-serif; top:-23px; color:#000; background:none; opacity:.7; padding:0}
+  .new-central-top-field .jslider .jslider-value span {font-size:10px}

@@ -37,334 +37,131 @@
 		<img src="local/layout/images/left.gif"><br>
 	</td><td class="c">
 
-				
-    <table cellspacing="0" class="green-top">
-		<tr valign="top"><td style="padding:26px 30px 0px 30px">
-			<img src="local/layout/images/sell_ico.gif"><br>
-		</td><td width="100%" align="left" style="padding:20px 30px 0px 0px">
 
-			<input type="hidden" name="cursell" id="cursell" value="kv">
-			<table cellspacing="0" class="sell-tbl">
-			<tr valign="top"><td>
-				<img src="local/layout/images/empty.gif" width="20" height="1"><br>
-			</td><td class="kv-act" id="kvsell" nowrap onclick="SetSell('kv');">
-				Квартиры <span>442</span><br>
-				<img src="local/layout/images/sell_str.gif" id="kvstr" style="margin-right:32px"><br>
-			</td><td>
-				<img src="local/layout/images/empty.gif" width="84" height="1"><br>
-			</td><td nowrap="" id="gvsell" class="gv">
-				<a href="http://parking.nv-servis.com/">Машиноместа</a> <span></span><br>
-				<img style="margin-right:38px" id="gvstr" src="local/layout/images/empty.gif"><br>
-			</td>
-				<img src="local/layout/images/empty.gif" width="84" height="1"><br>
-			</td><td>
-				<img height="1" width="84" src="local/layout/images/empty.gif"><br>
-			</td><td nowrap="" id="nvsell" class="nv">
-				<a target="_blank" href="http://www.adwill.ru/offers/new.vatutinki">Нежилые помещения</a><br>
-				<img style="margin-right:38px" id="nvstr" src="local/layout/images/empty.gif"><br>
-			</td>
-				<img src="local/layout/images/empty.gif" width="20" height="1"><br>
-			</td><td width="100%"></td></tr>
-			</table>
+    <!-- new central top -->
+    <div class="new-central-top">
+        <div class="new-central-top-title">Объекты в продаже<a href="#"></a></div>
+        <div class="new-central-top-content">
+            <div class="new-central-top-menu">
+                <ul>
+                    <li class="active"><div><img src="local/layout/images/central/new-central-top-icon-1.png" alt="" width="13" height="15" /> Квартиры <span>523</span></div></li>
+                    <li><a href="#"><img src="local/layout/images/central/new-central-top-icon-2.png" alt="" width="11" height="15" /> Вторичка <span>25</span></a></li>
+                    <li><a href="http://parking.nv-servis.com/"><img src="local/layout/images/central/new-central-top-icon-3.png" alt="" width="16" height="14" /> Машиноместа</a> <span>25</span></a></li>
+                    <li><a href="http://www.adwill.ru/offers/new.vatutinki"><img src="local/layout/images/central/new-central-top-icon-4.png" alt="" width="15" height="15" /> Нежилые помещения</a> <span>9</span></a></li>
+                </ul>
+            </div>
+            <div class="new-central-top-form">
+                <form method="post" name="fullsearch" action="/centralniy/search/">
+                    <input type="hidden" name="search" value="1" />
+                    <input type="hidden" name="sq_param" value="1" />
+                    <input type="hidden" name="flor_param" value="1" />
+                    <input type="hidden" name="korpus_param" value="1" />
 
-			<table cellspacing="0" width="100%" style="margin-top:13px">
-			<tr valign="top"><td width="100%">
+                    <div class="new-central-top-field">
+                        <div class="new-central-top-label">Комнаты</div>
+                        <script>var kk=new Array();</script>
+                        <script>kk[0]=2;</script>
+                        <input type="hidden" name="k1" id="k1" value="2" />
+                        <script>kk[1]=1;</script>
+                        <input type="hidden" name="k2" id="k2" value="2" />
+                        <script>kk[2]=3;</script>
+                        <input type="hidden" name="k3" id="k3" value="2" />
+                        <div class="new-central-top-select">
+                            <select name="komnat" id="komnat">
+                                <option value="">Все</option>
+                                <option value="2">2</option>
+                                <option value="1">1</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
+                    </div>
 
-				<div id="divkv" style="display:block">
-				<form method="post" name="fullsearch" action="/centralniy/search/">
-				<input type="hidden" name="search" value="1">
-				<input type="hidden" name="sq_param" value="1">
-				<input type="hidden" name="flor_param" value="1">
-				<input type="hidden" name="korpus_param" value="1">
-				<table cellspacing="0" width="100%">
-				<tr valign="top"><td width="100%" style="padding-top:14px">
+                    <div class="new-central-top-field">
+                        <div class="new-central-top-label">Цена</div>
+                        <input type="hidden" name="price_param" id="price_param" value="2" />
+                        <div class="layout-slider"><input id="price" type="slider" name="price" value="3939740;7677000" /></div>
+                        <script type="text/javascript">
+                            jQuery("#price").slider({ from:3939740, to:7677000, step:10, smooth:true, round:0, dimension:".-", limits:false });
+                        </script>
+                    </div>
 
-					<table cellspacing="0">
-					<tr valign="top"><td style="font-size:14px;color:#5e6269;padding:4px 10px 0px 0px">
-						Комнаты<br>
-					</td><td>
-												<script>var kk=new Array();</script>
-													<script>kk[0]=2;</script>
-														<input type="hidden" name="k1" id="k1" value="2">
-													<script>kk[1]=1;</script>
-														<input type="hidden" name="k2" id="k2" value="2">
-													<script>kk[2]=3;</script>
-														<input type="hidden" name="k3" id="k3" value="2">
-												<table cellspacing="0" class="gselect">
-						<tr><td><img src="local/layout/images/gselect_left.gif"></td><td class="select">
-							<div class="select">
-							<select name="komnat" id="komnat">
-								<option value="">Все</option>
-																	<option value="2">2</option>
-																	<option value="1">1</option>
-																	<option value="3">3</option>
-															</select>
-							</div>
-						</td></tr>
-						</table>
+                    <div class="new-central-top-adv-link"><a href="/centralniy/search/">Расширенный поиск</a></div>
 
-					</td><td style="font-size:14px;color:#5e6269;padding:4px 10px 0px 30px">
-						Цена<br>
-					</td><td style="padding-top:2px">
-												<input type="hidden" name="price_param" id="price_param" value="2">
-            						<div class="layout-slider" style="width:270px"><span style="display:inline-block;width:270px;padding:0px 5px;"><input id="price" type="slider" name="price" value="3939740;7677000"></span></div>
-						<script type="text/javascript" charset="utf-8">
-							jQuery("#price").slider({ from:3939740, to:7677000, step:10, smooth:true, round:0, dimension:".-", limits:false });
-						</script>
+                    <div class="new-central-top-submit" onclick="SetKV();">Искать</div>
 
-					</td></tr>
-					</table>
-
-				</td><td>
-
-					<table cellspacing="0" class="short-search-btn" onclick="SetKV();">
-					<tr valign="top"><td>
-						Искать<br>
-					</td></tr>
-					</table>
-
-				</td></tr>
-				</table>
-				</form>
-				</div>
-
-				<div id="divnv" style="display:none">
-				</div>
-			</td><td style="padding:0px 7px">
-				<img src="local/layout/images/sell_sep.gif"><br>
-			</td><td>
-
-				<table cellspacing="0" class="short-search-btn-lnk">
-				<tr valign="top"><td>
-					<a href="/centralniy/search/">Расширенный<br>поиск</a><br>
-				</td></tr>
-				</table>
-
-			</td></tr>
-			</table>
-
-		</td></tr>
-		</table>
-		
-		<div id="print-head"><img src="local/layout/images/central/print_head.gif"></div>
-
-		<table cellspacing="0" class="park">
-		<tr valign="top"><td>
-
-			<table cellspacing="0" width="100%">
-			<tr valign="top"><td style="padding:32px 0px 0px 30px">
-				<a href="/"><img src="local/layout/images/central/logo_nv.png"></a><br>
-			</td><td style="padding:28px 0px 0px 21px">
-				<a href="/centralniy/"><img src="local/layout/images/central/center_logo.png"></a><br>
-			</td><td width="100%" align="right" style="padding:10px 30px 0px 0px">
-
-								<div class="phone" id="comagic">+7 (495) 151-26-72</div>
-
-												<!--<table cellspacing="0" class="btn2">
-				<tr valign="top"><td>
-					<a href="#smartcallback" onclick="SCBchange('YES');SCBopen(1);return false;">Заказать обратный звонок</a><br>
-				</td></tr>
-				</table>-->
-				
-			</td></tr>
-			</table>
-
-			<table cellspacing="0" class="menu"><tr valign="top"><td><img src="local/layout/images/empty.gif" width="27" height="1"></td><td nowrap=""><!--<div onmouseover="this.className='act';" onmouseout="this.className='';"><a href="/">Главная</a></div>--></td><td><img src="local/layout/images/empty.gif" width="10" height="1"></td>
-      <td nowrap=""><div onmouseover="this.className='act';" onmouseout="this.className='';"><a href="/centralniy/about/">О нас</a></div></td>  
-  <td><img src="local/layout/images/empty.gif" width="18" height="1"></td>
-  <td nowrap=""><div onmouseover="this.className='act';" onmouseout="this.className='';"><a href="/centralniy/news/">Новости</a></div></td>  
-  <td><img src="local/layout/images/empty.gif" width="18" height="1"></td>
-  <td nowrap=""><div class="act"><a href="/centralniy/genplan/">Генплан</a></div></td>  
-  <td><img src="local/layout/images/empty.gif" width="18" height="1"></td>
-  <td nowrap=""><div onmouseover="this.className='act';" onmouseout="this.className='';"><a href="/centralniy/apartments/">Квартиры</a></div></td>  
-  <td><img src="local/layout/images/empty.gif" width="18" height="1"></td>
-  <td nowrap=""><div onmouseover="this.className='act';" onmouseout="this.className='';"><a href="/centralniy/sales/">Как купить</a></div></td>  
-  <td><img src="local/layout/images/empty.gif" width="18" height="1"></td>
-  <td nowrap=""><div onmouseover="this.className='act';" onmouseout="this.className='';"><a href="/centralniy/contacts/">Контакты</a></div></td>  
-        <td width="100%"></td></tr></table>
-      
-<table cellspacing="0" class="park-bottom">
-	<tbody><tr valign="top"><td align="left">
-		<img src="local/layout/images/central/center_left.gif"><br>
-	</td><td class="c"></td><td align="right">
-		<img src="local/layout/images/central/center_right.gif"><br>
-	</td></tr>
-	</tbody></table>
-
-
-<div style="padding-left:10px">
-	<table cellspacing="0" class="submenu sm-lvl-3">
-		<tbody>
-      <tr valign="top">
-        <td>
-          <div class="level-t" style="width:29px">&nbsp;</div>
-          <table cellspacing="0" class="submenu-bottom-clear">
-            <tbody>
-              <tr>
-                <td width="50%" class="bg"></td>
-                <td></td>
-                <td width="50%" class="bg"></td>
-              </tr>
-            </tbody>
-          </table>
-        </td>
-        <td nowrap="" width="50%" align="center">
-	       <div class="level-t-act"><a href="/centralniy/genplan/map/">Карта микрорайона</a></div>
-	         <table cellspacing="0" class="submenu-bottom">
-            <tbody>
-              <tr>
-                <td width="50%" class="bg"></td>
-                <td><img src="local/layout/images/menu/submenu_bottom_str.gif"></td>
-                <td width="50%" class="bg"></td>
-              </tr>
-            </tbody>
-          </table>
-        </td>
-                <td>
-        <div class="level-t" style="width:35px">&nbsp;</div>
-        <table cellspacing="0" class="submenu-bottom">
-          <tbody>
-            <tr>
-              <td width="50%" class="bg"></td>
-              <td></td>
-              <td width="50%" class="bg"></td>
-            </tr>
-          </tbody>
-        </table>
-        </td>
-                <td nowrap="" width="50%" align="center">
-	       <div class="level-t"><a href="/centralniy/genplan/process/">Ход строительства</a></div>
-	         <table cellspacing="0" class="submenu-bottom">
-            <tbody>
-              <tr>
-                <td width="50%" class="bg"></td>
-                <td></td>
-                <td width="50%" class="bg"></td>
-              </tr>
-            </tbody>
-          </table>
-        </td>
-                <td>
-        <div class="level-t" style="width:29px">&nbsp;</div>
-        <table cellspacing="0" class="submenu-bottom">
-          <tbody>
-            <tr>
-              <td width="50%" class="bg"></td>
-              <td></td>
-              <td width="50%" class="bg"></td>
-            </tr>
-          </tbody>
-        </table>
-        </td>
-			</tbody>
-    </table>
-<script>$('.sm-lvl-3').removeClass('submenu').addClass('submenu-str')</script>  <table cellspacing="0" class="submenu">
-	 <tbody>
-    <tr valign="top">
-      <td>
-        <div style="width:29px" class="level-f">&nbsp;</div>
-        <table cellspacing="0" class="submenu-bottom-clear">
-          <tbody>
-            <tr>
-              <td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td>
-            </tr>
-          </tbody>
-        </table>
-      </td>
-      <td width="25%" nowrap="" align="center">
-	      <div class="level-f-act">
-          <a href="/centralniy/genplan/map/houses/">Жилые дома</a>
+                </form>
+            </div>
         </div>
-	      <table cellspacing="0" class="submenu-bottom">
-          <tbody>
-            <tr>
-              <td width="50%" class="bg"></td><td><img src="local/layout/images/submenu_bottom_empty.png"></td><td width="50%" class="bg"></td>
-            </tr>
-          </tbody>
-        </table>
-      </td>
-      <td>
-        <div style="width:29px" class="level-f">&nbsp;</div>
-        <table cellspacing="0" class="submenu-bottom-clear">
-          <tbody>
-            <tr>
-              <td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td>
-            </tr>
-          </tbody>
-        </table>
-      </td>
-      <td width="25%" nowrap="" align="center">
-	      <div class="level-f">
-          <a href="/centralniy/genplan/map/infrastructure/">Инфраструктура</a>
-        </div>
-	      <table cellspacing="0" class="submenu-bottom">
-          <tbody>
-            <tr>
-              <td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td>
-            </tr>
-          </tbody>
-        </table>
-      </td>
-      <td>
-        <div style="width:29px" class="level-f">&nbsp;</div>
-        <table cellspacing="0" class="submenu-bottom-clear">
-          <tbody>
-            <tr>
-              <td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td>
-            </tr>
-          </tbody>
-        </table>
-      </td>
-      <td width="25%" nowrap="" align="center">
-	      <div class="level-f">
-          <a href="/centralniy/genplan/map/parking/">Машиноместа</a>
-        </div>
-	      <table cellspacing="0" class="submenu-bottom">
-          <tbody>
-            <tr>
-              <td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td>
-            </tr>
-          </tbody>
-        </table>
-      </td>
-      <td>
-        <div style="width:29px" class="level-f">&nbsp;</div>
-        <table cellspacing="0" class="submenu-bottom-clear">
-          <tbody>
-            <tr>
-              <td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td>
-            </tr>
-          </tbody>
-        </table>
-      </td>
-      <td width="25%" nowrap="" align="center">
-	      <div class="level-f">
-          <a href="/centralniy/genplan/map/commercial/">Нежилые помещения</a>
-        </div>
-	      <table cellspacing="0" class="submenu-bottom">
-          <tbody>
-            <tr>
-              <td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td>
-            </tr>
-          </tbody>
-        </table>
-      </td>
-      
-      <td><div style="width:29px" class="level-f">&nbsp;</div><table cellspacing="0" class="submenu-bottom"><tbody><tr><td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td></tr></tbody></table></td>
-    </tr>
-	</tbody>
-</table>
-	</div>
-</td></tr>
+    </div>
+    <!-- new central top END -->
 
-</table>
-<div style="background:#fff;padding:299px 0 0" id="cprn">
+	<div id="print-head"><img src="local/layout/images/central/print_head.gif"></div>
+
+    <!-- new central park -->
+    <div class="new-central-park">
+        <div class="new-central-park-logo"><a href="/"><img src="local/layout/images/central/logo_nv.png" alt="" width="127" height="50" /></a></div>
+        <div class="phone" id="comagic">+7 (495) 151-26-72</div>
+
+        <div class="new-central-park-menu">
+            <ul>
+                <li><a href="/centralniy/about/">О нас</a></li>
+                <li><a href="/centralniy/news/">Новости</a></li>
+                <li class="active"><a href="/centralniy/genplan/">Генплан</a></li>
+                <li><a href="#">Документы</a></li>
+                <li><a href="/centralniy/apartments/">Квартиры</a></li>
+                <li><a href="/centralniy/sales/">Как купить</a></li>
+                <li class="new-central-park-menu-with-submenu">
+                    <a href="/centralniy/contacts/">Контакты</a>
+                    <ul>
+                        <li><a href="#">Как добраться</a></li>
+                        <li><a href="#">Реализующие компании</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="new-central-park-district">
+            <div class="new-central-park-district-title"><a href="/centralniy/"><img src="local/layout/images/central/new-central-park-district.png" alt="" width="337" height="59" /></a></div>
+            <div class="new-central-park-district-menu new-central-park-district-menu-district">
+                <div class="new-central-park-district-menu-icon"></div>
+                <div class="new-central-park-district-menu-list">
+                    <ul>
+                        <li class="active"><a href="#">Микрорайон «Центральный»</a></li>
+                        <li><a href="#">Квартал «Южный»</a></li>
+                        <li><a href="#">Посёлок «Синергия»</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="new-central-park-district-menu new-central-park-district-menu-video">
+                <div class="new-central-park-district-menu-icon"></div>
+                <div class="new-central-park-district-menu-list">
+                    <ul>
+                        <li><a href="#">Ход строительства</a></li>
+                        <li><a href="#">Видеотрансляция</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- new central park END -->
+
+<div style="background:#fff;padding:0" id="cprn">
 	<input type="hidden" name="current_popup" id="current_popup" value="">
 	<table cellspacing="0" width="100%">
 	<tr valign="top"><td>
 		<div class="plan-legend" id="planlegend" style="display:none"><img src="local/layout/images/central/plan_legend.png"></div>
 		<div class="treed-legend" id="treedlegend"><img src="local/layout/images/central/3d_legend.png"></div>
-	
+        <div class="plan-shadow"></div>
+
+		<div class="plan-legend-trigger-links">
+            <ul>
+                <li class="active"><a href="/centralniy/genplan/map/houses/">Жилые дома</a></li>
+                <li><a href="/centralniy/genplan/map/infrastructure/">Инфраструктура</a></li>
+                <li><a href="/centralniy/genplan/map/parking/">Машиноместа</a></li>
+                <li><a href="/centralniy/genplan/map/commercial/">Нежилые помещения</a></li>
+            </ul>
+        </div>
+
 		<table cellspacing="0" class="plan-legend-trigger" id="sb">
 		<tr><td style="padding:0px 10px 0px 0px">
 			<div id="btn3d" class="act" onclick="ChangeCanvas('3d');">3D</div>
@@ -372,7 +169,7 @@
 			<div id="btnplan" onclick="ChangeCanvas('plan');">Вид сверху</div>
 		</td></tr>
 		</table>
-	
+
 		<table width="384" cellspacing="0" class="plan-legend" id="plan-legend-tbl">
 		<tr><td width="33">
 			<img src="local/layout/images/central/marker_korpus_icon.png"><br>
@@ -382,64 +179,509 @@
 			<img src="local/layout/images/central/marker_korpus_selled_icon.png"><br>
 		</td>
 		<td width="181">
-			Проданные и<br> 
+			Проданные и<br>
 			заселенные корпуса<br>
 		</td></tr>
 		</table>
-	
+
 		<div id="canvas3d" style="display:block">
 <table cellspacing="0" class="marker-korpus-selled" style="margin-top:475px;margin-left:935px">
-<tr valign="top"><td>
+<tr valign="top"><td onclick="ShowKorpusPopUpTR2('201', 475, 935);">
 	<div>1</div>
 	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
 </td></tr>
 </table>
+<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpusTR201" style="display:none">
+<tr>
+<td valign="middle" align="center">
+	<img src="local/layout/images/central/popup_str_up.png">
+</td></tr>
+<tr><td class="content" valign="top" style="padding:20px">
+
+	<table cellspacing="0" width="100%">
+	<tr valign="top"><td nowrap style="padding-right:20px">
+
+		<table cellspacing="0">
+		<tr><td colspan="2" nowrap>
+			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
+			<div class="korpus-title">Корпус 1</div>
+		</td></tr>
+		<tr><td style="padding-right:20px">
+			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
+		</td><td width="100%">
+			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
+		</td></tr>
+        <tr><td colspan="2">
+            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
+		</table>
+
+	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
+		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUpTR2('201', 0, 0);"></div>
+		<div class="popup-in-sell">Квартиры от физлиц</div>
+    	<a href="#" class="popup-in-sell-link">
+        <table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">1-комнатные</div>
+		<div class="price">от 3 939 740.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">30</div>
+	</td></tr>
+	</table>
+    </a>
+    	<a href="#" class="popup-in-sell-link">
+        <table cellspacing="0" class="stat-popup" >
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">2-комнатные</div>
+		<div class="price">от 5 222 880.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">102</div>
+	</td></tr>
+	</table>
+    </a>
+    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
+	</td></tr>
+	</table>
+
+</td></tr>
+</table>
 <table cellspacing="0" class="marker-korpus-selled" style="margin-top:431px;margin-left:767px">
-<tr valign="top"><td>
+<tr valign="top"><td onclick="ShowKorpusPopUpTR2('202', 431, 767);">
 	<div>2</div>
 	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
 </td></tr>
 </table>
+<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpusTR202" style="display:none">
+<tr>
+<td valign="middle" align="center">
+	<img src="local/layout/images/central/popup_str_up.png">
+</td></tr>
+<tr><td class="content" valign="top" style="padding:20px">
+
+	<table cellspacing="0" width="100%">
+	<tr valign="top"><td nowrap style="padding-right:20px">
+
+		<table cellspacing="0">
+		<tr><td colspan="2" nowrap>
+			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
+			<div class="korpus-title">Корпус 2</div>
+		</td></tr>
+		<tr><td style="padding-right:20px">
+			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
+		</td><td width="100%">
+			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
+		</td></tr>
+        <tr><td colspan="2">
+            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
+		</table>
+
+	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
+		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUpTR2('202', 0, 0);"></div>
+		<div class="popup-in-sell">Квартиры от физлиц</div>
+    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">1-комнатные</div>
+		<div class="price">от 3 939 740.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">30</div>
+	</td></tr>
+	</table>
+    	<table cellspacing="0" class="stat-popup" >
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">2-комнатные</div>
+		<div class="price">от 5 222 880.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">102</div>
+	</td></tr>
+	</table>
+    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
+	</td></tr>
+	</table>
+
+</td></tr>
+</table>
 <table cellspacing="0" class="marker-korpus-selled" style="margin-top:374px;margin-left:673px">
-<tr valign="top"><td>
+<tr valign="top"><td onclick="ShowKorpusPopUpTR2('206', 374, 673);">
 	<div>6</div>
 	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
 </td></tr>
 </table>
+<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpusTR206" style="display:none">
+<tr>
+<td valign="middle" align="center">
+	<img src="local/layout/images/central/popup_str_up.png">
+</td></tr>
+<tr><td class="content" valign="top" style="padding:20px">
+
+	<table cellspacing="0" width="100%">
+	<tr valign="top"><td nowrap style="padding-right:20px">
+
+		<table cellspacing="0">
+		<tr><td colspan="2" nowrap>
+			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
+			<div class="korpus-title">Корпус 6</div>
+		</td></tr>
+		<tr><td style="padding-right:20px">
+			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
+		</td><td width="100%">
+			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
+		</td></tr>
+        <tr><td colspan="2">
+            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
+		</table>
+
+	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
+		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUpTR2('206', 0, 0);"></div>
+		<div class="popup-in-sell">Квартиры от физлиц</div>
+    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">1-комнатные</div>
+		<div class="price">от 3 939 740.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">30</div>
+	</td></tr>
+	</table>
+    	<table cellspacing="0" class="stat-popup" >
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">2-комнатные</div>
+		<div class="price">от 5 222 880.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">102</div>
+	</td></tr>
+	</table>
+    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
+	</td></tr>
+	</table>
+
+</td></tr>
+</table>
 <table cellspacing="0" class="marker-korpus-selled" style="margin-top:296px;margin-left:605px">
-<tr valign="top"><td>
+<tr valign="top"><td onclick="ShowKorpusPopUpTR2('208', 296, 605);">
 	<div>8</div>
 	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
 </td></tr>
 </table>
+<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpusTR208" style="display:none">
+<tr>
+<td valign="middle" align="center">
+	<img src="local/layout/images/central/popup_str_up.png">
+</td></tr>
+<tr><td class="content" valign="top" style="padding:20px">
+
+	<table cellspacing="0" width="100%">
+	<tr valign="top"><td nowrap style="padding-right:20px">
+
+		<table cellspacing="0">
+		<tr><td colspan="2" nowrap>
+			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
+			<div class="korpus-title">Корпус 8</div>
+		</td></tr>
+		<tr><td style="padding-right:20px">
+			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
+		</td><td width="100%">
+			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
+		</td></tr>
+        <tr><td colspan="2">
+            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
+		</table>
+
+	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
+		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUpTR2('208', 0, 0);"></div>
+		<div class="popup-in-sell">Квартиры от физлиц</div>
+    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">1-комнатные</div>
+		<div class="price">от 3 939 740.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">30</div>
+	</td></tr>
+	</table>
+    	<table cellspacing="0" class="stat-popup" >
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">2-комнатные</div>
+		<div class="price">от 5 222 880.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">102</div>
+	</td></tr>
+	</table>
+    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
+	</td></tr>
+	</table>
+
+</td></tr>
+</table>
 <table cellspacing="0" class="marker-korpus-selled" style="margin-top:237px;margin-left:574px">
-<tr valign="top"><td>
+<tr valign="top"><td onclick="ShowKorpusPopUpTR2('209', 237, 574);">
 	<div>9</div>
 	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
 </td></tr>
 </table>
+<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpusTR209" style="display:none">
+<tr>
+<td valign="middle" align="center">
+	<img src="local/layout/images/central/popup_str_up.png">
+</td></tr>
+<tr><td class="content" valign="top" style="padding:20px">
+
+	<table cellspacing="0" width="100%">
+	<tr valign="top"><td nowrap style="padding-right:20px">
+
+		<table cellspacing="0">
+		<tr><td colspan="2" nowrap>
+			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
+			<div class="korpus-title">Корпус 9</div>
+		</td></tr>
+		<tr><td style="padding-right:20px">
+			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
+		</td><td width="100%">
+			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
+		</td></tr>
+        <tr><td colspan="2">
+            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
+		</table>
+
+	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
+		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUpTR2('209', 0, 0);"></div>
+		<div class="popup-in-sell">Квартиры от физлиц</div>
+    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">1-комнатные</div>
+		<div class="price">от 3 939 740.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">30</div>
+	</td></tr>
+	</table>
+    	<table cellspacing="0" class="stat-popup" >
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">2-комнатные</div>
+		<div class="price">от 5 222 880.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">102</div>
+	</td></tr>
+	</table>
+    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
+	</td></tr>
+	</table>
+
+</td></tr>
+</table>
 <table cellspacing="0" class="marker-korpus-selled" style="margin-top:255px;margin-left:716px">
-<tr valign="top"><td>
+<tr valign="top"><td onclick="ShowKorpusPopUpTR2('210', 255, 716);">
 	<div>10</div>
 	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
 </td></tr>
 </table>
+<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpusTR210" style="display:none">
+<tr>
+<td valign="middle" align="center">
+	<img src="local/layout/images/central/popup_str_up.png">
+</td></tr>
+<tr><td class="content" valign="top" style="padding:20px">
+
+	<table cellspacing="0" width="100%">
+	<tr valign="top"><td nowrap style="padding-right:20px">
+
+		<table cellspacing="0">
+		<tr><td colspan="2" nowrap>
+			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
+			<div class="korpus-title">Корпус 10</div>
+		</td></tr>
+		<tr><td style="padding-right:20px">
+			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
+		</td><td width="100%">
+			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
+		</td></tr>
+        <tr><td colspan="2">
+            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
+		</table>
+
+	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
+		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUpTR2('210', 0, 0);"></div>
+		<div class="popup-in-sell">Квартиры от физлиц</div>
+    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">1-комнатные</div>
+		<div class="price">от 3 939 740.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">30</div>
+	</td></tr>
+	</table>
+    	<table cellspacing="0" class="stat-popup" >
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">2-комнатные</div>
+		<div class="price">от 5 222 880.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">102</div>
+	</td></tr>
+	</table>
+    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
+	</td></tr>
+	</table>
+
+</td></tr>
+</table>
 <table cellspacing="0" class="marker-korpus-selled" style="margin-top:170px;margin-left:631px">
-<tr valign="top"><td>
+<tr valign="top"><td onclick="ShowKorpusPopUpTR2('211', 170, 631);">
 	<div>11</div>
 	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
 </td></tr>
 </table>
+<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpusTR211" style="display:none">
+<tr>
+<td valign="middle" align="center">
+	<img src="local/layout/images/central/popup_str_up.png">
+</td></tr>
+<tr><td class="content" valign="top" style="padding:20px">
+
+	<table cellspacing="0" width="100%">
+	<tr valign="top"><td nowrap style="padding-right:20px">
+
+		<table cellspacing="0">
+		<tr><td colspan="2" nowrap>
+			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
+			<div class="korpus-title">Корпус 11</div>
+		</td></tr>
+		<tr><td style="padding-right:20px">
+			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
+		</td><td width="100%">
+			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
+		</td></tr>
+        <tr><td colspan="2">
+            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
+		</table>
+
+	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
+		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUpTR2('211', 0, 0);"></div>
+		<div class="popup-in-sell">Квартиры от физлиц</div>
+    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">1-комнатные</div>
+		<div class="price">от 3 939 740.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">30</div>
+	</td></tr>
+	</table>
+    	<table cellspacing="0" class="stat-popup" >
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">2-комнатные</div>
+		<div class="price">от 5 222 880.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">102</div>
+	</td></tr>
+	</table>
+    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
+	</td></tr>
+	</table>
+
+</td></tr>
+</table>
 <table cellspacing="0" class="marker-korpus-selled" style="margin-top:193px;margin-left:682px">
-<tr valign="top"><td>
+<tr valign="top"><td onclick="ShowKorpusPopUpTR2('212', 193, 682);">
 	<div>12</div>
 	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
 </td></tr>
 </table>
+<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpusTR212" style="display:none">
+<tr>
+<td valign="middle" align="center">
+	<img src="local/layout/images/central/popup_str_up.png">
+</td></tr>
+<tr><td class="content" valign="top" style="padding:20px">
+
+	<table cellspacing="0" width="100%">
+	<tr valign="top"><td nowrap style="padding-right:20px">
+
+		<table cellspacing="0">
+		<tr><td colspan="2" nowrap>
+			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
+			<div class="korpus-title">Корпус 12</div>
+		</td></tr>
+		<tr><td style="padding-right:20px">
+			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
+		</td><td width="100%">
+			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
+		</td></tr>
+        <tr><td colspan="2">
+            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
+		</table>
+
+	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
+		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUpTR2('212', 0, 0);"></div>
+		<div class="popup-in-sell">Квартиры от физлиц</div>
+    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">1-комнатные</div>
+		<div class="price">от 3 939 740.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">30</div>
+	</td></tr>
+	</table>
+    	<table cellspacing="0" class="stat-popup" >
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">2-комнатные</div>
+		<div class="price">от 5 222 880.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">102</div>
+	</td></tr>
+	</table>
+    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
+	</td></tr>
+	</table>
+
+</td></tr>
+</table>
 <table cellspacing="0" class="marker-korpus-selled" style="margin-top:193px;margin-left:756px">
-<tr valign="top"><td>
+<tr valign="top"><td onclick="ShowKorpusPopUpTR2('213', 193, 756);">
 	<div>13</div>
 	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
+</td></tr>
+</table>
+<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpusTR213" style="display:none">
+<tr>
+<td valign="middle" align="center">
+	<img src="local/layout/images/central/popup_str_up.png">
+</td></tr>
+<tr><td class="content" valign="top" style="padding:20px">
+
+	<table cellspacing="0" width="100%">
+	<tr valign="top"><td nowrap style="padding-right:20px">
+
+		<table cellspacing="0">
+		<tr><td colspan="2" nowrap>
+			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
+			<div class="korpus-title">Корпус 13</div>
+		</td></tr>
+		<tr><td style="padding-right:20px">
+			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
+		</td><td width="100%">
+			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
+		</td></tr>
+        <tr><td colspan="2">
+            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
+		</table>
+
+	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
+		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUpTR2('213', 0, 0);"></div>
+		<div class="popup-in-sell">Квартиры от физлиц</div>
+    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">1-комнатные</div>
+		<div class="price">от 3 939 740.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">30</div>
+	</td></tr>
+	</table>
+    	<table cellspacing="0" class="stat-popup" >
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">2-комнатные</div>
+		<div class="price">от 5 222 880.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">102</div>
+	</td></tr>
+	</table>
+    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
+	</td></tr>
+	</table>
+
 </td></tr>
 </table>
 <table cellspacing="0" class="marker-korpus" style="margin-top:120px;margin-left:670px">
@@ -454,7 +696,7 @@
 
 	<table cellspacing="0" width="100%">
 	<tr valign="top"><td nowrap>
-		
+
 		<table cellspacing="0">
 		<tr><td colspan="2" nowrap>
 			<a href="./korpus/?korpus=104"><img src="upload/resize_cache/nvflats/cc3/154_100054_1/14.jpg" style="margin-bottom:15px"></a>
@@ -466,18 +708,18 @@
 			<div class="korpus-title-stat">Секций: <strong>6</strong></div>
 		</td></tr>
 		<tr><td colspan="2">
-		
+
 			<table cellspacing="0" class="bluekorpus-btn">
 			<tr><td>
 				<a href="./korpus/?korpus=104">Подробности</a><br>
 			</td></tr>
 			</table>
-			
+
 		</td></tr>
 		</table>
-		
+
 		<img src="local/layout/images/empty.gif" width="174" height="1"><br>
-		
+
 	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
 		<div style="position:absolute;margin:-10px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close.gif" class="cur" onclick="ShowKorpusPopUpTR('104', 0, 0);"></div>
 		<div class="popup-in-sell">Квартиры в продаже</div>
@@ -488,7 +730,7 @@
 	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
 		<div class="total">106</div>
 	</td></tr>
-	</table>    
+	</table>
     	<table cellspacing="0" class="stat-popup" >
 	<tr valign="top"><td style="padding:0px" nowrap>
 		<div class="type">2-комнатные</div>
@@ -496,7 +738,7 @@
 	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
 		<div class="total">68</div>
 	</td></tr>
-	</table>    
+	</table>
     	<table cellspacing="0" class="stat-popup" >
 	<tr valign="top"><td style="padding:0px" nowrap>
 		<div class="type">3-комнатные</div>
@@ -504,7 +746,25 @@
 	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
 		<div class="total">47</div>
 	</td></tr>
-	</table>    
+	</table>
+    <br />
+		<div class="popup-in-sell">Квартиры от физлиц</div>
+    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">1-комнатные</div>
+		<div class="price">от 3 939 740.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">30</div>
+	</td></tr>
+	</table>
+    	<table cellspacing="0" class="stat-popup" >
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">2-комнатные</div>
+		<div class="price">от 5 222 880.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">102</div>
+	</td></tr>
+	</table>
     		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
 	</td></tr>
 	</table>
@@ -514,9 +774,58 @@
 </td></tr>
 </table>
 <table cellspacing="0" class="marker-korpus-selled" style="margin-top:108px;margin-left:827px">
-<tr valign="top"><td>
+<tr valign="top"><td onclick="ShowKorpusPopUpTR2('219', 108, 827);">
 	<div>19</div>
 	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
+</td></tr>
+</table>
+<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpusTR219" style="display:none">
+<tr>
+<td valign="middle" align="center">
+	<img src="local/layout/images/central/popup_str_up.png">
+</td></tr>
+<tr><td class="content" valign="top" style="padding:20px">
+
+	<table cellspacing="0" width="100%">
+	<tr valign="top"><td nowrap style="padding-right:20px">
+
+		<table cellspacing="0">
+		<tr><td colspan="2" nowrap>
+			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
+			<div class="korpus-title">Корпус 19</div>
+		</td></tr>
+		<tr><td style="padding-right:20px">
+			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
+		</td><td width="100%">
+			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
+		</td></tr>
+        <tr><td colspan="2">
+            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
+		</table>
+
+	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
+		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUpTR2('219', 0, 0);"></div>
+		<div class="popup-in-sell">Квартиры от физлиц</div>
+    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">1-комнатные</div>
+		<div class="price">от 3 939 740.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">30</div>
+	</td></tr>
+	</table>
+    	<table cellspacing="0" class="stat-popup" >
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">2-комнатные</div>
+		<div class="price">от 5 222 880.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">102</div>
+	</td></tr>
+	</table>
+    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
+	</td></tr>
+	</table>
+
 </td></tr>
 </table>
 <table cellspacing="0" class="marker-korpus" style="margin-top:210px;margin-left:446px">
@@ -533,7 +842,7 @@
 
 	<table cellspacing="0" width="100%">
 	<tr valign="top"><td nowrap>
-		
+
 		<table cellspacing="0">
 		<tr><td colspan="2" nowrap>
 			<a href="./korpus/?korpus=100"><img src="upload/resize_cache/nvflats/f30/154_100054_1/33.jpg" style="margin-bottom:15px"></a>
@@ -545,18 +854,18 @@
 			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
 		</td></tr>
 		<tr><td colspan="2">
-		
+
 			<table cellspacing="0" class="bluekorpus-btn">
 			<tr><td>
 				<a href="./korpus/?korpus=100">Подробности</a><br>
 			</td></tr>
 			</table>
-			
+
 		</td></tr>
 		</table>
-		
+
 		<img src="local/layout/images/empty.gif" width="174" height="1"><br>
-		
+
 	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
 		<div style="position:absolute;margin:-10px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close.gif" class="cur" onclick="ShowKorpusPopUpTR('100', 0, 0);"></div>
 		<div class="popup-in-sell">Квартиры в продаже</div>
@@ -567,7 +876,7 @@
 	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
 		<div class="total">3</div>
 	</td></tr>
-	</table>    
+	</table>
     	<table cellspacing="0" class="stat-popup" >
 	<tr valign="top"><td style="padding:0px" nowrap>
 		<div class="type">2-комнатные</div>
@@ -575,7 +884,7 @@
 	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
 		<div class="total">5</div>
 	</td></tr>
-	</table>    
+	</table>
     		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
 	</td></tr>
 	</table>
@@ -596,7 +905,7 @@
 
 	<table cellspacing="0" width="100%">
 	<tr valign="top"><td nowrap>
-		
+
 		<table cellspacing="0">
 		<tr><td colspan="2" nowrap>
 			<a href="./korpus/?korpus=101"><img src="upload/resize_cache/nvflats/b83/154_100054_1/34.jpg" style="margin-bottom:15px"></a>
@@ -608,18 +917,18 @@
 			<div class="korpus-title-stat">Секций: <strong>2</strong></div>
 		</td></tr>
 		<tr><td colspan="2">
-		
+
 			<table cellspacing="0" class="bluekorpus-btn">
 			<tr><td>
 				<a href="./korpus/?korpus=101">Подробности</a><br>
 			</td></tr>
 			</table>
-			
+
 		</td></tr>
 		</table>
-		
+
 		<img src="local/layout/images/empty.gif" width="174" height="1"><br>
-		
+
 	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
 		<div style="position:absolute;margin:-10px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close.gif" class="cur" onclick="ShowKorpusPopUpTR('101', 0, 0);"></div>
 		<div class="popup-in-sell">Квартиры в продаже</div>
@@ -630,7 +939,7 @@
 	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
 		<div class="total">9</div>
 	</td></tr>
-	</table>    
+	</table>
     	<table cellspacing="0" class="stat-popup" >
 	<tr valign="top"><td style="padding:0px" nowrap>
 		<div class="type">2-комнатные</div>
@@ -638,7 +947,7 @@
 	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
 		<div class="total">2</div>
 	</td></tr>
-	</table>    
+	</table>
     		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
 	</td></tr>
 	</table>
@@ -646,9 +955,58 @@
 </td></tr>
 </table>
 <table cellspacing="0" class="marker-korpus-selled" style="margin-top:158px;margin-left:550px">
-<tr valign="top"><td>
+<tr valign="top"><td onclick="ShowKorpusPopUpTR2('235', 158, 550);">
 	<div>35</div>
 	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
+</td></tr>
+</table>
+<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpusTR235" style="display:none">
+<tr>
+<td valign="middle" align="center">
+	<img src="local/layout/images/central/popup_str_up.png">
+</td></tr>
+<tr><td class="content" valign="top" style="padding:20px">
+
+	<table cellspacing="0" width="100%">
+	<tr valign="top"><td nowrap style="padding-right:20px">
+
+		<table cellspacing="0">
+		<tr><td colspan="2" nowrap>
+			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
+			<div class="korpus-title">Корпус 35</div>
+		</td></tr>
+		<tr><td style="padding-right:20px">
+			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
+		</td><td width="100%">
+			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
+		</td></tr>
+        <tr><td colspan="2">
+            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
+		</table>
+
+	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
+		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUpTR2('235', 0, 0);"></div>
+		<div class="popup-in-sell">Квартиры от физлиц</div>
+    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">1-комнатные</div>
+		<div class="price">от 3 939 740.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">30</div>
+	</td></tr>
+	</table>
+    	<table cellspacing="0" class="stat-popup" >
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">2-комнатные</div>
+		<div class="price">от 5 222 880.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">102</div>
+	</td></tr>
+	</table>
+    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
+	</td></tr>
+	</table>
+
 </td></tr>
 </table>
 <table cellspacing="0" class="marker-korpus" style="margin-top:108px;margin-left:416px">
@@ -665,7 +1023,7 @@
 
 	<table cellspacing="0" width="100%">
 	<tr valign="top"><td nowrap>
-		
+
 		<table cellspacing="0">
 		<tr><td colspan="2" nowrap>
 			<a href="./korpus/?korpus=102"><img src="upload/resize_cache/nvflats/a9b/154_100054_1/36.jpg" style="margin-bottom:15px"></a>
@@ -677,18 +1035,18 @@
 			<div class="korpus-title-stat">Секций: <strong>4</strong></div>
 		</td></tr>
 		<tr><td colspan="2">
-		
+
 			<table cellspacing="0" class="bluekorpus-btn">
 			<tr><td>
 				<a href="./korpus/?korpus=102">Подробности</a><br>
 			</td></tr>
 			</table>
-			
+
 		</td></tr>
 		</table>
-		
+
 		<img src="local/layout/images/empty.gif" width="174" height="1"><br>
-		
+
 	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
 		<div style="position:absolute;margin:-10px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close.gif" class="cur" onclick="ShowKorpusPopUpTR('102', 0, 0);"></div>
 		<div class="popup-in-sell">Квартиры в продаже</div>
@@ -699,7 +1057,7 @@
 	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
 		<div class="total">30</div>
 	</td></tr>
-	</table>    
+	</table>
     	<table cellspacing="0" class="stat-popup" >
 	<tr valign="top"><td style="padding:0px" nowrap>
 		<div class="type">2-комнатные</div>
@@ -707,7 +1065,7 @@
 	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
 		<div class="total">98</div>
 	</td></tr>
-	</table>    
+	</table>
     		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
 	</td></tr>
 	</table>
@@ -728,7 +1086,7 @@
 
 	<table cellspacing="0" width="100%">
 	<tr valign="top"><td nowrap>
-		
+
 		<table cellspacing="0">
 		<tr><td colspan="2" nowrap>
 			<a href="./korpus/?korpus=103"><img src="upload/resize_cache/nvflats/d27/154_100054_1/37.jpg" style="margin-bottom:15px"></a>
@@ -740,18 +1098,18 @@
 			<div class="korpus-title-stat">Секций: <strong>4</strong></div>
 		</td></tr>
 		<tr><td colspan="2">
-		
+
 			<table cellspacing="0" class="bluekorpus-btn">
 			<tr><td>
 				<a href="./korpus/?korpus=103">Подробности</a><br>
 			</td></tr>
 			</table>
-			
+
 		</td></tr>
 		</table>
-		
+
 		<img src="local/layout/images/empty.gif" width="174" height="1"><br>
-		
+
 	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
 		<div style="position:absolute;margin:-10px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close.gif" class="cur" onclick="ShowKorpusPopUpTR('103', 0, 0);"></div>
 		<div class="popup-in-sell">Квартиры в продаже</div>
@@ -762,7 +1120,7 @@
 	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
 		<div class="total">22</div>
 	</td></tr>
-	</table>    
+	</table>
     	<table cellspacing="0" class="stat-popup" >
 	<tr valign="top"><td style="padding:0px" nowrap>
 		<div class="type">2-комнатные</div>
@@ -770,7 +1128,7 @@
 	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
 		<div class="total">52</div>
 	</td></tr>
-	</table>    
+	</table>
     		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
 	</td></tr>
 	</table>
@@ -778,9 +1136,58 @@
 </td></tr>
 </table>
 <table cellspacing="0" class="marker-korpus-selled" style="margin-top:112px;margin-left:599px">
-<tr valign="top"><td>
+<tr valign="top"><td onclick="ShowKorpusPopUpTR2('238', 112, 599);">
 	<div>38</div>
 	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
+</td></tr>
+</table>
+<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpusTR238" style="display:none">
+<tr>
+<td valign="middle" align="center">
+	<img src="local/layout/images/central/popup_str_up.png">
+</td></tr>
+<tr><td class="content" valign="top" style="padding:20px">
+
+	<table cellspacing="0" width="100%">
+	<tr valign="top"><td nowrap style="padding-right:20px">
+
+		<table cellspacing="0">
+		<tr><td colspan="2" nowrap>
+			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
+			<div class="korpus-title">Корпус 38</div>
+		</td></tr>
+		<tr><td style="padding-right:20px">
+			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
+		</td><td width="100%">
+			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
+		</td></tr>
+        <tr><td colspan="2">
+            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
+		</table>
+
+	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
+		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUpTR2('238', 0, 0);"></div>
+		<div class="popup-in-sell">Квартиры от физлиц</div>
+    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">1-комнатные</div>
+		<div class="price">от 3 939 740.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">30</div>
+	</td></tr>
+	</table>
+    	<table cellspacing="0" class="stat-popup" >
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">2-комнатные</div>
+		<div class="price">от 5 222 880.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">102</div>
+	</td></tr>
+	</table>
+    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
+	</td></tr>
+	</table>
+
 </td></tr>
 </table>
 						<img src="local/layout/images/central/3dmap.jpg"><br>
@@ -788,57 +1195,502 @@
 
 		<div id="canvasplan" style="display:none">
 			<table cellspacing="0" class="marker-korpus-selled" style="margin-top:877px;margin-left:1026px">
-<tr valign="top"><td>
+<tr valign="top"><td onclick="ShowKorpusPopUp2('301', 877, 1026);">
 	<div>1</div>
 	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
 </td></tr>
 </table>
+<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpus301" style="display:none">
+<tr>
+<td valign="middle" align="center">
+	<img src="local/layout/images/central/popup_str_up.png">
+</td></tr>
+<tr><td class="content" valign="top" style="padding:20px">
+
+	<table cellspacing="0" width="100%">
+	<tr valign="top"><td nowrap style="padding-right:20px">
+
+		<table cellspacing="0">
+		<tr><td colspan="2" nowrap>
+			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
+			<div class="korpus-title">Корпус 1</div>
+		</td></tr>
+		<tr><td style="padding-right:20px">
+			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
+		</td><td width="100%">
+			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
+		</td></tr>
+        <tr><td colspan="2">
+            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
+		</table>
+
+	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
+		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUp2('301', 0, 0);"></div>
+		<div class="popup-in-sell">Квартиры от физлиц</div>
+    	<a href="#" class="popup-in-sell-link">
+    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">1-комнатные</div>
+		<div class="price">от 3 939 740.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">30</div>
+	</td></tr>
+	</table>
+    </a>
+    	<a href="#" class="popup-in-sell-link">
+    	<table cellspacing="0" class="stat-popup" >
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">2-комнатные</div>
+		<div class="price">от 5 222 880.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">102</div>
+	</td></tr>
+	</table>
+    </a>
+    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
+	</td></tr>
+	</table>
+
+</td></tr>
+</table>
 <table cellspacing="0" class="marker-korpus-selled" style="margin-top:882px;margin-left:896px">
-<tr valign="top"><td>
+<tr valign="top"><td onclick="ShowKorpusPopUp2('302', 882, 896);">
 	<div>2</div>
 	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
 </td></tr>
 </table>
+<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpus302" style="display:none">
+<tr>
+<td valign="middle" align="center">
+	<img src="local/layout/images/central/popup_str_up.png">
+</td></tr>
+<tr><td class="content" valign="top" style="padding:20px">
+
+	<table cellspacing="0" width="100%">
+	<tr valign="top"><td nowrap style="padding-right:20px">
+
+		<table cellspacing="0">
+		<tr><td colspan="2" nowrap>
+			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
+			<div class="korpus-title">Корпус 2</div>
+		</td></tr>
+		<tr><td style="padding-right:20px">
+			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
+		</td><td width="100%">
+			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
+		</td></tr>
+        <tr><td colspan="2">
+            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
+		</table>
+
+	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
+		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUp2('302', 0, 0);"></div>
+		<div class="popup-in-sell">Квартиры от физлиц</div>
+    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">1-комнатные</div>
+		<div class="price">от 3 939 740.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">30</div>
+	</td></tr>
+	</table>
+    	<table cellspacing="0" class="stat-popup" >
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">2-комнатные</div>
+		<div class="price">от 5 222 880.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">102</div>
+	</td></tr>
+	</table>
+    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
+	</td></tr>
+	</table>
+
+</td></tr>
+</table>
 <table cellspacing="0" class="marker-korpus-selled" style="margin-top:847px;margin-left:806px">
-<tr valign="top"><td>
+<tr valign="top"><td onclick="ShowKorpusPopUp2('306', 847, 806);">
 	<div>6</div>
 	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
 </td></tr>
 </table>
+<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpus306" style="display:none">
+<tr>
+<td valign="middle" align="center">
+	<img src="local/layout/images/central/popup_str_up.png">
+</td></tr>
+<tr><td class="content" valign="top" style="padding:20px">
+
+	<table cellspacing="0" width="100%">
+	<tr valign="top"><td nowrap style="padding-right:20px">
+
+		<table cellspacing="0">
+		<tr><td colspan="2" nowrap>
+			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
+			<div class="korpus-title">Корпус 6</div>
+		</td></tr>
+		<tr><td style="padding-right:20px">
+			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
+		</td><td width="100%">
+			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
+		</td></tr>
+        <tr><td colspan="2">
+            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
+		</table>
+
+	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
+		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUp2('306', 0, 0);"></div>
+		<div class="popup-in-sell">Квартиры от физлиц</div>
+    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">1-комнатные</div>
+		<div class="price">от 3 939 740.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">30</div>
+	</td></tr>
+	</table>
+    	<table cellspacing="0" class="stat-popup" >
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">2-комнатные</div>
+		<div class="price">от 5 222 880.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">102</div>
+	</td></tr>
+	</table>
+    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
+	</td></tr>
+	</table>
+
+</td></tr>
+</table>
 <table cellspacing="0" class="marker-korpus-selled" style="margin-top:771px;margin-left:707px">
-<tr valign="top"><td>
+<tr valign="top"><td onclick="ShowKorpusPopUp2('308', 771, 707);">
 	<div>8</div>
 	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
 </td></tr>
 </table>
+<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpus308" style="display:none">
+<tr>
+<td valign="middle" align="center">
+	<img src="local/layout/images/central/popup_str_up.png">
+</td></tr>
+<tr><td class="content" valign="top" style="padding:20px">
+
+	<table cellspacing="0" width="100%">
+	<tr valign="top"><td nowrap style="padding-right:20px">
+
+		<table cellspacing="0">
+		<tr><td colspan="2" nowrap>
+			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
+			<div class="korpus-title">Корпус 8</div>
+		</td></tr>
+		<tr><td style="padding-right:20px">
+			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
+		</td><td width="100%">
+			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
+		</td></tr>
+        <tr><td colspan="2">
+            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
+		</table>
+
+	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
+		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUp2('308', 0, 0);"></div>
+		<div class="popup-in-sell">Квартиры от физлиц</div>
+    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">1-комнатные</div>
+		<div class="price">от 3 939 740.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">30</div>
+	</td></tr>
+	</table>
+    	<table cellspacing="0" class="stat-popup" >
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">2-комнатные</div>
+		<div class="price">от 5 222 880.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">102</div>
+	</td></tr>
+	</table>
+    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
+	</td></tr>
+	</table>
+
+</td></tr>
+</table>
 <table cellspacing="0" class="marker-korpus-selled" style="margin-top:695px;margin-left:640px">
-<tr valign="top"><td>
+<tr valign="top"><td onclick="ShowKorpusPopUp2('309', 695, 640);">
 	<div>9</div>
 	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
 </td></tr>
 </table>
+<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpus309" style="display:none">
+<tr>
+<td valign="middle" align="center">
+	<img src="local/layout/images/central/popup_str_up.png">
+</td></tr>
+<tr><td class="content" valign="top" style="padding:20px">
+
+	<table cellspacing="0" width="100%">
+	<tr valign="top"><td nowrap style="padding-right:20px">
+
+		<table cellspacing="0">
+		<tr><td colspan="2" nowrap>
+			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
+			<div class="korpus-title">Корпус 9</div>
+		</td></tr>
+		<tr><td style="padding-right:20px">
+			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
+		</td><td width="100%">
+			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
+		</td></tr>
+        <tr><td colspan="2">
+            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
+		</table>
+
+	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
+		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUp2('309', 0, 0);"></div>
+		<div class="popup-in-sell">Квартиры от физлиц</div>
+    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">1-комнатные</div>
+		<div class="price">от 3 939 740.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">30</div>
+	</td></tr>
+	</table>
+    	<table cellspacing="0" class="stat-popup" >
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">2-комнатные</div>
+		<div class="price">от 5 222 880.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">102</div>
+	</td></tr>
+	</table>
+    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
+	</td></tr>
+	</table>
+
+</td></tr>
+</table>
 <table cellspacing="0" class="marker-korpus-selled" style="margin-top:690px;margin-left:777px">
-<tr valign="top"><td>
+<tr valign="top"><td onclick="ShowKorpusPopUp2('310', 690, 777);">
 	<div>10</div>
 	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
 </td></tr>
 </table>
+<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpus310" style="display:none">
+<tr>
+<td valign="middle" align="center">
+	<img src="local/layout/images/central/popup_str_up.png">
+</td></tr>
+<tr><td class="content" valign="top" style="padding:20px">
+
+	<table cellspacing="0" width="100%">
+	<tr valign="top"><td nowrap style="padding-right:20px">
+
+		<table cellspacing="0">
+		<tr><td colspan="2" nowrap>
+			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
+			<div class="korpus-title">Корпус 10</div>
+		</td></tr>
+		<tr><td style="padding-right:20px">
+			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
+		</td><td width="100%">
+			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
+		</td></tr>
+        <tr><td colspan="2">
+            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
+		</table>
+
+	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
+		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUp2('310', 0, 0);"></div>
+		<div class="popup-in-sell">Квартиры от физлиц</div>
+    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">1-комнатные</div>
+		<div class="price">от 3 939 740.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">30</div>
+	</td></tr>
+	</table>
+    	<table cellspacing="0" class="stat-popup" >
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">2-комнатные</div>
+		<div class="price">от 5 222 880.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">102</div>
+	</td></tr>
+	</table>
+    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
+	</td></tr>
+	</table>
+
+</td></tr>
+</table>
 <table cellspacing="0" class="marker-korpus-selled" style="margin-top:583px;margin-left:643px">
-<tr valign="top"><td>
+<tr valign="top"><td onclick="ShowKorpusPopUp2('311', 583, 643);">
 	<div>11</div>
 	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
 </td></tr>
 </table>
+<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpus311" style="display:none">
+<tr>
+<td valign="middle" align="center">
+	<img src="local/layout/images/central/popup_str_up.png">
+</td></tr>
+<tr><td class="content" valign="top" style="padding:20px">
+
+	<table cellspacing="0" width="100%">
+	<tr valign="top"><td nowrap style="padding-right:20px">
+
+		<table cellspacing="0">
+		<tr><td colspan="2" nowrap>
+			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
+			<div class="korpus-title">Корпус 11</div>
+		</td></tr>
+		<tr><td style="padding-right:20px">
+			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
+		</td><td width="100%">
+			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
+		</td></tr>
+        <tr><td colspan="2">
+            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
+		</table>
+
+	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
+		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUp2('311', 0, 0);"></div>
+		<div class="popup-in-sell">Квартиры от физлиц</div>
+    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">1-комнатные</div>
+		<div class="price">от 3 939 740.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">30</div>
+	</td></tr>
+	</table>
+    	<table cellspacing="0" class="stat-popup" >
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">2-комнатные</div>
+		<div class="price">от 5 222 880.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">102</div>
+	</td></tr>
+	</table>
+    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
+	</td></tr>
+	</table>
+
+</td></tr>
+</table>
 <table cellspacing="0" class="marker-korpus-selled" style="margin-top:607px;margin-left:705px">
-<tr valign="top"><td>
+<tr valign="top"><td onclick="ShowKorpusPopUp2('312', 607, 705);">
 	<div>12</div>
 	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
 </td></tr>
 </table>
+<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpus312" style="display:none">
+<tr>
+<td valign="middle" align="center">
+	<img src="local/layout/images/central/popup_str_up.png">
+</td></tr>
+<tr><td class="content" valign="top" style="padding:20px">
+
+	<table cellspacing="0" width="100%">
+	<tr valign="top"><td nowrap style="padding-right:20px">
+
+		<table cellspacing="0">
+		<tr><td colspan="2" nowrap>
+			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
+			<div class="korpus-title">Корпус 12</div>
+		</td></tr>
+		<tr><td style="padding-right:20px">
+			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
+		</td><td width="100%">
+			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
+		</td></tr>
+        <tr><td colspan="2">
+            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
+		</table>
+
+	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
+		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUp2('312', 0, 0);"></div>
+		<div class="popup-in-sell">Квартиры от физлиц</div>
+    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">1-комнатные</div>
+		<div class="price">от 3 939 740.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">30</div>
+	</td></tr>
+	</table>
+    	<table cellspacing="0" class="stat-popup" >
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">2-комнатные</div>
+		<div class="price">от 5 222 880.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">102</div>
+	</td></tr>
+	</table>
+    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
+	</td></tr>
+	</table>
+
+</td></tr>
+</table>
 <table cellspacing="0" class="marker-korpus-selled" style="margin-top:574px;margin-left:773px">
-<tr valign="top"><td>
+<tr valign="top"><td onclick="ShowKorpusPopUp2('313', 574, 773);">
 	<div>13</div>
 	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
+</td></tr>
+</table>
+<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpus313" style="display:none">
+<tr>
+<td valign="middle" align="center">
+	<img src="local/layout/images/central/popup_str_up.png">
+</td></tr>
+<tr><td class="content" valign="top" style="padding:20px">
+
+	<table cellspacing="0" width="100%">
+	<tr valign="top"><td nowrap style="padding-right:20px">
+
+		<table cellspacing="0">
+		<tr><td colspan="2" nowrap>
+			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
+			<div class="korpus-title">Корпус 13</div>
+		</td></tr>
+		<tr><td style="padding-right:20px">
+			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
+		</td><td width="100%">
+			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
+		</td></tr>
+        <tr><td colspan="2">
+            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
+		</table>
+
+	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
+		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUp2('313', 0, 0);"></div>
+		<div class="popup-in-sell">Квартиры от физлиц</div>
+    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">1-комнатные</div>
+		<div class="price">от 3 939 740.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">30</div>
+	</td></tr>
+	</table>
+    	<table cellspacing="0" class="stat-popup" >
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">2-комнатные</div>
+		<div class="price">от 5 222 880.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">102</div>
+	</td></tr>
+	</table>
+    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
+	</td></tr>
+	</table>
+
 </td></tr>
 </table>
 <table cellspacing="0" class="marker-korpus" style="margin-top:470px;margin-left:638px">
@@ -853,7 +1705,7 @@
 
 	<table cellspacing="0" width="100%">
 	<tr valign="top"><td nowrap>
-		
+
 		<table cellspacing="0">
 		<tr><td colspan="2" nowrap>
 			<a href="./korpus/?korpus=104"><img src="upload/resize_cache/nvflats/cc3/154_100054_1/14.jpg" style="margin-bottom:15px"></a>
@@ -865,18 +1717,18 @@
 			<div class="korpus-title-stat">Секций: <strong>6</strong></div>
 		</td></tr>
 		<tr><td colspan="2">
-		
+
 			<table cellspacing="0" class="bluekorpus-btn">
 			<tr><td>
 				<a href="./korpus/?korpus=104">Подробности</a><br>
 			</td></tr>
 			</table>
-			
+
 		</td></tr>
 		</table>
-		
+
 		<img src="local/layout/images/empty.gif" width="174" height="1"><br>
-		
+
 	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
 		<div style="position:absolute;margin:-10px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close.gif" class="cur" onclick="ShowKorpusPopUp('104', 0, 0);"></div>
 		<div class="popup-in-sell">Квартиры в продаже</div>
@@ -887,7 +1739,7 @@
 	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
 		<div class="total">106</div>
 	</td></tr>
-	</table>    
+	</table>
     	<table cellspacing="0" class="stat-popup" >
 	<tr valign="top"><td style="padding:0px" nowrap>
 		<div class="type">2-комнатные</div>
@@ -895,7 +1747,7 @@
 	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
 		<div class="total">68</div>
 	</td></tr>
-	</table>    
+	</table>
     	<table cellspacing="0" class="stat-popup" >
 	<tr valign="top"><td style="padding:0px" nowrap>
 		<div class="type">3-комнатные</div>
@@ -903,7 +1755,25 @@
 	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
 		<div class="total">47</div>
 	</td></tr>
-	</table>    
+	</table>
+    <br />
+		<div class="popup-in-sell">Квартиры от физлиц</div>
+    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">1-комнатные</div>
+		<div class="price">от 3 939 740.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">30</div>
+	</td></tr>
+	</table>
+    	<table cellspacing="0" class="stat-popup" >
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">2-комнатные</div>
+		<div class="price">от 5 222 880.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">102</div>
+	</td></tr>
+	</table>
     		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
 	</td></tr>
 	</table>
@@ -913,9 +1783,58 @@
 </td></tr>
 </table>
 <table cellspacing="0" class="marker-korpus-selled" style="margin-top:359px;margin-left:759px">
-<tr valign="top"><td>
+<tr valign="top"><td onclick="ShowKorpusPopUp2('319', 359, 759);">
 	<div>19</div>
 	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
+</td></tr>
+</table>
+<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpus319" style="display:none">
+<tr>
+<td valign="middle" align="center">
+	<img src="local/layout/images/central/popup_str_up.png">
+</td></tr>
+<tr><td class="content" valign="top" style="padding:20px">
+
+	<table cellspacing="0" width="100%">
+	<tr valign="top"><td nowrap style="padding-right:20px">
+
+		<table cellspacing="0">
+		<tr><td colspan="2" nowrap>
+			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
+			<div class="korpus-title">Корпус 19</div>
+		</td></tr>
+		<tr><td style="padding-right:20px">
+			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
+		</td><td width="100%">
+			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
+		</td></tr>
+        <tr><td colspan="2">
+            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
+		</table>
+
+	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
+		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUp2('319', 0, 0);"></div>
+		<div class="popup-in-sell">Квартиры от физлиц</div>
+    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">1-комнатные</div>
+		<div class="price">от 3 939 740.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">30</div>
+	</td></tr>
+	</table>
+    	<table cellspacing="0" class="stat-popup" >
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">2-комнатные</div>
+		<div class="price">от 5 222 880.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">102</div>
+	</td></tr>
+	</table>
+    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
+	</td></tr>
+	</table>
+
 </td></tr>
 </table>
 <table cellspacing="0" class="marker-korpus" style="margin-top:721px;margin-left:530px">
@@ -932,7 +1851,7 @@
 
 	<table cellspacing="0" width="100%">
 	<tr valign="top"><td nowrap>
-		
+
 		<table cellspacing="0">
 		<tr><td colspan="2" nowrap>
 			<a href="./korpus/?korpus=100"><img src="upload/resize_cache/nvflats/f30/154_100054_1/33.jpg" style="margin-bottom:15px"></a>
@@ -944,18 +1863,18 @@
 			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
 		</td></tr>
 		<tr><td colspan="2">
-		
+
 			<table cellspacing="0" class="bluekorpus-btn">
 			<tr><td>
 				<a href="./korpus/?korpus=100">Подробности</a><br>
 			</td></tr>
 			</table>
-			
+
 		</td></tr>
 		</table>
-		
+
 		<img src="local/layout/images/empty.gif" width="174" height="1"><br>
-		
+
 	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
 		<div style="position:absolute;margin:-10px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close.gif" class="cur" onclick="ShowKorpusPopUp('100', 0, 0);"></div>
 		<div class="popup-in-sell">Квартиры в продаже</div>
@@ -966,7 +1885,7 @@
 	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
 		<div class="total">3</div>
 	</td></tr>
-	</table>    
+	</table>
     	<table cellspacing="0" class="stat-popup" >
 	<tr valign="top"><td style="padding:0px" nowrap>
 		<div class="type">2-комнатные</div>
@@ -974,7 +1893,7 @@
 	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
 		<div class="total">5</div>
 	</td></tr>
-	</table>    
+	</table>
     		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
 	</td></tr>
 	</table>
@@ -995,7 +1914,7 @@
 
 	<table cellspacing="0" width="100%">
 	<tr valign="top"><td nowrap>
-		
+
 		<table cellspacing="0">
 		<tr><td colspan="2" nowrap>
 			<a href="./korpus/?korpus=101"><img src="upload/resize_cache/nvflats/b83/154_100054_1/34.jpg" style="margin-bottom:15px"></a>
@@ -1007,18 +1926,18 @@
 			<div class="korpus-title-stat">Секций: <strong>2</strong></div>
 		</td></tr>
 		<tr><td colspan="2">
-		
+
 			<table cellspacing="0" class="bluekorpus-btn">
 			<tr><td>
 				<a href="./korpus/?korpus=101">Подробности</a><br>
 			</td></tr>
 			</table>
-			
+
 		</td></tr>
 		</table>
-		
+
 		<img src="local/layout/images/empty.gif" width="174" height="1"><br>
-		
+
 	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
 		<div style="position:absolute;margin:-10px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close.gif" class="cur" onclick="ShowKorpusPopUp('101', 0, 0);"></div>
 		<div class="popup-in-sell">Квартиры в продаже</div>
@@ -1029,7 +1948,7 @@
 	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
 		<div class="total">9</div>
 	</td></tr>
-	</table>    
+	</table>
     	<table cellspacing="0" class="stat-popup" >
 	<tr valign="top"><td style="padding:0px" nowrap>
 		<div class="type">2-комнатные</div>
@@ -1037,7 +1956,7 @@
 	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
 		<div class="total">2</div>
 	</td></tr>
-	</table>    
+	</table>
     		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
 	</td></tr>
 	</table>
@@ -1045,9 +1964,58 @@
 </td></tr>
 </table>
 <table cellspacing="0" class="marker-korpus-selled" style="margin-top:607px;margin-left:561px">
-<tr valign="top"><td>
+<tr valign="top"><td onclick="ShowKorpusPopUp2('335', 607, 561);">
 	<div>35</div>
 	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
+</td></tr>
+</table>
+<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpus335" style="display:none">
+<tr>
+<td valign="middle" align="center">
+	<img src="local/layout/images/central/popup_str_up.png">
+</td></tr>
+<tr><td class="content" valign="top" style="padding:20px">
+
+	<table cellspacing="0" width="100%">
+	<tr valign="top"><td nowrap style="padding-right:20px">
+
+		<table cellspacing="0">
+		<tr><td colspan="2" nowrap>
+			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
+			<div class="korpus-title">Корпус 35</div>
+		</td></tr>
+		<tr><td style="padding-right:20px">
+			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
+		</td><td width="100%">
+			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
+		</td></tr>
+        <tr><td colspan="2">
+            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
+		</table>
+
+	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
+		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUp2('335', 0, 0);"></div>
+		<div class="popup-in-sell">Квартиры от физлиц</div>
+    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">1-комнатные</div>
+		<div class="price">от 3 939 740.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">30</div>
+	</td></tr>
+	</table>
+    	<table cellspacing="0" class="stat-popup" >
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">2-комнатные</div>
+		<div class="price">от 5 222 880.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">102</div>
+	</td></tr>
+	</table>
+    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
+	</td></tr>
+	</table>
+
 </td></tr>
 </table>
 <table cellspacing="0" class="marker-korpus" style="margin-top:562px;margin-left:388px">
@@ -1064,7 +2032,7 @@
 
 	<table cellspacing="0" width="100%">
 	<tr valign="top"><td nowrap>
-		
+
 		<table cellspacing="0">
 		<tr><td colspan="2" nowrap>
 			<a href="./korpus/?korpus=102"><img src="upload/resize_cache/nvflats/a9b/154_100054_1/36.jpg" style="margin-bottom:15px"></a>
@@ -1076,18 +2044,18 @@
 			<div class="korpus-title-stat">Секций: <strong>4</strong></div>
 		</td></tr>
 		<tr><td colspan="2">
-		
+
 			<table cellspacing="0" class="bluekorpus-btn">
 			<tr><td>
 				<a href="./korpus/?korpus=102">Подробности</a><br>
 			</td></tr>
 			</table>
-			
+
 		</td></tr>
 		</table>
-		
+
 		<img src="local/layout/images/empty.gif" width="174" height="1"><br>
-		
+
 	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
 		<div style="position:absolute;margin:-10px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close.gif" class="cur" onclick="ShowKorpusPopUp('102', 0, 0);"></div>
 		<div class="popup-in-sell">Квартиры в продаже</div>
@@ -1098,7 +2066,7 @@
 	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
 		<div class="total">30</div>
 	</td></tr>
-	</table>    
+	</table>
     	<table cellspacing="0" class="stat-popup" >
 	<tr valign="top"><td style="padding:0px" nowrap>
 		<div class="type">2-комнатные</div>
@@ -1106,7 +2074,7 @@
 	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
 		<div class="total">98</div>
 	</td></tr>
-	</table>    
+	</table>
     		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
 	</td></tr>
 	</table>
@@ -1127,7 +2095,7 @@
 
 	<table cellspacing="0" width="100%">
 	<tr valign="top"><td nowrap>
-		
+
 		<table cellspacing="0">
 		<tr><td colspan="2" nowrap>
 			<a href="./korpus/?korpus=103"><img src="upload/resize_cache/nvflats/d27/154_100054_1/37.jpg" style="margin-bottom:15px"></a>
@@ -1139,18 +2107,18 @@
 			<div class="korpus-title-stat">Секций: <strong>4</strong></div>
 		</td></tr>
 		<tr><td colspan="2">
-		
+
 			<table cellspacing="0" class="bluekorpus-btn">
 			<tr><td>
 				<a href="./korpus/?korpus=103">Подробности</a><br>
 			</td></tr>
 			</table>
-			
+
 		</td></tr>
 		</table>
-		
+
 		<img src="local/layout/images/empty.gif" width="174" height="1"><br>
-		
+
 	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
 		<div style="position:absolute;margin:-10px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close.gif" class="cur" onclick="ShowKorpusPopUp('103', 0, 0);"></div>
 		<div class="popup-in-sell">Квартиры в продаже</div>
@@ -1161,7 +2129,7 @@
 	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
 		<div class="total">22</div>
 	</td></tr>
-	</table>    
+	</table>
     	<table cellspacing="0" class="stat-popup" >
 	<tr valign="top"><td style="padding:0px" nowrap>
 		<div class="type">2-комнатные</div>
@@ -1169,7 +2137,7 @@
 	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
 		<div class="total">52</div>
 	</td></tr>
-	</table>    
+	</table>
     		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
 	</td></tr>
 	</table>
@@ -1177,9 +2145,58 @@
 </td></tr>
 </table>
 <table cellspacing="0" class="marker-korpus-selled" style="margin-top:471px;margin-left:561px">
-<tr valign="top"><td>
+<tr valign="top"><td onclick="ShowKorpusPopUp2('338', 471, 561);">
 	<div>38</div>
 	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
+</td></tr>
+</table>
+<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpus338" style="display:none">
+<tr>
+<td valign="middle" align="center">
+	<img src="local/layout/images/central/popup_str_up.png">
+</td></tr>
+<tr><td class="content" valign="top" style="padding:20px">
+
+	<table cellspacing="0" width="100%">
+	<tr valign="top"><td nowrap style="padding-right:20px">
+
+		<table cellspacing="0">
+		<tr><td colspan="2" nowrap>
+			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
+			<div class="korpus-title">Корпус 38</div>
+		</td></tr>
+		<tr><td style="padding-right:20px">
+			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
+		</td><td width="100%">
+			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
+		</td></tr>
+        <tr><td colspan="2">
+            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
+		</table>
+
+	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
+		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUp2('338', 0, 0);"></div>
+		<div class="popup-in-sell">Квартиры от физлиц</div>
+    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">1-комнатные</div>
+		<div class="price">от 3 939 740.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">30</div>
+	</td></tr>
+	</table>
+    	<table cellspacing="0" class="stat-popup" >
+	<tr valign="top"><td style="padding:0px" nowrap>
+		<div class="type">2-комнатные</div>
+		<div class="price">от 5 222 880.-</div>
+	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
+		<div class="total">102</div>
+	</td></tr>
+	</table>
+    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
+	</td></tr>
+	</table>
+
 </td></tr>
 </table>
 			<img src="local/layout/images/central/planmap.jpg"><br>
@@ -1190,13 +2207,13 @@
 		<table cellspacing="0" class="foot">
 		<tr valign="top"><td>
 			<div class="clear"></div>
-			
+
 			<table cellspacing="0" width="100%">
 			<tr valign="top"><td style="padding:21px 30px 0px 30px">
 				<a href="/"><img src="local/layout/images/nv.gif"></a><br>
     		<div class="copy">&copy; Новые Ватутинки 2015.<br>Все права защищены.</div>
 			</td><td nowrap>
-				
+
 				<div class="parent">Микрорайон «Центральный»</div>
 				<table cellspacing="0">
 				<tr valign="top"><td nowrap>
@@ -1209,11 +2226,11 @@
                       <div class="lnk"><a href="/centralniy/contacts/">Контакты</a></div>
           				</td></tr>
 				</table>
- 
+
 				<div class="parent"><a href="/yuzhniy/">Квартал Южный</a></div>
-				
+
 			</td><td width="100%">
-			
+
 			</td><td nowrap style="padding-right:30px">
 								<div class="phone-bottom" id="comagic">+7 (495) 151-26-72</div>
         <br><br>
@@ -1221,10 +2238,10 @@
     			<a href="http://www.bilingo.ru" target="_blank" style="color:#4e5159;font-size:10px;text-decoration:none">разработка сайта</a><br>				</div>
 			</td></tr>
 			</table>
-			
+
 		</td></tr>
 		</table>
-		
+
 	</td><td class="r">
 		<img src="local/layout/images/right.gif"><br>
 	</td></tr>

@@ -36,276 +36,125 @@
 		<img src="local/layout/images/left.gif"><br>
 	</td><td class="c">
 
-				
-    <table cellspacing="0" class="green-top">
-		<tr valign="top"><td style="padding:26px 30px 0px 30px">
-			<img src="local/layout/images/sell_ico.gif"><br>
-		</td><td width="100%" align="left" style="padding:20px 30px 0px 0px">
 
-			<input type="hidden" name="cursell" id="cursell" value="kv">
-			<table cellspacing="0" class="sell-tbl">
-			<tr valign="top"><td>
-				<img src="local/layout/images/empty.gif" width="20" height="1"><br>
-			</td><td class="kv-act" id="kvsell" nowrap onclick="SetSell('kv');">
-				Квартиры <span>439</span><br>
-				<img src="local/layout/images/sell_str.gif" id="kvstr" style="margin-right:32px"><br>
-			</td><td>
-				<img src="local/layout/images/empty.gif" width="84" height="1"><br>
-			</td><td nowrap="" id="gvsell" class="gv">
-				<a href="http://parking.nv-servis.com/">Машиноместа</a> <span></span><br>
-				<img style="margin-right:38px" id="gvstr" src="local/layout/images/empty.gif"><br>
-			</td>
-				<img src="local/layout/images/empty.gif" width="84" height="1"><br>
-			</td><td>
-				<img height="1" width="84" src="local/layout/images/empty.gif"><br>
-			</td><td nowrap="" id="nvsell" class="nv">
-				<a target="_blank" href="http://www.adwill.ru/offers/new.vatutinki">Нежилые помещения</a><br>
-				<img style="margin-right:38px" id="nvstr" src="local/layout/images/empty.gif"><br>
-			</td>
-				<img src="local/layout/images/empty.gif" width="20" height="1"><br>
-			</td><td width="100%"></td></tr>
-			</table>
+    <!-- new central top -->
+    <div class="new-central-top">
+        <div class="new-central-top-title">Объекты в продаже<a href="#"></a></div>
+        <div class="new-central-top-content">
+            <div class="new-central-top-menu">
+                <ul>
+                    <li class="active"><div><img src="local/layout/images/central/new-central-top-icon-1.png" alt="" width="13" height="15" /> Квартиры <span>523</span></div></li>
+                    <li><a href="#"><img src="local/layout/images/central/new-central-top-icon-2.png" alt="" width="11" height="15" /> Вторичка <span>25</span></a></li>
+                    <li><a href="http://parking.nv-servis.com/"><img src="local/layout/images/central/new-central-top-icon-3.png" alt="" width="16" height="14" /> Машиноместа</a> <span>25</span></a></li>
+                    <li><a href="http://www.adwill.ru/offers/new.vatutinki"><img src="local/layout/images/central/new-central-top-icon-4.png" alt="" width="15" height="15" /> Нежилые помещения</a> <span>9</span></a></li>
+                </ul>
+            </div>
+            <div class="new-central-top-form">
+                <form method="post" name="fullsearch" action="/centralniy/search/">
+                    <input type="hidden" name="search" value="1" />
+                    <input type="hidden" name="sq_param" value="1" />
+                    <input type="hidden" name="flor_param" value="1" />
+                    <input type="hidden" name="korpus_param" value="1" />
 
-			<table cellspacing="0" width="100%" style="margin-top:13px">
-			<tr valign="top"><td width="100%">
+                    <div class="new-central-top-field">
+                        <div class="new-central-top-label">Комнаты</div>
+                        <script>var kk=new Array();</script>
+                        <script>kk[0]=2;</script>
+                        <input type="hidden" name="k1" id="k1" value="2" />
+                        <script>kk[1]=1;</script>
+                        <input type="hidden" name="k2" id="k2" value="2" />
+                        <script>kk[2]=3;</script>
+                        <input type="hidden" name="k3" id="k3" value="2" />
+                        <div class="new-central-top-select">
+                            <select name="komnat" id="komnat">
+                                <option value="">Все</option>
+                                <option value="2">2</option>
+                                <option value="1">1</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
+                    </div>
 
-				<div id="divkv" style="display:block">
-				<form method="post" name="fullsearch" action="/centralniy/search/">
-				<input type="hidden" name="search" value="1">
-				<input type="hidden" name="sq_param" value="1">
-				<input type="hidden" name="flor_param" value="1">
-				<input type="hidden" name="korpus_param" value="1">
-				<table cellspacing="0" width="100%">
-				<tr valign="top"><td width="100%" style="padding-top:14px">
+                    <div class="new-central-top-field">
+                        <div class="new-central-top-label">Цена</div>
+                        <input type="hidden" name="price_param" id="price_param" value="2" />
+                        <div class="layout-slider"><input id="price" type="slider" name="price" value="3939740;7677000" /></div>
+                        <script type="text/javascript">
+                            jQuery("#price").slider({ from:3939740, to:7677000, step:10, smooth:true, round:0, dimension:".-", limits:false });
+                        </script>
+                    </div>
 
-					<table cellspacing="0">
-					<tr valign="top"><td style="font-size:14px;color:#5e6269;padding:4px 10px 0px 0px">
-						Комнаты<br>
-					</td><td>
-												<script>var kk=new Array();</script>
-													<script>kk[0]=2;</script>
-														<input type="hidden" name="k1" id="k1" value="2">
-													<script>kk[1]=1;</script>
-														<input type="hidden" name="k2" id="k2" value="2">
-													<script>kk[2]=3;</script>
-														<input type="hidden" name="k3" id="k3" value="2">
-												<table cellspacing="0" class="gselect">
-						<tr><td><img src="local/layout/images/gselect_left.gif"></td><td class="select">
-							<div class="select">
-							<select name="komnat" id="komnat">
-								<option value="">Все</option>
-																	<option value="2">2</option>
-																	<option value="1">1</option>
-																	<option value="3">3</option>
-															</select>
-							</div>
-						</td></tr>
-						</table>
+                    <div class="new-central-top-adv-link"><a href="/centralniy/search/">Расширенный поиск</a></div>
 
-					</td><td style="font-size:14px;color:#5e6269;padding:4px 10px 0px 30px">
-						Цена<br>
-					</td><td style="padding-top:2px">
-												<input type="hidden" name="price_param" id="price_param" value="2">
-            						<div class="layout-slider" style="width:270px"><span style="display:inline-block;width:270px;padding:0px 5px;"><input id="price" type="slider" name="price" value="3939740;7677000"></span></div>
-						<script type="text/javascript" charset="utf-8">
-							jQuery("#price").slider({ from:3939740, to:7677000, step:10, smooth:true, round:0, dimension:".-", limits:false });
-						</script>
+                    <div class="new-central-top-submit" onclick="SetKV();">Искать</div>
 
-					</td></tr>
-					</table>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- new central top END -->
 
-				</td><td>
+    <div id="print-head"><img src="local/layout/images/central/print_head.gif"></div>
 
-					<table cellspacing="0" class="short-search-btn" onclick="SetKV();">
-					<tr valign="top"><td>
-						Искать<br>
-					</td></tr>
-					</table>
+    <!-- new central park -->
+    <div class="new-central-park">
+        <div class="new-central-park-logo"><a href="/"><img src="local/layout/images/central/logo_nv.png" alt="" width="127" height="50" /></a></div>
+        <div class="phone" id="comagic">+7 (495) 151-26-72</div>
 
-				</td></tr>
-				</table>
-				</form>
-				</div>
+        <div class="new-central-park-menu">
+            <ul>
+                <li><a href="/centralniy/about/">О нас</a></li>
+                <li><a href="/centralniy/news/">Новости</a></li>
+                <li class="active"><a href="/centralniy/genplan/">Генплан</a></li>
+                <li><a href="#">Документы</a></li>
+                <li><a href="/centralniy/apartments/">Квартиры</a></li>
+                <li><a href="/centralniy/sales/">Как купить</a></li>
+                <li class="new-central-park-menu-with-submenu">
+                    <a href="/centralniy/contacts/">Контакты</a>
+                    <ul>
+                        <li><a href="#">Как добраться</a></li>
+                        <li><a href="#">Реализующие компании</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
 
-				<div id="divnv" style="display:none">
-				</div>
-			</td><td style="padding:0px 7px">
-				<img src="local/layout/images/sell_sep.gif"><br>
-			</td><td>
+        <div class="new-central-park-district">
+            <div class="new-central-park-district-title"><a href="/centralniy/"><img src="local/layout/images/central/new-central-park-district.png" alt="" width="337" height="59" /></a></div>
+            <div class="new-central-park-district-menu new-central-park-district-menu-district">
+                <div class="new-central-park-district-menu-icon"></div>
+                <div class="new-central-park-district-menu-list">
+                    <ul>
+                        <li class="active"><a href="#">Микрорайон «Центральный»</a></li>
+                        <li><a href="#">Квартал «Южный»</a></li>
+                        <li><a href="#">Посёлок «Синергия»</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="new-central-park-district-menu new-central-park-district-menu-video">
+                <div class="new-central-park-district-menu-icon"></div>
+                <div class="new-central-park-district-menu-list">
+                    <ul>
+                        <li><a href="#">Ход строительства</a></li>
+                        <li><a href="#">Видеотрансляция</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- new central park END -->
 
-				<table cellspacing="0" class="short-search-btn-lnk">
-				<tr valign="top"><td>
-					<a href="/centralniy/search/">Расширенный<br>поиск</a><br>
-				</td></tr>
-				</table>
+    <div class="sandline">
+        <a href="/" title="Главная">Главная</a><span class="sep">/</span>
+        <a href="/centralniy/" title="Микрорайон «Центральный»">Микрорайон «Центральный»</a><span class="sep">/</span>
+        <a href="/centralniy/genplan/" title="Генплан">Генплан</a><span class="sep">/</span>
+        <a href="/centralniy/genplan/map/" title="Карта микрорайона">Карта микрорайона</a><span class="sep">/</span>
+        <a href="/centralniy/genplan/map/houses/" title="Жилые дома">Жилые дома</a><span class="sep">/</span>
+        <a href="/centralniy/genplan/map/houses/korpus/?korpus=103" title="Корпус 37">Корпус 37</a><span class="sep">/</span>
+        <a href="/centralniy/genplan/map/houses/korpus/?korpus=103&amp;section=520&amp;floor=2093" title="Секция 1">Секция 1</a><span class="sep">/</span><span>Этаж 12</span>
+    </div>
 
-			</td></tr>
-			</table>
-
-		</td></tr>
-		</table>
-		
-		<div id="print-head"><img src="local/layout/images/central/print_head.gif"></div>
-
-		<table cellspacing="0" class="park">
-		<tr valign="top"><td>
-
-			<table cellspacing="0" width="100%">
-			<tr valign="top"><td style="padding:32px 0px 0px 30px">
-				<a href="/"><img src="local/layout/images/central/logo_nv.png"></a><br>
-			</td><td style="padding:28px 0px 0px 21px">
-				<a href="/centralniy/"><img src="local/layout/images/central/center_logo.png"></a><br>
-			</td><td width="100%" align="right" style="padding:10px 30px 0px 0px">
-
-								<div class="phone" id="comagic">+7 (495) 151-26-72</div>
-
-												<!--<table cellspacing="0" class="btn2">
-				<tr valign="top"><td>
-					<a href="#smartcallback" onclick="SCBchange('YES');SCBopen(1);return false;">Заказать обратный звонок</a><br>
-				</td></tr>
-				</table>-->
-				
-			</td></tr>
-			</table>
-
-			<table cellspacing="0" class="menu"><tr valign="top"><td><img src="local/layout/images/empty.gif" width="27" height="1"></td><td nowrap=""><!--<div onmouseover="this.className='act';" onmouseout="this.className='';"><a href="/">Главная</a></div>--></td><td><img src="local/layout/images/empty.gif" width="10" height="1"></td>
-      <td nowrap=""><div onmouseover="this.className='act';" onmouseout="this.className='';"><a href="/centralniy/about/">О нас</a></div></td>  
-  <td><img src="local/layout/images/empty.gif" width="18" height="1"></td>
-  <td nowrap=""><div onmouseover="this.className='act';" onmouseout="this.className='';"><a href="/centralniy/news/">Новости</a></div></td>  
-  <td><img src="local/layout/images/empty.gif" width="18" height="1"></td>
-  <td nowrap=""><div class="act"><a href="/centralniy/genplan/">Генплан</a></div></td>  
-  <td><img src="local/layout/images/empty.gif" width="18" height="1"></td>
-  <td nowrap=""><div onmouseover="this.className='act';" onmouseout="this.className='';"><a href="/centralniy/apartments/">Квартиры</a></div></td>  
-  <td><img src="local/layout/images/empty.gif" width="18" height="1"></td>
-  <td nowrap=""><div onmouseover="this.className='act';" onmouseout="this.className='';"><a href="/centralniy/sales/">Как купить</a></div></td>  
-  <td><img src="local/layout/images/empty.gif" width="18" height="1"></td>
-  <td nowrap=""><div onmouseover="this.className='act';" onmouseout="this.className='';"><a href="/centralniy/contacts/">Контакты</a></div></td>  
-        <td width="100%"></td></tr></table>
-
-<table cellspacing="0" class="park-bottom">
-	<tbody><tr valign="top"><td align="left">
-		<img src="local/layout/images/central/center_left.gif"><br>
-	</td><td class="f">
-		<div class="sandline">
-    
-      <a href="/" title="Главная">Главная</a><span class="sep">/</span>
-      <a href="/centralniy/" title="Микрорайон «Центральный»">Микрорайон «Центральный»</a><span class="sep">/</span>
-      <a href="/centralniy/genplan/" title="Генплан">Генплан</a><span class="sep">/</span>
-      <a href="/centralniy/genplan/map/" title="Карта микрорайона">Карта микрорайона</a><span class="sep">/</span>
-      <a href="/centralniy/genplan/map/houses/" title="Жилые дома">Жилые дома</a><span class="sep">/</span>
-      <a href="/centralniy/genplan/map/houses/korpus/?korpus=103" title="Корпус 37">Корпус 37</a><span class="sep">/</span>
-      <a href="/centralniy/genplan/map/houses/korpus/?korpus=103&amp;section=520&amp;floor=2093" title="Секция 1">Секция 1</a><span class="sep">/</span><span>Этаж 12</span></div>
-	</td><td align="right">
-		<img src="local/layout/images/central/center_right.gif"><br>
-	</td></tr>
-	</tbody></table>
-
-
-
-
-<div style="padding-left:10px"><div style="width:1100px;height:21px;background:#fff"></div></div>
-	<div style="padding-left:10px">
-		<table cellspacing="0" class="submenu-str" style="background:#fff">
-		<tr><td><div class="level-f" style="width:29px">&nbsp;</div><table cellspacing="0" class="submenu-bottom-clear"><tr><td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td></tr></table></td><td>
-			<div class="korpus-sections">Секции:</div>
-			<table cellspacing="0" class="submenu-bottom"><tr><td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td></tr></table>
-		</td>
-          <td nowrap width="25%" align="center">
-      	<div class="level-t-act"><a href="/centralniy/genplan/map/houses/korpus/?korpus=103&section=520&floor=2083">1</a></div>
-      	<table cellspacing="0" class="submenu-bottom"><tr><td width="50%" class="bg"></td><td><img src="local/layout/images/central/menu/submenu_bottom_str.gif"></td><td width="50%" class="bg"></td></tr></table>
-      </td><td><div class="level-t" style="width:35px">&nbsp;</div><table cellspacing="0" class="submenu-bottom"><tr><td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td></tr></table></td>          <td nowrap width="25%" align="center">
-      	<div class="level-t"><a href="/centralniy/genplan/map/houses/korpus/?korpus=103&section=521&floor=2099">2</a></div>
-      	<table cellspacing="0" class="submenu-bottom"><tr><td width="50%" class="bg"></td><td><img src="local/layout/images/central/menu/submenu_bottom_str_bg.gif"></td><td width="50%" class="bg"></td></tr></table>
-      </td><td><div class="level-t" style="width:35px">&nbsp;</div><table cellspacing="0" class="submenu-bottom"><tr><td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td></tr></table></td>          <td nowrap width="25%" align="center">
-      	<div class="level-t"><a href="/centralniy/genplan/map/houses/korpus/?korpus=103&section=522&floor=2115">3</a></div>
-      	<table cellspacing="0" class="submenu-bottom"><tr><td width="50%" class="bg"></td><td><img src="local/layout/images/central/menu/submenu_bottom_str_bg.gif"></td><td width="50%" class="bg"></td></tr></table>
-      </td><td><div class="level-t" style="width:35px">&nbsp;</div><table cellspacing="0" class="submenu-bottom"><tr><td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td></tr></table></td>          <td nowrap width="25%" align="center">
-      	<div class="level-t"><a href="/centralniy/genplan/map/houses/korpus/?korpus=103&section=523&floor=2129">4</a></div>
-      	<table cellspacing="0" class="submenu-bottom"><tr><td width="50%" class="bg"></td><td><img src="local/layout/images/central/menu/submenu_bottom_str_bg.gif"></td><td width="50%" class="bg"></td></tr></table>
-      </td><td><div class="level-t" style="width:29px">&nbsp;</div><table cellspacing="0" class="submenu-bottom-clear"><tr><td width="50%" class="bg"></td><td width="50%" class="bg"></td></tr></table></td>        </tr>
-		</table>	
-	
-		<table cellspacing="0" class="submenu">
-		<tr><td><div class="level-f" style="width:29px">&nbsp;</div><table cellspacing="0" class="submenu-bottom-clear"><tr><td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td></tr></table></td><td>
-			<div class="korpus-floors">Этажи:</div>
-			<table cellspacing="0" class="submenu-bottom"><tr><td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td></tr></table>
-		</td>
-        
-    <td nowrap align="center" width="7%">
-    	<div class="level-f"><a href="/centralniy/genplan/map/houses/korpus/?korpus=103&section=520&floor=2083">2</a></div>
-    	<table cellspacing="0" class="submenu-bottom"><tr><td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td></tr></table>
-    </td><td><div class="level-f" style="width:29px">&nbsp;</div><table cellspacing="0" class="submenu-bottom"><tr><td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td></tr></table></td>
-        
-    <td nowrap align="center" width="7%">
-    	<div class="level-f"><a href="/centralniy/genplan/map/houses/korpus/?korpus=103&section=520&floor=2084">3</a></div>
-    	<table cellspacing="0" class="submenu-bottom"><tr><td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td></tr></table>
-    </td><td><div class="level-f" style="width:29px">&nbsp;</div><table cellspacing="0" class="submenu-bottom"><tr><td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td></tr></table></td>
-        
-    <td nowrap align="center" width="7%">
-    	<div class="level-f"><a href="/centralniy/genplan/map/houses/korpus/?korpus=103&section=520&floor=2085">4</a></div>
-    	<table cellspacing="0" class="submenu-bottom"><tr><td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td></tr></table>
-    </td><td><div class="level-f" style="width:29px">&nbsp;</div><table cellspacing="0" class="submenu-bottom"><tr><td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td></tr></table></td>
-        
-    <td nowrap align="center" width="7%">
-    	<div class="level-f"><a href="/centralniy/genplan/map/houses/korpus/?korpus=103&section=520&floor=2086">5</a></div>
-    	<table cellspacing="0" class="submenu-bottom"><tr><td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td></tr></table>
-    </td><td><div class="level-f" style="width:29px">&nbsp;</div><table cellspacing="0" class="submenu-bottom"><tr><td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td></tr></table></td>
-        
-    <td nowrap align="center" width="7%">
-    	<div class="level-f"><a href="/centralniy/genplan/map/houses/korpus/?korpus=103&section=520&floor=2087">6</a></div>
-    	<table cellspacing="0" class="submenu-bottom"><tr><td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td></tr></table>
-    </td><td><div class="level-f" style="width:29px">&nbsp;</div><table cellspacing="0" class="submenu-bottom"><tr><td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td></tr></table></td>
-        
-    <td nowrap align="center" width="7%">
-    	<div class="level-f"><a href="/centralniy/genplan/map/houses/korpus/?korpus=103&section=520&floor=2088">7</a></div>
-    	<table cellspacing="0" class="submenu-bottom"><tr><td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td></tr></table>
-    </td><td><div class="level-f" style="width:29px">&nbsp;</div><table cellspacing="0" class="submenu-bottom"><tr><td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td></tr></table></td>
-        
-    <td nowrap align="center" width="7%">
-    	<div class="level-f"><a href="/centralniy/genplan/map/houses/korpus/?korpus=103&section=520&floor=2092">11</a></div>
-    	<table cellspacing="0" class="submenu-bottom"><tr><td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td></tr></table>
-    </td><td><div class="level-f" style="width:29px">&nbsp;</div><table cellspacing="0" class="submenu-bottom"><tr><td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td></tr></table></td>
-        
-    <td nowrap align="center" width="7%">
-    	<div class="level-f-act"><a href="/centralniy/genplan/map/houses/korpus/?korpus=103&section=520&floor=2093">12</a></div>
-    	<table cellspacing="0" class="submenu-bottom"><tr><td width="50%" class="bg"></td><td><img src="local/layout/images/submenu_bottom_empty.png"></td><td width="50%" class="bg"></td></tr></table>
-    </td><td><div class="level-f" style="width:29px">&nbsp;</div><table cellspacing="0" class="submenu-bottom"><tr><td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td></tr></table></td>
-        
-    <td nowrap align="center" width="7%">
-    	<div class="level-f"><a href="/centralniy/genplan/map/houses/korpus/?korpus=103&section=520&floor=2094">13</a></div>
-    	<table cellspacing="0" class="submenu-bottom"><tr><td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td></tr></table>
-    </td><td><div class="level-f" style="width:29px">&nbsp;</div><table cellspacing="0" class="submenu-bottom"><tr><td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td></tr></table></td>
-        
-    <td nowrap align="center" width="7%">
-    	<div class="level-f"><a href="/centralniy/genplan/map/houses/korpus/?korpus=103&section=520&floor=2095">14</a></div>
-    	<table cellspacing="0" class="submenu-bottom"><tr><td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td></tr></table>
-    </td><td><div class="level-f" style="width:29px">&nbsp;</div><table cellspacing="0" class="submenu-bottom"><tr><td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td></tr></table></td>
-        
-    <td nowrap align="center" width="7%">
-    	<div class="level-f"><a href="/centralniy/genplan/map/houses/korpus/?korpus=103&section=520&floor=2096">15</a></div>
-    	<table cellspacing="0" class="submenu-bottom"><tr><td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td></tr></table>
-    </td><td><div class="level-f" style="width:29px">&nbsp;</div><table cellspacing="0" class="submenu-bottom"><tr><td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td></tr></table></td>
-        
-    <td nowrap align="center" width="7%">
-    	<div class="level-f"><a href="/centralniy/genplan/map/houses/korpus/?korpus=103&section=520&floor=2097">16</a></div>
-    	<table cellspacing="0" class="submenu-bottom"><tr><td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td></tr></table>
-    </td><td><div class="level-f" style="width:29px">&nbsp;</div><table cellspacing="0" class="submenu-bottom"><tr><td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td></tr></table></td>
-        
-    <td nowrap align="center" width="16%">
-    	<div class="level-f"><a href="/centralniy/genplan/map/houses/korpus/?korpus=103&section=520&floor=2098">17</a></div>
-    	<table cellspacing="0" class="submenu-bottom"><tr><td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td></tr></table>
-    </td><td><div class="level-f" style="width:29px">&nbsp;</div><table cellspacing="0" class="submenu-bottom"><tr><td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td></tr></table></td>
-        
-    </tr>
-		</table>
-	</div>
-
-  </td></tr>
-
-</table>
-
-
-<div style="background:#f2f6fa;padding:360px 0 0" id="cprn">
+<div style="background:#f2f6fa;" id="cprn">
 <div style="padding-bottom:30px">
 <table cellspacing="0" width="100%">
 <tbody><tr valign="top"><td width="100%" style="padding-right:20px;height:100%" valign="middle" align="center">
@@ -318,9 +167,9 @@
 		Распечатать<br>
 	</td></tr>
 	</tbody></table>
-	
+
 				<div style="position:absolute;width:184px;height:184px;margin:0px 0px 0px -219px"><img src="local/layout/images/central/37/in/sec1.png"></div>
-	
+
 	<div class="flats-in-korp" style="padding-bottom:5px;padding-top:0px">Корпус 37</div><div class="flats-in-korp" style="padding-bottom:15px;padding-top:0px"><span style="line-height:30px">Квартиры в продаже на 12 этаже 1 секции</span></div>
 <div class="flat-v-tit" style="padding-top:20px"><a href="/centralniy/genplan/map/houses/flats/?kvartira=4210">2-комнатная квартира №41</a></div>
 <div class="floor-flat">Общая площадь <br><span>56.2 м<sup>2</sup></span></div>
@@ -339,21 +188,21 @@
 
 <table cellspacing="0" width="100%" style="background:#dfe6ed">
 <tbody><tr valign="top"><td>
-	
+
 	<div class="clear"></div>
-	
+
 	<table cellspacing="0" width="100%"><tbody><tr><td style="padding:11px 30px 27px 30px">
 	<table cellspacing="0" width="100%" style="margin-bottom:15px">
 	<tbody><tr valign="top"><td>
 		<div class="flats-in-korp">Остальные квартиры в корпусе 37</div>
 	</td><td align="right">
-		
+
 		<table cellspacing="0" class="bluesearch-btn">
 		<tbody><tr valign="top"><td>
 						<a href="/centralniy/search/">Расширенный поиск</a><br>
 		</td></tr>
 		</tbody></table>
-				
+
 	</td></tr>
 	</tbody></table>
 		<table cellspacing="0" width="100%" id="sb">
@@ -374,7 +223,7 @@
 		</td></tr>
 		</tbody></table>
 				<div class="che-flat-price">от 3 939 740.-</div>
-		
+
 	</td></tr>
 	</tbody></table>
 	    </td>		<td style="padding-right:30px">
@@ -391,11 +240,11 @@
 		</td></tr>
 		</tbody></table>
 				<div class="che-flat-price">от 5 166 720.-</div>
-		
+
 	</td></tr>
 	</tbody></table>
-		
-    </td>					
+
+    </td>
     <td width="100%"></td></tr>
 	</tbody></table>
   		<table cellspacing="0" class="flat-tbl">
@@ -421,7 +270,7 @@
 		<div class="price" style="color:#008fa0">Стоимость</div>
 		<a href="/centralniy/genplan/map/houses/korpus/?sortby=price_asc&korpus=103&section=520&floor=2093"><img src="local/layout/images/sort_up_act.gif" style="margin-right:4px" id="sb"></a><a href="/centralniy/genplan/map/houses/korpus/?sortby=price_desc&korpus=103&section=520&floor=2093"><img src="local/layout/images/sort_down.gif" id="sb"></a><br>
 	</td></tr>
-  
+
 <tr class="f" onclick="document.location.href='/centralniy/genplan/map/houses/flats/?kvartira=4211'" onmouseover="this.className='overf'" onmouseout="this.className='f'"><td class="f">
 	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4211">1</a></div>
 </td><td>
@@ -437,7 +286,7 @@
 </td><td class="l">
 	<div  class="sorting" style="width:180px"><span><a href="/centralniy/genplan/map/houses/flats/?kvartira=4211" style="color:#008fa0">3 939 740.-</a></span></div>
 </td></tr>
-  
+
 <tr class="" onclick="document.location.href='/centralniy/genplan/map/houses/flats/?kvartira=4215'" onmouseover="this.className='over'" onmouseout="this.className=''"><td class="f">
 	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4215">1</a></div>
 </td><td>
@@ -453,7 +302,7 @@
 </td><td class="l">
 	<div  class="sorting" style="width:180px"><span><a href="/centralniy/genplan/map/houses/flats/?kvartira=4215" style="color:#008fa0">3 939 740.-</a></span></div>
 </td></tr>
-  
+
 <tr class="" onclick="document.location.href='/centralniy/genplan/map/houses/flats/?kvartira=4216'" onmouseover="this.className='over'" onmouseout="this.className=''"><td class="f">
 	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4216">1</a></div>
 </td><td>
@@ -469,7 +318,7 @@
 </td><td class="l">
 	<div  class="sorting" style="width:180px"><span><a href="/centralniy/genplan/map/houses/flats/?kvartira=4216" style="color:#008fa0">3 939 740.-</a></span></div>
 </td></tr>
-  
+
 <tr class="" onclick="document.location.href='/centralniy/genplan/map/houses/flats/?kvartira=4219'" onmouseover="this.className='over'" onmouseout="this.className=''"><td class="f">
 	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4219">1</a></div>
 </td><td>
@@ -485,7 +334,7 @@
 </td><td class="l">
 	<div  class="sorting" style="width:180px"><span><a href="/centralniy/genplan/map/houses/flats/?kvartira=4219" style="color:#008fa0">3 939 740.-</a></span></div>
 </td></tr>
-  
+
 <tr class="" onclick="document.location.href='/centralniy/genplan/map/houses/flats/?kvartira=4223'" onmouseover="this.className='over'" onmouseout="this.className=''"><td class="f">
 	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4223">1</a></div>
 </td><td>
@@ -501,7 +350,7 @@
 </td><td class="l">
 	<div  class="sorting" style="width:180px"><span><a href="/centralniy/genplan/map/houses/flats/?kvartira=4223" style="color:#008fa0">3 939 740.-</a></span></div>
 </td></tr>
-  
+
 <tr class="" onclick="document.location.href='/centralniy/genplan/map/houses/flats/?kvartira=4224'" onmouseover="this.className='over'" onmouseout="this.className=''"><td class="f">
 	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4224">1</a></div>
 </td><td>
@@ -517,7 +366,7 @@
 </td><td class="l">
 	<div  class="sorting" style="width:180px"><span><a href="/centralniy/genplan/map/houses/flats/?kvartira=4224" style="color:#008fa0">3 939 740.-</a></span></div>
 </td></tr>
-  
+
 <tr class="" onclick="document.location.href='/centralniy/genplan/map/houses/flats/?kvartira=4227'" onmouseover="this.className='over'" onmouseout="this.className=''"><td class="f">
 	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4227">1</a></div>
 </td><td>
@@ -533,7 +382,7 @@
 </td><td class="l">
 	<div  class="sorting" style="width:180px"><span><a href="/centralniy/genplan/map/houses/flats/?kvartira=4227" style="color:#008fa0">3 939 740.-</a></span></div>
 </td></tr>
-  
+
 <tr class="" onclick="document.location.href='/centralniy/genplan/map/houses/flats/?kvartira=4228'" onmouseover="this.className='over'" onmouseout="this.className=''"><td class="f">
 	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4228">1</a></div>
 </td><td>
@@ -549,7 +398,7 @@
 </td><td class="l">
 	<div  class="sorting" style="width:180px"><span><a href="/centralniy/genplan/map/houses/flats/?kvartira=4228" style="color:#008fa0">3 939 740.-</a></span></div>
 </td></tr>
-  
+
 <tr class="" onclick="document.location.href='/centralniy/genplan/map/houses/flats/?kvartira=4231'" onmouseover="this.className='over'" onmouseout="this.className=''"><td class="f">
 	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4231">1</a></div>
 </td><td>
@@ -565,7 +414,7 @@
 </td><td class="l">
 	<div  class="sorting" style="width:180px"><span><a href="/centralniy/genplan/map/houses/flats/?kvartira=4231" style="color:#008fa0">3 939 740.-</a></span></div>
 </td></tr>
-  
+
 <tr class="b" onclick="document.location.href='/centralniy/genplan/map/houses/flats/?kvartira=4232'" onmouseover="this.className='overb'" onmouseout="this.className='b'"><td class="f">
 	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4232">1</a></div>
 </td><td>
@@ -583,7 +432,7 @@
 </td></tr>
 </tbody></table>
 
-	
+
 <table cellspacing="0" style="width:100%;margin:20px 0px 0px 0px" id="sb">
 <tbody><tr><td width="50%"></td><td style="padding-right:26px">
     <img src="local/layout/images/empty.gif" width="30" height="1"><br>
@@ -602,13 +451,13 @@
 		<table cellspacing="0" class="foot">
 		<tr valign="top"><td>
 			<div class="clear"></div>
-			
+
 			<table cellspacing="0" width="100%">
 			<tr valign="top"><td style="padding:21px 30px 0px 30px">
 				<a href="/"><img src="local/layout/images/nv.gif"></a><br>
     		<div class="copy">&copy; Новые Ватутинки 2015.<br>Все права защищены.</div>
 			</td><td nowrap>
-				
+
 				<div class="parent">Микрорайон «Центральный»</div>
 				<table cellspacing="0">
 				<tr valign="top"><td nowrap>
@@ -621,11 +470,11 @@
                       <div class="lnk"><a href="/centralniy/contacts/">Контакты</a></div>
           				</td></tr>
 				</table>
- 
+
 				<div class="parent"><a href="/yuzhniy/">Квартал Южный</a></div>
-				
+
 			</td><td width="100%">
-			
+
 			</td><td nowrap style="padding-right:30px">
 								<div class="phone-bottom" id="comagic">+7 (495) 151-26-72</div>
         <br><br>
@@ -633,10 +482,10 @@
     			<a href="http://www.bilingo.ru" target="_blank" style="color:#4e5159;font-size:10px;text-decoration:none">разработка сайта</a><br>				</div>
 			</td></tr>
 			</table>
-			
+
 		</td></tr>
 		</table>
-		
+
 	</td><td class="r">
 		<img src="local/layout/images/right.gif"><br>
 	</td></tr>

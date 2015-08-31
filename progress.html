@@ -36,307 +36,115 @@
 	</td><td class="c">
 
 				
-    <table cellspacing="0" class="green-top">
-		<tr valign="top"><td style="padding:26px 30px 0px 30px">
-			<img src="local/layout/images/sell_ico.gif"><br>
-		</td><td width="100%" align="left" style="padding:20px 30px 0px 0px">
+    <!-- new central top -->
+    <div class="new-central-top">
+        <div class="new-central-top-title">Объекты в продаже<a href="#"></a></div>
+        <div class="new-central-top-content">
+            <div class="new-central-top-menu">
+                <ul>
+                    <li class="active"><div><img src="local/layout/images/central/new-central-top-icon-1.png" alt="" width="13" height="15" /> Квартиры <span>523</span></div></li>
+                    <li><a href="#"><img src="local/layout/images/central/new-central-top-icon-2.png" alt="" width="11" height="15" /> Вторичка <span>25</span></a></li>
+                    <li><a href="http://parking.nv-servis.com/"><img src="local/layout/images/central/new-central-top-icon-3.png" alt="" width="16" height="14" /> Машиноместа</a> <span>25</span></a></li>
+                    <li><a href="http://www.adwill.ru/offers/new.vatutinki"><img src="local/layout/images/central/new-central-top-icon-4.png" alt="" width="15" height="15" /> Нежилые помещения</a> <span>9</span></a></li>
+                </ul>
+            </div>
+            <div class="new-central-top-form">
+                <form method="post" name="fullsearch" action="/centralniy/search/">
+                    <input type="hidden" name="search" value="1" />
+                    <input type="hidden" name="sq_param" value="1" />
+                    <input type="hidden" name="flor_param" value="1" />
+                    <input type="hidden" name="korpus_param" value="1" />
 
-			<input type="hidden" name="cursell" id="cursell" value="kv">
-			<table cellspacing="0" class="sell-tbl">
-			<tr valign="top"><td>
-				<img src="local/layout/images/empty.gif" width="20" height="1"><br>
-			</td><td class="kv-act" id="kvsell" nowrap onclick="SetSell('kv');">
-				Квартиры <span>442</span><br>
-				<img src="local/layout/images/sell_str.gif" id="kvstr" style="margin-right:32px"><br>
-			</td><td>
-				<img src="local/layout/images/empty.gif" width="84" height="1"><br>
-			</td><td nowrap="" id="gvsell" class="gv">
-				<a href="http://parking.nv-servis.com/">Машиноместа</a> <span></span><br>
-				<img style="margin-right:38px" id="gvstr" src="local/layout/images/empty.gif"><br>
-			</td>
-				<img src="local/layout/images/empty.gif" width="84" height="1"><br>
-			</td><td>
-				<img height="1" width="84" src="local/layout/images/empty.gif"><br>
-			</td><td nowrap="" id="nvsell" class="nv">
-				<a target="_blank" href="http://www.adwill.ru/offers/new.vatutinki">Нежилые помещения</a><br>
-				<img style="margin-right:38px" id="nvstr" src="local/layout/images/empty.gif"><br>
-			</td>
-				<img src="local/layout/images/empty.gif" width="20" height="1"><br>
-			</td><td width="100%"></td></tr>
-			</table>
+                    <div class="new-central-top-field">
+                        <div class="new-central-top-label">Комнаты</div>
+                        <script>var kk=new Array();</script>
+                        <script>kk[0]=2;</script>
+                        <input type="hidden" name="k1" id="k1" value="2" />
+                        <script>kk[1]=1;</script>
+                        <input type="hidden" name="k2" id="k2" value="2" />
+                        <script>kk[2]=3;</script>
+                        <input type="hidden" name="k3" id="k3" value="2" />
+                        <div class="new-central-top-select">
+                            <select name="komnat" id="komnat">
+                                <option value="">Все</option>
+                                <option value="2">2</option>
+                                <option value="1">1</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
+                    </div>
 
-			<table cellspacing="0" width="100%" style="margin-top:13px">
-			<tr valign="top"><td width="100%">
+                    <div class="new-central-top-field">
+                        <div class="new-central-top-label">Цена</div>
+                        <input type="hidden" name="price_param" id="price_param" value="2" />
+                        <div class="layout-slider"><input id="price" type="slider" name="price" value="3939740;7677000" /></div>
+                        <script type="text/javascript">
+                            jQuery("#price").slider({ from:3939740, to:7677000, step:10, smooth:true, round:0, dimension:".-", limits:false });
+                        </script>
+                    </div>
 
-				<div id="divkv" style="display:block">
-				<form method="post" name="fullsearch" action="/centralniy/search/">
-				<input type="hidden" name="search" value="1">
-				<input type="hidden" name="sq_param" value="1">
-				<input type="hidden" name="flor_param" value="1">
-				<input type="hidden" name="korpus_param" value="1">
-				<table cellspacing="0" width="100%">
-				<tr valign="top"><td width="100%" style="padding-top:14px">
+                    <div class="new-central-top-adv-link"><a href="/centralniy/search/">Расширенный поиск</a></div>
 
-					<table cellspacing="0">
-					<tr valign="top"><td style="font-size:14px;color:#5e6269;padding:4px 10px 0px 0px">
-						Комнаты<br>
-					</td><td>
-												<script>var kk=new Array();</script>
-													<script>kk[0]=2;</script>
-														<input type="hidden" name="k1" id="k1" value="2">
-													<script>kk[1]=1;</script>
-														<input type="hidden" name="k2" id="k2" value="2">
-													<script>kk[2]=3;</script>
-														<input type="hidden" name="k3" id="k3" value="2">
-												<table cellspacing="0" class="gselect">
-						<tr><td><img src="local/layout/images/gselect_left.gif"></td><td class="select">
-							<div class="select">
-							<select name="komnat" id="komnat">
-								<option value="">Все</option>
-																	<option value="2">2</option>
-																	<option value="1">1</option>
-																	<option value="3">3</option>
-															</select>
-							</div>
-						</td></tr>
-						</table>
+                    <div class="new-central-top-submit" onclick="SetKV();">Искать</div>
 
-					</td><td style="font-size:14px;color:#5e6269;padding:4px 10px 0px 30px">
-						Цена<br>
-					</td><td style="padding-top:2px">
-												<input type="hidden" name="price_param" id="price_param" value="2">
-            						<div class="layout-slider" style="width:270px"><span style="display:inline-block;width:270px;padding:0px 5px;"><input id="price" type="slider" name="price" value="3939740;7677000"></span></div>
-						<script type="text/javascript" charset="utf-8">
-							jQuery("#price").slider({ from:3939740, to:7677000, step:10, smooth:true, round:0, dimension:".-", limits:false });
-						</script>
-
-					</td></tr>
-					</table>
-
-				</td><td>
-
-					<table cellspacing="0" class="short-search-btn" onclick="SetKV();">
-					<tr valign="top"><td>
-						Искать<br>
-					</td></tr>
-					</table>
-
-				</td></tr>
-				</table>
-				</form>
-				</div>
-
-				<div id="divnv" style="display:none">
-				</div>
-			</td><td style="padding:0px 7px">
-				<img src="local/layout/images/sell_sep.gif"><br>
-			</td><td>
-
-				<table cellspacing="0" class="short-search-btn-lnk">
-				<tr valign="top"><td>
-					<a href="/centralniy/search/">Расширенный<br>поиск</a><br>
-				</td></tr>
-				</table>
-
-			</td></tr>
-			</table>
-
-		</td></tr>
-		</table>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- new central top END -->
 		
-		<div id="print-head"><img src="local/layout/images/central/print_head.gif"></div>
+	<div id="print-head"><img src="local/layout/images/central/print_head.gif"></div>
 
-		<table cellspacing="0" class="park">
-		<tr valign="top"><td>
+    <!-- new central park -->
+    <div class="new-central-park">
+        <div class="new-central-park-logo"><a href="/"><img src="local/layout/images/central/logo_nv.png" alt="" width="127" height="50" /></a></div>
+        <div class="phone" id="comagic">+7 (495) 151-26-72</div>
 
-			<table cellspacing="0" width="100%">
-			<tr valign="top"><td style="padding:32px 0px 0px 30px">
-				<a href="/"><img src="local/layout/images/central/logo_nv.png"></a><br>
-			</td><td style="padding:28px 0px 0px 21px">
-				<a href="/centralniy/"><img src="local/layout/images/central/center_logo.png"></a><br>
-			</td><td width="100%" align="right" style="padding:10px 30px 0px 0px">
-
-								<div class="phone" id="comagic">+7 (495) 151-26-72</div>
-
-												<!--<table cellspacing="0" class="btn2">
-				<tr valign="top"><td>
-					<a href="#smartcallback" onclick="SCBchange('YES');SCBopen(1);return false;">Заказать обратный звонок</a><br>
-				</td></tr>
-				</table>-->
-				
-			</td></tr>
-			</table>
-
-			<table cellspacing="0" class="menu"><tr valign="top"><td><img src="local/layout/images/empty.gif" width="27" height="1"></td><td nowrap=""><!--<div onmouseover="this.className='act';" onmouseout="this.className='';"><a href="/">Главная</a></div>--></td><td><img src="local/layout/images/empty.gif" width="10" height="1"></td>
-      <td nowrap=""><div class="act"><a href="/centralniy/about/">О нас</a></div></td>  
-  <td><img src="local/layout/images/empty.gif" width="18" height="1"></td>
-  <td nowrap=""><div onmouseover="this.className='act';" onmouseout="this.className='';"><a href="/centralniy/news/">Новости</a></div></td>  
-  <td><img src="local/layout/images/empty.gif" width="18" height="1"></td>
-  <td nowrap=""><div onmouseover="this.className='act';" onmouseout="this.className='';"><a href="/centralniy/genplan/">Генплан</a></div></td>  
-  <td><img src="local/layout/images/empty.gif" width="18" height="1"></td>
-  <td nowrap=""><div onmouseover="this.className='act';" onmouseout="this.className='';"><a href="/centralniy/apartments/">Квартиры</a></div></td>  
-  <td><img src="local/layout/images/empty.gif" width="18" height="1"></td>
-  <td nowrap=""><div onmouseover="this.className='act';" onmouseout="this.className='';"><a href="/centralniy/sales/">Как купить</a></div></td>  
-  <td><img src="local/layout/images/empty.gif" width="18" height="1"></td>
-  <td nowrap=""><div onmouseover="this.className='act';" onmouseout="this.className='';"><a href="/centralniy/contacts/">Контакты</a></div></td>  
-        <td width="100%"></td></tr></table>
-      
-<table cellspacing="0" class="park-bottom">
-	<tbody><tr valign="top"><td align="left">
-		<img src="local/layout/images/central/center_left.gif"><br>
-	</td><td class="c"></td><td align="right">
-		<img src="local/layout/images/central/center_right.gif"><br>
-	</td></tr>
-	</tbody></table>
-
-
-<div style="padding-left:10px">
-	<table cellspacing="0" class="submenu sm-lvl-3">
-		<tbody>
-      <tr valign="top">
-        <td>
-          <div class="level-t" style="width:29px">&nbsp;</div>
-          <table cellspacing="0" class="submenu-bottom-clear">
-            <tbody>
-              <tr>
-                <td width="50%" class="bg"></td>
-                <td></td>
-                <td width="50%" class="bg"></td>
-              </tr>
-            </tbody>
-          </table>
-        </td>
-        <td nowrap="" width="33%" align="center">
-	       <div class="level-t"><a href="/centralniy/about/presentation/">Презентация</a></div>
-	         <table cellspacing="0" class="submenu-bottom">
-            <tbody>
-              <tr>
-                <td width="50%" class="bg"></td>
-                <td></td>
-                <td width="50%" class="bg"></td>
-              </tr>
-            </tbody>
-          </table>
-        </td>
-                <td>
-        <div class="level-t" style="width:35px">&nbsp;</div>
-        <table cellspacing="0" class="submenu-bottom">
-          <tbody>
-            <tr>
-              <td width="50%" class="bg"></td>
-              <td></td>
-              <td width="50%" class="bg"></td>
-            </tr>
-          </tbody>
-        </table>
-        </td>
-                <td nowrap="" width="33%" align="center">
-	       <div class="level-t-act"><a href="/centralniy/about/gallery/">Галерея</a></div>
-	         <table cellspacing="0" class="submenu-bottom">
-            <tbody>
-              <tr>
-                <td width="50%" class="bg"></td>
-                <td><img src="local/layout/images/menu/submenu_bottom_str.gif"></td>
-                <td width="50%" class="bg"></td>
-              </tr>
-            </tbody>
-          </table>
-        </td>
-                <td>
-        <div class="level-t" style="width:35px">&nbsp;</div>
-        <table cellspacing="0" class="submenu-bottom">
-          <tbody>
-            <tr>
-              <td width="50%" class="bg"></td>
-              <td></td>
-              <td width="50%" class="bg"></td>
-            </tr>
-          </tbody>
-        </table>
-        </td>
-                <td nowrap="" width="33%" align="center">
-	       <div class="level-t"><a href="/centralniy/about/documents/">Документы</a></div>
-	         <table cellspacing="0" class="submenu-bottom">
-            <tbody>
-              <tr>
-                <td width="50%" class="bg"></td>
-                <td></td>
-                <td width="50%" class="bg"></td>
-              </tr>
-            </tbody>
-          </table>
-        </td>
-                <td>
-        <div class="level-t" style="width:29px">&nbsp;</div>
-        <table cellspacing="0" class="submenu-bottom">
-          <tbody>
-            <tr>
-              <td width="50%" class="bg"></td>
-              <td></td>
-              <td width="50%" class="bg"></td>
-            </tr>
-          </tbody>
-        </table>
-        </td>
-			</tbody>
-    </table>
-<script>$('.sm-lvl-3').removeClass('submenu').addClass('submenu-str')</script>  <table cellspacing="0" class="submenu">
-	 <tbody>
-    <tr valign="top">
-      <td>
-        <div style="width:29px" class="level-f">&nbsp;</div>
-        <table cellspacing="0" class="submenu-bottom-clear">
-          <tbody>
-            <tr>
-              <td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td>
-            </tr>
-          </tbody>
-        </table>
-      </td>
-      <td width="50%" nowrap="" align="center">
-	      <div class="level-f-act">
-          <a href="/centralniy/about/gallery/photo/">Фото</a>
+        <div class="new-central-park-menu">
+            <ul>
+                <li class="active"><a href="/centralniy/about/">О нас</a></li>
+                <li><a href="/centralniy/news/">Новости</a></li>
+                <li><a href="/centralniy/genplan/">Генплан</a></li>
+                <li><a href="#">Документы</a></li>
+                <li><a href="/centralniy/apartments/">Квартиры</a></li>
+                <li><a href="/centralniy/sales/">Как купить</a></li>
+                <li class="new-central-park-menu-with-submenu">
+                    <a href="/centralniy/contacts/">Контакты</a>
+                    <ul>
+                        <li><a href="#">Как добраться</a></li>
+                        <li><a href="#">Реализующие компании</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
-	      <table cellspacing="0" class="submenu-bottom">
-          <tbody>
-            <tr>
-              <td width="50%" class="bg"></td><td><img src="local/layout/images/submenu_bottom_empty.png"></td><td width="50%" class="bg"></td>
-            </tr>
-          </tbody>
-        </table>
-      </td>
-      <td>
-        <div style="width:29px" class="level-f">&nbsp;</div>
-        <table cellspacing="0" class="submenu-bottom-clear">
-          <tbody>
-            <tr>
-              <td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td>
-            </tr>
-          </tbody>
-        </table>
-      </td>
-      <td width="50%" nowrap="" align="center">
-	      <div class="level-f">
-          <a href="/centralniy/about/gallery/surroundings/">Окружение</a>
-        </div>
-	      <table cellspacing="0" class="submenu-bottom">
-          <tbody>
-            <tr>
-              <td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td>
-            </tr>
-          </tbody>
-        </table>
-      </td>
-      
-      <td><div style="width:29px" class="level-f">&nbsp;</div><table cellspacing="0" class="submenu-bottom"><tbody><tr><td width="50%" class="bg"></td><td></td><td width="50%" class="bg"></td></tr></tbody></table></td>
-    </tr>
-	</tbody>
-</table>
-	</div>
-</td></tr>
 
-</table>
-<div style="background:#1f1f1f; padding:244px 0 30px;" id="cprn">
+        <div class="new-central-park-district">
+            <div class="new-central-park-district-title"><a href="/centralniy/"><img src="local/layout/images/central/new-central-park-district.png" alt="" width="337" height="59" /></a></div>
+            <div class="new-central-park-district-menu new-central-park-district-menu-district">
+                <div class="new-central-park-district-menu-icon"></div>
+                <div class="new-central-park-district-menu-list">
+                    <ul>
+                        <li class="active"><a href="#">Микрорайон «Центральный»</a></li>
+                        <li><a href="#">Квартал «Южный»</a></li>
+                        <li><a href="#">Посёлок «Синергия»</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="new-central-park-district-menu new-central-park-district-menu-video">
+                <div class="new-central-park-district-menu-icon"></div>
+                <div class="new-central-park-district-menu-list">
+                    <ul>
+                        <li><a href="#">Ход строительства</a></li>
+                        <li><a href="#">Видеотрансляция</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- new central park END -->
+
+
+<div style="background:#1f1f1f; padding:0 0 30px;" id="cprn">
 <div class="wrapper">
 	<div class="connected-carousels">
 		<div class="stage">
