@@ -2210,3 +2210,27 @@ div.shadow {
 .flat-likes {position:absolute; margin:513px 0 0 0; width:279px; text-align:center}
 
 .popup-in-sell-link {text-decoration:none}
+
+.ipoteka {padding:37px 30px 0 30px; background:#f2f6fa}
+.ipoteka-title {font:40px/40px v33r, sans-serif; color:#126ba3}
+.ipoteka-list {width:100%; margin:0; border-collapse:collapse}
+.ipoteka-list th {text-transform:uppercase; color:#546279; font:10px/20px v31r, sans-serif; padding:32px 0 11px 0; text-align:left; border-bottom:2px solid #00a1e4}
+.ipoteka-list th.ipoteka-col-1 {width:279px}
+.ipoteka-list th.ipoteka-col-2 {width:225px}
+.ipoteka-list th.ipoteka-col-3 {width:229px}
+.ipoteka-list th.ipoteka-col-5 {text-align:right}
+.ipoteka-list td {vertical-align:middle; color:#000; font:15px/20px v31r, sans-serif; padding:13px 0 16px 0; text-align:left; border-bottom:1px solid #ded2dd}
+.ipoteka-list td.ipoteka-col-5 {text-align:right}
+.ipoteka-order {text-align:center; padding:28px 0 0 0}
+.ipoteka-order a {display:inline-block; vertical-align:top; font:18px/38px v31r, sans-serif; color:#fefefe; padding:0 50px; height:40px; background:#00a1e4; text-decoration:none; border-radius:20px; box-shadow:0 1px 0 #136085}
+.ipoteka-text {min-height:587px; background:url(../images/central/ipotek.jpg) no-repeat right bottom; padding:0 530px 0 0}
+.ipoteka-text,
+.ipoteka-text ul,
+.ipoteka-text ul li,
+.ipoteka-text p {color:#546279; font:15px/20px v31r, sans-serif}
+.ipoteka-text h3 {color:#126ba3; font:20px/20px v33r, sans-serif; margin:38px 0 0 0; padding:0}
+.ipoteka-text p {margin:20px 0; padding:0}
+.ipoteka-text ul {margin:20px 0; padding:0; list-style:none}
+.ipoteka-text h3+ul {margin-top:12px}
+.ipoteka-text ul li {margin:10px 0; padding:0 0 0 20px; position:relative}
+.ipoteka-text ul li:before {content:""; display:block; width:7px; height:7px; position:absolute; left:3px; top:7px; background:#00a1e4; border-radius:4px}
