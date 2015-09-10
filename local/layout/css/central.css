@@ -947,8 +947,8 @@ div.num-same-tit {
 
 div.other-flat {
 	color:#006da5;
-	font-size:35px;
-	padding:9px 0px 17px 30px;
+	font-size:30px;
+	padding:26px 0px 21px 30px;
 }
 
 div.polus {
@@ -2234,3 +2234,37 @@ div.shadow {
 .ipoteka-text h3+ul {margin-top:12px}
 .ipoteka-text ul li {margin:10px 0; padding:0 0 0 20px; position:relative}
 .ipoteka-text ul li:before {content:""; display:block; width:7px; height:7px; position:absolute; left:3px; top:7px; background:#00a1e4; border-radius:4px}
+
+.flat-tbl-new {width:100%; border-collapse:collapse; margin:0; border-bottom:2px solid #00a1e4}
+.flat-tbl-new th {text-align:center; font:10px/14px v31r, sans-serif; text-transform:uppercase; color:#546279; padding:13px 0}
+.flat-tbl-new th a {text-decoration:none; color:#546279; font-size:10px; line-height:14px}
+.flat-tbl-new th a:hover {text-decoration:underline}
+.flat-tbl-new th span {display:inline-block; vertical-align:middle; width:7px; height:9px; background:url(../images/central/flat-tbl-arrows.png); margin:0 0 0 2px}
+.flat-tbl-new th.active span {background-position:-7px top}
+.flat-tbl-new th span.flat-tbl-new-sort-up {background-position:left -9px}
+.flat-tbl-new th.active span.flat-tbl-new-sort-up {background-position:-7px -9px}
+.flat-tbl-new th.flat-tbl-new-price {text-align:left; white-space:nowrap; width:1%}
+.flat-tbl-new td {text-align:center; font:15px/20px v31r, sans-serif; color:#000; border-top:1px solid #ded2dd; padding:18px 0 22px 0}
+.flat-tbl-new td a {color:#000; text-decoration:none; font-size:15px; line-height:20px}
+.flat-tbl-new td a:hover {text-decoration:underline}
+.flat-tbl-new td.active,
+.flat-tbl-new td.active a {color:#006da5; font-size:18px; font-family:v33r, sans-serif}
+.flat-tbl-new td.flat-tbl-new-price {text-align:left; white-space:nowrap; width:1%}
+.flat-tbl-new tr:first-child td {border-top:2px solid #00a1e4}
+.flat-tbl-new tbody tr:hover {background:#fff}
+
+.pager {text-align:center; font-size:0; line-height:0; letter-spacing:-1px; padding:41px 0 35px 0}
+.pager a {display:inline-block; vertical-align:middle; margin:0 6px; position:relative; border:2px solid #00a1e4; border-radius:17px; width:29px; height:29px; font:15px/29px v31r, sans-serif; letter-spacing:0; text-align:center; text-decoration:none; color:#00a1e4}
+.pager a.active,
+.pager a:hover {background:#00a1e4; color:#fff}
+.pager span {display:inline-block; vertical-align:middle; margin:0 6px; width:22px; height:6px; background:url(../images/central/pager-sep.png)}
+
+.flat-tbl-new-header {padding:0 0 25px 0}
+.flat-tbl-new-header:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.flat-tbl-new-title {float:left; color:#546279; font:22px/30px v33r, sans-serif; padding:1px 0 0 0}
+.flat-tbl-new-views {float:right; padding:8px 0 0 0}
+.flat-tbl-new-views-title {float:left; color:#546279; font:15px/18px v31r, sans-serif; padding:0 10px 0 0}
+.flat-tbl-new-view {float:left; width:25px; height:18px; margin:0 0 0 10px; background:url(../images/central/flat-tbl-views.png); opacity:.25; filter:alpha(opacity=25)}
+.flat-tbl-new-view-1 {background-position:left top}
+.flat-tbl-new-view-2 {background-position:-25px top}
+.flat-tbl-new-view.active {opacity:1; filter:alpha(opacity=100)}
