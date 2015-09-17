@@ -707,13 +707,393 @@ function ShowKorpusOnMap()
             $('.new-central-top').toggleClass('open');
         });
 
-        $('.new-central-top-title a').click(function(e) {
-            $('.new-central-top').removeClass('open');
+        $('.new-central-top-title').click(function(e) {
+            $('.new-central-top').toggleClass('open');
             e.preventDefault();
         });
 
         $('.flat-btn-print').click(function(e) {
             window.print();
+            e.preventDefault();
+        });
+
+        $('.progress').each(function() {
+            var curBlock = $(this);
+
+            curBlock.find('.progress-ctrl-preview li:first').addClass('active');
+
+            var monthsAll = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
+
+            function searchInArray(el, arr) {
+                var result = false;
+                for (var i = 0; i < arr.length; i++) {
+                    if (arr[i] == el) {
+                        result = true;
+                    }
+                }
+                return result;
+            }
+
+            var periodYears = [];
+
+            curBlock.find('.progress-ctrl-preview li').each(function() {
+                var curYear = Number($(this).data('year'));
+                if (!searchInArray(curYear, periodYears)) {
+                    periodYears.unshift(curYear);
+                }
+            });
+
+            var firstMonth = Number(curBlock.find('.progress-ctrl-preview li:last').data('month'));
+            var lastMonth = Number(curBlock.find('.progress-ctrl-preview li:first').data('month'));
+
+            function hasDate(newYear, newMonth) {
+                var result = false;
+                curBlock.find('.progress-ctrl-preview li').each(function() {
+                    var curYear = Number($(this).data('year'));
+                    var curMonth = Number($(this).data('month'));
+                    if (newYear == curYear && newMonth == curMonth) {
+                        result = true;
+                    }
+                });
+                return result;
+            }
+
+            var periodHTML = '';
+            for (var i = 0; i < periodYears.length; i++) {
+                periodHTML = '<li><span>' + periodYears[i] + '</span></li>' + periodHTML;
+
+                var startMonth = 1;
+                var endMonth = 12;
+                if (i == 0) {
+                    startMonth = firstMonth;
+                }
+                if (i == periodYears.length - 1) {
+                    endMonth = lastMonth;
+                }
+
+                for (var j = startMonth; j <= endMonth; j++) {
+                    if (hasDate(periodYears[i], j)) {
+                        periodHTML = '<li><a href="#" data-year="' + periodYears[i] + '" data-month="' + j + '">' + monthsAll[j - 1] + '</a></li>' + periodHTML;
+                    } else {
+                        periodHTML = '<li>' + monthsAll[j - 1] + '</li>' + periodHTML;
+                    }
+                }
+            }
+            curBlock.find('.progress-ctrl-periods-inner').html('<ul>' + periodHTML + '</ul>');
+            curBlock.find('.progress-ctrl-periods-inner a:first').parent().addClass('active');
+
+            if (curBlock.find('.progress-ctrl-periods-inner ul').width() <= curBlock.find('.progress-ctrl-periods-inner').width()) {
+                curBlock.find('.progress-ctrl-periods-next').css({'display': 'none'});
+            }
+
+            if (curBlock.find('.progress-ctrl-preview-inner ul').width() <= curBlock.find('.progress-ctrl-preview-inner').width()) {
+                curBlock.find('.progress-ctrl-preview-next').css({'display': 'none'});
+            }
+
+            curBlock.find('.progress-big').data('disableAnimation', true);
+            curBlock.find('.progress-big').data('curIndex', 0);
+            curBlock.find('.progress-ctrl-periods').data('disableAnimation', true);
+            curBlock.find('.progress-ctrl-periods').data('curIndex', 0);
+            curBlock.find('.progress-ctrl-preview').data('disableAnimation', true);
+            curBlock.find('.progress-ctrl-preview').data('curIndex', 0);
+
+            curBlock.find('.progress-ctrl-periods-next').click(function(e) {
+                var curBlock = $(this).parents().filter('.progress');
+
+                if (curBlock.find('.progress-ctrl-periods').data('disableAnimation')) {
+                    var curLeft = Number(curBlock.find('.progress-ctrl-periods ul').css('left').replace(/px/, ''));
+                    var curIndex = curBlock.find('.progress-ctrl-periods').data('curIndex');
+                    curIndex++;
+                    curLeft -= curBlock.find('.progress-ctrl-periods li').eq(curIndex - 1).outerWidth();
+
+                    curBlock.find('.progress-ctrl-periods-prev').css({'display': 'block'});
+                    if (curBlock.find('.progress-ctrl-periods-inner ul').width() + curLeft <= curBlock.find('.progress-ctrl-periods-inner').width()) {
+                        curBlock.find('.progress-ctrl-periods-next').css({'display': 'none'});
+                    }
+
+                    curBlock.find('.progress-ctrl-periods').data('curIndex', curIndex);
+                    curBlock.find('.progress-ctrl-periods').data('disableAnimation', false);
+                    curBlock.find('.progress-ctrl-periods ul').animate({'left': curLeft}, function() {
+                        curBlock.find('.progress-ctrl-periods').data('disableAnimation', true);
+                    });
+                }
+
+                e.preventDefault();
+            });
+
+            curBlock.find('.progress-ctrl-periods-prev').click(function(e) {
+                var curBlock = $(this).parents().filter('.progress');
+
+                if (curBlock.find('.progress-ctrl-periods').data('disableAnimation')) {
+                    var curLeft = Number(curBlock.find('.progress-ctrl-periods ul').css('left').replace(/px/, ''));
+                    var curIndex = curBlock.find('.progress-ctrl-periods').data('curIndex');
+                    curIndex--;
+                    curLeft += curBlock.find('.progress-ctrl-periods li').eq(curIndex).outerWidth();
+
+                    curBlock.find('.progress-ctrl-periods-next').css({'display': 'block'});
+                    if (curIndex == 0) {
+                        curBlock.find('.progress-ctrl-periods-prev').css({'display': 'none'});
+                    }
+
+                    curBlock.find('.progress-ctrl-periods').data('curIndex', curIndex);
+                    curBlock.find('.progress-ctrl-periods').data('disableAnimation', false);
+                    curBlock.find('.progress-ctrl-periods ul').animate({'left': curLeft}, function() {
+                        curBlock.find('.progress-ctrl-periods').data('disableAnimation', true);
+                    });
+                }
+
+                e.preventDefault();
+            });
+
+            curBlock.find('.progress-ctrl-preview-next').click(function(e) {
+                var curBlock = $(this).parents().filter('.progress');
+
+                if (curBlock.find('.progress-ctrl-preview').data('disableAnimation')) {
+                    var curLeft = Number(curBlock.find('.progress-ctrl-preview ul').css('left').replace(/px/, ''));
+                    var curIndex = curBlock.find('.progress-ctrl-preview').data('curIndex');
+                    curIndex++;
+                    curLeft -= curBlock.find('.progress-ctrl-preview li').eq(curIndex - 1).outerWidth();
+
+                    curBlock.find('.progress-ctrl-preview-prev').css({'display': 'block'});
+                    if (curBlock.find('.progress-ctrl-preview-inner ul').width() + curLeft <= curBlock.find('.progress-ctrl-preview-inner').width()) {
+                        curBlock.find('.progress-ctrl-preview-next').css({'display': 'none'});
+                    }
+
+                    curBlock.find('.progress-ctrl-preview').data('curIndex', curIndex);
+                    curBlock.find('.progress-ctrl-preview').data('disableAnimation', false);
+                    curBlock.find('.progress-ctrl-preview ul').animate({'left': curLeft}, function() {
+                        curBlock.find('.progress-ctrl-preview').data('disableAnimation', true);
+                    });
+                }
+
+                e.preventDefault();
+            });
+
+            curBlock.find('.progress-ctrl-preview-prev').click(function(e) {
+                var curBlock = $(this).parents().filter('.progress');
+
+                if (curBlock.find('.progress-ctrl-preview').data('disableAnimation')) {
+                    var curLeft = Number(curBlock.find('.progress-ctrl-preview ul').css('left').replace(/px/, ''));
+                    var curIndex = curBlock.find('.progress-ctrl-preview').data('curIndex');
+                    curIndex--;
+                    curLeft += curBlock.find('.progress-ctrl-preview li').eq(curIndex).outerWidth();
+
+                    curBlock.find('.progress-ctrl-preview-next').css({'display': 'block'});
+                    if (curIndex == 0) {
+                        curBlock.find('.progress-ctrl-preview-prev').css({'display': 'none'});
+                    }
+
+                    curBlock.find('.progress-ctrl-preview').data('curIndex', curIndex);
+                    curBlock.find('.progress-ctrl-preview').data('disableAnimation', false);
+                    curBlock.find('.progress-ctrl-preview ul').animate({'left': curLeft}, function() {
+                        curBlock.find('.progress-ctrl-preview').data('disableAnimation', true);
+                    });
+                }
+
+                e.preventDefault();
+            });
+
+            curBlock.find('.progress-big-next').click(function(e) {
+                var curBlock = $(this).parents().filter('.progress');
+
+                if (curBlock.find('.progress-big').data('disableAnimation')) {
+                    var curLeft = Number(curBlock.find('.progress-big ul').css('left').replace(/px/, ''));
+                    var curIndex = curBlock.find('.progress-big').data('curIndex');
+                    curIndex++;
+                    curLeft -= curBlock.find('.progress-big li').eq(curIndex - 1).outerWidth();
+
+                    curBlock.find('.progress-big-prev').css({'display': 'block'});
+                    if (curBlock.find('.progress-big ul').width() + curLeft <= curBlock.find('.progress-big').width()) {
+                        curBlock.find('.progress-big-next').css({'display': 'none'});
+                    }
+
+                    curBlock.find('.progress-ctrl-preview-inner li.active').removeClass('active');
+                    curBlock.find('.progress-ctrl-preview-inner li').eq(curIndex).addClass('active');
+                    var previewIndex = curBlock.find('.progress-ctrl-preview').data('curIndex');
+                    if (curIndex - previewIndex > 5) {
+                        curBlock.find('.progress-ctrl-preview-next').click();
+                    }
+                    var periodYear = curBlock.find('.progress-ctrl-preview-inner li').eq(curIndex).data('year');
+                    var periodMonth = curBlock.find('.progress-ctrl-preview-inner li').eq(curIndex).data('month');
+                    var newIndex = -1;
+                    curBlock.find('.progress-ctrl-periods li a').each(function() {
+                        var curYear = Number($(this).data('year'));
+                        var curMonth = Number($(this).data('month'));
+                        if (newIndex == -1 && periodYear == curYear && periodMonth == curMonth) {
+                            newIndex = curBlock.find('.progress-ctrl-periods li').index($(this).parent());
+                        }
+                    });
+                    curBlock.find('.progress-ctrl-periods li.active').removeClass('active');
+                    curBlock.find('.progress-ctrl-periods li').eq(newIndex).addClass('active');
+
+                    curBlock.find('.progress-big').data('curIndex', curIndex);
+                    curBlock.find('.progress-big').data('disableAnimation', false);
+                    curBlock.find('.progress-big ul').animate({'left': curLeft}, function() {
+                        curBlock.find('.progress-big').data('disableAnimation', true);
+                    });
+                }
+
+                e.preventDefault();
+            });
+
+            curBlock.find('.progress-big-prev').click(function(e) {
+                var curBlock = $(this).parents().filter('.progress');
+
+                if (curBlock.find('.progress-big').data('disableAnimation')) {
+                    var curLeft = Number(curBlock.find('.progress-big ul').css('left').replace(/px/, ''));
+                    var curIndex = curBlock.find('.progress-big').data('curIndex');
+                    curIndex--;
+                    curLeft += curBlock.find('.progress-big li').eq(curIndex).outerWidth();
+
+                    curBlock.find('.progress-big-next').css({'display': 'block'});
+                    if (curIndex == 0) {
+                        curBlock.find('.progress-big-prev').css({'display': 'none'});
+                    }
+
+                    curBlock.find('.progress-ctrl-preview-inner li.active').removeClass('active');
+                    curBlock.find('.progress-ctrl-preview-inner li').eq(curIndex).addClass('active');
+                    var previewIndex = curBlock.find('.progress-ctrl-preview').data('curIndex');
+                    if (curIndex - previewIndex < 0) {
+                        curBlock.find('.progress-ctrl-preview-prev').click();
+                    }
+                    var periodYear = curBlock.find('.progress-ctrl-preview-inner li').eq(curIndex).data('year');
+                    var periodMonth = curBlock.find('.progress-ctrl-preview-inner li').eq(curIndex).data('month');
+                    var newIndex = -1;
+                    curBlock.find('.progress-ctrl-periods li a').each(function() {
+                        var curYear = Number($(this).data('year'));
+                        var curMonth = Number($(this).data('month'));
+                        if (newIndex == -1 && periodYear == curYear && periodMonth == curMonth) {
+                            newIndex = curBlock.find('.progress-ctrl-periods li').index($(this).parent());
+                        }
+                    });
+                    curBlock.find('.progress-ctrl-periods li.active').removeClass('active');
+                    curBlock.find('.progress-ctrl-periods li').eq(newIndex).addClass('active');
+
+                    curBlock.find('.progress-big').data('curIndex', curIndex);
+                    curBlock.find('.progress-big').data('disableAnimation', false);
+                    curBlock.find('.progress-big ul').animate({'left': curLeft}, function() {
+                        curBlock.find('.progress-big').data('disableAnimation', true);
+                    });
+                }
+
+                e.preventDefault();
+            });
+
+            curBlock.find('.progress-ctrl-preview-inner li a').click(function(e) {
+                var curLi = $(this).parent();
+                if (!curLi.hasClass('active') && curBlock.find('.progress-big').data('disableAnimation')) {
+                    var curIndex = curBlock.find('.progress-ctrl-preview-inner li').index($(this).parent());
+                    curBlock.find('.progress-ctrl-preview-inner li.active').removeClass('active');
+                    curLi.addClass('active');
+
+                    var curLeft = -curIndex * curBlock.find('.progress-big li').eq(curIndex).outerWidth();
+
+                    if (curIndex == 0) {
+                        curBlock.find('.progress-big-prev').css({'display': 'none'});
+                    } else {
+                        curBlock.find('.progress-big-prev').css({'display': 'block'});
+                    }
+                    if (curBlock.find('.progress-big ul').width() + curLeft <= curBlock.find('.progress-big').width()) {
+                        curBlock.find('.progress-big-next').css({'display': 'none'});
+                    } else {
+                        curBlock.find('.progress-big-next').css({'display': 'block'});
+                    }
+
+                    var periodYear = curLi.data('year');
+                    var periodMonth = curLi.data('month');
+                    var newIndex = -1;
+                    curBlock.find('.progress-ctrl-periods li a').each(function() {
+                        var curYear = Number($(this).data('year'));
+                        var curMonth = Number($(this).data('month'));
+                        if (newIndex == -1 && periodYear == curYear && periodMonth == curMonth) {
+                            newIndex = curBlock.find('.progress-ctrl-periods li').index($(this).parent());
+                        }
+                    });
+                    curBlock.find('.progress-ctrl-periods li.active').removeClass('active');
+                    curBlock.find('.progress-ctrl-periods li').eq(newIndex).addClass('active');
+
+                    curBlock.find('.progress-big').data('curIndex', curIndex);
+                    curBlock.find('.progress-big').data('disableAnimation', false);
+                    curBlock.find('.progress-big ul').animate({'left': curLeft}, function() {
+                        curBlock.find('.progress-big').data('disableAnimation', true);
+                    });
+                }
+                e.preventDefault();
+            });
+
+            curBlock.find('.progress-ctrl-periods-inner li a').click(function(e) {
+                var curLi = $(this).parent();
+                if (!curLi.hasClass('active')) {
+                    var curIndex = curBlock.find('.progress-ctrl-periods-inner li').index($(this).parent());
+                    curBlock.find('.progress-ctrl-periods-inner li.active').removeClass('active');
+                    curLi.addClass('active');
+
+                    var periodYear = $(this).data('year');
+                    var periodMonth = $(this).data('month');
+                    var newIndex = -1;
+                    curBlock.find('.progress-ctrl-preview li').each(function() {
+                        var curYear = Number($(this).data('year'));
+                        var curMonth = Number($(this).data('month'));
+                        if (newIndex == -1 && periodYear == curYear && periodMonth == curMonth) {
+                            newIndex = curBlock.find('.progress-ctrl-preview li').index($(this));
+                        }
+                    });
+                    curBlock.find('.progress-ctrl-preview-inner li').eq(newIndex).find('a').click();
+
+                    if (newIndex > curBlock.find('.progress-ctrl-preview li').length - 6) {
+                        newIndex = curBlock.find('.progress-ctrl-preview li').length - 6;
+                    }
+                    var curLeft = -newIndex * curBlock.find('.progress-ctrl-preview li:first').outerWidth();
+
+                    curBlock.find('.progress-ctrl-preview-next').css({'display': 'block'});
+                    if (curBlock.find('.progress-ctrl-preview-inner ul').width() + curLeft <= curBlock.find('.progress-ctrl-preview-inner').width()) {
+                        curBlock.find('.progress-ctrl-preview-next').css({'display': 'none'});
+                    }
+                    curBlock.find('.progress-ctrl-preview-prev').css({'display': 'block'});
+                    if (newIndex == 0) {
+                        curBlock.find('.progress-ctrl-preview-prev').css({'display': 'none'});
+                    }
+
+                    curBlock.find('.progress-ctrl-preview').data('curIndex', newIndex);
+                    curBlock.find('.progress-ctrl-preview').data('disableAnimation', false);
+                    curBlock.find('.progress-ctrl-preview ul').animate({'left': curLeft}, function() {
+                        curBlock.find('.progress-ctrl-preview').data('disableAnimation', true);
+                    });
+                }
+                e.preventDefault();
+            });
+
+        });
+
+        $('.section-new-select div').click(function() {
+            var curBlock = $(this).parent();
+            if (curBlock.hasClass('open')) {
+                curBlock.removeClass('open');
+            } else {
+                $('.section-new-select.open').removeClass('open');
+                curBlock.addClass('open');
+            }
+        });
+
+        $(document).click(function(e) {
+            if ($(e.target).parents().filter('.section-new-select').length == 0) {
+                $('.section-new-select.open').removeClass('open');
+            }
+        });
+
+        $('.storages-tabs ul li a').click(function(e) {
+            var curLink = $(this);
+            if (!curLink.parent().hasClass('active')) {
+                $('.storages-tabs ul li.active').removeClass('active');
+                curLink.parent().addClass('active');
+                $('.storages-scheme img').stop(true, true).animate({'left': -curLink.data('left')});
+
+                var curIndex = $('.storages-tabs ul li').index(curLink.parent());
+                $('.storages-info-item').stop(true, true);
+                $('.storages-info-item:visible').fadeOut(function() {
+                    $('.storages-info-item').eq(curIndex).fadeIn();
+                });
+            }
             e.preventDefault();
         });
 

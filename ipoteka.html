@@ -39,7 +39,7 @@
 
     <!-- new central top -->
     <div class="new-central-top">
-        <div class="new-central-top-title">Объекты в продаже<a href="#"></a></div>
+        <a href="#" class="new-central-top-title">Объекты в продаже</a>
         <div class="new-central-top-content">
             <div class="new-central-top-menu">
                 <ul>
@@ -80,7 +80,9 @@
                         <input type="hidden" name="price_param" id="price_param" value="2" />
                         <div class="layout-slider"><input id="price" type="slider" name="price" value="3939740;7677000" /></div>
                         <script type="text/javascript">
+                            $('.new-central-top').addClass('open');
                             jQuery("#price").slider({ from:3939740, to:7677000, step:10, smooth:true, round:0, dimension:".-", limits:false });
+                            $('.new-central-top').removeClass('open');
                         </script>
                     </div>
 

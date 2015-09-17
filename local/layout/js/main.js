@@ -130,7 +130,7 @@ function FrmSbm()
 {
 	var r1=document.getElementById("rayon1");
 	var r2=document.getElementById("rayon2");
-	
+
 	if(r1.value!=1 && r2.value!=1)
 	{
 		alert("Необходимо выбрать хотябы один район");
@@ -142,14 +142,14 @@ function FrmSbmFull()
 {
 	var r1=document.getElementById("rayon1");
 	var r2=document.getElementById("rayon2");
-	
+
 	var k1=document.getElementById("k1");
 	var k2=document.getElementById("k2");
 	var k3=document.getElementById("k3");
 	var k4=document.getElementById("k4");
-	
+
 	var f=0;
-	
+
 	if(r1.value!=1 && r2.value!=1)
 	{
 		alert("Необходимо выбрать хотябы один район");
@@ -160,8 +160,8 @@ function FrmSbmFull()
 		if(k2 && k2.value==1) f=1;
 		if(k3 && k3.value==1) f=1;
 		if(k4 && k4.value==1) f=1;
-		
-		if(f==0) 
+
+		if(f==0)
 		{
 			alert("Необходимо выбрать хотябы один тип комнат");
 		}
@@ -172,7 +172,7 @@ function FrmSbmFull()
 function SetRayon(pa, o)
 {
 	var r=document.getElementById("rayon"+pa);
-	
+
 	if(r)
 	{
 		if(r.value==1)
@@ -191,7 +191,7 @@ function SetRayon(pa, o)
 function SetKomnatSearch(p, o, pa)
 {
 	var s=document.getElementById("k"+p);
-	
+
 	if(s.value==2)
 	{
 		s.value=1;
@@ -207,7 +207,26 @@ function SetKomnatSearch(p, o, pa)
 function SetRayonSearch(pa, o)
 {
 	var r=document.getElementById("rayon"+pa);
-	
+
+	if(r)
+	{
+		if(r.value==1)
+		{
+			r.value=2;
+			o.src="local/layout/images/main/checkbox.gif";
+		}
+		else
+		{
+			r.value=1;
+			o.src="local/layout/images/main/checkbox_act.gif";
+		}
+	}
+}
+
+function SetTypeSearch(pa, o)
+{
+	var r=document.getElementById("type"+pa);
+
 	if(r)
 	{
 		if(r.value==1)
@@ -228,14 +247,14 @@ function SetPriceSearch(p, pa)
 	var price_param=document.getElementById("price_param");
 	var price1=document.getElementById("price1");
 	var price2=document.getElementById("price2");
-	
+
 	if(p==1)
 	{
 		price_param.value=1;
 		price1.src="local/layout/images/"+pa+"/radio_act.gif";
 		price2.src="local/layout/images/"+pa+"/radio.gif";
 	}
-	
+
 	if(p==2)
 	{
 		price_param.value=2;
@@ -259,7 +278,7 @@ function ChangeK(o)
 		if(document.getElementById("k2")) document.getElementById("k2").value=0;
 		if(document.getElementById("k3")) document.getElementById("k3").value=0;
 		if(document.getElementById("k4")) document.getElementById("k4").value=0;
-		
+
 		document.getElementById("k"+o.options[o.options.selectedIndex].value).value=1;
 	}
 }

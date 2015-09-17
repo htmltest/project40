@@ -39,7 +39,7 @@
 
     <!-- new central top -->
     <div class="new-central-top">
-        <div class="new-central-top-title">Объекты в продаже<a href="#"></a></div>
+        <a href="#" class="new-central-top-title">Объекты в продаже</a>
         <div class="new-central-top-content">
             <div class="new-central-top-menu">
                 <ul>
@@ -80,7 +80,9 @@
                         <input type="hidden" name="price_param" id="price_param" value="2" />
                         <div class="layout-slider"><input id="price" type="slider" name="price" value="3939740;7677000" /></div>
                         <script type="text/javascript">
+                            $('.new-central-top').addClass('open');
                             jQuery("#price").slider({ from:3939740, to:7677000, step:10, smooth:true, round:0, dimension:".-", limits:false });
+                            $('.new-central-top').removeClass('open');
                         </script>
                     </div>
 
@@ -154,15 +156,72 @@
         <a href="/centralniy/genplan/map/houses/korpus/?korpus=103&amp;section=520&amp;floor=2093" title="Секция 1">Секция 1</a><span class="sep">/</span><span>Этаж 12</span>
     </div>
 
-<div style="background:#f2f6fa;" id="cprn">
-<div style="padding-bottom:30px">
+<div style="background:#f2f6fa;padding:0" id="cprn">
+
+<div class="section-new-title">Квартиры в продаже на 12 этаже 1 секции</div>
+
+<!-- section new selects -->
+<div class="section-new-selects">
+
+    <!-- section new select -->
+    <div class="section-new-select">
+        <div>Корпус 34</div>
+        <ul>
+            <li><a href="#">Корпус 14</a></li>
+            <li><a href="#">Корпус 33</a></li>
+            <li class="active"><a href="#">Корпус 34</a></li>
+            <li><a href="#">Корпус 36</a></li>
+            <li><a href="#">Корпус 37</a></li>
+        </ul>
+    </div>
+    <!-- section new select END -->
+
+    <!-- section new select -->
+    <div class="section-new-select">
+        <div>Секция 1</div>
+        <ul>
+            <li class="active"><a href="#">Секция 1</a></li>
+            <li><a href="#">Секция 2</a></li>
+        </ul>
+    </div>
+    <!-- section new select END -->
+
+    <!-- section new select -->
+    <div class="section-new-select">
+        <div>Этаж 3</div>
+        <ul>
+            <li><a href="#">Этаж 1</a></li>
+            <li><a href="#">Этаж 2</a></li>
+            <li class="active"><a href="#">Этаж 3</a></li>
+            <li><a href="#">Этаж 4</a></li>
+            <li><a href="#">Этаж 5</a></li>
+            <li><a href="#">Этаж 6</a></li>
+            <li><a href="#">Этаж 7</a></li>
+            <li><a href="#">Этаж 8</a></li>
+            <li><a href="#">Этаж 9</a></li>
+            <li><a href="#">Этаж 10</a></li>
+            <li><a href="#">Этаж 11</a></li>
+            <li><a href="#">Этаж 12</a></li>
+            <li><a href="#">Этаж 13</a></li>
+            <li><a href="#">Этаж 14</a></li>
+            <li><a href="#">Этаж 15</a></li>
+            <li><a href="#">Этаж 16</a></li>
+            <li><a href="#">Этаж 17</a></li>
+        </ul>
+    </div>
+    <!-- section new select END -->
+
+</div>
+<!-- section new selects END -->
+
+<div style="padding-bottom:24px">
 <table cellspacing="0" width="100%">
 <tbody><tr valign="top"><td width="100%" style="padding-right:20px;height:100%" valign="middle" align="center">
 
 	<img src="local/layout/images/central/37/1_12.png"><br>
 
 </td><td style="border-left:1px solid #c3c3c3;padding:0px 20px">
-	<table cellspacing="0" class="print-flat-btn" style="position:absolute;margin:0px 0px 0px -774px">
+	<table cellspacing="0" class="print-flat-btn" style="position:absolute;margin:0px 0px 0px -765px">
 	<tbody><tr valign="top"><td onclick="window.print();">
 		Распечатать<br>
 	</td></tr>
@@ -170,8 +229,7 @@
 
 				<div style="position:absolute;width:184px;height:184px;margin:0px 0px 0px -219px"><img src="local/layout/images/central/37/in/sec1.png"></div>
 
-	<div class="flats-in-korp" style="padding-bottom:5px;padding-top:0px">Корпус 37</div><div class="flats-in-korp" style="padding-bottom:15px;padding-top:0px"><span style="line-height:30px">Квартиры в продаже на 12 этаже 1 секции</span></div>
-<div class="flat-v-tit" style="padding-top:20px"><a href="/centralniy/genplan/map/houses/flats/?kvartira=4210">2-комнатная квартира №41</a></div>
+<div class="flat-v-tit" style="padding-top:0px"><a href="/centralniy/genplan/map/houses/flats/?kvartira=4210">2-комнатная квартира №41</a></div>
 <div class="floor-flat">Общая площадь <br><span>56.2 м<sup>2</sup></span></div>
 <div class="flat-v-price" style="padding-top:4px">5 395 200.-</div>	<img src="local/layout/images/empty.gif" width="285" height="1"><br>
 <div class="flat-v-tit" style="padding-top:20px"><a href="/centralniy/genplan/map/houses/flats/?kvartira=4211">1-комнатная квартира №42</a></div>
@@ -189,12 +247,10 @@
 <table cellspacing="0" width="100%" style="background:#dfe6ed">
 <tbody><tr valign="top"><td>
 
-	<div class="clear"></div>
-
-	<table cellspacing="0" width="100%"><tbody><tr><td style="padding:11px 30px 27px 30px">
+	<table cellspacing="0" width="100%"><tbody><tr><td style="padding:38px 30px 27px 30px">
 	<table cellspacing="0" width="100%" style="margin-bottom:15px">
 	<tbody><tr valign="top"><td>
-		<div class="flats-in-korp">Остальные квартиры в корпусе 37</div>
+		<div class="flats-in-korp-new">Остальные квартиры в корпусе 37</div>
 	</td><td align="right">
 
 		<table cellspacing="0" class="bluesearch-btn">
@@ -205,243 +261,275 @@
 
 	</td></tr>
 	</tbody></table>
-		<table cellspacing="0" width="100%" id="sb">
-	<tbody><tr valign="top"><td style="padding:6px 40px 0px 0px;width:1%" nowrap="">
-		<div style="color:#5e6369;font-size:14px">Показать<br>квартиры</div>
-	</td>
-		<td style="padding-right:30px">
-		<table cellspacing="0">
-	<tbody><tr valign="top"><td style="padding:6px 9px 0px 0px">
-		<div class="select-flat-type-checked cur" onclick="document.location.href='/centralniy/genplan/map/houses/korpus/?room1=y&korpus=103&section=520&floor=2093'"></div>
-	</td><td nowrap="">
-		<div class="che-flat-type">1-комнатные</div>
-		<div class="che-flat-num">22</div>
 
-		<table cellspacing="0" class="var-flat-btn">
-		<tbody><tr><td nowrap="">
-			<a href="/centralniy/apartments/plans/1/">Варианты планировки</a><br>
-		</td></tr>
-		</tbody></table>
-				<div class="che-flat-price">от 3 939 740.-</div>
+    <!-- section flats -->
+    <div class="section-flats">
+        <div class="section-flats-title">Квартиры</div>
+        <div class="section-flats-item">
+            <div class="section-flats-item-name">
+                <a href="/centralniy/genplan/map/houses/korpus/?room1=y&korpus=103&section=520&floor=2093" class="checked"></a>
+                1-комнатные <span>[22]</span>
+            </div>
+            <div class="section-flats-item-price">от 3 939 740.-</div>
+            <div class="section-flats-item-variants"><a href="/centralniy/apartments/plans/1/">Варианты планировки</a></div>
+        </div>
+        <div class="section-flats-item">
+            <div class="section-flats-item-name">
+                <a href="/centralniy/genplan/map/houses/korpus/?room2=y&korpus=103&section=520&floor=2093" class="checked"></a>
+                2-комнатные <span>[50]</span>
+            </div>
+            <div class="section-flats-item-price">от 5 166 720.-</div>
+            <div class="section-flats-item-variants"><a href="/centralniy/apartments/plans/2/">Варианты планировки</a></div>
+        </div>
+    </div>
+    <!-- section flats END -->
 
-	</td></tr>
-	</tbody></table>
-	    </td>		<td style="padding-right:30px">
-    	<table cellspacing="0">
-	<tbody><tr valign="top"><td style="padding:6px 9px 0px 0px">
-		<div class="select-flat-type-checked cur" onclick="document.location.href='/centralniy/genplan/map/houses/korpus/?room2=y&korpus=103&section=520&floor=2093'"></div>
-	</td><td nowrap="">
-		<div class="che-flat-type">2-комнатные</div>
-		<div class="che-flat-num">50</div>
-
-		<table cellspacing="0" class="var-flat-btn">
-		<tbody><tr><td nowrap="">
-			<a href="/centralniy/apartments/plans/2/">Варианты планировки</a><br>
-		</td></tr>
-		</tbody></table>
-				<div class="che-flat-price">от 5 166 720.-</div>
-
-	</td></tr>
-	</tbody></table>
-
-    </td>
-    <td width="100%"></td></tr>
-	</tbody></table>
-  		<table cellspacing="0" class="flat-tbl">
-	<tbody><tr class="h"><td width="15%">
-		<div>Секция</div>
-		<a href="/centralniy/genplan/map/houses/korpus/?sortby=section_asc&korpus=103&section=520&floor=2093"><img src="local/layout/images/sort_up.gif" style="margin-right:4px" id="sb"></a><a href="/centralniy/genplan/map/houses/korpus/?sortby=section_desc&korpus=103&section=520&floor=2093"><img src="local/layout/images/sort_down.gif" id="sb"></a><br>
-	</td><td width="15%">
-		<div>Номер</div>
-		<a href="/centralniy/genplan/map/houses/korpus/?sortby=num_asc&korpus=103&section=520&floor=2093"><img src="local/layout/images/sort_up.gif" style="margin-right:4px" id="sb"></a><a href="/centralniy/genplan/map/houses/korpus/?sortby=num_desc&korpus=103&section=520&floor=2093"><img src="local/layout/images/sort_down.gif" id="sb"></a><br>
-	</td><td width="15%">
-		<div>Этаж</div>
-		<a href="/centralniy/genplan/map/houses/korpus/?sortby=floor_asc&korpus=103&section=520&floor=2093"><img src="local/layout/images/sort_up.gif" style="margin-right:4px" id="sb"></a><a href="/centralniy/genplan/map/houses/korpus/?sortby=floor_desc&korpus=103&section=520&floor=2093"><img src="local/layout/images/sort_down.gif" id="sb"></a><br>
-	</td><td width="20%">
-		<div>Номер на площадке</div>
-		<a href="/centralniy/genplan/map/houses/korpus/?sortby=numpl_asc&korpus=103&section=520&floor=2093"><img src="local/layout/images/sort_up.gif" style="margin-right:4px" id="sb"></a><a href="/centralniy/genplan/map/houses/korpus/?sortby=numpl_desc&korpus=103&section=520&floor=2093"><img src="local/layout/images/sort_down.gif" id="sb"></a><br>
-	</td><td width="15%">
-		<div>Комнаты</div>
-		<a href="/centralniy/genplan/map/houses/korpus/?sortby=kom_asc&korpus=103&section=520&floor=2093"><img src="local/layout/images/sort_up.gif" style="margin-right:4px" id="sb"></a><a href="/centralniy/genplan/map/houses/korpus/?sortby=kom_desc&korpus=103&section=520&floor=2093"><img src="local/layout/images/sort_down.gif" id="sb"></a><br>
-	</td><td width="20%">
-		<div>Площадь</div>
-		<a href="/centralniy/genplan/map/houses/korpus/?sortby=sq_asc&korpus=103&section=520&floor=2093"><img src="local/layout/images/sort_up.gif" style="margin-right:4px" id="sb"></a><a href="/centralniy/genplan/map/houses/korpus/?sortby=sq_desc&korpus=103&section=520&floor=2093"><img src="local/layout/images/sort_down.gif" id="sb"></a><br>
-	</td><td>
-		<div class="price" style="color:#008fa0">Стоимость</div>
-		<a href="/centralniy/genplan/map/houses/korpus/?sortby=price_asc&korpus=103&section=520&floor=2093"><img src="local/layout/images/sort_up_act.gif" style="margin-right:4px" id="sb"></a><a href="/centralniy/genplan/map/houses/korpus/?sortby=price_desc&korpus=103&section=520&floor=2093"><img src="local/layout/images/sort_down.gif" id="sb"></a><br>
-	</td></tr>
-
-<tr class="f" onclick="document.location.href='/centralniy/genplan/map/houses/flats/?kvartira=4211'" onmouseover="this.className='overf'" onmouseout="this.className='f'"><td class="f">
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4211">1</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4211">42</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4211">12</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4211">2</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4211">1</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4211">36.82</a> м<sup>2</sup></div>
-</td><td class="l">
-	<div  class="sorting" style="width:180px"><span><a href="/centralniy/genplan/map/houses/flats/?kvartira=4211" style="color:#008fa0">3 939 740.-</a></span></div>
-</td></tr>
-
-<tr class="" onclick="document.location.href='/centralniy/genplan/map/houses/flats/?kvartira=4215'" onmouseover="this.className='over'" onmouseout="this.className=''"><td class="f">
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4215">1</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4215">46</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4215">13</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4215">2</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4215">1</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4215">36.82</a> м<sup>2</sup></div>
-</td><td class="l">
-	<div  class="sorting" style="width:180px"><span><a href="/centralniy/genplan/map/houses/flats/?kvartira=4215" style="color:#008fa0">3 939 740.-</a></span></div>
-</td></tr>
-
-<tr class="" onclick="document.location.href='/centralniy/genplan/map/houses/flats/?kvartira=4216'" onmouseover="this.className='over'" onmouseout="this.className=''"><td class="f">
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4216">1</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4216">47</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4216">13</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4216">3</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4216">1</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4216">36.82</a> м<sup>2</sup></div>
-</td><td class="l">
-	<div  class="sorting" style="width:180px"><span><a href="/centralniy/genplan/map/houses/flats/?kvartira=4216" style="color:#008fa0">3 939 740.-</a></span></div>
-</td></tr>
-
-<tr class="" onclick="document.location.href='/centralniy/genplan/map/houses/flats/?kvartira=4219'" onmouseover="this.className='over'" onmouseout="this.className=''"><td class="f">
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4219">1</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4219">50</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4219">14</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4219">2</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4219">1</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4219">36.82</a> м<sup>2</sup></div>
-</td><td class="l">
-	<div  class="sorting" style="width:180px"><span><a href="/centralniy/genplan/map/houses/flats/?kvartira=4219" style="color:#008fa0">3 939 740.-</a></span></div>
-</td></tr>
-
-<tr class="" onclick="document.location.href='/centralniy/genplan/map/houses/flats/?kvartira=4223'" onmouseover="this.className='over'" onmouseout="this.className=''"><td class="f">
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4223">1</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4223">54</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4223">15</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4223">2</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4223">1</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4223">36.82</a> м<sup>2</sup></div>
-</td><td class="l">
-	<div  class="sorting" style="width:180px"><span><a href="/centralniy/genplan/map/houses/flats/?kvartira=4223" style="color:#008fa0">3 939 740.-</a></span></div>
-</td></tr>
-
-<tr class="" onclick="document.location.href='/centralniy/genplan/map/houses/flats/?kvartira=4224'" onmouseover="this.className='over'" onmouseout="this.className=''"><td class="f">
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4224">1</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4224">55</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4224">15</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4224">3</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4224">1</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4224">36.82</a> м<sup>2</sup></div>
-</td><td class="l">
-	<div  class="sorting" style="width:180px"><span><a href="/centralniy/genplan/map/houses/flats/?kvartira=4224" style="color:#008fa0">3 939 740.-</a></span></div>
-</td></tr>
-
-<tr class="" onclick="document.location.href='/centralniy/genplan/map/houses/flats/?kvartira=4227'" onmouseover="this.className='over'" onmouseout="this.className=''"><td class="f">
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4227">1</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4227">58</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4227">16</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4227">2</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4227">1</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4227">36.82</a> м<sup>2</sup></div>
-</td><td class="l">
-	<div  class="sorting" style="width:180px"><span><a href="/centralniy/genplan/map/houses/flats/?kvartira=4227" style="color:#008fa0">3 939 740.-</a></span></div>
-</td></tr>
-
-<tr class="" onclick="document.location.href='/centralniy/genplan/map/houses/flats/?kvartira=4228'" onmouseover="this.className='over'" onmouseout="this.className=''"><td class="f">
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4228">1</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4228">59</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4228">16</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4228">3</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4228">1</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4228">36.82</a> м<sup>2</sup></div>
-</td><td class="l">
-	<div  class="sorting" style="width:180px"><span><a href="/centralniy/genplan/map/houses/flats/?kvartira=4228" style="color:#008fa0">3 939 740.-</a></span></div>
-</td></tr>
-
-<tr class="" onclick="document.location.href='/centralniy/genplan/map/houses/flats/?kvartira=4231'" onmouseover="this.className='over'" onmouseout="this.className=''"><td class="f">
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4231">1</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4231">62</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4231">17</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4231">2</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4231">1</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4231">36.82</a> м<sup>2</sup></div>
-</td><td class="l">
-	<div  class="sorting" style="width:180px"><span><a href="/centralniy/genplan/map/houses/flats/?kvartira=4231" style="color:#008fa0">3 939 740.-</a></span></div>
-</td></tr>
-
-<tr class="b" onclick="document.location.href='/centralniy/genplan/map/houses/flats/?kvartira=4232'" onmouseover="this.className='overb'" onmouseout="this.className='b'"><td class="f">
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4232">1</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4232">63</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4232">17</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4232">3</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4232">1</a></div>
-</td><td>
-	<div><a href="/centralniy/genplan/map/houses/flats/?kvartira=4232">36.82</a> м<sup>2</sup></div>
-</td><td class="l">
-	<div  class="sorting" style="width:180px"><span><a href="/centralniy/genplan/map/houses/flats/?kvartira=4232" style="color:#008fa0">3 939 740.-</a></span></div>
-</td></tr>
-</tbody></table>
+		
 
 
-<table cellspacing="0" style="width:100%;margin:20px 0px 0px 0px" id="sb">
-<tbody><tr><td width="50%"></td><td style="padding-right:26px">
-    <img src="local/layout/images/empty.gif" width="30" height="1"><br>
-  </td><td align="center" style="color:#435063;font-size:15px" nowrap="">
-	Страница <strong>1</strong> из <strong>8</strong><br>
-</td><td style="padding-left:26px">
-   	<div class="blue-str" style="padding:7px 9px 7px 11px"><a href="/centralniy/genplan/map/houses/korpus/?page=2&korpus=103&section=520&floor=2093"><img src="local/layout/images/central/page_right.gif"></a></div><img src="local/layout/images/empty.gif" width="30" height="1"><br>
-  </td><td width="50%"></td></tr>
-</tbody></table>
+		<div class="flat-tbl-new-header">
+
+            <div class="flat-tbl-header-results"><a href="#"><small></small> Скачать результаты <span>(XLS, 15 КБ)</span></a></div>
+
+            <div class="flat-tbl-header-send"><a href="#"><small></small> Отправить по почте</a></div>
+
+            <div class="flat-tbl-new-views">
+                <div class="flat-tbl-new-views-title">Вид отображения</div>
+                <a href="#" class="flat-tbl-new-view flat-tbl-new-view-1 active"></a>
+                <a href="#" class="flat-tbl-new-view flat-tbl-new-view-2"></a>
+            </div>
+        </div>
+    <table class="flat-tbl-new">
+        <thead>
+            <tr>
+                <th><a href="#">секция <span class="flat-tbl-new-sort flat-tbl-new-sort-down"></span></a></th>
+                <th><a href="#">Номер <span class="flat-tbl-new-sort flat-tbl-new-sort-down"></span></a></th>
+                <th><a href="#">Этаж <span class="flat-tbl-new-sort flat-tbl-new-sort-down"></span></a></th>
+                <th><a href="#">Комнаты <span class="flat-tbl-new-sort flat-tbl-new-sort-down"></span></a></th>
+                <th><a href="#">Площадь <span class="flat-tbl-new-sort flat-tbl-new-sort-down"></span></a></th>
+                <th><a href="#">готовность <span class="flat-tbl-new-sort flat-tbl-new-sort-down"></span></a></th>
+                <th><a href="#">Дата заселения <span class="flat-tbl-new-sort flat-tbl-new-sort-down"></span></a></th>
+                <th class="flat-tbl-new-price active"><a href="#">Стоимость <span class="flat-tbl-new-sort flat-tbl-new-sort-down"></span></a></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="#">36</a></td>
+                <td><a href="#">46</a></td>
+                <td><a href="#">13</a></td>
+                <td><a href="#">1</a></td>
+                <td><a href="#">36.82</a></td>
+                <td><a href="#">II квартал 2015</a></td>
+                <td><a href="#">24.07.2015</a></td>
+                <td class="flat-tbl-new-price active"><a href="#">3 939 740.-</a></td>
+            </tr>
+            <tr>
+                <td><a href="#">36</a></td>
+                <td><a href="#">47</a></td>
+                <td><a href="#">13</a></td>
+                <td><a href="#">1</a></td>
+                <td><a href="#">36.82</a></td>
+                <td><a href="#">II квартал 2015</a></td>
+                <td><a href="#">24.07.2015</a></td>
+                <td class="flat-tbl-new-price active"><a href="#">3 939 740.-</a></td>
+            </tr>
+            <tr>
+                <td><a href="#">36</a></td>
+                <td><a href="#">50</a></td>
+                <td><a href="#">14</a></td>
+                <td><a href="#">1</a></td>
+                <td><a href="#">36.82</a></td>
+                <td><a href="#">II квартал 2015</a></td>
+                <td><a href="#">24.07.2015</a></td>
+                <td class="flat-tbl-new-price active"><a href="#">3 939 740.-</a></td>
+            </tr>
+            <tr>
+                <td><a href="#">36</a></td>
+                <td><a href="#">54</a></td>
+                <td><a href="#">15</a></td>
+                <td><a href="#">1</a></td>
+                <td><a href="#">36.82</a></td>
+                <td><a href="#">II квартал 2015</a></td>
+                <td><a href="#">24.07.2015</a></td>
+                <td class="flat-tbl-new-price active"><a href="#">3 939 740.-</a></td>
+            </tr>
+            <tr>
+                <td><a href="#">36</a></td>
+                <td><a href="#">58</a></td>
+                <td><a href="#">16</a></td>
+                <td><a href="#">1</a></td>
+                <td><a href="#">36.82</a></td>
+                <td><a href="#">II квартал 2015</a></td>
+                <td><a href="#">24.07.2015</a></td>
+                <td class="flat-tbl-new-price active"><a href="#">3 939 740.-</a></td>
+            </tr>
+            <tr>
+                <td><a href="#">36</a></td>
+                <td><a href="#">59</a></td>
+                <td><a href="#">16</a></td>
+                <td><a href="#">1</a></td>
+                <td><a href="#">36.82</a></td>
+                <td><a href="#">II квартал 2015</a></td>
+                <td><a href="#">24.07.2015</a></td>
+                <td class="flat-tbl-new-price active"><a href="#">3 939 740.-</a></td>
+            </tr>
+            <tr>
+                <td><a href="#">36</a></td>
+                <td><a href="#">46</a></td>
+                <td><a href="#">13</a></td>
+                <td><a href="#">1</a></td>
+                <td><a href="#">36.82</a></td>
+                <td><a href="#">II квартал 2015</a></td>
+                <td><a href="#">24.07.2015</a></td>
+                <td class="flat-tbl-new-price active"><a href="#">3 939 740.-</a></td>
+            </tr>
+            <tr>
+                <td><a href="#">36</a></td>
+                <td><a href="#">47</a></td>
+                <td><a href="#">14</a></td>
+                <td><a href="#">1</a></td>
+                <td><a href="#">36.82</a></td>
+                <td><a href="#">II квартал 2015</a></td>
+                <td><a href="#">24.07.2015</a></td>
+                <td class="flat-tbl-new-price active"><a href="#">3 939 740.-</a></td>
+            </tr>
+            <tr>
+                <td><a href="#">36</a></td>
+                <td><a href="#">50</a></td>
+                <td><a href="#">15</a></td>
+                <td><a href="#">1</a></td>
+                <td><a href="#">36.82</a></td>
+                <td><a href="#">II квартал 2015</a></td>
+                <td><a href="#">24.07.2015</a></td>
+                <td class="flat-tbl-new-price active"><a href="#">3 939 740.-</a></td>
+            </tr>
+            <tr>
+                <td><a href="#">36</a></td>
+                <td><a href="#">54</a></td>
+                <td><a href="#">16</a></td>
+                <td><a href="#">1</a></td>
+                <td><a href="#">36.82</a></td>
+                <td><a href="#">II квартал 2015</a></td>
+                <td><a href="#">24.07.2015</a></td>
+                <td class="flat-tbl-new-price active"><a href="#">3 939 740.-</a></td>
+            </tr>
+            <tr>
+                <td><a href="#">36</a></td>
+                <td><a href="#">36</a></td>
+                <td><a href="#">13</a></td>
+                <td><a href="#">1</a></td>
+                <td><a href="#">36.82</a></td>
+                <td><a href="#">II квартал 2015</a></td>
+                <td><a href="#">24.07.2015</a></td>
+                <td class="flat-tbl-new-price active"><a href="#">3 939 740.-</a></td>
+            </tr>
+            <tr>
+                <td><a href="#">36</a></td>
+                <td><a href="#">36</a></td>
+                <td><a href="#">13</a></td>
+                <td><a href="#">1</a></td>
+                <td><a href="#">36.82</a></td>
+                <td><a href="#">II квартал 2015</a></td>
+                <td><a href="#">24.07.2015</a></td>
+                <td class="flat-tbl-new-price active"><a href="#">3 939 740.-</a></td>
+            </tr>
+            <tr>
+                <td><a href="#">36</a></td>
+                <td><a href="#">36</a></td>
+                <td><a href="#">14</a></td>
+                <td><a href="#">1</a></td>
+                <td><a href="#">36.82</a></td>
+                <td><a href="#">II квартал 2015</a></td>
+                <td><a href="#">24.07.2015</a></td>
+                <td class="flat-tbl-new-price active"><a href="#">3 939 740.-</a></td>
+            </tr>
+            <tr>
+                <td><a href="#">36</a></td>
+                <td><a href="#">36</a></td>
+                <td><a href="#">15</a></td>
+                <td><a href="#">1</a></td>
+                <td><a href="#">36.82</a></td>
+                <td><a href="#">II квартал 2015</a></td>
+                <td><a href="#">24.07.2015</a></td>
+                <td class="flat-tbl-new-price active"><a href="#">3 939 740.-</a></td>
+            </tr>
+            <tr>
+                <td><a href="#">36</a></td>
+                <td><a href="#">36</a></td>
+                <td><a href="#">16</a></td>
+                <td><a href="#">1</a></td>
+                <td><a href="#">36.82</a></td>
+                <td><a href="#">II квартал 2015</a></td>
+                <td><a href="#">24.07.2015</a></td>
+                <td class="flat-tbl-new-price active"><a href="#">3 939 740.-</a></td>
+            </tr>
+            <tr>
+                <td><a href="#">36</a></td>
+                <td><a href="#">36</a></td>
+                <td><a href="#">16</a></td>
+                <td><a href="#">1</a></td>
+                <td><a href="#">36.82</a></td>
+                <td><a href="#">II квартал 2015</a></td>
+                <td><a href="#">24.07.2015</a></td>
+                <td class="flat-tbl-new-price active"><a href="#">3 939 740.-</a></td>
+            </tr>
+            <tr>
+                <td><a href="#">36</a></td>
+                <td><a href="#">36</a></td>
+                <td><a href="#">13</a></td>
+                <td><a href="#">1</a></td>
+                <td><a href="#">36.82</a></td>
+                <td><a href="#">II квартал 2015</a></td>
+                <td><a href="#">24.07.2015</a></td>
+                <td class="flat-tbl-new-price active"><a href="#">3 939 740.-</a></td>
+            </tr>
+            <tr>
+                <td><a href="#">36</a></td>
+                <td><a href="#">36</a></td>
+                <td><a href="#">14</a></td>
+                <td><a href="#">1</a></td>
+                <td><a href="#">36.82</a></td>
+                <td><a href="#">II квартал 2015</a></td>
+                <td><a href="#">24.07.2015</a></td>
+                <td class="flat-tbl-new-price active"><a href="#">3 939 740.-</a></td>
+            </tr>
+            <tr>
+                <td><a href="#">36</a></td>
+                <td><a href="#">36</a></td>
+                <td><a href="#">15</a></td>
+                <td><a href="#">1</a></td>
+                <td><a href="#">36.82</a></td>
+                <td><a href="#">II квартал 2015</a></td>
+                <td><a href="#">24.07.2015</a></td>
+                <td class="flat-tbl-new-price active"><a href="#">3 939 740.-</a></td>
+            </tr>
+            <tr>
+                <td><a href="#">36</a></td>
+                <td><a href="#">36</a></td>
+                <td><a href="#">16</a></td>
+                <td><a href="#">1</a></td>
+                <td><a href="#">36.82</a></td>
+                <td><a href="#">II квартал 2015</a></td>
+                <td><a href="#">24.07.2015</a></td>
+                <td class="flat-tbl-new-price active"><a href="#">3 939 740.-</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="pager">
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <span></span>
+        <a href="#">55</a>
+        <a href="#">56</a>
+        <a href="#">57</a>
+        <a href="#">57</a>
+    </div>
+
 		</td></tr></tbody></table>	</td></tr></tbody></table>
 
 
