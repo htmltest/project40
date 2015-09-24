@@ -2221,7 +2221,7 @@ div.shadow {
 .ipoteka-list td.ipoteka-col-5 {text-align:right}
 .ipoteka-order {text-align:center; padding:28px 0 0 0}
 .ipoteka-order a {display:inline-block; vertical-align:top; font:18px/38px v31r, sans-serif; color:#fefefe; padding:0 50px; height:40px; background:#00a1e4; text-decoration:none; border-radius:20px; box-shadow:0 1px 0 #136085}
-.ipoteka-text {min-height:587px; background:url(../images/central/ipotek.jpg) no-repeat right bottom; padding:0 530px 0 0}
+.ipoteka-text {min-height:587px; background:url(../images/central/ipotek.jpg) no-repeat right bottom; padding:0 530px 1px 0}
 .ipoteka-text,
 .ipoteka-text ul,
 .ipoteka-text ul li,
