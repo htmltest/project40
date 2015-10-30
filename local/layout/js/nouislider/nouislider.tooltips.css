@@ -1,0 +1,20 @@
+.noUi-tooltip {
+	display: block;
+	position: absolute;
+	background: #fff;
+	padding: 0px 10px;
+    color: #546279;
+    font-size: 18px;
+    line-height: 25px;
+    white-space: nowrap;
+}
+
+.noUi-handle-lower .noUi-tooltip {
+	right: 6px;
+    padding-right: 15px;
+}
+
+.noUi-handle-upper .noUi-tooltip {
+	left: 6px;
+    padding-left: 15px;
+}
