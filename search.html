@@ -8,8 +8,8 @@
     <link href="local/layout/css/main.css" rel="stylesheet" type="text/css" />
     <link href="local/layout/css/print.css" rel="stylesheet" type="text/css" media="print" />
     <meta name="format-detection" content="telephone=no"/>
-    <script type="text/javascript" src="local/layout/js/main.js" language="JavaScript"></script>
     <script type="text/javascript" src="local/layout/js/jquery.js"></script>
+    <script type="text/javascript" src="local/layout/js/main.js" language="JavaScript"></script>
     <link rel="stylesheet" href="local/layout/css/main_jslider.css" type="text/css">
     <script type="text/javascript" src="local/layout/js/jshashtable-2.1_src.js"></script>
     <script type="text/javascript" src="local/layout/js/jquery.numberformatter-1.2.3.js"></script>
@@ -51,135 +51,270 @@
       </table></td>
   </tr>
     </table>
-<table cellspacing="0" width="100%" style="background:#f2f6fa">
-      <tr valign="top">
-    <td align="center" style="padding-bottom:30px"><div style="width:1100px" align="left">
-	<div style="color:#8c416b;font-size:30px;padding:23px 0px 30px 0px">Поиск квартир в Новых Ватутинках</div>
+    <!-- new search -->
+    <div class="new-search">
+        <link rel="stylesheet" href="local/layout/js/chosen/chosen-main.css" />
+        <link rel="stylesheet" href="local/layout/js/nouislider/nouislider-main.css" />
+        <link rel="stylesheet" href="local/layout/js/nouislider/nouislider.tooltips.css" />
 
-	<form method="post" name="fullsearch">
-		<input type="hidden" name="search" value="1">
-		<input type="hidden" name="rayon1" id="rayon1" value="">
-		<input type="hidden" name="rayon2" id="rayon2" value="">
-		<input type="hidden" name="type1" id="type1" value="">
-		<input type="hidden" name="type2" id="type2" value="">
+        <form action="#" method="post">
+            <div class="new-search-title">Поиск квартир в Новых Ватутинках</div>
 
-		<table cellspacing="0">
-		<tr><td width="186">
-			<span class="param">Район</span><br>
-		</td><td style="padding:6px 10px 6px 0">
-			<img src="local/layout/images/main/checkbox.gif" class="cur" onclick="SetRayonSearch(1, this);"><br>
-		</td><td style="font-size:18px;color:#000;line-height:19px;">
-			&laquo;Центральный&raquo;<br>
-		</td><td style="padding:6px 10px 6px 30px">
-			<img src="local/layout/images/main/checkbox.gif" class="cur" onclick="SetRayonSearch(2, this);"><br>
-		</td><td style="font-size:18px;color:#000;line-height:19px;">
-			&laquo;Южный&raquo;<br>
-		</td></tr>
-		</table>
+            <div class="new-search-row">
+                <div class="new-search-label">Район</div>
+                <div class="new-search-radio">
+                    <input type="radio" name="district" value="1" checked="checked" />
+                    «Центральный»
+                </div>
+                <div class="new-search-radio">
+                    <input type="radio" name="district" value="2" />
+                    «Южный»
+                </div>
+            </div>
 
-		<div class="search-sep"></div>
+            <div class="new-search-row">
+                <div class="new-search-label">Готовность</div>
+                <div class="new-search-select new-search-select-1">
+                    <select name="ready">
+                        <option value="1">II квартал 2015</option>
+                        <option value="2">III квартал 2015</option>
+                        <option value="3">IV квартал 2015</option>
+                        <option value="4">I квартал 2016</option>
+                        <option value="5">II квартал 2016</option>
+                    </select>
+                </div>
+            </div>
 
-		<table cellspacing="0">
-		<tr><td width="186">
-			<span class="param">Тип</span><br>
-		</td><td style="padding:6px 10px 6px 0">
-			<img src="local/layout/images/main/checkbox.gif" class="cur" onclick="SetTypeSearch(1, this);"><br>
-		</td><td style="font-size:18px;color:#000;line-height:19px;">
-			Квартиры в собственности <a href="#" class="search-hint"></a><br>
-		</td><td style="padding:6px 10px 6px 30px">
-			<img src="local/layout/images/main/checkbox.gif" class="cur" onclick="SetTypeSearch(2, this);"><br>
-		</td><td style="font-size:18px;color:#000;line-height:19px;">
-			Новые квартиры <a href="#" class="search-hint"></a><br>
-		</td></tr>
-		</table>
+            <div class="new-search-row">
+                <div class="new-search-label">Корпус</div>
+                <div class="new-search-radio">
+                    <input type="radio" name="building" value="1" />
+                    Любой
+                </div>
+                <div class="new-search-radio new-search-radio-building">
+                    <input type="radio" name="building" value="2" checked="checked" />
+                    Выбрать на карте корпусов
+                </div>
+                <div class="new-search-building-count">Выбрано <span>0</span> корпусов</div>
+            </div>
 
-		<div class="search-sep"></div>
+            <div class="new-search-row">
+                <div class="new-search-label">Тип</div>
+                <div class="new-search-radio">
+                    <input type="radio" name="type" value="1" />
+                    Квартиры в собственности
+                </div>
+                <div class="new-search-hint">
+                    <div href="#" class="new-search-hint-link">?</div>
+                    <div class="new-search-hint-popup">
+                        <div class="new-search-hint-popup-top"></div>
+                        <div class="new-search-hint-popup-middle">
+                            <div class="new-search-hint-popup-middle-inner">
+                                Надо сказать, что созерцание индуцирует принцип восприятия. Априори, аджива подрывает онтологический предмет деятельности. Аджива, следовательно, реально порождает
+                            </div>
+                        </div>
+                        <div class="new-search-hint-popup-bottom"></div>
+                    </div>
+                </div>
+                <div class="new-search-radio">
+                    <input type="radio" name="type" value="2" checked="checked" />
+                    Новые квартиры
+                </div>
+                <div class="new-search-hint">
+                    <div href="#" class="new-search-hint-link">?</div>
+                    <div class="new-search-hint-popup">
+                        <div class="new-search-hint-popup-top"></div>
+                        <div class="new-search-hint-popup-middle">
+                            <div class="new-search-hint-popup-middle-inner">
+                                Надо сказать, что созерцание индуцирует принцип восприятия. Априори, аджива подрывает онтологический предмет деятельности. Аджива, следовательно, реально порождает
+                            </div>
+                        </div>
+                        <div class="new-search-hint-popup-bottom"></div>
+                    </div>
+                </div>
+            </div>
 
-		<table cellspacing="0">
-		<tr valign="top"><td width="186">
-			<span class="param">Квартиры</span><br>
-		</td>
-			      <td style="padding-right:30px">
-      	<input type="hidden" name="k1" id="k1" value="1">
-      	<table cellspacing="0">
-      	<tr valign="top"><td style="padding:2px 12px 0px 0px">
-      		<img src="local/layout/images/main/checkbox_act.gif" class="cur" onclick="SetKomnatSearch(1, this, 'main');"><br>
-      	</td><td nowrap>
-      		<div class="che-flat-type">1-комнатные</div>
-      		<div class="che-flat-num">[177]</div>
+            <div class="new-search-row">
+                <div class="new-search-label">Квартиры</div>
+                <div class="new-search-checkbox">
+                    <input type="checkbox" name="flats1" checked="checked" />
+                    1-комнатные <strong>[195]</strong>
+                    <span>от 3 939 740.-</span>
+                </div>
+                <div class="new-search-checkbox">
+                    <input type="checkbox" name="flats2" checked="checked" />
+                    2-комнатные <strong>[294]</strong>
+                    <span>от 5 166 720.-</span>
+                </div>
+                <div class="new-search-checkbox">
+                    <input type="checkbox" name="flats3" checked="checked" />
+                    3-комнатные <strong>[53]</strong>
+                    <span>от 7 030 800.-</span>
+                </div>
+            </div>
 
-      		<div class="che-flat-price">от 3 939 740.-</div>
+            <div class="new-search-row">
+                <div class="new-search-label">Площадь</div>
+                <div class="new-search-radio">
+                    <input type="radio" name="size" value="1" />
+                    Любая
+                </div>
+                <div class="new-search-radio" id="sizeRangeRadio">
+                    <input type="radio" name="size" value="2" checked="checked" />
+                    Диапазон
+                </div>
+                <input type="hidden" name="sizeRangeFrom" id="sizeRangeFrom" value="" />
+                <input type="hidden" name="sizeRangeTo" id="sizeRangeTo" value="" />
+                <div class="new-search-slider">
+                    <div class="new-search-slider-inner" id="new-search-slider-size"></div>
+                </div>
+            </div>
 
-      	</td></tr>
-      	</table>
+            <div class="new-search-row">
+                <div class="new-search-label">Этаж</div>
+                <div class="new-search-radio">
+                    <input type="radio" name="floor" value="1" />
+                    Любой
+                </div>
+                <div class="new-search-radio" id="floorOnlyRadio">
+                    <input type="radio" name="floor" value="2" checked="checked" />
+                    Только
+                </div>
+                <div class="new-search-select new-search-select-2">
+                    <select name="floorOnly" id="floorOnly">
+                        <option value="1">1 этаж</option>
+                        <option value="2" selected="selected">2 этаж</option>
+                        <option value="3">3 этаж</option>
+                        <option value="4">4 этаж</option>
+                        <option value="5">5 этаж</option>
+                        <option value="6">6 этаж</option>
+                        <option value="7">7 этаж</option>
+                        <option value="8">8 этаж</option>
+                        <option value="9">9 этаж</option>
+                        <option value="10">10 этаж</option>
+                        <option value="11">11 этаж</option>
+                        <option value="12">12 этаж</option>
+                        <option value="13">13 этаж</option>
+                        <option value="14">14 этаж</option>
+                        <option value="15">15 этаж</option>
+                        <option value="16">16 этаж</option>
+                        <option value="17">17 этаж</option>
+                    </select>
+                </div>
+                <div class="new-search-or">или</div>
+                <div class="new-search-radio" id="floorRangeRadio">
+                    <input type="radio" name="floor" value="3" />
+                    Выбор от
+                </div>
+                <div class="new-search-select new-search-select-3">
+                    <select name="floorFrom" id="floorFrom">
+                        <option value="1">1 этажа</option>
+                        <option value="2" selected="selected">2 этажа</option>
+                        <option value="3">3 этажа</option>
+                        <option value="4">4 этажа</option>
+                        <option value="5">5 этажа</option>
+                        <option value="6">6 этажа</option>
+                        <option value="7">7 этажа</option>
+                        <option value="8">8 этажа</option>
+                        <option value="9">9 этажа</option>
+                        <option value="10">10 этажа</option>
+                        <option value="11">11 этажа</option>
+                        <option value="12">12 этажа</option>
+                        <option value="13">13 этажа</option>
+                        <option value="14">14 этажа</option>
+                        <option value="15">15 этажа</option>
+                        <option value="16">16 этажа</option>
+                        <option value="17">17 этажа</option>
+                    </select>
+                </div>
+                <div class="new-search-to">до</div>
+                <div class="new-search-select new-search-select-4">
+                    <select name="floorTo" id="floorTo">
+                        <option value="1">1 этажа</option>
+                        <option value="2">2 этажа</option>
+                        <option value="3">3 этажа</option>
+                        <option value="4">4 этажа</option>
+                        <option value="5">5 этажа</option>
+                        <option value="6">6 этажа</option>
+                        <option value="7">7 этажа</option>
+                        <option value="8">8 этажа</option>
+                        <option value="9">9 этажа</option>
+                        <option value="10">10 этажа</option>
+                        <option value="11">11 этажа</option>
+                        <option value="12">12 этажа</option>
+                        <option value="13">13 этажа</option>
+                        <option value="14">14 этажа</option>
+                        <option value="15">15 этажа</option>
+                        <option value="16">16 этажа</option>
+                        <option value="17" selected="selected">17 этажа</option>
+                    </select>
+                </div>
+            </div>
 
-      </td>
-      <td style="padding-right:30px">
-      	<input type="hidden" name="k2" id="k2" value="1">
-      	<table cellspacing="0">
-      	<tr valign="top"><td style="padding:2px 12px 0px 0px">
-      		<img src="local/layout/images/main/checkbox_act.gif" class="cur" onclick="SetKomnatSearch(2, this, 'main');"><br>
-      	</td><td nowrap>
-      		<div class="che-flat-type">2-комнатные</div>
-      		<div class="che-flat-num">[262]</div>
+            <div class="new-search-row">
+                <div class="new-search-label">Стоимость</div>
+                <div class="new-search-radio">
+                    <input type="radio" name="price" value="1" />
+                    Любая
+                </div>
+                <div class="new-search-radio" id="priceRangeRadio">
+                    <input type="radio" name="price" value="2" checked="checked" />
+                    Диапазон
+                </div>
+                <input type="hidden" name="priceRangeFrom" id="priceRangeFrom" value="" />
+                <input type="hidden" name="priceRangeTo" id="priceRangeTo" value="" />
+                <div class="new-search-slider">
+                    <div class="new-search-slider-inner" id="new-search-slider-price"></div>
+                </div>
+            </div>
 
-      		<div class="che-flat-price">от 5 166 720.-</div>
+            <input type="hidden" name="isShort" id="isShort" value="0" />
 
-      	</td></tr>
-      	</table>
+            <div class="new-search-row new-search-row-short">
+                <div class="new-search-label new-search-label-2">Комнаты</div>
+                <div class="new-search-select new-search-select-4">
+                    <select name="rooms">
+                        <option value="0">Все</option>
+                        <option value="1">1 к.</option>
+                        <option value="2">2 к.</option>
+                        <option value="3">3 к.</option>
+                    </select>
+                </div>
+                <div class="new-search-label new-search-label-3">Стоимость</div>
+                <div class="new-search-radio" id="priceRangeRadioShort">
+                    <input type="radio" name="priceShort" value="2" checked="checked" />
+                    Диапазон
+                </div>
+                <input type="hidden" name="priceRangeFromShort" id="priceRangeFromShort" value="" />
+                <input type="hidden" name="priceRangeToShort" id="priceRangeToShort" value="" />
+                <div class="new-search-slider">
+                    <div class="new-search-slider-inner" id="new-search-slider-price-short"></div>
+                </div>
+            </div>
 
-      </td>
-      <td style="padding-right:30px">
-      	<input type="hidden" name="k3" id="k3" value="1">
-      	<table cellspacing="0">
-      	<tr valign="top"><td style="padding:2px 12px 0px 0px">
-      		<img src="local/layout/images/main/checkbox_act.gif" class="cur" onclick="SetKomnatSearch(3, this, 'main');"><br>
-      	</td><td nowrap>
-      		<div class="che-flat-type">3-комнатные</div>
-      		<div class="che-flat-num">[53]</div>
+            <div class="new-search-ctrl">
+                <div class="new-search-submit"><input type="submit" value="Применить фильтр" /></div>
+                <div class="new-search-close-link"><a href="#" rel="Развернуть поиск">Свернуть поиск</a></div>
+            </div>
 
-      		<div class="che-flat-price">от 7 030 800.-</div>
+        </form>
+        <script src="local/layout/js/chosen/chosen.jquery.min.js"></script>
+        <script src="local/layout/js/nouislider/nouislider.min.js"></script>
+        <script src="local/layout/js/nouislider/wNumb.js"></script>
+    </div>
+    <!-- new search END -->
 
-      	</td></tr>
-      	</table>
+<table cellspacing="0" width="100%" style="background:#f8fafc">
+<tbody><tr valign="top"><td align="center">
 
-      </td>
-		</tr>
-		</table>
-
-		<div class="search-sep"></div>
-
-				<input type="hidden" name="price_param" id="price_param" value="1">
-		<table cellspacing="0">
-		<tr><td width="186">
-			<span class="param">Стоимость</span><br>
-		</td><td style="padding:2px 10px 0 0">
-			<img src="local/layout/images/main/radio_act.gif" class="cur" id="price1" onclick="SetPriceSearch(1, 'main');"><br>
-		</td><td style="font-size:18px;color:#000;padding-right:30px;line-height:19px;">
-			Любая<br>
-		</td><td style="padding:2px 10px 0px 0">
-			<img src="local/layout/images/main/radio.gif" class="cur" id="price2" onclick="SetPriceSearch(2, 'main');"><br>
-		</td><td style="font-size:16px;color:#000;line-height:19px;">
-			Диапазон<br>
-		</td><td style="padding-left:100px">
-			<div class="layout-slider" style="width:190px"><span style="display:inline-block;width:190px;padding:0px 5px;"><input id="price" type="slider" name="price" value="3939740;9752000"></span></div>
-			<script type="text/javascript" charset="utf-8">
-				jQuery("#price").slider({ from:3939740, to:9752000, step:10, smooth:true, round:0, dimension:".-", limits:false, onstatechange: function(){ SetPriceSearch(2, 'main'); } });
-			</script>
-		</td></tr>
-		</table>
-
-		<center>
-			<table cellspacing="0" class="full-search-btn" onclick="FrmSbmFull();">
-			<tr valign="top"><td>
-				Искать<br>
-			</td></tr>
-			</table>
-		</center>
-	</form>
+	<table cellspacing="0" width="1160"><tbody><tr><td style="padding:38px 30px 27px 30px">
 
 		<div class="flat-tbl-new-header">
-            <div class="flat-tbl-new-title">Близкие по цене</div>
+            <div class="new-search-flat-tbl-title">542 квартиры</div>
+
+            <div class="flat-tbl-header-results"><a href="#"><small></small> Скачать результаты <span>(XLS, 15 КБ)</span></a></div>
+
+            <div class="flat-tbl-header-send"><a href="#"><small></small> Отправить по почте</a></div>
 
             <div class="flat-tbl-new-views">
                 <div class="flat-tbl-new-views-title">Вид отображения</div>
@@ -416,12 +551,12 @@
         <a href="#">56</a>
         <a href="#">57</a>
         <a href="#">57</a>
+
+        <a href="#" class="pager-all">Показать все результаты</a>
     </div>
 
-    </div>
-    </td>
-  </tr>
-    </table>
+		</td></tr></tbody></table>	</td></tr></tbody></table>
+
 <table cellspacing="0" class="foot" style="background:#2b3038 url('local/layout/images/foot.gif');">
       <tr valign="top">
     <td align="center"><div class="clear" style="width:100%;max-width:100%"></div>
@@ -440,5 +575,18 @@
       </table></td>
   </tr>
     </table>
+
+    <div class="new-search-results-preview">
+        <div class="new-search-results-preview-top"></div>
+        <div class="new-search-results-preview-middle">
+            <div class="new-search-results-preview-middle-inner">
+                <div class="new-search-results-preview-text">По выбранным параметрам<br />подходит <a href="#"><span>547</span> квартир</a></div>
+                <a href="#" class="new-search-results-preview-link">Показать</a>
+            </div>
+        </div>
+        <div class="new-search-results-preview-bottom"></div>
+        <a href="#" class="new-search-results-preview-close"></a>
+    </div>
+
 </body>
 </html>
