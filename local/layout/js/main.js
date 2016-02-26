@@ -390,30 +390,6 @@ function ChangeK(o)
             });
         }
 
-        if ($('#new-search-slider-price-short').length > 0) {
-            noUiSlider.create(document.getElementById('new-search-slider-price-short'), {
-                start: [3939740, 9827740],
-                tooltips: true,
-                range: {
-                    'min': 3939740,
-                    'max': 9827740
-                },
-                format: wNumb({
-                    decimals: 0,
-                    thousand: ',',
-                    postfix: '.-',
-                })
-            }).on('update', function(values, handle) {
-                var value = values[handle];
-                if (handle) {
-                    $('#priceRangeToShort').val(value.replace(/.-/g, '').replace(/,/g, ''));
-                } else {
-                    $('#priceRangeFromShort').val(value.replace(/.-/g, '').replace(/,/g, ''));
-                }
-                showResultsPreview($('#new-search-slider-price-short'));
-            });
-        }
-
         $('.new-search-close-link a').click(function(e) {
             $('.new-search').toggleClass('closed');
             var curLink = $(this);

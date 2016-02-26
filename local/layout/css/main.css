@@ -1055,6 +1055,7 @@ div.gazeta-grp-inner {
 
 .flat-tbl-new {width:100%; border-collapse:collapse; margin:0; border-bottom:2px solid #8c416b}
 .flat-tbl-new th {text-align:center; font:10px/14px v31r, sans-serif; text-transform:uppercase; color:#546279; padding:13px 0}
+.flat-tbl-new th.flat-tbl-new-district {text-align:left}
 .flat-tbl-new th a {text-decoration:none; color:#546279; font-size:10px; line-height:14px}
 .flat-tbl-new th a:hover {text-decoration:underline}
 .flat-tbl-new th span {display:inline-block; vertical-align:middle; width:7px; height:9px; background:url(../images/main/flat-tbl-arrows.png); margin:0 0 0 2px}
@@ -1063,6 +1064,7 @@ div.gazeta-grp-inner {
 .flat-tbl-new th.active span.flat-tbl-new-sort-up {background-position:-7px -9px}
 .flat-tbl-new th.flat-tbl-new-price {text-align:left; white-space:nowrap; width:1%}
 .flat-tbl-new td {text-align:center; font:15px/20px v31r, sans-serif; color:#000; border-top:1px solid #e2d5df; padding:18px 0 22px 0}
+.flat-tbl-new td.flat-tbl-new-district {text-align:left}
 .flat-tbl-new td a {color:#000; text-decoration:none; font-size:15px; line-height:20px}
 .flat-tbl-new td a:hover {text-decoration:underline}
 .flat-tbl-new td.active,
@@ -1124,14 +1126,21 @@ div.gazeta-grp-inner {
 .new-search-ctrl {padding:30px 0 0 0}
 .new-search-ctrl:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .new-search-submit {float:left}
+.new-search.closed .new-search-submit {display:none}
 .new-search-submit input {vertical-align:top; margin:0; padding:0 32px 0 57px; outline:none; color:#fff; background:#8c416b url(../images/central/new-search-submit.png) no-repeat 32px 12px; border:none; border:none; border-radius:20px; overflow:visible; height:40px; font:18px/38xp v31r, sans-serif; cursor:pointer; -webkit-appearance:none; box-shadow:0 1px 0 #51253e}
 .new-search-close-link {float:right}
 .new-search-close-link a {display:inline-block; vertical-align:top; font-size:18px; line-height:40px; position:relative; padding:0 0 0 21px; text-decoration:none; color:#8c416b}
 .new-search-close-link a:before {content:""; display:block; width:13px; height:8px; background:url(../images/main/new-search-close.png); position:absolute; left:0; top:50%; margin-top:-4px}
-.new-search.closed .new-search-close-link a:before {background-position:left -8px}
+.new-search.closed .new-search-close-link {float:left}
+.new-search.closed .new-search-close-link a {padding:0 30px; background:#8c416b; color:#fff; border-radius:20px}
+.new-search.closed .new-search-close-link a:before {display:none}
 .new-search-row-short {position:absolute; left:-9999px; top:-9999px}
 .new-search.closed .new-search-row {position:absolute; left:-9999px; top:-9999px}
-.new-search.closed .new-search-row-short {position:static; left:auto; top:auto}
+.new-search.closed .new-search-row-short {position:static; left:auto; top:auto; border:none; padding-bottom:12px}
+.new-search-row-short-col {float:left; width:186px}
+.new-search-row-short-title {font:22px/22px v33r, sans-serif; color:#1d1f22; padding:4px 0 9px 0}
+.new-search-row-short-value {font-size:15px; line-height:20px; color:#546279; padding:10px 0 0 0}
+.new-search-row-short-value span {font-size:15px; line-height:20px; color:#c48aaa}
 
 .new-search-results-preview {display:none; position:absolute; z-index:9999; left:0; top:0; width:303px; margin-left:-152px}
 .new-search-results-preview-top {float:left; width:100%; height:40px; background:url(../images/central/new-search-popup.png) -303px top}

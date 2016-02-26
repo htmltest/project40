@@ -2172,7 +2172,7 @@ div.shadow {
 
 .new-central-park-menu {position:absolute; left:0; bottom:6px; width:100%; height:30px; text-align:center}
 .new-central-park-menu > ul {display:inline-block; vertical-align:top; margin:0; padding:0; list-style:none; font:18px/28px v31r, sans-serif}
-.new-central-park-menu > ul > li {float:left; margin:0 27px; padding:0; position:relative}
+.new-central-park-menu > ul > li {float:left; margin:0 12px; padding:0; position:relative}
 .new-central-park-menu > ul > li > a {float:left; padding:0 19px; height:30px; text-decoration:none; border-radius:15px; color:#fff; position:relative}
 .new-central-park-menu > ul > li:hover > a,
 .new-central-park-menu > ul > li.active > a {background:#fff; color:#0069b2}
@@ -2473,3 +2473,18 @@ div.shadow {
 .flats-plans-title {font:30px/30px v31r, sans-serif; color:#00a1e4}
 .flats-plans-text {font:19px/21px v31r, sans-serif; color:#1d1f22; padding:16px 0 0 0}
 .flats-plans-text span {font-size:19px; line-height:21px; color:#00a1e4}
+.flats-plans-list {border-bottom:2px solid #00a1e4}
+.flats-plans-list:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.flats-plans-item {float:left; width:339px; height:279px; padding:0 0 0 20px; border-right:1px solid #dfe6ed; border-bottom:1px solid #dfe6ed; background:url(../images/central/flats-plans-rose.png) no-repeat 20px 220px}
+.flats-plans-item:nth-child(3n+1) {padding-left:0; background-position:left 220px}
+.flats-plans-item:nth-child(3n+3) {width:319px; border-right:0}
+.flats-plans-item-preview {float:left; line-height:0; padding:42px 0 0 0; width:169px}
+.flats-plans-item-text {float:left; width:150px; padding:25px 0 0 0}
+.flats-plans-item-param {font-size:15px; line-height:20px; color:#546279; padding:10px 0 0 0}
+.flats-plans-item-value {font:15px/20px v33r, sans-serif; color:#000}
+.flats-plans-item-value sup {position:absolute}
+.flats-plans-item-price {font-size:19px; color:#00a1e4}
+
+table.flat-tbl-new-plans {width:auto; margin-top:10px}
+table.flat-tbl-new-plans th {width:auto; padding-left:40px; white-space:nowrap}
+table.flat-tbl-new-plans th.flat-tbl-new-plans-plans-header-left {width:100%}
