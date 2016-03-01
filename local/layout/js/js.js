@@ -1255,6 +1255,15 @@ function ShowKorpusOnMap()
             e.preventDefault();
         });
 
+        $('.karta-flat-btn-bg').click(function() {
+            ShowKorpusOnMap();
+        });
+
+        $('.flat-map-bg').click(function() {
+            $('.flat-map').removeClass('open');
+            $('.add-basket-flat-btn a').removeClass('open');
+        });
+
     });
 
     $(window).load(function() {

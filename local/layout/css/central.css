@@ -2330,23 +2330,26 @@ div.shadow {
 .flat-tbl-header-send a {color:#00a1e4; text-decoration:none; font-size:15px}
 .flat-tbl-header-send small {display:inline-block; vertical-align:middle; width:22px; height:16px; background:url(../images/central/flat-tbl-header-send.png); margin:-4px 5px 0 0}
 
-.section-new-title {font:30px/30px v31r, sans-serif; color:#006da5; padding:22px 30px 0 30px}
+.section-new-title {font:30px/30px v31r, sans-serif; color:#00a1e4; padding:22px 30px 30px 30px}
 
-.section-new-selects {padding:23px 30px}
+.section-new-selects {padding:5px 30px 43px 30px}
 .section-new-selects:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .section-new-select {float:left; width:214px; margin:0 0 0 20px; position:relative}
 .section-new-select:first-child {margin:0}
-.section-new-select div {border:2px solid #006da5; position:relative; cursor:pointer; height:26px; padding:0 0 0 15px; color:#000; font-size:15px; line-height:26px; border-radius:15px}
+.section-new-select div {position:relative; cursor:pointer; height:30px; padding:0 0 0 15px; color:#546279; font-size:15px; line-height:30px; border-radius:15px; background:#f2f6fa}
 .section-new-select.open div {border-radius:15px 15px 0 0}
-.section-new-select div:after {content:""; display:block; width:0; height:0; border-top:8px solid #006da5; border-left:4px solid transparent; border-right:4px solid transparent; position:absolute; right:14px; top:9px}
+.section-new-select div:after {content:""; display:block; width:0; height:0; border-top:8px solid #006da5; border-left:4px solid transparent; border-right:4px solid transparent; position:absolute; right:16px; top:11px}
 .section-new-select.open div:after {border-top:none; border-bottom:8px solid #006da5}
-.section-new-select ul {display:none; z-index:99; position:absolute; left:0; top:100%; width:100%; max-height:200px; overflow:auto; margin:-2px 0 0 0; padding:0; list-style:none; box-sizing:border-box; border:2px solid #006da5; border-radius:0 0 15px 15px; border-top:1px solid #006da5; background:#f2f6fa}
+.section-new-select ul {display:none; z-index:99; position:absolute; left:0; top:100%; width:100%; max-height:200px; overflow:auto; margin:0; padding:0; list-style:none; border-radius:0 0 15px 15px; background:#f2f6fa}
 .section-new-select.open ul {display:block}
 .section-new-select ul li {margin:0; padding:0}
 .section-new-select ul li a {display:block; padding:0 15px; font-size:15px; line-height:26px; text-decoration:none; color:#00}
 .section-new-select ul li a:hover {background:#dfe6ed}
-.section-new-select ul li.active a {background:#006da5; color:#fff}
+.section-new-select ul li.active a {background:#00a1e4; color:#fff}
 .section-new-select ul li:last-child a {border-radius:0 0 15px 15px}
+
+.section-new-flats {width:307px}
+.section-new-flats .flat-map-info-item > div {opacity:1}
 
 .flats-in-korp-new {font-size:30px; line-height:40px; color:#006da5}
 
@@ -2492,7 +2495,8 @@ div.shadow {
 .flats-plans-text span {font-size:19px; line-height:21px; color:#00a1e4}
 .flats-plans-list {border-bottom:2px solid #00a1e4}
 .flats-plans-list:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
-.flats-plans-item {float:left; width:339px; height:279px; padding:0 0 0 20px; border-right:1px solid #dfe6ed; border-bottom:1px solid #dfe6ed; background:url(../images/central/flats-plans-rose.png) no-repeat 20px 220px}
+.flats-plans-item {float:left; width:339px; height:279px; padding:0 0 0 20px; border-right:1px solid #dfe6ed; text-decoration:none; border-bottom:1px solid #dfe6ed; background:url(../images/central/flats-plans-rose.png) no-repeat 20px 220px}
+.flats-plans-item:hover {outline:1px solid #00a1e4; position:relative}
 .flats-plans-item:nth-child(3n+1) {padding-left:0; background-position:left 220px}
 .flats-plans-item:nth-child(3n+3) {width:319px; border-right:0}
 .flats-plans-item-preview {float:left; line-height:0; padding:42px 0 0 0; width:169px}
@@ -2573,12 +2577,18 @@ table.flat-tbl-new-plans th.flat-tbl-new-plans-plans-header-left {width:100%}
 
 .flat-map-info {float:left; width:308px; height:611px; background:#f2f6fa; border-radius:0 20px 20px 0}
 .flat-map-info-text-1 {color:#00a1e4; font-size:30px; line-height:30px; padding:25px 0 0 30px}
+.section-new-flats .flat-map-info-text-1 {padding-top:0}
 .flat-map-info-text-2 {color:#1d1f22; font:22px/20px v33r, sans-serif; padding:17px 40px 28px 30px}
 .flat-map-info-item {border-top:1px solid #d4dee8; padding:13px 0 28px 30px}
 .flat-map-info-item > div {opacity:.5}
 .flat-map-info-item.active > div {opacity:1}
 .flat-map-info-item-title {font-size:19px; line-height:19px; color:#1d1f22}
+.flat-map-info-item-title a {text-decoration:none; color:#1d1f22}
+.flat-map-info-item-title a:hover {color:#00a1e4; text-decoration:underline}
 .flat-map-info-item-size {font-size:15px; line-height:20px; color:#546279; padding:12px 0 0 0}
 .flat-map-info-item-size-value {font:15px/20px v33r, sans-serif; color:#546279}
 .flat-map-info-item-size-value sup {position:absolute}
 .flat-map-info-item-price {font:22px/20px v33r, sans-serif; color:#00a1e5; padding:14px 0 0 0}
+
+.flat-sheme-point-2 {position:relative; display:inline-block; left:auto; top:auto}
+.flat-sheme-point-2 img {position:relative}
