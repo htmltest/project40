@@ -404,8 +404,8 @@ table.plan-legend td {
 }
 
 table.marker-korpus {
-	width:30px;
-	height:42px;
+	width:53px;
+	height:71px;
 	position:absolute;
 	margin:0px 0px 0px 0px;
 }
@@ -430,12 +430,12 @@ table.marker-korpus-selled td {
 table.marker-korpus td div, table.marker-korpus-selled td div {
 	color:#fff;
 	font-family:'v33r';
-	font-size:16px;
-	line-height:16px;
+	font-size:21px;
+	line-height:21px;
 	text-align:center;
 	position:absolute;
-	width:25px;
-	padding-top:5px;
+	width:53px;
+	padding-top:15px;
 	margin:0px;
 }
 
@@ -999,10 +999,12 @@ table.print-flat-btn td {
 }
 
 table.karta-flat-btn td {
-	padding:5px 13px 6px 32px;
+	padding:0 16px 0 40px;
 	color:#fff;
 	text-decoration:none;
-	font-size:14px;
+	font-size:12px;
+    height:30px;
+    line-height:30px;
 	cursor:hand;
 	cursor:pointer;
 }
@@ -1015,7 +1017,7 @@ div.flat-p-t {
 }
 
 table.karta-flat-btn-act {
-	background:#00a1e4 url('../images/central/karta_btn_close.gif') no-repeat 13px 6px;
+	background:#00a1e4 url('../images/central/karta_btn_close.png') no-repeat 15px 8px;
 	border-radius:24px;
 	border-top-left-radius:24px;
 	border-top-right-radius:24px;
@@ -1024,13 +1026,16 @@ table.karta-flat-btn-act {
 	box-shadow:0 1px 0px rgba(153,153,153,1.0);
 	position:absolute;
 	margin:547px 0px 0px 0px;
+    z-index:200;
 }
 
 table.karta-flat-btn-act td {
-	padding:5px 17px 6px 38px;
+	padding:0 16px 0 40px;
 	color:#fff;
 	text-decoration:none;
-	font-size:14px;
+	font-size:12px;
+    height:30px;
+    line-height:30px;
 	cursor:hand;
 	cursor:pointer;
 }
@@ -1058,13 +1063,17 @@ div.flat-p-t span sup {
 
 table.flat-ipoteka-tbl-buy {
 	width:100%;
-	border-top:1px solid #c3c3c3;
-	border-bottom:1px solid #c3c3c3;
+	border-top:1px solid #dfe6ed;
+	border-bottom:1px solid #dfe6ed;
 	margin:21px 0px 0px 0px;
 }
 
 table.flat-ipoteka-tbl-buy td {
-	padding:22px 0px 26px 0px;
+	padding:15px 0px 22px 0;
+}
+
+table.flat-ipoteka-tbl-buy td:first-child {
+    padding-left:29px;
 }
 
 table.flat-ipoteka-tbl-buy td a, table.flat-ipoteka-tbl-buy td a:hover {
@@ -1078,10 +1087,10 @@ table.flat-ipoteka-tbl-buy td a:hover {
 }
 
 div.flat-price {
-	color:#008fa0;
-	font-size:48px;
+	color:#00a1e5;
+	font-size:50px;
 	font-family:'v33r';
-	padding:17px 0px 13px 0px;
+	padding:24px 0px 5px 29px;
 }
 
 table.flat-otd td {
@@ -1103,33 +1112,7 @@ table.flat-otd span.act {
 	font-family:'v33r';
 }
 
-table.add-basket-flat-btn {
-	background:#214c63 url('../images/central/add_basket.gif') no-repeat 17px center;
-	border-radius:24px;
-	border-top-left-radius:24px;
-	border-top-right-radius:24px;
-	border-bottom-left-radius:24px;
-	border-bottom-right-radius:24px;
-	box-shadow:0 1px 0px rgba(89,89,89,1.0);
-	margin:558px 0px 0px 0px;
-	position:absolute;
-}
-
-table.add-basket-flat-btn td {
-	padding:9px 22px 10px 45px;
-}
-
-table.add-basket-flat-btn td a, table.add-basket-flat-btn td a:hover {
-	color:#fff;
-	text-decoration:none;
-	font-size:19px;
-}
-
-table.add-basket-flat-btn td a:hover {
-	color:#fff;
-}
-
-div.inbasket {
+.inbasket {
 	font-size:36px;
 	color:#c6eeff;
 	padding:19px 0px 19px 53px;
@@ -1150,7 +1133,7 @@ table.bluebasket-btn {
 	border-bottom-right-radius:24px;
 	box-shadow:0 1px 0px rgba(6,28,39,1.0);
 	position:absolute;
-	margin-top:600px;
+	margin-top:585px;
 	margin-left:21px;
 }
 
@@ -2030,12 +2013,45 @@ table.geo-btn td {
 }
 
 div.map {
-	width:532px;
-	height:564px;
+	width:504px;
+	height:504px;
 	position:absolute;
-	margin:-19px 0px 0px -4px;
+	margin:-21px 0px 0px -44px;
 	z-index:200;
-	text-shadow:0px 2px 2px #000;
+	border: 20px solid #f2f6fa;
+    border-radius:20px;
+    box-shadow:0 4px 10px rgba(12, 10, 5, .43);
+    background:#f2f6fa;
+}
+
+div.map:after {
+    content:"";
+    display:block;
+    width:17px;
+    height:9px;
+    background:url(../images/central/map-arrow.png);
+    position:absolute;
+    left:86px;
+    bottom:-29px;
+}
+
+.map-img {
+    border-radius:16px;
+}
+
+.karta-flat-btn-bg {
+    content:"";
+    display:none;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    z-index:199;
+    background:rgba(0, 0, 0, .8);
+}
+.karta-flat-btn-act+.karta-flat-btn-bg {
+    display:block;
 }
 
 #print-head, #sbm {
@@ -2196,16 +2212,17 @@ div.shadow {
 .plan-shadow {position:absolute; width:1100px; height:153px; background:url(../images/central/map-shadow.png)}
 
 .flat-btns:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
-.flat-btns a {float:left; text-decoration:none; color:#fff; padding:0 15px 0 40px; height:30px; font:14px/30px v31r, sans-serif; background:#9bafd1; background-repeat:no-repeat; border-radius:15px; margin:0 0 0 20px; box-shadow:0 1px 0px rgba(153, 153, 153, 1)}
+.flat-btns a {float:left; text-decoration:none; color:#fff; height:30px; font:12px/30px v31r, sans-serif; background:#9bafd1; background-repeat:no-repeat; border-radius:15px; margin:0 0 0 5px; box-shadow:0 1px 0px rgba(153, 153, 153, 1)}
 .flat-btns a:first-child {margin:0}
-.flat-btns a.flat-btn-print {background-image:url(../images/central/flat-btn-print.png); background-position:13px 8px}
-.flat-btns a.flat-btn-pdf {background-image:url(../images/central/flat-btn-pdf.png); background-position:20px 7px}
-.flat-btns a.flat-btn-email {background-image:url(../images/central/flat-btn-email.png); background-position:17px 10px}
-.flat-btns a.flat-btn-floor {background-image:url(../images/central/flat-btn-floor.png); background-position:15px 7px}
+.flat-btns a.flat-btn-print {background-image:url(../images/central/flat-btn-print.png); background-position:13px 8px; padding:0 16px 0 46px}
+.flat-btns a.flat-btn-pdf {background-image:url(../images/central/flat-btn-pdf.png); background-position:20px 7px; padding:0 16px 0 37px}
+.flat-btns a.flat-btn-email {background-image:url(../images/central/flat-btn-email.png); background-position:17px 10px; padding:0 16px 0 41px}
+.flat-btns a.flat-btn-floor {background-image:url(../images/central/flat-btn-floor.png); background-position:15px 7px; padding:0 16px 0 43px}
+.flat-btns a.flat-btn-floor.active {background:#00a1e4 url('../images/central/karta_btn_close.png') no-repeat 15px 8px; z-index:200; position:relative}
 
-.flat-btns-2 {position:absolute; margin:573px 0 0 157px}
+.flat-btns-2 {position:absolute; margin:563px 0 0 147px}
 
-.flat-likes {position:absolute; margin:513px 0 0 0; width:279px; text-align:center}
+.flat-likes {padding:31px 0 31px 29px; border-top:1px solid #dfe6ed}
 
 .popup-in-sell-link {text-decoration:none}
 
@@ -2488,3 +2505,80 @@ div.shadow {
 table.flat-tbl-new-plans {width:auto; margin-top:10px}
 table.flat-tbl-new-plans th {width:auto; padding-left:40px; white-space:nowrap}
 table.flat-tbl-new-plans th.flat-tbl-new-plans-plans-header-left {width:100%}
+
+.flat-params {padding:38px 0 0 29px}
+.flat-params-row {padding:10px 0 0 0}
+.flat-params-row:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.flat-params-name {float:left; font-size:15px; line-height:20px; color:#546279; width:178px}
+.flat-params-value {float:left; font:15px/20px v33r, sans-serif; color:#546279}
+.flat-params-value sup {position:absolute}
+
+#basket-row4 {font-size:15px; line-height:20px}
+
+.add-basket-flat-btn {padding:27px 0 27px 29px}
+.add-basket-flat-btn a {display:table; color:#00a1e5; text-decoration:none}
+.add-basket-flat-btn a span {display:table-cell; font-size:22px; color:#00a1e5; line-height:25px; vertical-align:middle; width:299px}
+.add-basket-flat-btn a strong {display:table-cell; vertical-align:middle}
+.add-basket-flat-btn a strong:after {content:""; display:block; width:25px; height:25px; background:url(../images/central/add-basket-flat-btn.png)}
+.add-basket-flat-btn a.active strong:after {background-position:left -25px}
+
+.flat-map {
+	width:1100px;
+	height:611px;
+	position:absolute;
+	margin:-62px 0px 0px -30px;
+	z-index:200;
+    border-radius:20px;
+    box-shadow:0 4px 10px rgba(12, 10, 5, .43);
+    background:#fff;
+    display:none;
+}
+
+.flat-map:after {
+    content:"";
+    display:block;
+    width:17px;
+    height:9px;
+    background:url(../images/central/map-arrow-2.png);
+    position:absolute;
+    left:248px;
+    bottom:-9px;
+}
+
+.flat-map.open {
+    display:block;
+}
+
+.flat-map-bg {
+    content:"";
+    display:none;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    z-index:199;
+    background:rgba(0, 0, 0, .8);
+}
+.flat-map.open+.flat-map-bg {
+    display:block;
+}
+
+.flat-map-scheme {float:left; width:792px; height:611px; position:relative}
+.flat-map-scheme .flat-btns {padding:30px 0 0 30px}
+.flat-map-scheme-polus {position:absolute; left:30px; bottom:35px; line-height:0}
+.flat-sheme-point {position:absolute; left:0; top:67px}
+.flat-sheme-point img {position:absolute; left:0; top:0}
+.flat-sheme-point div {position:absolute; left:0; top:0; width:53px; height:56px; background:url(../images/central/marker_korpus-2.png); color:#fff; font-family:'v33r'; font-size:21px; line-height:21px; text-align:center; padding-top:15px;}
+
+.flat-map-info {float:left; width:308px; height:611px; background:#f2f6fa; border-radius:0 20px 20px 0}
+.flat-map-info-text-1 {color:#00a1e4; font-size:30px; line-height:30px; padding:25px 0 0 30px}
+.flat-map-info-text-2 {color:#1d1f22; font:22px/20px v33r, sans-serif; padding:17px 40px 28px 30px}
+.flat-map-info-item {border-top:1px solid #d4dee8; padding:13px 0 28px 30px}
+.flat-map-info-item > div {opacity:.5}
+.flat-map-info-item.active > div {opacity:1}
+.flat-map-info-item-title {font-size:19px; line-height:19px; color:#1d1f22}
+.flat-map-info-item-size {font-size:15px; line-height:20px; color:#546279; padding:12px 0 0 0}
+.flat-map-info-item-size-value {font:15px/20px v33r, sans-serif; color:#546279}
+.flat-map-info-item-size-value sup {position:absolute}
+.flat-map-info-item-price {font:22px/20px v33r, sans-serif; color:#00a1e5; padding:14px 0 0 0}

@@ -688,13 +688,11 @@ function ShowKorpusOnMap()
 	{
 		km.style.display='block';
 		k.className='karta-flat-btn-act';
-		kt.innerHTML='Закрыть карту';
 	}
 	else
 	{
 		km.style.display='none';
 		k.className='karta-flat-btn';
-		kt.innerHTML='Корпус на карте';
 	}
 }
 
@@ -1246,6 +1244,16 @@ function ShowKorpusOnMap()
         function showResultsPreview(block) {
             $('.new-search-results-preview').css({'left': block.offset().left + block.width() / 2, 'top': block.offset().top + block.height()}).show();
         }
+
+        $('.add-basket-flat-btn a').click(function(e) {
+            $(this).toggleClass('active');
+        });
+
+        $('.flat-btn-floor').click(function(e) {
+            $(this).toggleClass('active');
+            $('.flat-map').toggleClass('open');
+            e.preventDefault();
+        });
 
     });
 

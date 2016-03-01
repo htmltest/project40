@@ -106,11 +106,12 @@
         <div class="new-central-park-menu">
             <ul>
                 <li><a href="/centralniy/about/">О нас</a></li>
-                <li><a href="/centralniy/news/">Новости</a></li>
-                <li class="active"><a href="/centralniy/genplan/">Генплан</a></li>
-                <li><a href="#">Документы</a></li>
+                <li><a href="/centralniy/genplan/">Генплан</a></li>
                 <li><a href="/centralniy/apartments/">Квартиры</a></li>
-                <li><a href="/centralniy/sales/">Как купить</a></li>
+                <li><a href="#">Кладовые</a></li>
+                <li><a href="#">Документы</a></li>
+                <li><a href="/centralniy/news/">Новости и Акции</a></li>
+                <li class="active"><a href="/centralniy/sales/">Как купить</a></li>
                 <li class="new-central-park-menu-with-submenu">
                     <a href="/centralniy/contacts/">Контакты</a>
                     <ul>
@@ -158,33 +159,113 @@
     </div>
 
 <div id="cprn" style="padding:0; background:#fff;">
-<table width="100%" cellspacing="0" style="background:#f2f6fa">
-<tbody><tr valign="top"><td width="100%" style="padding:42px 0px 30px 30px">
+<table width="100%" cellspacing="0" style="background:#fff">
+<tbody><tr valign="top"><td width="100%" style="padding:2px 0px 0 30px">
 
 	<table width="100%" cellspacing="0">
-	<tbody><tr valign="top"><td style="width:100%;border-right:1px solid #c3c3c3">
+	<tbody><tr valign="top"><td style="width:410px;border-right:1px solid #dfe6ed; padding-top:40px">
 
-		<div onclick="ShowKorpusOnMap();" style="display:none;margin-top:5px;cursor:hand;cursor:pointer" id="korpus-map" class="map"><table cellspacing="0" style="margin-top:147px;margin-left:255px" class="marker-korpus"><tbody><tr valign="top"><td style="text-shadow:none"><div>34</div><img src="local/layout/images/central/marker_korpus.png"></td></tr></tbody></table><img src="local/layout/images/central/map.png"></div>
-		<div style="margin-top:482px" class="polus"><img src="local/layout/images/central/polus.gif"></div>
-		<table cellspacing="0" onclick="ShowKorpusOnMap();" style="margin-top:573px" id="karta-flat-btn" class="karta-flat-btn">
+		<div onclick="ShowKorpusOnMap();" style="display:none;margin-top:5px;cursor:hand;cursor:pointer" id="korpus-map" class="map"><table cellspacing="0" style="margin-top:249px;margin-left:230px" class="marker-korpus"><tbody><tr valign="top"><td style="text-shadow:none"><div>34</div><img src="local/layout/images/central/marker_korpus-2.png"></td></tr></tbody></table><img src="local/layout/images/central/map.jpg" class="map-img"></div>
+		<div style="margin-top:482px" class="polus"><img src="local/layout/images/central/polus-white.png"></div>
+		<table cellspacing="0" onclick="ShowKorpusOnMap();" style="margin-top:563px" id="karta-flat-btn" class="karta-flat-btn">
 		<tbody><tr valign="top"><td id="karta-flat-btn-txt">
 			Корпус на карте<br>
 		</td></tr>
 		</tbody></table>
+        <div class="karta-flat-btn-bg"></div>
 
+		<div class="flat-map">
+            <div class="flat-map-scheme">
+                <div class="flat-sheme-point" style="left:92px">
+                    <img src="files/flat-scheme.png" alt="" width="624" height="466" />
+                    <div style="left:239px; top:185px">49</div>
+                </div>
+
+                <div class="flat-btns">
+                    <a href="#" class="flat-btn-print">Печать</a>
+                </div>
+
+                <div class="flat-map-scheme-polus"><img src="local/layout/images/central/polus-white.png"></div>
+            </div>
+            <div class="flat-map-info">
+                <div class="flat-map-info-text-1">Корпус 34</div>
+                <div class="flat-map-info-text-2">Квартиры в продаже на 14 этаже</div>
+                <div class="flat-map-info-item active">
+                    <div class="flat-map-info-item-title">2-комнатная квартира №49</div>
+                    <div class="flat-map-info-item-size">Общая площадь</div>
+                    <div class="flat-map-info-item-size-value">56.2 м<sup>2</sup></div>
+                    <div class="flat-map-info-item-price">5 395 200.-</div>
+                </div>
+                <div class="flat-map-info-item">
+                    <div class="flat-map-info-item-title">2-комнатная квартира №50</div>
+                    <div class="flat-map-info-item-size">Общая площадь</div>
+                    <div class="flat-map-info-item-size-value">56.2 м<sup>2</sup></div>
+                    <div class="flat-map-info-item-price">5 395 200.-</div>
+                </div>
+            </div>
+        </div>
+        <div class="flat-map-bg"></div>
         <div class="flat-btns flat-btns-2">
             <a href="#" class="flat-btn-floor">Квартира на этаже</a>
         </div>
 
         <div class="flat-btns">
-            <a href="#" class="flat-btn-print">Распечатать</a>
+            <a href="#" class="flat-btn-print">Печать</a>
             <a href="#" class="flat-btn-pdf">PDF версия</a>
             <a href="#" class="flat-btn-email">Отправить по почте</a>
         </div>
 
 		<table cellspacing="0" id="flt-btr"><tbody><tr valign="middle"><td align="center"><img src="upload/nvflats/db3/237_photo.png"></td></tr></tbody></table>
 
-	</td><td><img width="1" height="604" src="local/layout/images/empty.gif"></td><td style="padding:0px 20px">
+	</td><td>
+        <div class="flat-params">
+            <div class="flat-params-row">
+                <div class="flat-params-name">Корпус</div>
+                <div class="flat-params-value">36</div>
+            </div>
+            <div class="flat-params-row">
+                <div class="flat-params-name">Номер квартиры</div>
+                <div class="flat-params-value">50</div>
+            </div>
+            <div class="flat-params-row">
+                <div class="flat-params-name">Секция</div>
+                <div class="flat-params-value">1</div>
+            </div>
+            <div class="flat-params-row">
+                <div class="flat-params-name">Этаж</div>
+                <div class="flat-params-value">14</div>
+            </div>
+            <div class="flat-params-row">
+                <div class="flat-params-name">Комнат</div>
+                <div class="flat-params-value">1</div>
+            </div>
+            <div class="flat-params-row">
+                <div class="flat-params-name">Номер на площадке</div>
+                <div class="flat-params-value">2</div>
+            </div>
+            <div class="flat-params-row">
+                <div class="flat-params-name">Общая площадь</div>
+                <div class="flat-params-value">36.82 м<sup>2</sup></div>
+            </div>
+            <div class="flat-params-row">
+                <div class="flat-params-name">Общая площадь<br />без балкона и лоджий</div>
+                <div class="flat-params-value">34.12 м<sup>2</sup></div>
+            </div>
+        </div>
+
+		<div id="flat_price" class="flat-price">3 939 740.-</div>
+
+		<table cellspacing="0" class="flat-ipoteka-tbl-buy">
+		<tbody><tr valign="top"><td nowrap="" width="306">
+			<a href="/centralniy/sales/terms/mortgage/">Купить в ипотеку</a><br>
+		</td><td style="padding:27px 0px 0px 0">
+			<a href="/centralniy/sales/terms/mortgage/"><img src="local/layout/images/central/str2.png"></a><br>
+		</td></tr>
+		</tbody></table>
+
+        <div class="add-basket-flat-btn">
+            <a href="/centralniy/genplan/map/houses/flats/?addtobasket=4211&kvartira=4211"><span>Отложить для просмотра</span><strong></strong></a>
+        </div>
 
         <div class="flat-likes">
             <script src="//yandex.st/share/share.js"></script>
@@ -198,35 +279,6 @@
             </script>
         </div>
 
-        <table cellspacing="0" class="add-basket-flat-btn">
-		<tbody><tr valign="top">
-		  <td>
-			<a href="/centralniy/genplan/map/houses/flats/?addtobasket=4211&kvartira=4211">Отложить для просмотра</a><br>
-		</td></tr>
-		</tbody></table>
-
-		<!---->
-
-		<div class="flat-p-t">Корпус: <span>37</span></div>
-		<div class="flat-p-t">Номер квартиры: <span>42</span></div>
-		<div class="flat-p-t">Секция: <span>1</span></div>
-		<div class="flat-p-t">Этаж: <span>12</span></div>
-		<div class="flat-p-t">Комнат: <span>1</span></div>
-		<div style="padding-bottom:11px" class="flat-p-t">Номер на площадке: <span>2</span></div>
-		<div class="flat-p-t">Общая площадь: <span>36.82 м<sup>2</sup></span></div>
-
-		<div class="flat-p-t" style="padding-bottom:0px">Общая площадь<br></div><div class="flat-p-t" style="padding-bottom:11px">без балкона и лоджий: <span>34.12 м<sup>2</sup></span></div>
-		<table cellspacing="0" class="flat-ipoteka-tbl-buy">
-		<tbody><tr valign="top"><td nowrap="">
-			<a href="/centralniy/sales/terms/mortgage/">Купить в ипотеку</a><br>
-		</td><td width="100%" style="padding:37px 0px 0px 7px">
-			<a href="/centralniy/sales/terms/mortgage/"><img src="local/layout/images/central/str1.gif"></a><br>
-		</td></tr>
-		</tbody></table>
-
-		<div id="flat_price" class="flat-price">3 939 740.-</div>
-
-		<img width="279" height="1" src="local/layout/images/empty.gif"><br>
 	</td></tr>
 	</tbody></table>
 
@@ -240,11 +292,11 @@
 
 					<table width="100%" cellspacing="0" id="basket-row3">
 		<tbody><tr valign="top"><td nowrap="">
-			<div align="center" style="padding-left:0px" class="inbasket">Корзина</div>
+			<div style="padding-left:20px" class="inbasket">Корзина</div>
 		</td></tr>
 		</tbody></table>
 
-    <p id="basket-row4" style="color:#30b2e8;margin:0px;padding:20px">Вы можете добавить в корзину любую понравившуюся квартиру, для того, чтобы потом оформить заявку на просмотр.</p>
+    <p id="basket-row4" style="color:#30b2e8;margin:0px;padding:0 20px 20px 20px">Вы можете добавить в корзину любую понравившуюся квартиру, для того, чтобы потом оформить заявку на просмотр.</p>
 
 	<img width="260" height="1" src="local/layout/images/empty.gif"><br>
 </td></tr>
@@ -313,215 +365,194 @@
     <table class="flat-tbl-new">
         <thead>
             <tr>
-                <th><a href="#">секция <span class="flat-tbl-new-sort flat-tbl-new-sort-down"></span></a></th>
+                <th><a href="#">Корпус <span class="flat-tbl-new-sort flat-tbl-new-sort-down"></span></a></th>
                 <th><a href="#">Номер <span class="flat-tbl-new-sort flat-tbl-new-sort-down"></span></a></th>
                 <th><a href="#">Этаж <span class="flat-tbl-new-sort flat-tbl-new-sort-down"></span></a></th>
                 <th><a href="#">Комнаты <span class="flat-tbl-new-sort flat-tbl-new-sort-down"></span></a></th>
                 <th><a href="#">Площадь <span class="flat-tbl-new-sort flat-tbl-new-sort-down"></span></a></th>
                 <th><a href="#">готовность <span class="flat-tbl-new-sort flat-tbl-new-sort-down"></span></a></th>
-                <th><a href="#">Дата заселения <span class="flat-tbl-new-sort flat-tbl-new-sort-down"></span></a></th>
                 <th class="flat-tbl-new-price active"><a href="#">Стоимость <span class="flat-tbl-new-sort flat-tbl-new-sort-down"></span></a></th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td><a href="#">36</a></td>
+                <td><a href="#">1</a></td>
                 <td><a href="#">46</a></td>
                 <td><a href="#">13</a></td>
                 <td><a href="#">1</a></td>
                 <td><a href="#">36.82</a></td>
                 <td><a href="#">II квартал 2015</a></td>
-                <td><a href="#">24.07.2015</a></td>
                 <td class="flat-tbl-new-price active"><a href="#">3 939 740.-</a></td>
             </tr>
             <tr>
-                <td><a href="#">36</a></td>
+                <td><a href="#">1</a></td>
                 <td><a href="#">47</a></td>
                 <td><a href="#">13</a></td>
                 <td><a href="#">1</a></td>
                 <td><a href="#">36.82</a></td>
                 <td><a href="#">II квартал 2015</a></td>
-                <td><a href="#">24.07.2015</a></td>
                 <td class="flat-tbl-new-price active"><a href="#">3 939 740.-</a></td>
             </tr>
             <tr>
-                <td><a href="#">36</a></td>
+                <td><a href="#">1</a></td>
                 <td><a href="#">50</a></td>
                 <td><a href="#">14</a></td>
                 <td><a href="#">1</a></td>
                 <td><a href="#">36.82</a></td>
                 <td><a href="#">II квартал 2015</a></td>
-                <td><a href="#">24.07.2015</a></td>
                 <td class="flat-tbl-new-price active"><a href="#">3 939 740.-</a></td>
             </tr>
             <tr>
-                <td><a href="#">36</a></td>
+                <td><a href="#">1</a></td>
                 <td><a href="#">54</a></td>
                 <td><a href="#">15</a></td>
                 <td><a href="#">1</a></td>
                 <td><a href="#">36.82</a></td>
                 <td><a href="#">II квартал 2015</a></td>
-                <td><a href="#">24.07.2015</a></td>
                 <td class="flat-tbl-new-price active"><a href="#">3 939 740.-</a></td>
             </tr>
             <tr>
-                <td><a href="#">36</a></td>
+                <td><a href="#">1</a></td>
                 <td><a href="#">58</a></td>
                 <td><a href="#">16</a></td>
                 <td><a href="#">1</a></td>
                 <td><a href="#">36.82</a></td>
                 <td><a href="#">II квартал 2015</a></td>
-                <td><a href="#">24.07.2015</a></td>
                 <td class="flat-tbl-new-price active"><a href="#">3 939 740.-</a></td>
             </tr>
             <tr>
-                <td><a href="#">36</a></td>
+                <td><a href="#">1</a></td>
                 <td><a href="#">59</a></td>
                 <td><a href="#">16</a></td>
                 <td><a href="#">1</a></td>
                 <td><a href="#">36.82</a></td>
                 <td><a href="#">II квартал 2015</a></td>
-                <td><a href="#">24.07.2015</a></td>
                 <td class="flat-tbl-new-price active"><a href="#">3 939 740.-</a></td>
             </tr>
             <tr>
-                <td><a href="#">36</a></td>
+                <td><a href="#">1</a></td>
                 <td><a href="#">46</a></td>
                 <td><a href="#">13</a></td>
                 <td><a href="#">1</a></td>
                 <td><a href="#">36.82</a></td>
                 <td><a href="#">II квартал 2015</a></td>
-                <td><a href="#">24.07.2015</a></td>
                 <td class="flat-tbl-new-price active"><a href="#">3 939 740.-</a></td>
             </tr>
             <tr>
-                <td><a href="#">36</a></td>
+                <td><a href="#">1</a></td>
                 <td><a href="#">47</a></td>
                 <td><a href="#">14</a></td>
                 <td><a href="#">1</a></td>
                 <td><a href="#">36.82</a></td>
                 <td><a href="#">II квартал 2015</a></td>
-                <td><a href="#">24.07.2015</a></td>
                 <td class="flat-tbl-new-price active"><a href="#">3 939 740.-</a></td>
             </tr>
             <tr>
-                <td><a href="#">36</a></td>
+                <td><a href="#">1</a></td>
                 <td><a href="#">50</a></td>
                 <td><a href="#">15</a></td>
                 <td><a href="#">1</a></td>
                 <td><a href="#">36.82</a></td>
                 <td><a href="#">II квартал 2015</a></td>
-                <td><a href="#">24.07.2015</a></td>
                 <td class="flat-tbl-new-price active"><a href="#">3 939 740.-</a></td>
             </tr>
             <tr>
-                <td><a href="#">36</a></td>
+                <td><a href="#">1</a></td>
                 <td><a href="#">54</a></td>
                 <td><a href="#">16</a></td>
                 <td><a href="#">1</a></td>
                 <td><a href="#">36.82</a></td>
                 <td><a href="#">II квартал 2015</a></td>
-                <td><a href="#">24.07.2015</a></td>
                 <td class="flat-tbl-new-price active"><a href="#">3 939 740.-</a></td>
             </tr>
             <tr>
-                <td><a href="#">36</a></td>
+                <td><a href="#">1</a></td>
                 <td><a href="#">36</a></td>
                 <td><a href="#">13</a></td>
                 <td><a href="#">1</a></td>
                 <td><a href="#">36.82</a></td>
                 <td><a href="#">II квартал 2015</a></td>
-                <td><a href="#">24.07.2015</a></td>
                 <td class="flat-tbl-new-price active"><a href="#">3 939 740.-</a></td>
             </tr>
             <tr>
-                <td><a href="#">36</a></td>
+                <td><a href="#">1</a></td>
                 <td><a href="#">36</a></td>
                 <td><a href="#">13</a></td>
                 <td><a href="#">1</a></td>
                 <td><a href="#">36.82</a></td>
                 <td><a href="#">II квартал 2015</a></td>
-                <td><a href="#">24.07.2015</a></td>
                 <td class="flat-tbl-new-price active"><a href="#">3 939 740.-</a></td>
             </tr>
             <tr>
-                <td><a href="#">36</a></td>
+                <td><a href="#">1</a></td>
                 <td><a href="#">36</a></td>
                 <td><a href="#">14</a></td>
                 <td><a href="#">1</a></td>
                 <td><a href="#">36.82</a></td>
                 <td><a href="#">II квартал 2015</a></td>
-                <td><a href="#">24.07.2015</a></td>
                 <td class="flat-tbl-new-price active"><a href="#">3 939 740.-</a></td>
             </tr>
             <tr>
-                <td><a href="#">36</a></td>
+                <td><a href="#">1</a></td>
                 <td><a href="#">36</a></td>
                 <td><a href="#">15</a></td>
                 <td><a href="#">1</a></td>
                 <td><a href="#">36.82</a></td>
                 <td><a href="#">II квартал 2015</a></td>
-                <td><a href="#">24.07.2015</a></td>
                 <td class="flat-tbl-new-price active"><a href="#">3 939 740.-</a></td>
             </tr>
             <tr>
-                <td><a href="#">36</a></td>
+                <td><a href="#">1</a></td>
                 <td><a href="#">36</a></td>
                 <td><a href="#">16</a></td>
                 <td><a href="#">1</a></td>
                 <td><a href="#">36.82</a></td>
                 <td><a href="#">II квартал 2015</a></td>
-                <td><a href="#">24.07.2015</a></td>
                 <td class="flat-tbl-new-price active"><a href="#">3 939 740.-</a></td>
             </tr>
             <tr>
-                <td><a href="#">36</a></td>
+                <td><a href="#">1</a></td>
                 <td><a href="#">36</a></td>
                 <td><a href="#">16</a></td>
                 <td><a href="#">1</a></td>
                 <td><a href="#">36.82</a></td>
                 <td><a href="#">II квартал 2015</a></td>
-                <td><a href="#">24.07.2015</a></td>
                 <td class="flat-tbl-new-price active"><a href="#">3 939 740.-</a></td>
             </tr>
             <tr>
-                <td><a href="#">36</a></td>
+                <td><a href="#">1</a></td>
                 <td><a href="#">36</a></td>
                 <td><a href="#">13</a></td>
                 <td><a href="#">1</a></td>
                 <td><a href="#">36.82</a></td>
                 <td><a href="#">II квартал 2015</a></td>
-                <td><a href="#">24.07.2015</a></td>
                 <td class="flat-tbl-new-price active"><a href="#">3 939 740.-</a></td>
             </tr>
             <tr>
-                <td><a href="#">36</a></td>
+                <td><a href="#">1</a></td>
                 <td><a href="#">36</a></td>
                 <td><a href="#">14</a></td>
                 <td><a href="#">1</a></td>
                 <td><a href="#">36.82</a></td>
                 <td><a href="#">II квартал 2015</a></td>
-                <td><a href="#">24.07.2015</a></td>
                 <td class="flat-tbl-new-price active"><a href="#">3 939 740.-</a></td>
             </tr>
             <tr>
-                <td><a href="#">36</a></td>
+                <td><a href="#">1</a></td>
                 <td><a href="#">36</a></td>
                 <td><a href="#">15</a></td>
                 <td><a href="#">1</a></td>
                 <td><a href="#">36.82</a></td>
                 <td><a href="#">II квартал 2015</a></td>
-                <td><a href="#">24.07.2015</a></td>
                 <td class="flat-tbl-new-price active"><a href="#">3 939 740.-</a></td>
             </tr>
             <tr>
-                <td><a href="#">36</a></td>
+                <td><a href="#">1</a></td>
                 <td><a href="#">36</a></td>
                 <td><a href="#">16</a></td>
                 <td><a href="#">1</a></td>
                 <td><a href="#">36.82</a></td>
                 <td><a href="#">II квартал 2015</a></td>
-                <td><a href="#">24.07.2015</a></td>
                 <td class="flat-tbl-new-price active"><a href="#">3 939 740.-</a></td>
             </tr>
         </tbody>
