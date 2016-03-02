@@ -344,14 +344,14 @@ div.plan-legend {
 	width:81px;
 	height:85px;
 	position:absolute;
-	margin:1087px 0px 0px 30px;
+	margin:400px 0px 0px 30px;
 }
 
 div.treed-legend {
 	width:79px;
 	height:73px;
 	position:absolute;
-	margin:692px 0px 0px 30px;
+	margin:390px 0px 0px 30px;
 }
 
 table.plan-legend-trigger {
@@ -394,7 +394,7 @@ table.plan-legend-trigger td div {
 
 table.plan-legend {
 	position:absolute;
-	margin:717px 0px 0px 178px;
+	margin:270px 0px 0px 30px;
 }
 
 table.plan-legend td {
@@ -408,6 +408,12 @@ table.marker-korpus {
 	height:71px;
 	position:absolute;
 	margin:0px 0px 0px 0px;
+}
+
+#canvas3d table.marker-korpus,
+#canvasplan table.marker-korpus {
+    width:25px;
+    height:34px;
 }
 
 table.marker-korpus td {
@@ -439,6 +445,17 @@ table.marker-korpus td div, table.marker-korpus-selled td div {
 	margin:0px;
 }
 
+#canvas3d table.marker-korpus td div,
+#canvas3d table.marker-korpus-selled td div,
+#canvasplan table.marker-korpus td div,
+#canvasplan table.marker-korpus-selled td div {
+    width:25px;
+    height:34px;
+    padding-top:5px;
+    font-size:15px;
+    line-height:20px;
+}
+
 table.korpus-plan-popup {
 	position:absolute;
 	margin:0px 0px 0px 0px;
@@ -448,7 +465,7 @@ table.korpus-plan-popup {
 }
 
 table.korpus-plan-popup td.content {
-	background:#f2f6fa;
+	background:#fff;
 	border-radius:20px;
 	border-top-left-radius:20px;
 	border-top-right-radius:20px;
@@ -459,10 +476,10 @@ table.korpus-plan-popup td.content {
 }
 
 table.korpus-plan-popup td.content div.korpus-title {
-	color:#414e62;
-	font-size:36px;
-	line-height:36px;
-	padding:4px 0px 6px 0px;
+	color:#00a1e4;
+	font-size:30px;
+	line-height:30px;
+	padding:4px 0px 12px 0px;
 	margin-left:-2px;
 }
 
@@ -508,24 +525,29 @@ table.korpus-plan-popup2 td.content div.korpus-title {
 }
 
 table.korpus-plan-popup2 td.content div.korpus-title-stat {
-	padding:0px;
+	padding:0px 0 10px 0;
 }
 
 div.popup-in-sell {
-	color:#4a586b;
-	font-size:21px;
-	padding:3px 0px 0px 0px;
+	color:#010101;
+	font-size:19px;
+	padding:3px 0px 0px 0;
+}
+
+div.popup-in-sell-2 {
+    padding:13px 0 0 20px;
+    margin:20px 0 0 -20px;
+    border-top: 1px solid #dfe6ed;
 }
 
 table.stat-popup {
 	width:100%;
-	border-top:1px solid #c2c2c2;
 	margin-top:12px;
 }
 
 table.stat-popup td div.type {
 	color:#1b222c;
-	font-size:17px;
+	font-size:15px;
 	padding:8px 0px 0px 0px;
 	margin:0px;
 }
@@ -533,7 +555,7 @@ table.stat-popup td div.type {
 table.stat-popup td div.price {
 	color:#0090a2;
 	font-family:'v33r';
-	font-size:15px;
+	font-size:12px;
 	line-height:14px;
 	padding:0px;
 	margin:0px;
@@ -549,7 +571,7 @@ table.stat-popup td span.price {
 
 table.stat-popup td div.total {
 	color:#0077b2;
-	font-size:41px;
+	font-size:40px;
 	line-height:36px;
 	padding:11px 0px 0px 0px;
 	margin:0px;
@@ -2592,3 +2614,36 @@ table.flat-tbl-new-plans th.flat-tbl-new-plans-plans-header-left {width:100%}
 
 .flat-sheme-point-2 {position:relative; display:inline-block; left:auto; top:auto}
 .flat-sheme-point-2 img {position:relative}
+
+.new-map-item {position:absolute}
+.new-map-item-icon {position:absolute; left:0; top:0; width:25px; height:29px; padding:5px 0 0 0; background:url(../images/central/marker_korpus-new.png); text-align:center; text-decoration:none; display:block; color:#fff; font-size:11px; line-height:16px}
+.new-map-item-selled .new-map-item-icon {width:25px; height:37px; padding:5px 5px 0 0; background:url(../images/central/marker_korpus_selled.png)}
+.new-map-item-popup {display:none; position:absolute; left:-133px; top:51px; width:552px; border-radius:20px; background:#fff; box-shadow:0 4px 10px rgba(12, 10, 5, .43); z-index:99}
+.new-map-item-popup-r {left:auto; right:-133px}
+.new-map-item-popup-t {top:auto; bottom:17px}
+.new-map-item-popup-tr {left:auto; right:-133px; top:auto; bottom:17px}
+.new-map-item.open .new-map-item-popup {display:block}
+.new-map-item-popup:after {content:""; display:block; width:0; height:0; position:absolute; left:128px; top:-17px; border-bottom:17px solid #fff; border-left:17px solid transparent; border-right:17px solid transparent}
+.new-map-item-popup-r:after {border-bottom-color:#f2f6fa; left:auto; right:103px}
+.new-map-item-popup-t:after {border-bottom:none; border-top:17px solid #fff; top:auto; bottom:-17px}
+.new-map-item-popup-tr:after {border-bottom:none; border-top:17px solid #f2f6fa; top:auto; bottom:-17px; left:auto; right:103px}
+.new-map-item-popup-info {display:table-cell; vertical-align:top; width:244px; padding:29px 21px}
+.new-map-item-popup-photo {line-height:0}
+.new-map-item-popup-photo img {width:100%}
+.new-map-item-popup-title {color:#00a1e4; font-size:30px; line-height:30px; padding:18px 0 7px 0}
+.new-map-item-popup-text {font-size:15px; line-height:20px; color:#414e62; padding:10px 0 0 0}
+.new-map-item-popup-text span {font-size:15px; line-height:20px; color:#414e62; font-family:v33r, sans-serif}
+.new-map-item-popup-flats {display:table-cell; vertical-align:top; width:266px; background:#f2f6fa; border-radius:0 20px 20px 0; padding:10px 0 0 0}
+.new-map-item-popup-flats-block {border-top:1px solid #dfe6ed; padding:0 20px 19px 20px}
+.new-map-item-popup-flats-block:first-child {border:none}
+.new-map-item-popup-flats-block-title {font-size:19px; line-height:19px; color:#000; padding:16px 0 4px 0}
+.new-map-item-popup-flats-block-row {display:table; width:100%; text-decoration:none; margin:9px 0 0 0}
+.new-map-item-popup-flats-block-text {display:table-cell; vertical-align:middle; width:100%}
+.new-map-item-popup-flats-block-count {display:table-cell; vertical-align:middle; font-size:40px; line-height:40px; color:#0077b2; text-align:right}
+.new-map-item-popup-flats-block-name {font-size:15px; line-height:15px; color:#000}
+.new-map-item-popup-flats-block-row:hover .new-map-item-popup-flats-block-name {color:#00a1e4; text-decoration:underline}
+.new-map-item-popup-flats-block-price {font-size:12px; line-height:15px; font-family:v33r, sans-serif; color:#00a1e4}
+.new-map-item-popup-boxes {display:table; text-decoration:none; width:100%; margin:15px 0 0 0}
+.new-map-item-popup-boxes .new-map-item-popup-flats-block-title {padding:0}
+.new-map-item-popup-boxes:hover .new-map-item-popup-flats-block-title {color:#00a1e4; text-decoration:underline}
+.new-map-item-popup-close {display:block; position:absolute; width:35px; height:35px; background:url(../images/central/korpus_popup_close-new.png); right:-17px; top:-13px}

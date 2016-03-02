@@ -150,7 +150,7 @@
 <div style="background:#fff;padding:0" id="cprn">
 	<input type="hidden" name="current_popup" id="current_popup" value="">
 	<table cellspacing="0" width="100%">
-	<tr valign="top"><td>
+	<tr valign="top"><td valign="top" style="position:relative">
 		<div class="plan-legend" id="planlegend" style="display:none"><img src="local/layout/images/central/plan_legend.png"></div>
 		<div class="treed-legend" id="treedlegend"><img src="local/layout/images/central/3d_legend.png"></div>
         <div class="plan-shadow"></div>
@@ -172,2036 +172,622 @@
 		</td></tr>
 		</table>
 
-		<table width="384" cellspacing="0" class="plan-legend" id="plan-legend-tbl">
+		<table width="166" cellspacing="0" class="plan-legend" id="plan-legend-tbl">
 		<tr><td width="33">
 			<img src="local/layout/images/central/marker_korpus_icon.png"><br>
 		</td>
 		  <td width="123" style="padding:0px 17px 0px 6px">Корпуса<br>в продаже<br>
-		</td><td width="33" style="padding-right:6px">
-			<img src="local/layout/images/central/marker_korpus_selled_icon.png"><br>
+		    </td>
+		</tr>
+        <tr><td width="33">
 		</td>
-		<td width="181">
-			Проданные и<br>
-			заселенные корпуса<br>
-		</td></tr>
+		  <td width="123" style="padding:0px 17px 0px 6px"><br><br>
+		    </td>
+		</tr>
+		<tr>
+		  <td><span style="padding-right:6px"><img src="local/layout/images/central/marker_korpus_selled_icon.png"></span></td>
+		  <td style="padding:0px 17px 0px 6px">Проданные и<br>
+		    заселенные корпуса</td>
+		  </tr>
 		</table>
 
-		<div id="canvas3d" style="display:block">
-<table cellspacing="0" class="marker-korpus-selled" style="margin-top:475px;margin-left:935px">
-<tr valign="top"><td onclick="ShowKorpusPopUpTR2('201', 475, 935);">
-	<div>1</div>
-	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
-</td></tr>
-</table>
-<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpusTR201" style="display:none">
-<tr>
-<td valign="middle" align="center">
-	<img src="local/layout/images/central/popup_str_up.png">
-</td></tr>
-<tr><td class="content" valign="top" style="padding:20px">
+		<!-- canvas3d -->
+        <div id="canvas3d" style="display:block">
+
+            <!-- new map item -->
+            <div class="new-map-item new-map-item-selled" style="top:457px; left:936px">
+                <a href="#" class="new-map-item-icon">1</a>
+                <div class="new-map-item-popup new-map-item-popup-tr">
+                    <div class="new-map-item-popup-info">
+                        <div class="new-map-item-popup-photo"><img src="files/new-map-photo.jpg" alt="" /></div>
+                        <div class="new-map-item-popup-title">Корпус 37</div>
+                        <div class="new-map-item-popup-text">Этажей: <span>17</span></div>
+                        <div class="new-map-item-popup-text">Секций: <span>5</span></div>
+                        <div class="new-map-item-popup-text">Дата заселения: <span>21 июля 2015</span></div>
+                    </div>
+                    <div class="new-map-item-popup-flats">
+                        <div class="new-map-item-popup-flats-block">
+                            <div class="new-map-item-popup-flats-block-title">Квартиры от физлиц</div>
+                            <a href="#" class="new-map-item-popup-flats-block-row">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-name">1-комнатные</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 3 939 740.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">30</div>
+                            </a>
+                            <a href="#" class="new-map-item-popup-flats-block-row">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-name">2-комнатные</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 5 222 880.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">102</div>
+                            </a>
+                        </div>
+                        <div class="new-map-item-popup-flats-block">
+                            <div class="new-map-item-popup-flats-block-title">Квартиры от застройщика</div>
+                            <a href="#" class="new-map-item-popup-flats-block-row">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-name">1-комнатные</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 3 939 740.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">35</div>
+                            </a>
+                            <a href="#" class="new-map-item-popup-flats-block-row">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-name">2-комнатные</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 5 222 880.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">29</div>
+                            </a>
+                        </div>
+                        <div class="new-map-item-popup-flats-block">
+                            <a href="#" class="new-map-item-popup-boxes">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-title">Кладовые</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 3 939 740.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">35</div>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="#" class="new-map-item-popup-close"></a>
+                </div>
+            </div>
+            <!-- new map item END -->
+
+            <!-- new map item -->
+            <div class="new-map-item new-map-item-selled" style="margin-top:401px;margin-left:753px">
+                <a href="#" class="new-map-item-icon">2</a>
+                <div class="new-map-item-popup new-map-item-popup-r">
+                    <div class="new-map-item-popup-info">
+                        <div class="new-map-item-popup-photo"><img src="files/new-map-photo.jpg" alt="" /></div>
+                        <div class="new-map-item-popup-title">Корпус 37</div>
+                        <div class="new-map-item-popup-text">Этажей: <span>17</span></div>
+                        <div class="new-map-item-popup-text">Секций: <span>5</span></div>
+                        <div class="new-map-item-popup-text">Дата заселения: <span>21 июля 2015</span></div>
+                    </div>
+                    <div class="new-map-item-popup-flats">
+                        <div class="new-map-item-popup-flats-block">
+                            <div class="new-map-item-popup-flats-block-title">Квартиры от физлиц</div>
+                            <a href="#" class="new-map-item-popup-flats-block-row">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-name">1-комнатные</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 3 939 740.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">30</div>
+                            </a>
+                            <a href="#" class="new-map-item-popup-flats-block-row">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-name">2-комнатные</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 5 222 880.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">102</div>
+                            </a>
+                        </div>
+                        <div class="new-map-item-popup-flats-block">
+                            <div class="new-map-item-popup-flats-block-title">Квартиры от застройщика</div>
+                            <a href="#" class="new-map-item-popup-flats-block-row">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-name">1-комнатные</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 3 939 740.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">35</div>
+                            </a>
+                            <a href="#" class="new-map-item-popup-flats-block-row">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-name">2-комнатные</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 5 222 880.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">29</div>
+                            </a>
+                        </div>
+                        <div class="new-map-item-popup-flats-block">
+                            <a href="#" class="new-map-item-popup-boxes">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-title">Кладовые</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 3 939 740.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">35</div>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="#" class="new-map-item-popup-close"></a>
+                </div>
+            </div>
+            <!-- new map item END -->
+
+            <!-- new map item -->
+            <div class="new-map-item new-map-item-selled" style="margin-top:258px; margin-left:573px">
+                <a href="#" class="new-map-item-icon">8</a>
+                <div class="new-map-item-popup new-map-item-popup-r">
+                    <div class="new-map-item-popup-info">
+                        <div class="new-map-item-popup-photo"><img src="files/new-map-photo.jpg" alt="" /></div>
+                        <div class="new-map-item-popup-title">Корпус 37</div>
+                        <div class="new-map-item-popup-text">Этажей: <span>17</span></div>
+                        <div class="new-map-item-popup-text">Секций: <span>5</span></div>
+                        <div class="new-map-item-popup-text">Дата заселения: <span>21 июля 2015</span></div>
+                    </div>
+                    <div class="new-map-item-popup-flats">
+                        <div class="new-map-item-popup-flats-block">
+                            <div class="new-map-item-popup-flats-block-title">Квартиры от физлиц</div>
+                            <a href="#" class="new-map-item-popup-flats-block-row">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-name">1-комнатные</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 3 939 740.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">30</div>
+                            </a>
+                            <a href="#" class="new-map-item-popup-flats-block-row">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-name">2-комнатные</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 5 222 880.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">102</div>
+                            </a>
+                        </div>
+                        <div class="new-map-item-popup-flats-block">
+                            <div class="new-map-item-popup-flats-block-title">Квартиры от застройщика</div>
+                            <a href="#" class="new-map-item-popup-flats-block-row">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-name">1-комнатные</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 3 939 740.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">35</div>
+                            </a>
+                            <a href="#" class="new-map-item-popup-flats-block-row">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-name">2-комнатные</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 5 222 880.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">29</div>
+                            </a>
+                        </div>
+                        <div class="new-map-item-popup-flats-block">
+                            <a href="#" class="new-map-item-popup-boxes">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-title">Кладовые</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 3 939 740.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">35</div>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="#" class="new-map-item-popup-close"></a>
+                </div>
+            </div>
+            <!-- new map item END -->
+
+            <!-- new map item -->
+            <div class="new-map-item" style="margin-top:86px;margin-left:346px">
+                <a href="#" class="new-map-item-icon">37</a>
+                <div class="new-map-item-popup">
+                    <div class="new-map-item-popup-info">
+                        <div class="new-map-item-popup-photo"><img src="files/new-map-photo.jpg" alt="" /></div>
+                        <div class="new-map-item-popup-title">Корпус 37</div>
+                        <div class="new-map-item-popup-text">Этажей: <span>17</span></div>
+                        <div class="new-map-item-popup-text">Секций: <span>5</span></div>
+                    </div>
+                    <div class="new-map-item-popup-flats">
+                        <div class="new-map-item-popup-flats-block">
+                            <div class="new-map-item-popup-flats-block-title">Квартиры от физлиц</div>
+                            <a href="#" class="new-map-item-popup-flats-block-row">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-name">1-комнатные</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 3 939 740.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">30</div>
+                            </a>
+                            <a href="#" class="new-map-item-popup-flats-block-row">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-name">2-комнатные</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 5 222 880.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">102</div>
+                            </a>
+                        </div>
+                        <div class="new-map-item-popup-flats-block">
+                            <div class="new-map-item-popup-flats-block-title">Квартиры от застройщика</div>
+                            <a href="#" class="new-map-item-popup-flats-block-row">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-name">1-комнатные</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 3 939 740.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">35</div>
+                            </a>
+                            <a href="#" class="new-map-item-popup-flats-block-row">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-name">2-комнатные</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 5 222 880.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">29</div>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="#" class="new-map-item-popup-close"></a>
+                </div>
+            </div>
+            <!-- new map item END -->
+
+            <!-- new map item -->
+            <div class="new-map-item new-map-item-selled" style="margin-top:90px;margin-left:569px">
+                <a href="#" class="new-map-item-icon">38</a>
+                <div class="new-map-item-popup">
+                    <div class="new-map-item-popup-info">
+                        <div class="new-map-item-popup-photo"><img src="files/new-map-photo.jpg" alt="" /></div>
+                        <div class="new-map-item-popup-title">Корпус 37</div>
+                        <div class="new-map-item-popup-text">Этажей: <span>17</span></div>
+                        <div class="new-map-item-popup-text">Секций: <span>5</span></div>
+                    </div>
+                    <div class="new-map-item-popup-flats">
+                        <div class="new-map-item-popup-flats-block">
+                            <div class="new-map-item-popup-flats-block-title">Квартиры от физлиц</div>
+                            <a href="#" class="new-map-item-popup-flats-block-row">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-name">1-комнатные</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 3 939 740.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">30</div>
+                            </a>
+                            <a href="#" class="new-map-item-popup-flats-block-row">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-name">2-комнатные</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 5 222 880.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">102</div>
+                            </a>
+                        </div>
+                        <div class="new-map-item-popup-flats-block">
+                            <div class="new-map-item-popup-flats-block-title">Квартиры от застройщика</div>
+                            <a href="#" class="new-map-item-popup-flats-block-row">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-name">1-комнатные</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 3 939 740.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">35</div>
+                            </a>
+                            <a href="#" class="new-map-item-popup-flats-block-row">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-name">2-комнатные</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 5 222 880.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">29</div>
+                            </a>
+                        </div>
+                        <div class="new-map-item-popup-flats-block">
+                            <a href="#" class="new-map-item-popup-boxes">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-title">Кладовые</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 3 939 740.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">35</div>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="#" class="new-map-item-popup-close"></a>
+                </div>
+            </div>
+            <!-- new map item END -->
+
+            <img src="local/layout/images/central/3dmap.jpg" alt="" width="1100" height="803" />
 
-	<table cellspacing="0" width="100%">
-	<tr valign="top"><td nowrap style="padding-right:20px">
-
-		<table cellspacing="0">
-		<tr><td colspan="2" nowrap>
-			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
-			<div class="korpus-title">Корпус 1</div>
-		</td></tr>
-		<tr><td style="padding-right:20px">
-			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
-		</td><td width="100%">
-			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
-		</td></tr>
-        <tr><td colspan="2">
-            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
-		</table>
-
-	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
-		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUpTR2('201', 0, 0);"></div>
-		<div class="popup-in-sell">Квартиры от физлиц</div>
-    	<a href="#" class="popup-in-sell-link">
-        <table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">1-комнатные</div>
-		<div class="price">от 3 939 740.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">30</div>
-	</td></tr>
-	</table>
-    </a>
-    	<a href="#" class="popup-in-sell-link">
-        <table cellspacing="0" class="stat-popup" >
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">2-комнатные</div>
-		<div class="price">от 5 222 880.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">102</div>
-	</td></tr>
-	</table>
-    </a>
-    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
-	</td></tr>
-	</table>
-
-</td></tr>
-</table>
-<table cellspacing="0" class="marker-korpus-selled" style="margin-top:431px;margin-left:767px">
-<tr valign="top"><td onclick="ShowKorpusPopUpTR2('202', 431, 767);">
-	<div>2</div>
-	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
-</td></tr>
-</table>
-<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpusTR202" style="display:none">
-<tr>
-<td valign="middle" align="center">
-	<img src="local/layout/images/central/popup_str_up.png">
-</td></tr>
-<tr><td class="content" valign="top" style="padding:20px">
-
-	<table cellspacing="0" width="100%">
-	<tr valign="top"><td nowrap style="padding-right:20px">
-
-		<table cellspacing="0">
-		<tr><td colspan="2" nowrap>
-			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
-			<div class="korpus-title">Корпус 2</div>
-		</td></tr>
-		<tr><td style="padding-right:20px">
-			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
-		</td><td width="100%">
-			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
-		</td></tr>
-        <tr><td colspan="2">
-            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
-		</table>
-
-	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
-		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUpTR2('202', 0, 0);"></div>
-		<div class="popup-in-sell">Квартиры от физлиц</div>
-    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">1-комнатные</div>
-		<div class="price">от 3 939 740.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">30</div>
-	</td></tr>
-	</table>
-    	<table cellspacing="0" class="stat-popup" >
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">2-комнатные</div>
-		<div class="price">от 5 222 880.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">102</div>
-	</td></tr>
-	</table>
-    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
-	</td></tr>
-	</table>
-
-</td></tr>
-</table>
-<table cellspacing="0" class="marker-korpus-selled" style="margin-top:374px;margin-left:673px">
-<tr valign="top"><td onclick="ShowKorpusPopUpTR2('206', 374, 673);">
-	<div>6</div>
-	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
-</td></tr>
-</table>
-<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpusTR206" style="display:none">
-<tr>
-<td valign="middle" align="center">
-	<img src="local/layout/images/central/popup_str_up.png">
-</td></tr>
-<tr><td class="content" valign="top" style="padding:20px">
-
-	<table cellspacing="0" width="100%">
-	<tr valign="top"><td nowrap style="padding-right:20px">
-
-		<table cellspacing="0">
-		<tr><td colspan="2" nowrap>
-			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
-			<div class="korpus-title">Корпус 6</div>
-		</td></tr>
-		<tr><td style="padding-right:20px">
-			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
-		</td><td width="100%">
-			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
-		</td></tr>
-        <tr><td colspan="2">
-            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
-		</table>
-
-	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
-		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUpTR2('206', 0, 0);"></div>
-		<div class="popup-in-sell">Квартиры от физлиц</div>
-    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">1-комнатные</div>
-		<div class="price">от 3 939 740.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">30</div>
-	</td></tr>
-	</table>
-    	<table cellspacing="0" class="stat-popup" >
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">2-комнатные</div>
-		<div class="price">от 5 222 880.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">102</div>
-	</td></tr>
-	</table>
-    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
-	</td></tr>
-	</table>
-
-</td></tr>
-</table>
-<table cellspacing="0" class="marker-korpus-selled" style="margin-top:296px;margin-left:605px">
-<tr valign="top"><td onclick="ShowKorpusPopUpTR2('208', 296, 605);">
-	<div>8</div>
-	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
-</td></tr>
-</table>
-<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpusTR208" style="display:none">
-<tr>
-<td valign="middle" align="center">
-	<img src="local/layout/images/central/popup_str_up.png">
-</td></tr>
-<tr><td class="content" valign="top" style="padding:20px">
-
-	<table cellspacing="0" width="100%">
-	<tr valign="top"><td nowrap style="padding-right:20px">
-
-		<table cellspacing="0">
-		<tr><td colspan="2" nowrap>
-			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
-			<div class="korpus-title">Корпус 8</div>
-		</td></tr>
-		<tr><td style="padding-right:20px">
-			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
-		</td><td width="100%">
-			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
-		</td></tr>
-        <tr><td colspan="2">
-            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
-		</table>
-
-	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
-		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUpTR2('208', 0, 0);"></div>
-		<div class="popup-in-sell">Квартиры от физлиц</div>
-    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">1-комнатные</div>
-		<div class="price">от 3 939 740.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">30</div>
-	</td></tr>
-	</table>
-    	<table cellspacing="0" class="stat-popup" >
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">2-комнатные</div>
-		<div class="price">от 5 222 880.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">102</div>
-	</td></tr>
-	</table>
-    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
-	</td></tr>
-	</table>
-
-</td></tr>
-</table>
-<table cellspacing="0" class="marker-korpus-selled" style="margin-top:237px;margin-left:574px">
-<tr valign="top"><td onclick="ShowKorpusPopUpTR2('209', 237, 574);">
-	<div>9</div>
-	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
-</td></tr>
-</table>
-<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpusTR209" style="display:none">
-<tr>
-<td valign="middle" align="center">
-	<img src="local/layout/images/central/popup_str_up.png">
-</td></tr>
-<tr><td class="content" valign="top" style="padding:20px">
-
-	<table cellspacing="0" width="100%">
-	<tr valign="top"><td nowrap style="padding-right:20px">
-
-		<table cellspacing="0">
-		<tr><td colspan="2" nowrap>
-			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
-			<div class="korpus-title">Корпус 9</div>
-		</td></tr>
-		<tr><td style="padding-right:20px">
-			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
-		</td><td width="100%">
-			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
-		</td></tr>
-        <tr><td colspan="2">
-            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
-		</table>
-
-	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
-		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUpTR2('209', 0, 0);"></div>
-		<div class="popup-in-sell">Квартиры от физлиц</div>
-    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">1-комнатные</div>
-		<div class="price">от 3 939 740.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">30</div>
-	</td></tr>
-	</table>
-    	<table cellspacing="0" class="stat-popup" >
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">2-комнатные</div>
-		<div class="price">от 5 222 880.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">102</div>
-	</td></tr>
-	</table>
-    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
-	</td></tr>
-	</table>
-
-</td></tr>
-</table>
-<table cellspacing="0" class="marker-korpus-selled" style="margin-top:255px;margin-left:716px">
-<tr valign="top"><td onclick="ShowKorpusPopUpTR2('210', 255, 716);">
-	<div>10</div>
-	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
-</td></tr>
-</table>
-<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpusTR210" style="display:none">
-<tr>
-<td valign="middle" align="center">
-	<img src="local/layout/images/central/popup_str_up.png">
-</td></tr>
-<tr><td class="content" valign="top" style="padding:20px">
-
-	<table cellspacing="0" width="100%">
-	<tr valign="top"><td nowrap style="padding-right:20px">
-
-		<table cellspacing="0">
-		<tr><td colspan="2" nowrap>
-			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
-			<div class="korpus-title">Корпус 10</div>
-		</td></tr>
-		<tr><td style="padding-right:20px">
-			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
-		</td><td width="100%">
-			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
-		</td></tr>
-        <tr><td colspan="2">
-            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
-		</table>
-
-	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
-		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUpTR2('210', 0, 0);"></div>
-		<div class="popup-in-sell">Квартиры от физлиц</div>
-    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">1-комнатные</div>
-		<div class="price">от 3 939 740.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">30</div>
-	</td></tr>
-	</table>
-    	<table cellspacing="0" class="stat-popup" >
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">2-комнатные</div>
-		<div class="price">от 5 222 880.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">102</div>
-	</td></tr>
-	</table>
-    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
-	</td></tr>
-	</table>
-
-</td></tr>
-</table>
-<table cellspacing="0" class="marker-korpus-selled" style="margin-top:170px;margin-left:631px">
-<tr valign="top"><td onclick="ShowKorpusPopUpTR2('211', 170, 631);">
-	<div>11</div>
-	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
-</td></tr>
-</table>
-<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpusTR211" style="display:none">
-<tr>
-<td valign="middle" align="center">
-	<img src="local/layout/images/central/popup_str_up.png">
-</td></tr>
-<tr><td class="content" valign="top" style="padding:20px">
-
-	<table cellspacing="0" width="100%">
-	<tr valign="top"><td nowrap style="padding-right:20px">
-
-		<table cellspacing="0">
-		<tr><td colspan="2" nowrap>
-			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
-			<div class="korpus-title">Корпус 11</div>
-		</td></tr>
-		<tr><td style="padding-right:20px">
-			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
-		</td><td width="100%">
-			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
-		</td></tr>
-        <tr><td colspan="2">
-            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
-		</table>
-
-	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
-		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUpTR2('211', 0, 0);"></div>
-		<div class="popup-in-sell">Квартиры от физлиц</div>
-    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">1-комнатные</div>
-		<div class="price">от 3 939 740.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">30</div>
-	</td></tr>
-	</table>
-    	<table cellspacing="0" class="stat-popup" >
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">2-комнатные</div>
-		<div class="price">от 5 222 880.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">102</div>
-	</td></tr>
-	</table>
-    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
-	</td></tr>
-	</table>
-
-</td></tr>
-</table>
-<table cellspacing="0" class="marker-korpus-selled" style="margin-top:193px;margin-left:682px">
-<tr valign="top"><td onclick="ShowKorpusPopUpTR2('212', 193, 682);">
-	<div>12</div>
-	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
-</td></tr>
-</table>
-<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpusTR212" style="display:none">
-<tr>
-<td valign="middle" align="center">
-	<img src="local/layout/images/central/popup_str_up.png">
-</td></tr>
-<tr><td class="content" valign="top" style="padding:20px">
-
-	<table cellspacing="0" width="100%">
-	<tr valign="top"><td nowrap style="padding-right:20px">
-
-		<table cellspacing="0">
-		<tr><td colspan="2" nowrap>
-			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
-			<div class="korpus-title">Корпус 12</div>
-		</td></tr>
-		<tr><td style="padding-right:20px">
-			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
-		</td><td width="100%">
-			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
-		</td></tr>
-        <tr><td colspan="2">
-            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
-		</table>
-
-	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
-		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUpTR2('212', 0, 0);"></div>
-		<div class="popup-in-sell">Квартиры от физлиц</div>
-    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">1-комнатные</div>
-		<div class="price">от 3 939 740.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">30</div>
-	</td></tr>
-	</table>
-    	<table cellspacing="0" class="stat-popup" >
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">2-комнатные</div>
-		<div class="price">от 5 222 880.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">102</div>
-	</td></tr>
-	</table>
-    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
-	</td></tr>
-	</table>
-
-</td></tr>
-</table>
-<table cellspacing="0" class="marker-korpus-selled" style="margin-top:193px;margin-left:756px">
-<tr valign="top"><td onclick="ShowKorpusPopUpTR2('213', 193, 756);">
-	<div>13</div>
-	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
-</td></tr>
-</table>
-<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpusTR213" style="display:none">
-<tr>
-<td valign="middle" align="center">
-	<img src="local/layout/images/central/popup_str_up.png">
-</td></tr>
-<tr><td class="content" valign="top" style="padding:20px">
-
-	<table cellspacing="0" width="100%">
-	<tr valign="top"><td nowrap style="padding-right:20px">
-
-		<table cellspacing="0">
-		<tr><td colspan="2" nowrap>
-			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
-			<div class="korpus-title">Корпус 13</div>
-		</td></tr>
-		<tr><td style="padding-right:20px">
-			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
-		</td><td width="100%">
-			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
-		</td></tr>
-        <tr><td colspan="2">
-            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
-		</table>
-
-	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
-		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUpTR2('213', 0, 0);"></div>
-		<div class="popup-in-sell">Квартиры от физлиц</div>
-    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">1-комнатные</div>
-		<div class="price">от 3 939 740.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">30</div>
-	</td></tr>
-	</table>
-    	<table cellspacing="0" class="stat-popup" >
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">2-комнатные</div>
-		<div class="price">от 5 222 880.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">102</div>
-	</td></tr>
-	</table>
-    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
-	</td></tr>
-	</table>
-
-</td></tr>
-</table>
-<table cellspacing="0" class="marker-korpus" style="margin-top:120px;margin-left:670px">
-<tr valign="top"><td onclick="ShowKorpusPopUpTR('104', 120, 670);">
-	<div>14</div>
-	<img src="local/layout/images/central/marker_korpus.png"><br>
-</td></tr>
-</table>
-
-<table cellspacing="0" class="korpus-plan-popup" id="korpusTR104" style="display:none">
-<tr><td class="content" valign="top" style="padding:20px">
-
-	<table cellspacing="0" width="100%">
-	<tr valign="top"><td nowrap>
-
-		<table cellspacing="0">
-		<tr><td colspan="2" nowrap>
-			<a href="./korpus/?korpus=104"><img src="upload/resize_cache/nvflats/cc3/154_100054_1/14.jpg" style="margin-bottom:15px"></a>
-			<div class="korpus-title">Корпус 14</div>
-		</td></tr>
-		<tr><td width="50%">
-			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
-		</td><td width="50%" align="right">
-			<div class="korpus-title-stat">Секций: <strong>6</strong></div>
-		</td></tr>
-		<tr><td colspan="2">
-
-			<table cellspacing="0" class="bluekorpus-btn">
-			<tr><td>
-				<a href="./korpus/?korpus=104">Подробности</a><br>
-			</td></tr>
-			</table>
-
-		</td></tr>
-		</table>
-
-		<img src="local/layout/images/empty.gif" width="174" height="1"><br>
-
-	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
-		<div style="position:absolute;margin:-10px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close.gif" class="cur" onclick="ShowKorpusPopUpTR('104', 0, 0);"></div>
-		<div class="popup-in-sell">Квартиры в продаже</div>
-    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">1-комнатные</div>
-		<div class="price">от 4 166 400.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">106</div>
-	</td></tr>
-	</table>
-    	<table cellspacing="0" class="stat-popup" >
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">2-комнатные</div>
-		<div class="price">от 5 210 000.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">68</div>
-	</td></tr>
-	</table>
-    	<table cellspacing="0" class="stat-popup" >
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">3-комнатные</div>
-		<div class="price">от 7 030 800.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">47</div>
-	</td></tr>
-	</table>
-    <br />
-		<div class="popup-in-sell">Квартиры от физлиц</div>
-    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">1-комнатные</div>
-		<div class="price">от 3 939 740.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">30</div>
-	</td></tr>
-	</table>
-    	<table cellspacing="0" class="stat-popup" >
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">2-комнатные</div>
-		<div class="price">от 5 222 880.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">102</div>
-	</td></tr>
-	</table>
-    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
-	</td></tr>
-	</table>
-
-</td><td valign="middle">
-	<img src="local/layout/images/central/popup_str3.png"><br>
-</td></tr>
-</table>
-<table cellspacing="0" class="marker-korpus-selled" style="margin-top:108px;margin-left:827px">
-<tr valign="top"><td onclick="ShowKorpusPopUpTR2('219', 108, 827);">
-	<div>19</div>
-	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
-</td></tr>
-</table>
-<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpusTR219" style="display:none">
-<tr>
-<td valign="middle" align="center">
-	<img src="local/layout/images/central/popup_str_up.png">
-</td></tr>
-<tr><td class="content" valign="top" style="padding:20px">
-
-	<table cellspacing="0" width="100%">
-	<tr valign="top"><td nowrap style="padding-right:20px">
-
-		<table cellspacing="0">
-		<tr><td colspan="2" nowrap>
-			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
-			<div class="korpus-title">Корпус 19</div>
-		</td></tr>
-		<tr><td style="padding-right:20px">
-			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
-		</td><td width="100%">
-			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
-		</td></tr>
-        <tr><td colspan="2">
-            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
-		</table>
-
-	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
-		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUpTR2('219', 0, 0);"></div>
-		<div class="popup-in-sell">Квартиры от физлиц</div>
-    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">1-комнатные</div>
-		<div class="price">от 3 939 740.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">30</div>
-	</td></tr>
-	</table>
-    	<table cellspacing="0" class="stat-popup" >
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">2-комнатные</div>
-		<div class="price">от 5 222 880.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">102</div>
-	</td></tr>
-	</table>
-    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
-	</td></tr>
-	</table>
-
-</td></tr>
-</table>
-<table cellspacing="0" class="marker-korpus" style="margin-top:210px;margin-left:446px">
-<tr valign="top"><td onclick="ShowKorpusPopUpTR('100', 210, 446);">
-	<div>33</div>
-	<img src="local/layout/images/central/marker_korpus.png"><br>
-</td></tr>
-</table>
-
-<table cellspacing="0" class="korpus-plan-popup" id="korpusTR100" style="display:none">
-<tr><td valign="middle">
-	<img src="local/layout/images/central/popup_str.png"><br>
-</td><td class="content" valign="top" style="padding:20px">
-
-	<table cellspacing="0" width="100%">
-	<tr valign="top"><td nowrap>
-
-		<table cellspacing="0">
-		<tr><td colspan="2" nowrap>
-			<a href="./korpus/?korpus=100"><img src="upload/resize_cache/nvflats/f30/154_100054_1/33.jpg" style="margin-bottom:15px"></a>
-			<div class="korpus-title">Корпус 33</div>
-		</td></tr>
-		<tr><td width="50%">
-			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
-		</td><td width="50%" align="right">
-			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
-		</td></tr>
-		<tr><td colspan="2">
-
-			<table cellspacing="0" class="bluekorpus-btn">
-			<tr><td>
-				<a href="./korpus/?korpus=100">Подробности</a><br>
-			</td></tr>
-			</table>
-
-		</td></tr>
-		</table>
-
-		<img src="local/layout/images/empty.gif" width="174" height="1"><br>
-
-	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
-		<div style="position:absolute;margin:-10px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close.gif" class="cur" onclick="ShowKorpusPopUpTR('100', 0, 0);"></div>
-		<div class="popup-in-sell">Квартиры в продаже</div>
-    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">1-комнатные</div>
-		<div class="price">от 4 290 056.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">3</div>
-	</td></tr>
-	</table>
-    	<table cellspacing="0" class="stat-popup" >
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">2-комнатные</div>
-		<div class="price">от 5 221 800.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">5</div>
-	</td></tr>
-	</table>
-    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
-	</td></tr>
-	</table>
-
-</td></tr>
-</table>
-<table cellspacing="0" class="marker-korpus" style="margin-top:191px;margin-left:508px">
-<tr valign="top"><td onclick="ShowKorpusPopUpTR('101', 191, 508);">
-	<div>34</div>
-	<img src="local/layout/images/central/marker_korpus.png"><br>
-</td></tr>
-</table>
-
-<table cellspacing="0" class="korpus-plan-popup" id="korpusTR101" style="display:none">
-<tr><td valign="middle">
-	<img src="local/layout/images/central/popup_str.png"><br>
-</td><td class="content" valign="top" style="padding:20px">
-
-	<table cellspacing="0" width="100%">
-	<tr valign="top"><td nowrap>
-
-		<table cellspacing="0">
-		<tr><td colspan="2" nowrap>
-			<a href="./korpus/?korpus=101"><img src="upload/resize_cache/nvflats/b83/154_100054_1/34.jpg" style="margin-bottom:15px"></a>
-			<div class="korpus-title">Корпус 34</div>
-		</td></tr>
-		<tr><td width="50%">
-			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
-		</td><td width="50%" align="right">
-			<div class="korpus-title-stat">Секций: <strong>2</strong></div>
-		</td></tr>
-		<tr><td colspan="2">
-
-			<table cellspacing="0" class="bluekorpus-btn">
-			<tr><td>
-				<a href="./korpus/?korpus=101">Подробности</a><br>
-			</td></tr>
-			</table>
-
-		</td></tr>
-		</table>
-
-		<img src="local/layout/images/empty.gif" width="174" height="1"><br>
-
-	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
-		<div style="position:absolute;margin:-10px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close.gif" class="cur" onclick="ShowKorpusPopUpTR('101', 0, 0);"></div>
-		<div class="popup-in-sell">Квартиры в продаже</div>
-    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">1-комнатные</div>
-		<div class="price">от 4 290 056.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">9</div>
-	</td></tr>
-	</table>
-    	<table cellspacing="0" class="stat-popup" >
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">2-комнатные</div>
-		<div class="price">от 5 279 820.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">2</div>
-	</td></tr>
-	</table>
-    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
-	</td></tr>
-	</table>
-
-</td></tr>
-</table>
-<table cellspacing="0" class="marker-korpus-selled" style="margin-top:158px;margin-left:550px">
-<tr valign="top"><td onclick="ShowKorpusPopUpTR2('235', 158, 550);">
-	<div>35</div>
-	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
-</td></tr>
-</table>
-<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpusTR235" style="display:none">
-<tr>
-<td valign="middle" align="center">
-	<img src="local/layout/images/central/popup_str_up.png">
-</td></tr>
-<tr><td class="content" valign="top" style="padding:20px">
-
-	<table cellspacing="0" width="100%">
-	<tr valign="top"><td nowrap style="padding-right:20px">
-
-		<table cellspacing="0">
-		<tr><td colspan="2" nowrap>
-			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
-			<div class="korpus-title">Корпус 35</div>
-		</td></tr>
-		<tr><td style="padding-right:20px">
-			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
-		</td><td width="100%">
-			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
-		</td></tr>
-        <tr><td colspan="2">
-            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
-		</table>
-
-	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
-		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUpTR2('235', 0, 0);"></div>
-		<div class="popup-in-sell">Квартиры от физлиц</div>
-    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">1-комнатные</div>
-		<div class="price">от 3 939 740.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">30</div>
-	</td></tr>
-	</table>
-    	<table cellspacing="0" class="stat-popup" >
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">2-комнатные</div>
-		<div class="price">от 5 222 880.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">102</div>
-	</td></tr>
-	</table>
-    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
-	</td></tr>
-	</table>
-
-</td></tr>
-</table>
-<table cellspacing="0" class="marker-korpus" style="margin-top:108px;margin-left:416px">
-<tr valign="top"><td onclick="ShowKorpusPopUpTR('102', 108, 416);">
-	<div>36</div>
-	<img src="local/layout/images/central/marker_korpus.png"><br>
-</td></tr>
-</table>
-
-<table cellspacing="0" class="korpus-plan-popup" id="korpusTR102" style="display:none">
-<tr><td valign="middle">
-	<img src="local/layout/images/central/popup_str.png"><br>
-</td><td class="content" valign="top" style="padding:20px">
-
-	<table cellspacing="0" width="100%">
-	<tr valign="top"><td nowrap>
-
-		<table cellspacing="0">
-		<tr><td colspan="2" nowrap>
-			<a href="./korpus/?korpus=102"><img src="upload/resize_cache/nvflats/a9b/154_100054_1/36.jpg" style="margin-bottom:15px"></a>
-			<div class="korpus-title">Корпус 36</div>
-		</td></tr>
-		<tr><td width="50%">
-			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
-		</td><td width="50%" align="right">
-			<div class="korpus-title-stat">Секций: <strong>4</strong></div>
-		</td></tr>
-		<tr><td colspan="2">
-
-			<table cellspacing="0" class="bluekorpus-btn">
-			<tr><td>
-				<a href="./korpus/?korpus=102">Подробности</a><br>
-			</td></tr>
-			</table>
-
-		</td></tr>
-		</table>
-
-		<img src="local/layout/images/empty.gif" width="174" height="1"><br>
-
-	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
-		<div style="position:absolute;margin:-10px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close.gif" class="cur" onclick="ShowKorpusPopUpTR('102', 0, 0);"></div>
-		<div class="popup-in-sell">Квартиры в продаже</div>
-    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">1-комнатные</div>
-		<div class="price">от 3 939 740.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">30</div>
-	</td></tr>
-	</table>
-    	<table cellspacing="0" class="stat-popup" >
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">2-комнатные</div>
-		<div class="price">от 5 222 880.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">98</div>
-	</td></tr>
-	</table>
-    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
-	</td></tr>
-	</table>
-
-</td></tr>
-</table>
-<table cellspacing="0" class="marker-korpus" style="margin-top:106px;margin-left:348px">
-<tr valign="top"><td onclick="ShowKorpusPopUpTR('103', 106, 348);">
-	<div>37</div>
-	<img src="local/layout/images/central/marker_korpus.png"><br>
-</td></tr>
-</table>
-
-<table cellspacing="0" class="korpus-plan-popup" id="korpusTR103" style="display:none">
-<tr><td valign="middle">
-	<img src="local/layout/images/central/popup_str.png"><br>
-</td><td class="content" valign="top" style="padding:20px">
-
-	<table cellspacing="0" width="100%">
-	<tr valign="top"><td nowrap>
-
-		<table cellspacing="0">
-		<tr><td colspan="2" nowrap>
-			<a href="./korpus/?korpus=103"><img src="upload/resize_cache/nvflats/d27/154_100054_1/37.jpg" style="margin-bottom:15px"></a>
-			<div class="korpus-title">Корпус 37</div>
-		</td></tr>
-		<tr><td width="50%">
-			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
-		</td><td width="50%" align="right">
-			<div class="korpus-title-stat">Секций: <strong>4</strong></div>
-		</td></tr>
-		<tr><td colspan="2">
-
-			<table cellspacing="0" class="bluekorpus-btn">
-			<tr><td>
-				<a href="./korpus/?korpus=103">Подробности</a><br>
-			</td></tr>
-			</table>
-
-		</td></tr>
-		</table>
-
-		<img src="local/layout/images/empty.gif" width="174" height="1"><br>
-
-	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
-		<div style="position:absolute;margin:-10px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close.gif" class="cur" onclick="ShowKorpusPopUpTR('103', 0, 0);"></div>
-		<div class="popup-in-sell">Квартиры в продаже</div>
-    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">1-комнатные</div>
-		<div class="price">от 3 939 740.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">22</div>
-	</td></tr>
-	</table>
-    	<table cellspacing="0" class="stat-popup" >
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">2-комнатные</div>
-		<div class="price">от 5 166 720.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">52</div>
-	</td></tr>
-	</table>
-    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
-	</td></tr>
-	</table>
-
-</td></tr>
-</table>
-<table cellspacing="0" class="marker-korpus-selled" style="margin-top:112px;margin-left:599px">
-<tr valign="top"><td onclick="ShowKorpusPopUpTR2('238', 112, 599);">
-	<div>38</div>
-	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
-</td></tr>
-</table>
-<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpusTR238" style="display:none">
-<tr>
-<td valign="middle" align="center">
-	<img src="local/layout/images/central/popup_str_up.png">
-</td></tr>
-<tr><td class="content" valign="top" style="padding:20px">
-
-	<table cellspacing="0" width="100%">
-	<tr valign="top"><td nowrap style="padding-right:20px">
-
-		<table cellspacing="0">
-		<tr><td colspan="2" nowrap>
-			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
-			<div class="korpus-title">Корпус 38</div>
-		</td></tr>
-		<tr><td style="padding-right:20px">
-			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
-		</td><td width="100%">
-			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
-		</td></tr>
-        <tr><td colspan="2">
-            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
-		</table>
-
-	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
-		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUpTR2('238', 0, 0);"></div>
-		<div class="popup-in-sell">Квартиры от физлиц</div>
-    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">1-комнатные</div>
-		<div class="price">от 3 939 740.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">30</div>
-	</td></tr>
-	</table>
-    	<table cellspacing="0" class="stat-popup" >
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">2-комнатные</div>
-		<div class="price">от 5 222 880.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">102</div>
-	</td></tr>
-	</table>
-    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
-	</td></tr>
-	</table>
-
-</td></tr>
-</table>
-						<img src="local/layout/images/central/3dmap.jpg"><br>
 		</div>
 
 		<div id="canvasplan" style="display:none">
-			<table cellspacing="0" class="marker-korpus-selled" style="margin-top:877px;margin-left:1026px">
-<tr valign="top"><td onclick="ShowKorpusPopUp2('301', 877, 1026);">
-	<div>1</div>
-	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
-</td></tr>
-</table>
-<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpus301" style="display:none">
-<tr>
-<td valign="middle" align="center">
-	<img src="local/layout/images/central/popup_str_up.png">
-</td></tr>
-<tr><td class="content" valign="top" style="padding:20px">
-
-	<table cellspacing="0" width="100%">
-	<tr valign="top"><td nowrap style="padding-right:20px">
-
-		<table cellspacing="0">
-		<tr><td colspan="2" nowrap>
-			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
-			<div class="korpus-title">Корпус 1</div>
-		</td></tr>
-		<tr><td style="padding-right:20px">
-			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
-		</td><td width="100%">
-			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
-		</td></tr>
-        <tr><td colspan="2">
-            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
-		</table>
-
-	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
-		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUp2('301', 0, 0);"></div>
-		<div class="popup-in-sell">Квартиры от физлиц</div>
-    	<a href="#" class="popup-in-sell-link">
-    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">1-комнатные</div>
-		<div class="price">от 3 939 740.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">30</div>
-	</td></tr>
-	</table>
-    </a>
-    	<a href="#" class="popup-in-sell-link">
-    	<table cellspacing="0" class="stat-popup" >
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">2-комнатные</div>
-		<div class="price">от 5 222 880.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">102</div>
-	</td></tr>
-	</table>
-    </a>
-    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
-	</td></tr>
-	</table>
-
-</td></tr>
-</table>
-<table cellspacing="0" class="marker-korpus-selled" style="margin-top:882px;margin-left:896px">
-<tr valign="top"><td onclick="ShowKorpusPopUp2('302', 882, 896);">
-	<div>2</div>
-	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
-</td></tr>
-</table>
-<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpus302" style="display:none">
-<tr>
-<td valign="middle" align="center">
-	<img src="local/layout/images/central/popup_str_up.png">
-</td></tr>
-<tr><td class="content" valign="top" style="padding:20px">
-
-	<table cellspacing="0" width="100%">
-	<tr valign="top"><td nowrap style="padding-right:20px">
-
-		<table cellspacing="0">
-		<tr><td colspan="2" nowrap>
-			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
-			<div class="korpus-title">Корпус 2</div>
-		</td></tr>
-		<tr><td style="padding-right:20px">
-			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
-		</td><td width="100%">
-			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
-		</td></tr>
-        <tr><td colspan="2">
-            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
-		</table>
-
-	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
-		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUp2('302', 0, 0);"></div>
-		<div class="popup-in-sell">Квартиры от физлиц</div>
-    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">1-комнатные</div>
-		<div class="price">от 3 939 740.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">30</div>
-	</td></tr>
-	</table>
-    	<table cellspacing="0" class="stat-popup" >
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">2-комнатные</div>
-		<div class="price">от 5 222 880.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">102</div>
-	</td></tr>
-	</table>
-    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
-	</td></tr>
-	</table>
-
-</td></tr>
-</table>
-<table cellspacing="0" class="marker-korpus-selled" style="margin-top:847px;margin-left:806px">
-<tr valign="top"><td onclick="ShowKorpusPopUp2('306', 847, 806);">
-	<div>6</div>
-	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
-</td></tr>
-</table>
-<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpus306" style="display:none">
-<tr>
-<td valign="middle" align="center">
-	<img src="local/layout/images/central/popup_str_up.png">
-</td></tr>
-<tr><td class="content" valign="top" style="padding:20px">
-
-	<table cellspacing="0" width="100%">
-	<tr valign="top"><td nowrap style="padding-right:20px">
-
-		<table cellspacing="0">
-		<tr><td colspan="2" nowrap>
-			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
-			<div class="korpus-title">Корпус 6</div>
-		</td></tr>
-		<tr><td style="padding-right:20px">
-			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
-		</td><td width="100%">
-			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
-		</td></tr>
-        <tr><td colspan="2">
-            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
-		</table>
-
-	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
-		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUp2('306', 0, 0);"></div>
-		<div class="popup-in-sell">Квартиры от физлиц</div>
-    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">1-комнатные</div>
-		<div class="price">от 3 939 740.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">30</div>
-	</td></tr>
-	</table>
-    	<table cellspacing="0" class="stat-popup" >
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">2-комнатные</div>
-		<div class="price">от 5 222 880.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">102</div>
-	</td></tr>
-	</table>
-    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
-	</td></tr>
-	</table>
-
-</td></tr>
-</table>
-<table cellspacing="0" class="marker-korpus-selled" style="margin-top:771px;margin-left:707px">
-<tr valign="top"><td onclick="ShowKorpusPopUp2('308', 771, 707);">
-	<div>8</div>
-	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
-</td></tr>
-</table>
-<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpus308" style="display:none">
-<tr>
-<td valign="middle" align="center">
-	<img src="local/layout/images/central/popup_str_up.png">
-</td></tr>
-<tr><td class="content" valign="top" style="padding:20px">
-
-	<table cellspacing="0" width="100%">
-	<tr valign="top"><td nowrap style="padding-right:20px">
-
-		<table cellspacing="0">
-		<tr><td colspan="2" nowrap>
-			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
-			<div class="korpus-title">Корпус 8</div>
-		</td></tr>
-		<tr><td style="padding-right:20px">
-			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
-		</td><td width="100%">
-			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
-		</td></tr>
-        <tr><td colspan="2">
-            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
-		</table>
-
-	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
-		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUp2('308', 0, 0);"></div>
-		<div class="popup-in-sell">Квартиры от физлиц</div>
-    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">1-комнатные</div>
-		<div class="price">от 3 939 740.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">30</div>
-	</td></tr>
-	</table>
-    	<table cellspacing="0" class="stat-popup" >
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">2-комнатные</div>
-		<div class="price">от 5 222 880.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">102</div>
-	</td></tr>
-	</table>
-    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
-	</td></tr>
-	</table>
-
-</td></tr>
-</table>
-<table cellspacing="0" class="marker-korpus-selled" style="margin-top:695px;margin-left:640px">
-<tr valign="top"><td onclick="ShowKorpusPopUp2('309', 695, 640);">
-	<div>9</div>
-	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
-</td></tr>
-</table>
-<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpus309" style="display:none">
-<tr>
-<td valign="middle" align="center">
-	<img src="local/layout/images/central/popup_str_up.png">
-</td></tr>
-<tr><td class="content" valign="top" style="padding:20px">
-
-	<table cellspacing="0" width="100%">
-	<tr valign="top"><td nowrap style="padding-right:20px">
-
-		<table cellspacing="0">
-		<tr><td colspan="2" nowrap>
-			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
-			<div class="korpus-title">Корпус 9</div>
-		</td></tr>
-		<tr><td style="padding-right:20px">
-			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
-		</td><td width="100%">
-			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
-		</td></tr>
-        <tr><td colspan="2">
-            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
-		</table>
-
-	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
-		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUp2('309', 0, 0);"></div>
-		<div class="popup-in-sell">Квартиры от физлиц</div>
-    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">1-комнатные</div>
-		<div class="price">от 3 939 740.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">30</div>
-	</td></tr>
-	</table>
-    	<table cellspacing="0" class="stat-popup" >
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">2-комнатные</div>
-		<div class="price">от 5 222 880.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">102</div>
-	</td></tr>
-	</table>
-    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
-	</td></tr>
-	</table>
-
-</td></tr>
-</table>
-<table cellspacing="0" class="marker-korpus-selled" style="margin-top:690px;margin-left:777px">
-<tr valign="top"><td onclick="ShowKorpusPopUp2('310', 690, 777);">
-	<div>10</div>
-	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
-</td></tr>
-</table>
-<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpus310" style="display:none">
-<tr>
-<td valign="middle" align="center">
-	<img src="local/layout/images/central/popup_str_up.png">
-</td></tr>
-<tr><td class="content" valign="top" style="padding:20px">
-
-	<table cellspacing="0" width="100%">
-	<tr valign="top"><td nowrap style="padding-right:20px">
-
-		<table cellspacing="0">
-		<tr><td colspan="2" nowrap>
-			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
-			<div class="korpus-title">Корпус 10</div>
-		</td></tr>
-		<tr><td style="padding-right:20px">
-			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
-		</td><td width="100%">
-			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
-		</td></tr>
-        <tr><td colspan="2">
-            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
-		</table>
-
-	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
-		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUp2('310', 0, 0);"></div>
-		<div class="popup-in-sell">Квартиры от физлиц</div>
-    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">1-комнатные</div>
-		<div class="price">от 3 939 740.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">30</div>
-	</td></tr>
-	</table>
-    	<table cellspacing="0" class="stat-popup" >
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">2-комнатные</div>
-		<div class="price">от 5 222 880.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">102</div>
-	</td></tr>
-	</table>
-    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
-	</td></tr>
-	</table>
-
-</td></tr>
-</table>
-<table cellspacing="0" class="marker-korpus-selled" style="margin-top:583px;margin-left:643px">
-<tr valign="top"><td onclick="ShowKorpusPopUp2('311', 583, 643);">
-	<div>11</div>
-	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
-</td></tr>
-</table>
-<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpus311" style="display:none">
-<tr>
-<td valign="middle" align="center">
-	<img src="local/layout/images/central/popup_str_up.png">
-</td></tr>
-<tr><td class="content" valign="top" style="padding:20px">
-
-	<table cellspacing="0" width="100%">
-	<tr valign="top"><td nowrap style="padding-right:20px">
-
-		<table cellspacing="0">
-		<tr><td colspan="2" nowrap>
-			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
-			<div class="korpus-title">Корпус 11</div>
-		</td></tr>
-		<tr><td style="padding-right:20px">
-			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
-		</td><td width="100%">
-			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
-		</td></tr>
-        <tr><td colspan="2">
-            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
-		</table>
-
-	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
-		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUp2('311', 0, 0);"></div>
-		<div class="popup-in-sell">Квартиры от физлиц</div>
-    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">1-комнатные</div>
-		<div class="price">от 3 939 740.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">30</div>
-	</td></tr>
-	</table>
-    	<table cellspacing="0" class="stat-popup" >
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">2-комнатные</div>
-		<div class="price">от 5 222 880.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">102</div>
-	</td></tr>
-	</table>
-    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
-	</td></tr>
-	</table>
-
-</td></tr>
-</table>
-<table cellspacing="0" class="marker-korpus-selled" style="margin-top:607px;margin-left:705px">
-<tr valign="top"><td onclick="ShowKorpusPopUp2('312', 607, 705);">
-	<div>12</div>
-	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
-</td></tr>
-</table>
-<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpus312" style="display:none">
-<tr>
-<td valign="middle" align="center">
-	<img src="local/layout/images/central/popup_str_up.png">
-</td></tr>
-<tr><td class="content" valign="top" style="padding:20px">
-
-	<table cellspacing="0" width="100%">
-	<tr valign="top"><td nowrap style="padding-right:20px">
-
-		<table cellspacing="0">
-		<tr><td colspan="2" nowrap>
-			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
-			<div class="korpus-title">Корпус 12</div>
-		</td></tr>
-		<tr><td style="padding-right:20px">
-			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
-		</td><td width="100%">
-			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
-		</td></tr>
-        <tr><td colspan="2">
-            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
-		</table>
-
-	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
-		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUp2('312', 0, 0);"></div>
-		<div class="popup-in-sell">Квартиры от физлиц</div>
-    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">1-комнатные</div>
-		<div class="price">от 3 939 740.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">30</div>
-	</td></tr>
-	</table>
-    	<table cellspacing="0" class="stat-popup" >
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">2-комнатные</div>
-		<div class="price">от 5 222 880.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">102</div>
-	</td></tr>
-	</table>
-    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
-	</td></tr>
-	</table>
-
-</td></tr>
-</table>
-<table cellspacing="0" class="marker-korpus-selled" style="margin-top:574px;margin-left:773px">
-<tr valign="top"><td onclick="ShowKorpusPopUp2('313', 574, 773);">
-	<div>13</div>
-	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
-</td></tr>
-</table>
-<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpus313" style="display:none">
-<tr>
-<td valign="middle" align="center">
-	<img src="local/layout/images/central/popup_str_up.png">
-</td></tr>
-<tr><td class="content" valign="top" style="padding:20px">
-
-	<table cellspacing="0" width="100%">
-	<tr valign="top"><td nowrap style="padding-right:20px">
-
-		<table cellspacing="0">
-		<tr><td colspan="2" nowrap>
-			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
-			<div class="korpus-title">Корпус 13</div>
-		</td></tr>
-		<tr><td style="padding-right:20px">
-			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
-		</td><td width="100%">
-			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
-		</td></tr>
-        <tr><td colspan="2">
-            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
-		</table>
-
-	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
-		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUp2('313', 0, 0);"></div>
-		<div class="popup-in-sell">Квартиры от физлиц</div>
-    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">1-комнатные</div>
-		<div class="price">от 3 939 740.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">30</div>
-	</td></tr>
-	</table>
-    	<table cellspacing="0" class="stat-popup" >
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">2-комнатные</div>
-		<div class="price">от 5 222 880.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">102</div>
-	</td></tr>
-	</table>
-    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
-	</td></tr>
-	</table>
-
-</td></tr>
-</table>
-<table cellspacing="0" class="marker-korpus" style="margin-top:470px;margin-left:638px">
-<tr valign="top"><td onclick="ShowKorpusPopUp('104', 470, 638);">
-	<div>14</div>
-	<img src="local/layout/images/central/marker_korpus.png"><br>
-</td></tr>
-</table>
-
-<table cellspacing="0" class="korpus-plan-popup" id="korpus104" style="display:none">
-<tr><td class="content" valign="top" style="padding:20px">
-
-	<table cellspacing="0" width="100%">
-	<tr valign="top"><td nowrap>
-
-		<table cellspacing="0">
-		<tr><td colspan="2" nowrap>
-			<a href="./korpus/?korpus=104"><img src="upload/resize_cache/nvflats/cc3/154_100054_1/14.jpg" style="margin-bottom:15px"></a>
-			<div class="korpus-title">Корпус 14</div>
-		</td></tr>
-		<tr><td width="50%">
-			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
-		</td><td width="50%" align="right">
-			<div class="korpus-title-stat">Секций: <strong>6</strong></div>
-		</td></tr>
-		<tr><td colspan="2">
-
-			<table cellspacing="0" class="bluekorpus-btn">
-			<tr><td>
-				<a href="./korpus/?korpus=104">Подробности</a><br>
-			</td></tr>
-			</table>
-
-		</td></tr>
-		</table>
-
-		<img src="local/layout/images/empty.gif" width="174" height="1"><br>
-
-	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
-		<div style="position:absolute;margin:-10px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close.gif" class="cur" onclick="ShowKorpusPopUp('104', 0, 0);"></div>
-		<div class="popup-in-sell">Квартиры в продаже</div>
-    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">1-комнатные</div>
-		<div class="price">от 4 166 400.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">106</div>
-	</td></tr>
-	</table>
-    	<table cellspacing="0" class="stat-popup" >
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">2-комнатные</div>
-		<div class="price">от 5 210 000.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">68</div>
-	</td></tr>
-	</table>
-    	<table cellspacing="0" class="stat-popup" >
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">3-комнатные</div>
-		<div class="price">от 7 030 800.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">47</div>
-	</td></tr>
-	</table>
-    <br />
-		<div class="popup-in-sell">Квартиры от физлиц</div>
-    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">1-комнатные</div>
-		<div class="price">от 3 939 740.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">30</div>
-	</td></tr>
-	</table>
-    	<table cellspacing="0" class="stat-popup" >
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">2-комнатные</div>
-		<div class="price">от 5 222 880.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">102</div>
-	</td></tr>
-	</table>
-    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
-	</td></tr>
-	</table>
-
-</td><td valign="middle">
-	<img src="local/layout/images/central/popup_str3.png"><br>
-</td></tr>
-</table>
-<table cellspacing="0" class="marker-korpus-selled" style="margin-top:359px;margin-left:759px">
-<tr valign="top"><td onclick="ShowKorpusPopUp2('319', 359, 759);">
-	<div>19</div>
-	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
-</td></tr>
-</table>
-<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpus319" style="display:none">
-<tr>
-<td valign="middle" align="center">
-	<img src="local/layout/images/central/popup_str_up.png">
-</td></tr>
-<tr><td class="content" valign="top" style="padding:20px">
-
-	<table cellspacing="0" width="100%">
-	<tr valign="top"><td nowrap style="padding-right:20px">
-
-		<table cellspacing="0">
-		<tr><td colspan="2" nowrap>
-			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
-			<div class="korpus-title">Корпус 19</div>
-		</td></tr>
-		<tr><td style="padding-right:20px">
-			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
-		</td><td width="100%">
-			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
-		</td></tr>
-        <tr><td colspan="2">
-            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
-		</table>
-
-	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
-		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUp2('319', 0, 0);"></div>
-		<div class="popup-in-sell">Квартиры от физлиц</div>
-    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">1-комнатные</div>
-		<div class="price">от 3 939 740.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">30</div>
-	</td></tr>
-	</table>
-    	<table cellspacing="0" class="stat-popup" >
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">2-комнатные</div>
-		<div class="price">от 5 222 880.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">102</div>
-	</td></tr>
-	</table>
-    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
-	</td></tr>
-	</table>
-
-</td></tr>
-</table>
-<table cellspacing="0" class="marker-korpus" style="margin-top:721px;margin-left:530px">
-<tr valign="top"><td onclick="ShowKorpusPopUp('100', 721, 530);">
-	<div>33</div>
-	<img src="local/layout/images/central/marker_korpus.png"><br>
-</td></tr>
-</table>
-
-<table cellspacing="0" class="korpus-plan-popup" id="korpus100" style="display:none">
-<tr><td valign="middle">
-	<img src="local/layout/images/central/popup_str.png"><br>
-</td><td class="content" valign="top" style="padding:20px">
-
-	<table cellspacing="0" width="100%">
-	<tr valign="top"><td nowrap>
-
-		<table cellspacing="0">
-		<tr><td colspan="2" nowrap>
-			<a href="./korpus/?korpus=100"><img src="upload/resize_cache/nvflats/f30/154_100054_1/33.jpg" style="margin-bottom:15px"></a>
-			<div class="korpus-title">Корпус 33</div>
-		</td></tr>
-		<tr><td width="50%">
-			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
-		</td><td width="50%" align="right">
-			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
-		</td></tr>
-		<tr><td colspan="2">
-
-			<table cellspacing="0" class="bluekorpus-btn">
-			<tr><td>
-				<a href="./korpus/?korpus=100">Подробности</a><br>
-			</td></tr>
-			</table>
-
-		</td></tr>
-		</table>
-
-		<img src="local/layout/images/empty.gif" width="174" height="1"><br>
-
-	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
-		<div style="position:absolute;margin:-10px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close.gif" class="cur" onclick="ShowKorpusPopUp('100', 0, 0);"></div>
-		<div class="popup-in-sell">Квартиры в продаже</div>
-    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">1-комнатные</div>
-		<div class="price">от 4 290 056.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">3</div>
-	</td></tr>
-	</table>
-    	<table cellspacing="0" class="stat-popup" >
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">2-комнатные</div>
-		<div class="price">от 5 221 800.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">5</div>
-	</td></tr>
-	</table>
-    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
-	</td></tr>
-	</table>
-
-</td></tr>
-</table>
-<table cellspacing="0" class="marker-korpus" style="margin-top:674px;margin-left:560px">
-<tr valign="top"><td onclick="ShowKorpusPopUp('101', 674, 560);">
-	<div>34</div>
-	<img src="local/layout/images/central/marker_korpus.png"><br>
-</td></tr>
-</table>
-
-<table cellspacing="0" class="korpus-plan-popup" id="korpus101" style="display:none">
-<tr><td valign="middle">
-	<img src="local/layout/images/central/popup_str.png"><br>
-</td><td class="content" valign="top" style="padding:20px">
-
-	<table cellspacing="0" width="100%">
-	<tr valign="top"><td nowrap>
-
-		<table cellspacing="0">
-		<tr><td colspan="2" nowrap>
-			<a href="./korpus/?korpus=101"><img src="upload/resize_cache/nvflats/b83/154_100054_1/34.jpg" style="margin-bottom:15px"></a>
-			<div class="korpus-title">Корпус 34</div>
-		</td></tr>
-		<tr><td width="50%">
-			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
-		</td><td width="50%" align="right">
-			<div class="korpus-title-stat">Секций: <strong>2</strong></div>
-		</td></tr>
-		<tr><td colspan="2">
-
-			<table cellspacing="0" class="bluekorpus-btn">
-			<tr><td>
-				<a href="./korpus/?korpus=101">Подробности</a><br>
-			</td></tr>
-			</table>
-
-		</td></tr>
-		</table>
-
-		<img src="local/layout/images/empty.gif" width="174" height="1"><br>
-
-	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
-		<div style="position:absolute;margin:-10px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close.gif" class="cur" onclick="ShowKorpusPopUp('101', 0, 0);"></div>
-		<div class="popup-in-sell">Квартиры в продаже</div>
-    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">1-комнатные</div>
-		<div class="price">от 4 290 056.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">9</div>
-	</td></tr>
-	</table>
-    	<table cellspacing="0" class="stat-popup" >
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">2-комнатные</div>
-		<div class="price">от 5 279 820.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">2</div>
-	</td></tr>
-	</table>
-    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
-	</td></tr>
-	</table>
-
-</td></tr>
-</table>
-<table cellspacing="0" class="marker-korpus-selled" style="margin-top:607px;margin-left:561px">
-<tr valign="top"><td onclick="ShowKorpusPopUp2('335', 607, 561);">
-	<div>35</div>
-	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
-</td></tr>
-</table>
-<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpus335" style="display:none">
-<tr>
-<td valign="middle" align="center">
-	<img src="local/layout/images/central/popup_str_up.png">
-</td></tr>
-<tr><td class="content" valign="top" style="padding:20px">
-
-	<table cellspacing="0" width="100%">
-	<tr valign="top"><td nowrap style="padding-right:20px">
-
-		<table cellspacing="0">
-		<tr><td colspan="2" nowrap>
-			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
-			<div class="korpus-title">Корпус 35</div>
-		</td></tr>
-		<tr><td style="padding-right:20px">
-			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
-		</td><td width="100%">
-			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
-		</td></tr>
-        <tr><td colspan="2">
-            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
-		</table>
-
-	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
-		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUp2('335', 0, 0);"></div>
-		<div class="popup-in-sell">Квартиры от физлиц</div>
-    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">1-комнатные</div>
-		<div class="price">от 3 939 740.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">30</div>
-	</td></tr>
-	</table>
-    	<table cellspacing="0" class="stat-popup" >
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">2-комнатные</div>
-		<div class="price">от 5 222 880.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">102</div>
-	</td></tr>
-	</table>
-    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
-	</td></tr>
-	</table>
-
-</td></tr>
-</table>
-<table cellspacing="0" class="marker-korpus" style="margin-top:562px;margin-left:388px">
-<tr valign="top"><td onclick="ShowKorpusPopUp('102', 562, 388);">
-	<div>36</div>
-	<img src="local/layout/images/central/marker_korpus.png"><br>
-</td></tr>
-</table>
-
-<table cellspacing="0" class="korpus-plan-popup" id="korpus102" style="display:none">
-<tr><td valign="middle">
-	<img src="local/layout/images/central/popup_str.png"><br>
-</td><td class="content" valign="top" style="padding:20px">
-
-	<table cellspacing="0" width="100%">
-	<tr valign="top"><td nowrap>
-
-		<table cellspacing="0">
-		<tr><td colspan="2" nowrap>
-			<a href="./korpus/?korpus=102"><img src="upload/resize_cache/nvflats/a9b/154_100054_1/36.jpg" style="margin-bottom:15px"></a>
-			<div class="korpus-title">Корпус 36</div>
-		</td></tr>
-		<tr><td width="50%">
-			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
-		</td><td width="50%" align="right">
-			<div class="korpus-title-stat">Секций: <strong>4</strong></div>
-		</td></tr>
-		<tr><td colspan="2">
-
-			<table cellspacing="0" class="bluekorpus-btn">
-			<tr><td>
-				<a href="./korpus/?korpus=102">Подробности</a><br>
-			</td></tr>
-			</table>
-
-		</td></tr>
-		</table>
-
-		<img src="local/layout/images/empty.gif" width="174" height="1"><br>
-
-	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
-		<div style="position:absolute;margin:-10px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close.gif" class="cur" onclick="ShowKorpusPopUp('102', 0, 0);"></div>
-		<div class="popup-in-sell">Квартиры в продаже</div>
-    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">1-комнатные</div>
-		<div class="price">от 3 939 740.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">30</div>
-	</td></tr>
-	</table>
-    	<table cellspacing="0" class="stat-popup" >
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">2-комнатные</div>
-		<div class="price">от 5 222 880.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">98</div>
-	</td></tr>
-	</table>
-    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
-	</td></tr>
-	</table>
-
-</td></tr>
-</table>
-<table cellspacing="0" class="marker-korpus" style="margin-top:582px;margin-left:328px">
-<tr valign="top"><td onclick="ShowKorpusPopUp('103', 582, 328);">
-	<div>37</div>
-	<img src="local/layout/images/central/marker_korpus.png"><br>
-</td></tr>
-</table>
-
-<table cellspacing="0" class="korpus-plan-popup" id="korpus103" style="display:none">
-<tr><td valign="middle">
-	<img src="local/layout/images/central/popup_str.png"><br>
-</td><td class="content" valign="top" style="padding:20px">
-
-	<table cellspacing="0" width="100%">
-	<tr valign="top"><td nowrap>
-
-		<table cellspacing="0">
-		<tr><td colspan="2" nowrap>
-			<a href="./korpus/?korpus=103"><img src="upload/resize_cache/nvflats/d27/154_100054_1/37.jpg" style="margin-bottom:15px"></a>
-			<div class="korpus-title">Корпус 37</div>
-		</td></tr>
-		<tr><td width="50%">
-			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
-		</td><td width="50%" align="right">
-			<div class="korpus-title-stat">Секций: <strong>4</strong></div>
-		</td></tr>
-		<tr><td colspan="2">
-
-			<table cellspacing="0" class="bluekorpus-btn">
-			<tr><td>
-				<a href="./korpus/?korpus=103">Подробности</a><br>
-			</td></tr>
-			</table>
-
-		</td></tr>
-		</table>
-
-		<img src="local/layout/images/empty.gif" width="174" height="1"><br>
-
-	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
-		<div style="position:absolute;margin:-10px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close.gif" class="cur" onclick="ShowKorpusPopUp('103', 0, 0);"></div>
-		<div class="popup-in-sell">Квартиры в продаже</div>
-    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">1-комнатные</div>
-		<div class="price">от 3 939 740.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">22</div>
-	</td></tr>
-	</table>
-    	<table cellspacing="0" class="stat-popup" >
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">2-комнатные</div>
-		<div class="price">от 5 166 720.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">52</div>
-	</td></tr>
-	</table>
-    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
-	</td></tr>
-	</table>
-
-</td></tr>
-</table>
-<table cellspacing="0" class="marker-korpus-selled" style="margin-top:471px;margin-left:561px">
-<tr valign="top"><td onclick="ShowKorpusPopUp2('338', 471, 561);">
-	<div>38</div>
-	<img src="local/layout/images/central/marker_korpus_selled.png"><br>
-</td></tr>
-</table>
-<table cellspacing="0" class="korpus-plan-popup korpus-plan-popup2" id="korpus338" style="display:none">
-<tr>
-<td valign="middle" align="center">
-	<img src="local/layout/images/central/popup_str_up.png">
-</td></tr>
-<tr><td class="content" valign="top" style="padding:20px">
-
-	<table cellspacing="0" width="100%">
-	<tr valign="top"><td nowrap style="padding-right:20px">
-
-		<table cellspacing="0">
-		<tr><td colspan="2" nowrap>
-			<a href="./korpus/?korpus=104"><img src="files/korpus12.jpg" style="margin-bottom:15px"></a>
-			<div class="korpus-title">Корпус 38</div>
-		</td></tr>
-		<tr><td style="padding-right:20px">
-			<div class="korpus-title-stat">Этажей: <strong>17</strong></div>
-		</td><td width="100%">
-			<div class="korpus-title-stat">Секций: <strong>5</strong></div>
-		</td></tr>
-        <tr><td colspan="2">
-            <div class="korpus-title-stat">Дата заселения: <strong>21 июля 2015</strong></div>
-		</table>
-
-	</td><td style="border-left:1px solid #c3c3c3;width:100%;padding-left:20px">
-		<div style="position:absolute;margin:-37px 0px 0px 216px"><img src="local/layout/images/central/korpus_popup_close-new.png" class="cur" onclick="ShowKorpusPopUp2('338', 0, 0);"></div>
-		<div class="popup-in-sell">Квартиры от физлиц</div>
-    	<table cellspacing="0" class="stat-popup" style="border-top:0px;margin-top:9px">
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">1-комнатные</div>
-		<div class="price">от 3 939 740.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">30</div>
-	</td></tr>
-	</table>
-    	<table cellspacing="0" class="stat-popup" >
-	<tr valign="top"><td style="padding:0px" nowrap>
-		<div class="type">2-комнатные</div>
-		<div class="price">от 5 222 880.-</div>
-	</td><td nowrap style="padding:0px 0px 0px 18px;width:100%">
-		<div class="total">102</div>
-	</td></tr>
-	</table>
-    		<img src="local/layout/images/empty.gif" width="212" height="1"><br>
-	</td></tr>
-	</table>
-
-</td></tr>
-</table>
-			<img src="local/layout/images/central/planmap.jpg"><br>
+            <!-- new map item -->
+            <div class="new-map-item new-map-item-selled" style="margin-top:719px; margin-left:1018px">
+                <a href="#" class="new-map-item-icon">1</a>
+                <div class="new-map-item-popup new-map-item-popup-tr">
+                    <div class="new-map-item-popup-info">
+                        <div class="new-map-item-popup-photo"><img src="files/new-map-photo.jpg" alt="" /></div>
+                        <div class="new-map-item-popup-title">Корпус 37</div>
+                        <div class="new-map-item-popup-text">Этажей: <span>17</span></div>
+                        <div class="new-map-item-popup-text">Секций: <span>5</span></div>
+                        <div class="new-map-item-popup-text">Дата заселения: <span>21 июля 2015</span></div>
+                    </div>
+                    <div class="new-map-item-popup-flats">
+                        <div class="new-map-item-popup-flats-block">
+                            <div class="new-map-item-popup-flats-block-title">Квартиры от физлиц</div>
+                            <a href="#" class="new-map-item-popup-flats-block-row">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-name">1-комнатные</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 3 939 740.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">30</div>
+                            </a>
+                            <a href="#" class="new-map-item-popup-flats-block-row">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-name">2-комнатные</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 5 222 880.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">102</div>
+                            </a>
+                        </div>
+                        <div class="new-map-item-popup-flats-block">
+                            <div class="new-map-item-popup-flats-block-title">Квартиры от застройщика</div>
+                            <a href="#" class="new-map-item-popup-flats-block-row">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-name">1-комнатные</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 3 939 740.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">35</div>
+                            </a>
+                            <a href="#" class="new-map-item-popup-flats-block-row">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-name">2-комнатные</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 5 222 880.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">29</div>
+                            </a>
+                        </div>
+                        <div class="new-map-item-popup-flats-block">
+                            <a href="#" class="new-map-item-popup-boxes">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-title">Кладовые</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 3 939 740.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">35</div>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="#" class="new-map-item-popup-close"></a>
+                </div>
+            </div>
+            <!-- new map item END -->
+
+            <!-- new map item -->
+            <div class="new-map-item new-map-item-selled" style="margin-top:715px;margin-left:890px">
+                <a href="#" class="new-map-item-icon">2</a>
+                <div class="new-map-item-popup new-map-item-popup-r">
+                    <div class="new-map-item-popup-info">
+                        <div class="new-map-item-popup-photo"><img src="files/new-map-photo.jpg" alt="" /></div>
+                        <div class="new-map-item-popup-title">Корпус 37</div>
+                        <div class="new-map-item-popup-text">Этажей: <span>17</span></div>
+                        <div class="new-map-item-popup-text">Секций: <span>5</span></div>
+                        <div class="new-map-item-popup-text">Дата заселения: <span>21 июля 2015</span></div>
+                    </div>
+                    <div class="new-map-item-popup-flats">
+                        <div class="new-map-item-popup-flats-block">
+                            <div class="new-map-item-popup-flats-block-title">Квартиры от физлиц</div>
+                            <a href="#" class="new-map-item-popup-flats-block-row">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-name">1-комнатные</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 3 939 740.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">30</div>
+                            </a>
+                            <a href="#" class="new-map-item-popup-flats-block-row">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-name">2-комнатные</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 5 222 880.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">102</div>
+                            </a>
+                        </div>
+                        <div class="new-map-item-popup-flats-block">
+                            <div class="new-map-item-popup-flats-block-title">Квартиры от застройщика</div>
+                            <a href="#" class="new-map-item-popup-flats-block-row">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-name">1-комнатные</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 3 939 740.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">35</div>
+                            </a>
+                            <a href="#" class="new-map-item-popup-flats-block-row">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-name">2-комнатные</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 5 222 880.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">29</div>
+                            </a>
+                        </div>
+                        <div class="new-map-item-popup-flats-block">
+                            <a href="#" class="new-map-item-popup-boxes">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-title">Кладовые</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 3 939 740.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">35</div>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="#" class="new-map-item-popup-close"></a>
+                </div>
+            </div>
+            <!-- new map item END -->
+
+            <!-- new map item -->
+            <div class="new-map-item new-map-item-selled" style="margin-top:604px; margin-left:705px">
+                <a href="#" class="new-map-item-icon">8</a>
+                <div class="new-map-item-popup new-map-item-popup-r">
+                    <div class="new-map-item-popup-info">
+                        <div class="new-map-item-popup-photo"><img src="files/new-map-photo.jpg" alt="" /></div>
+                        <div class="new-map-item-popup-title">Корпус 37</div>
+                        <div class="new-map-item-popup-text">Этажей: <span>17</span></div>
+                        <div class="new-map-item-popup-text">Секций: <span>5</span></div>
+                        <div class="new-map-item-popup-text">Дата заселения: <span>21 июля 2015</span></div>
+                    </div>
+                    <div class="new-map-item-popup-flats">
+                        <div class="new-map-item-popup-flats-block">
+                            <div class="new-map-item-popup-flats-block-title">Квартиры от физлиц</div>
+                            <a href="#" class="new-map-item-popup-flats-block-row">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-name">1-комнатные</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 3 939 740.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">30</div>
+                            </a>
+                            <a href="#" class="new-map-item-popup-flats-block-row">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-name">2-комнатные</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 5 222 880.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">102</div>
+                            </a>
+                        </div>
+                        <div class="new-map-item-popup-flats-block">
+                            <div class="new-map-item-popup-flats-block-title">Квартиры от застройщика</div>
+                            <a href="#" class="new-map-item-popup-flats-block-row">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-name">1-комнатные</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 3 939 740.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">35</div>
+                            </a>
+                            <a href="#" class="new-map-item-popup-flats-block-row">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-name">2-комнатные</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 5 222 880.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">29</div>
+                            </a>
+                        </div>
+                        <div class="new-map-item-popup-flats-block">
+                            <a href="#" class="new-map-item-popup-boxes">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-title">Кладовые</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 3 939 740.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">35</div>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="#" class="new-map-item-popup-close"></a>
+                </div>
+            </div>
+            <!-- new map item END -->
+
+            <!-- new map item -->
+            <div class="new-map-item" style="margin-top:417px; margin-left:367px">
+                <a href="#" class="new-map-item-icon">37</a>
+                <div class="new-map-item-popup">
+                    <div class="new-map-item-popup-info">
+                        <div class="new-map-item-popup-photo"><img src="files/new-map-photo.jpg" alt="" /></div>
+                        <div class="new-map-item-popup-title">Корпус 37</div>
+                        <div class="new-map-item-popup-text">Этажей: <span>17</span></div>
+                        <div class="new-map-item-popup-text">Секций: <span>5</span></div>
+                    </div>
+                    <div class="new-map-item-popup-flats">
+                        <div class="new-map-item-popup-flats-block">
+                            <div class="new-map-item-popup-flats-block-title">Квартиры от физлиц</div>
+                            <a href="#" class="new-map-item-popup-flats-block-row">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-name">1-комнатные</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 3 939 740.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">30</div>
+                            </a>
+                            <a href="#" class="new-map-item-popup-flats-block-row">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-name">2-комнатные</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 5 222 880.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">102</div>
+                            </a>
+                        </div>
+                        <div class="new-map-item-popup-flats-block">
+                            <div class="new-map-item-popup-flats-block-title">Квартиры от застройщика</div>
+                            <a href="#" class="new-map-item-popup-flats-block-row">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-name">1-комнатные</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 3 939 740.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">35</div>
+                            </a>
+                            <a href="#" class="new-map-item-popup-flats-block-row">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-name">2-комнатные</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 5 222 880.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">29</div>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="#" class="new-map-item-popup-close"></a>
+                </div>
+            </div>
+            <!-- new map item END -->
+
+            <!-- new map item -->
+            <div class="new-map-item new-map-item-selled" style="margin-top:321px; margin-left:565px">
+                <a href="#" class="new-map-item-icon">38</a>
+                <div class="new-map-item-popup">
+                    <div class="new-map-item-popup-info">
+                        <div class="new-map-item-popup-photo"><img src="files/new-map-photo.jpg" alt="" /></div>
+                        <div class="new-map-item-popup-title">Корпус 37</div>
+                        <div class="new-map-item-popup-text">Этажей: <span>17</span></div>
+                        <div class="new-map-item-popup-text">Секций: <span>5</span></div>
+                    </div>
+                    <div class="new-map-item-popup-flats">
+                        <div class="new-map-item-popup-flats-block">
+                            <div class="new-map-item-popup-flats-block-title">Квартиры от физлиц</div>
+                            <a href="#" class="new-map-item-popup-flats-block-row">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-name">1-комнатные</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 3 939 740.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">30</div>
+                            </a>
+                            <a href="#" class="new-map-item-popup-flats-block-row">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-name">2-комнатные</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 5 222 880.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">102</div>
+                            </a>
+                        </div>
+                        <div class="new-map-item-popup-flats-block">
+                            <div class="new-map-item-popup-flats-block-title">Квартиры от застройщика</div>
+                            <a href="#" class="new-map-item-popup-flats-block-row">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-name">1-комнатные</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 3 939 740.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">35</div>
+                            </a>
+                            <a href="#" class="new-map-item-popup-flats-block-row">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-name">2-комнатные</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 5 222 880.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">29</div>
+                            </a>
+                        </div>
+                        <div class="new-map-item-popup-flats-block">
+                            <a href="#" class="new-map-item-popup-boxes">
+                                <div class="new-map-item-popup-flats-block-text">
+                                    <div class="new-map-item-popup-flats-block-title">Кладовые</div>
+                                    <div class="new-map-item-popup-flats-block-price">от 3 939 740.-</div>
+                                </div>
+                                <div class="new-map-item-popup-flats-block-count">35</div>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="#" class="new-map-item-popup-close"></a>
+                </div>
+            </div>
+            <!-- new map item END -->
+
+            <img src="local/layout/images/central/planmap.jpg" alt="" width="1100" height="1055" />
 		</div>
 	</td></tr>
 	</table>

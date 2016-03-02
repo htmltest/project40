@@ -170,7 +170,6 @@ function ChangeCanvas(p)
 		s.style.display='none';
 		bo.className='act';
 		bs.className='';
-		if(plt) plt.style.marginTop='717px';
 		planlegend.style.display='none';
 		treedlegend.style.display='block';
 	}
@@ -182,7 +181,6 @@ function ChangeCanvas(p)
 		bs.className='act';
 		planlegend.style.display='block';
 		treedlegend.style.display='none';
-		if(plt) plt.style.marginTop='1117px';
 	}
 }
 
@@ -203,7 +201,6 @@ function ChangeCanvasUg(p)
 		s.style.display='none';
 		bo.className='act';
 		bs.className='';
-		if(plt) plt.style.marginTop='717px';
 		planlegend.style.display='none';
 		treedlegend.style.display='block';
 	}
@@ -215,7 +212,6 @@ function ChangeCanvasUg(p)
 		bs.className='act';
 		planlegend.style.display='block';
 		treedlegend.style.display='none';
-		if(plt) plt.style.marginTop='1017px';
 	}
 }
 
@@ -1262,6 +1258,22 @@ function ShowKorpusOnMap()
         $('.flat-map-bg').click(function() {
             $('.flat-map').removeClass('open');
             $('.add-basket-flat-btn a').removeClass('open');
+        });
+
+        $('.new-map-item-icon').click(function(e) {
+            var curItem = $(this).parent();
+            if (curItem.hasClass('open')) {
+                curItem.removeClass('open');
+            } else {
+                $('.new-map-item.open').removeClass('open');
+                curItem.addClass('open');
+            }
+            e.preventDefault();
+        });
+
+        $('.new-map-item-popup-close').click(function(e) {
+            $(this).parent().parent().removeClass('open');
+            e.preventDefault();
         });
 
     });
