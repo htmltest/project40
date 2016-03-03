@@ -1276,6 +1276,14 @@ function ShowKorpusOnMap()
             e.preventDefault();
         });
 
+        $('.flats-plans-filter-radio input:checked').parent().addClass('checked');
+        $('.flats-plans-filter-radio').click(function(e) {
+            var curName = $(this).find('input').attr('name');
+            $('.flats-plans-filter-radio input[name="' + curName + '"]').parent().removeClass('checked');
+            $(this).addClass('checked');
+            $(this).find('input').prop('checked', true).trigger('change');
+        });
+
     });
 
     $(window).load(function() {

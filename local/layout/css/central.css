@@ -2520,19 +2520,41 @@ h1 .flat-btns a {background-color:#00a1e4}
 .flats-plans {padding:32px 30px 0 30px; background:#fff}
 .flats-plans-title {font:30px/30px v31r, sans-serif; color:#00a1e4}
 .flats-plans-text {font:19px/21px v31r, sans-serif; color:#1d1f22; padding:16px 0 0 0}
+.flats-plans-text:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .flats-plans-text span {font-size:19px; line-height:21px; color:#00a1e4}
+.flats-plans-text-stat {float:left}
+.flats-plans-text-all {float:right}
+.flats-plans-text-all a {font-size:18px; line-height:21px; color:#6d7c94}
 .flats-plans-list {border-bottom:2px solid #00a1e4}
 .flats-plans-list:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
-.flats-plans-item {float:left; width:339px; height:279px; padding:0 0 0 20px; border-right:1px solid #dfe6ed; text-decoration:none; border-bottom:1px solid #dfe6ed; background:url(../images/central/flats-plans-rose.png) no-repeat 20px 220px}
-.flats-plans-item:hover {outline:1px solid #00a1e4; position:relative}
-.flats-plans-item:nth-child(3n+1) {padding-left:0; background-position:left 220px}
-.flats-plans-item:nth-child(3n+3) {width:319px; border-right:0}
-.flats-plans-item-preview {float:left; line-height:0; padding:42px 0 0 0; width:169px}
-.flats-plans-item-text {float:left; width:150px; padding:25px 0 0 0}
+.flats-plans-item {float:left; width:344px; height:279px; position:relative; padding:0 0 0 15px; border-right:1px solid #dfe6ed; text-decoration:none; border-bottom:1px solid #dfe6ed; background:url(../images/central/flats-plans-rose.png) no-repeat 15px 220px}
+.flats-plans-item:hover {background:#f8f8fa url(../images/central/flats-plans-rose-hover.png) no-repeat 15px 220px}
+.flats-plans-item:hover:before {content:""; display:block; position:absolute; left:0; top:0; width:100%; height:100%; box-sizing:border-box; border:5px solid #fff}
+.flats-plans-item:nth-child(3n+1) {margin-left:-15px}
+.flats-plans-item:nth-child(3n+1):hover:before {border-left:none}
+.flats-plans-item:nth-child(3n+3) {width:334px; border-right:0; margin-right:-15px}
+.flats-plans-item:nth-child(3n+3):hover:before {border-right:none}
+.flats-plans-item-preview {float:left; line-height:0; padding:42px 0 0 0; width:169px; position:relative}
+.flats-plans-item-text {float:left; width:150px; padding:25px 0 0 0; position:relative}
 .flats-plans-item-param {font-size:15px; line-height:20px; color:#546279; padding:10px 0 0 0}
 .flats-plans-item-value {font:15px/20px v33r, sans-serif; color:#000}
 .flats-plans-item-value sup {position:absolute}
 .flats-plans-item-price {font-size:19px; color:#00a1e4}
+
+.flats-plans-filter {background:#00a1e4; margin:30px -15px 0 -15px; padding:0 15px; text-transform:uppercase; height:44px}
+.flats-plans-filter:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.flats-plans-filter form {float:left}
+.flats-plans-filter-title {float:left; color:#fff; font:12px/44px v33r, sans-serif}
+.flats-plans-filter-radio {float:left; position:relative; padding:0 0 0 20px; margin:0 0 0 20px; cursor:pointer; font:12px/44px v31r, sans-serif; color:#fff; opacity:.7}
+.flats-plans-filter-radio.checked {opacity:1}
+.flats-plans-filter-radio input {display:none}
+.flats-plans-filter-radio:before {content:""; display:block; width:11px; height:11px; position:absolute; left:0; top:15px; border:1px solid #fff; border-radius:7px}
+.flats-plans-filter-radio.checked:after {content:""; display:block; width:5px; height:5px; position:absolute; left:4px; top:19px; background:#fff; border-radius:3px}
+.flats-plans-sort {float:right; margin:0 0 0 20px; opacity:.7}
+.flats-plans-sort.active {opacity:1}
+.flats-plans-sort a {color:#fff; text-decoration:none; font-size:12px; line-height:44px; text-transform:uppercase}
+.flats-plans-sort a span {display:inline-block; vertical-align:middle; width:7px; height:11px; background:url(../images/central/flats-plans-sort.png); margin:-4px 0 0 0}
+.flats-plans-sort a span.flats-plans-sort-down {background:url(../images/central/flats-plans-sort-down.png)}
 
 table.flat-tbl-new-plans {width:auto; margin-top:10px}
 table.flat-tbl-new-plans th {width:auto; padding-left:40px; white-space:nowrap}

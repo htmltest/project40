@@ -188,17 +188,38 @@
     <div class="flats-plans">
         <div class="flats-plans-title">Планировки</div>
 
-        <div class="flats-plans-text">В продаже квартир <span>351</span>, планировок <span>34</span></div>
+        <div class="flats-plans-text">
+            <div class="flats-plans-text-stat">В продаже квартир <span>351</span>, планировок <span>34</span></div>
+            <div class="flats-plans-text-all"><a href="#">Показать все квартиры</a></div>
+        </div>
 
-        <table class="flat-tbl-new flat-tbl-new-plans">
-            <thead>
-                <tr>
-                    <th class="flat-tbl-new-plans-plans-header-left"></th>
-                    <th><a href="#">площадь общая <span class="flat-tbl-new-sort flat-tbl-new-sort-down"></span></a></th>
-                    <th class="active"><a href="#">Стоимость <span class="flat-tbl-new-sort flat-tbl-new-sort-down"></span></a></th>
-                </tr>
-            </thead>
-        </table>
+        <div class="flats-plans-filter">
+            <form action="#" method="post">
+                <div class="flats-plans-filter-title">Показать:</div>
+                <div class="flats-plans-filter-radio">
+                    <input type="radio" name="plans" value="0" checked="checked" />
+                    Все планировки
+                </div>
+                <div class="flats-plans-filter-radio">
+                    <input type="radio" name="plans" value="1" />
+                    1-комнатные
+                </div>
+                <div class="flats-plans-filter-radio">
+                    <input type="radio" name="plans" value="2" />
+                    2-комнатные
+                </div>
+                <div class="flats-plans-filter-radio">
+                    <input type="radio" name="plans" value="3" />
+                    3-комнатные
+                </div>
+                <div class="flats-plans-filter-radio">
+                    <input type="radio" name="plans" value="4" />
+                    4-комнатные
+                </div>
+            </form>
+            <div class="flats-plans-sort active"><a href="#">Стоимость <span class="flats-plans-sort-down"></span></a></div>
+            <div class="flats-plans-sort"><a href="#">площадь общая <span class="flats-plans-sort-down"></span></a></div>
+        </div>
 
         <div class="flats-plans-list">
             <a href="#" class="flats-plans-item">
@@ -224,7 +245,7 @@
                 </div>
             </a>
             <a href="#" class="flats-plans-item">
-                <div class="flats-plans-item-preview"><img src="files/flats-plans-3.jpg" alt="" width="150" height="150" /></div>
+                <div class="flats-plans-item-preview"><img src="files/flats-plans-3.png" alt="" width="150" height="150" /></div>
                 <div class="flats-plans-item-text">
                     <div class="flats-plans-item-param">Общая площадь</div>
                     <div class="flats-plans-item-value">36.82 м<sup>2</sup></div>
@@ -257,7 +278,7 @@
                 </div>
             </a>
             <a href="#" class="flats-plans-item">
-                <div class="flats-plans-item-preview"><img src="files/flats-plans-3.jpg" alt="" width="150" height="150" /></div>
+                <div class="flats-plans-item-preview"><img src="files/flats-plans-3.png" alt="" width="150" height="150" /></div>
                 <div class="flats-plans-item-text">
                     <div class="flats-plans-item-param">Общая площадь</div>
                     <div class="flats-plans-item-value">36.82 м<sup>2</sup></div>
@@ -290,7 +311,7 @@
                 </div>
             </a>
             <a href="#" class="flats-plans-item">
-                <div class="flats-plans-item-preview"><img src="files/flats-plans-3.jpg" alt="" width="150" height="150" /></div>
+                <div class="flats-plans-item-preview"><img src="files/flats-plans-3.png" alt="" width="150" height="150" /></div>
                 <div class="flats-plans-item-text">
                     <div class="flats-plans-item-param">Общая площадь</div>
                     <div class="flats-plans-item-value">36.82 м<sup>2</sup></div>
