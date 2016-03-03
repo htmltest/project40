@@ -331,7 +331,7 @@ function ChangeK(o)
 
         if ($('#new-search-slider-size').length > 0) {
             noUiSlider.create(document.getElementById('new-search-slider-size'), {
-                start: [36, 58],
+                start: [Number($('#sizeRangeFrom').val()), Number($('#sizeRangeTo').val())],
                 tooltips: true,
                 range: {
                     'min': 36,
@@ -355,13 +355,16 @@ function ChangeK(o)
                 } else {
                     $('#sizeRangeFrom').val(value.replace(/ м&sup2;/g, ''));
                 }
+            });
+
+            document.getElementById('new-search-slider-size').noUiSlider.on('change', function(values, handle) {
                 showResultsPreview($('#new-search-slider-size'));
             });
         }
 
         if ($('#new-search-slider-price').length > 0) {
             noUiSlider.create(document.getElementById('new-search-slider-price'), {
-                start: [3939740, 9827740],
+                start: [Number($('#priceRangeFrom').val()), Number($('#priceRangeTo').val())],
                 tooltips: true,
                 range: {
                     'min': 3939740,
@@ -386,6 +389,9 @@ function ChangeK(o)
                 } else {
                     $('#priceRangeFrom').val(value.replace(/.-/g, '').replace(/,/g, ''));
                 }
+            });
+
+            document.getElementById('new-search-slider-price').noUiSlider.on('change', function(values, handle) {
                 showResultsPreview($('#new-search-slider-price'));
             });
         }
