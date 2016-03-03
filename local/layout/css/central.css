@@ -2186,7 +2186,7 @@ div.shadow {
 .new-central-park:before {content:""; display:block; width:10px; height:30px; background:url(../images/central/center_left.gif); position:absolute; left:0; bottom:-30px}
 .new-central-park:after {content:""; display:block; width:10px; height:30px; background:url(../images/central/center_right.gif); position:absolute; right:0; bottom:-30px}
 .new-central-park-logo {position:absolute; left:37px; top:25px; line-height:0}
-.new-central-park .phone {position:absolute; right:42px; top:31px; color:#fff; font:30px/30px v33r, sans-serif; text-shadow:0 1px 1px #0087bb}
+.new-central-park .phone {position:absolute; right:42px; top:29px; color:#fff; font:30px/30px v33r, sans-serif; text-shadow:0 1px 1px #0087bb}
 .new-central-park-district {position:absolute; left:213px; top:21px}
 .new-central-park-district-title {float:left; line-height:0; margin:0 9px 0 0}
 
@@ -2217,12 +2217,13 @@ div.shadow {
 .new-central-park-menu > ul > li.new-central-park-menu-with-submenu:hover > a {border-radius:15px 15px 0 0; padding-bottom:6px}
 .new-central-park-menu > ul > li.new-central-park-menu-with-submenu:hover > a:after {content:""; display:block; width:10px; height:11px; position:absolute; left:-10px; bottom:0; background:url(../images/central/new-central-park-menu-with-submenu.png)}
 .new-central-park-menu > ul > li.new-central-park-menu-with-submenu-right:hover > a:after {left:auto; right:-10px; background-position:-10px top}
-.new-central-park-menu > ul > li > ul {display:none; position:absolute; right:0; top:100%; margin:0; padding:0 3px; height:40px; white-space:nowrap; list-style:none; background:#fff; border-radius:0 0 15px 15px; z-index:101}
+.new-central-park-menu > ul > li > ul {display:none; position:absolute; right:0; top:100%; margin:0; padding:0; white-space:nowrap; list-style:none; background:#fff; border-radius:0 0 15px 15px; z-index:101}
 .new-central-park-menu > ul > li.new-central-park-menu-with-submenu-right > ul {right:auto; left:0}
 .new-central-park-menu > ul > li:hover > ul {display:block}
-.new-central-park-menu > ul > li > ul > li {display:inline-block; vertical-align:top; margin:0; padding:0 16px}
-.new-central-park-menu > ul > li > ul > li > a {text-decoration:none; color:#546279; font:15px/38px v31r, sans-serif}
-.new-central-park-menu > ul > li > ul > li > a:hover {color:#0069b2}
+.new-central-park-menu > ul > li > ul > li {display:inline-block; vertical-align:top; margin:0; padding:7px 14px}
+.new-central-park-menu > ul > li > ul > li > a {text-decoration:none; color:#546279; font:15px/35px v31r, sans-serif; display:block; padding:0 20px; height:35px; border-radius:8px}
+.new-central-park-menu > ul > li > ul > li.active > a,
+.new-central-park-menu > ul > li > ul > li > a:hover {color:#fff; background:#00a1e4}
 
 .plan-legend-trigger-links {position:absolute; margin:19px 0 0 30px}
 .plan-legend-trigger-links ul {margin:0; padding:0; list-style:none}
@@ -2358,14 +2359,14 @@ div.shadow {
 .section-new-selects:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .section-new-select {float:left; width:214px; margin:0 0 0 20px; position:relative}
 .section-new-select:first-child {margin:0}
-.section-new-select div {position:relative; cursor:pointer; height:30px; padding:0 0 0 15px; color:#546279; font-size:15px; line-height:30px; border-radius:15px; background:#f2f6fa}
+.section-new-select div {position:relative; cursor:pointer; height:30px; padding:0 0 0 15px; color:#546279; font-size:15px; line-height:30px; border-radius:15px; background:#f2f6fa; text-align:left}
 .section-new-select.open div {border-radius:15px 15px 0 0}
 .section-new-select div:after {content:""; display:block; width:0; height:0; border-top:8px solid #006da5; border-left:4px solid transparent; border-right:4px solid transparent; position:absolute; right:16px; top:11px}
 .section-new-select.open div:after {border-top:none; border-bottom:8px solid #006da5}
-.section-new-select ul {display:none; z-index:99; position:absolute; left:0; top:100%; width:100%; max-height:200px; overflow:auto; margin:0; padding:0; list-style:none; border-radius:0 0 15px 15px; background:#f2f6fa}
+.section-new-select ul {display:none; text-align:left; z-index:99; position:absolute; left:0; top:100%; width:100%; max-height:200px; overflow:auto; margin:0; padding:0; list-style:none; border-radius:0 0 15px 15px; background:#f2f6fa}
 .section-new-select.open ul {display:block}
-.section-new-select ul li {margin:0; padding:0}
-.section-new-select ul li a {display:block; padding:0 15px; font-size:15px; line-height:26px; text-decoration:none; color:#00}
+.section-new-select ul li {margin:0; text-align:left; padding:0}
+.section-new-select ul li a {display:block; text-align:left; padding:0 15px; font-size:15px; line-height:26px; text-decoration:none; color:#00}
 .section-new-select ul li a:hover {background:#dfe6ed}
 .section-new-select ul li.active a {background:#00a1e4; color:#fff}
 .section-new-select ul li:last-child a {border-radius:0 0 15px 15px}
@@ -2476,6 +2477,8 @@ div.shadow {
 .new-search-ctrl:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .new-search-submit {float:left}
 .new-search-submit input {vertical-align:top; margin:0; padding:0 32px 0 57px; outline:none; color:#fff; background:#00a1e4 url(../images/central/new-search-submit.png) no-repeat 32px 12px; border:none; border:none; border-radius:20px; overflow:visible; height:40px; font:18px/38xp v31r, sans-serif; cursor:pointer; -webkit-appearance:none; box-shadow:0 1px 0 #136085}
+.new-search-submit input:hover {background-color:#44c1f5}
+.new-search-submit input:active {background-color:#148bbd}
 .new-search-close-link {float:right}
 .new-search-close-link a {display:inline-block; vertical-align:top; font-size:18px; line-height:40px; position:relative; padding:0 0 0 21px; text-decoration:none; color:#00a1e4}
 .new-search-close-link a:before {content:""; display:block; width:13px; height:8px; background:url(../images/central/new-search-close.png); position:absolute; left:0; top:50%; margin-top:-4px}
@@ -2647,3 +2650,53 @@ table.flat-tbl-new-plans th.flat-tbl-new-plans-plans-header-left {width:100%}
 .new-map-item-popup-boxes .new-map-item-popup-flats-block-title {padding:0}
 .new-map-item-popup-boxes:hover .new-map-item-popup-flats-block-title {color:#00a1e4; text-decoration:underline}
 .new-map-item-popup-close {display:block; position:absolute; width:35px; height:35px; background:url(../images/central/korpus_popup_close-new.png); right:-17px; top:-13px}
+
+.top-events:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.top-event {float:left; box-sizing:border-box; width:50%; border-left:1px solid #3c9ce1; text-decoration:none}
+.top-events-3 .top-event {width:33.33%}
+.top-event:first-child {border-left:none}
+.top-event-title {font-size:18px; line-height:40px; height:40px; text-transform:uppercase; font-family:v33r, sans-serif; color:#8c416b; padding:0 0 0 20px; background:#e4f222}
+.top-event-text {display:table; width:100%; background:#0080db}
+.top-event-text-inner {display:table-cell; height:80px; padding:0 0 0 20px; vertical-align:middle; color:#fff; font-size:18px; line-height:22px}
+.top-event-text-inner strong {color:#fcff00}
+
+.header-opt-link {position:absolute; right:42px; top:66px; display:block; text-decoration:none; color:#00a1e4; background:#fff; text-align:center; width:158px; height:27px; font-size:15px; line-height:27px; border-radius:14px; box-shadow:0 1px 0 #0e5377}
+.header-opt-link:after {content:""; display:inline-block; vertical-align:middle; width:8px; height:13px; background:url(../images/central/header-opt-link.png); margin:-2px 0 0 9px}
+
+.typography {padding:12px 30px; font-size:15px; line-height:20px; color:#546279}
+.typography h1 {font-weight:normal; font-size:30px; line-height:30px; color:#00a1e4; margin:30px 0; padding:0}
+.typography h2 {font:22px/20px v33r, sans-serif; color:#1d1f22; margin:38px 0 22px 0; padding:0}
+.typography h3 {font-weight:normal; font-size:19px; line-height:20px; color:#1d1f22; margin:40px 0 20px 0; padding:0}
+.typography h2+h3 {margin-top:22px}
+.typography p {font-size:15px; line-height:20px; color:#546279; margin:20px 0; padding:0}
+.typography ul {margin:20px 0; padding:0; list-style:none}
+.typography ul li {margin:10px 0; padding:0 0 0 20px; position:relative}
+.typography ul li:before {content:""; display:block; width:7px; height:7px; background:#00a1e4; border-radius:4px; position:absolute; left:2px; top:8px}
+.typography ol {margin:20px 0; padding:0; list-style:none; counter-reset:point}
+.typography ol li {margin:10px 0; padding:0 0 0 20px; position:relative}
+.typography ol li:before {content:counter(point)'.'; counter-increment:point 1; left:0; position:absolute; top:0; font-weight:bold; color:#1d1f22}
+.typography > table {font-size:15px; line-height:20px; color:#546279; border-bottom:2px solid #00a1e4; border-collapse:collapse; margin:30px 0}
+.typography > table th {vertical-align:middle; font-weight:normal; font-size:10px; line-height:20px; color:#546279; text-transform:uppercase; text-align:left; padding:0 30px 11px 30px; border-bottom:2px solid #00a1e4}
+.typography > table th:first-child {padding-left:0}
+.typography > table th:last-child {padding-right:0}
+.typography > table td {vertical-align:middle; font-weight:normal; font-size:15px; line-height:20px; color:#546279; text-align:left; padding:8px 30px 11px 30px; border-top:1px solid #e8d9e1}
+.typography > table tbody tr:first-child td {border-top:none}
+.typography > table td:first-child {padding-left:0}
+.typography > table td:last-child {padding-right:0}
+
+.typography .new-search {padding:0; background:none}
+.typography .new-search-row {border:none; margin:20px 0; padding:0}
+.typography .new-search-ctrl {padding:0; margin:30px 0}
+
+.typography-wide {margin:20px -30px}
+
+.typography .new-search-flat-tbl-title {color:#00a1e4}
+.typography .flat-tbl-new td.flat-tbl-new-price {color:#00a1e4}
+.typography .flat-tbl-new td.flat-tbl-new-price a {color:#00a1e4}
+.typography div.other-flat {color:#00a1e4}
+.typography .section-new-select ul {margin:0}
+.typography .section-new-select ul li {padding:0; margin:0}
+.typography .section-new-select ul li:before {display:none}
+
+.typography .ipoteka {padding:37px 30px 0 30px; background:none}
+.typography .ipoteka h1 {margin:0}
