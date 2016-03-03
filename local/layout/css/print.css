@@ -12,5 +12,44 @@ table.menu, table.green-top, table.karta-flat-btn, table.print-flat-btn, table.f
 
 #print-head {
 	display:block;
+     padding:0 0 43px 0;
+     border-bottom:2px solid #000;
+     width:1040px;
 }
 
+#print-head:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+
+.print-logo {float:left; line-height:0; padding:63px 0 0 0}
+
+.print-contacts {float:right; text-align:right; padding:61px 0 0 0}
+.print-phone {color:#000; font-size:30px; line-height:30px; font-weight:bold}
+
+#print-foot {
+	display:block;
+     padding:0 0 43px 0;
+     border-top:2px solid #000;
+     width:1040px;
+}
+
+#print-foot:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+
+* {color:#000 !important}
+
+.typography > ul li:before {width:0; height:0; border:3px solid #000}
+
+form {display:none}
+
+.pager {display:none}
+
+.flat-btns,
+.flat-tbl-header-send,
+.flat-tbl-new-views,
+.flat-ipoteka-tbl-buy,
+.add-basket-flat-btn,
+.flat-likes,
+.bluebasket-btn,
+.top-events,
+.new-central-top,
+.new-central-park,
+.sandline,
+.flat-tbl-header-results {display:none}

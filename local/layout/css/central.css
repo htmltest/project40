@@ -2076,7 +2076,7 @@ div.map:after {
     display:block;
 }
 
-#print-head, #sbm {
+#print-head, #sbm, #print-foot {
 	display:none;
 }
 
@@ -2242,6 +2242,9 @@ div.shadow {
 .flat-btns a.flat-btn-email {background-image:url(../images/central/flat-btn-email.png); background-position:17px 10px; padding:0 16px 0 41px}
 .flat-btns a.flat-btn-floor {background-image:url(../images/central/flat-btn-floor.png); background-position:15px 7px; padding:0 16px 0 43px}
 .flat-btns a.flat-btn-floor.active {background:#00a1e4 url('../images/central/karta_btn_close.png') no-repeat 15px 8px; z-index:200; position:relative}
+
+h1 .flat-btns {display:inline-block; vertical-align:middle}
+h1 .flat-btns a {background-color:#00a1e4}
 
 .flat-btns-2 {position:absolute; margin:563px 0 0 147px}
 
@@ -2666,6 +2669,7 @@ table.flat-tbl-new-plans th.flat-tbl-new-plans-plans-header-left {width:100%}
 .typography {padding:12px 30px; font-size:15px; line-height:20px; color:#546279}
 .typography h1 {font-weight:normal; font-size:30px; line-height:30px; color:#00a1e4; margin:30px 0; padding:0}
 .typography h2 {font:22px/20px v33r, sans-serif; color:#1d1f22; margin:38px 0 22px 0; padding:0}
+.typography h2 span {font:22px/20px v33r, sans-serif; color:#00a1e4}
 .typography h3 {font-weight:normal; font-size:19px; line-height:20px; color:#1d1f22; margin:40px 0 20px 0; padding:0}
 .typography h2+h3 {margin-top:22px}
 .typography p {font-size:15px; line-height:20px; color:#546279; margin:20px 0; padding:0}
@@ -2700,3 +2704,33 @@ table.flat-tbl-new-plans th.flat-tbl-new-plans-plans-header-left {width:100%}
 
 .typography .ipoteka {padding:37px 30px 0 30px; background:none}
 .typography .ipoteka h1 {margin:0}
+
+.typography h2.address {padding:0 0 0 22px; background:url(../images/central/address.png) no-repeat left 4px}
+
+.contacts-item {position:relative; padding:0 0 0 22px}
+.contacts-item-number {position:absolute; left:0; top:0; font-family:v33r, sans-serif; color:#00a1e4; font-size:20px}
+
+.typography-bg {background:#f2f6fa; margin:0 -30px; padding:1px 30px 30px 30px}
+
+.form-error {background:#f3e9ed; border:1px solid #f3dde1; text-align:center; margin:20px 0; padding:24px 20px 21px 20px; border-radius:4px}
+.form-error-title {font-size:22px; line-height:22px; font-family:v33r, sans-serif; color:#ff0000}
+.form-error-text {padding:4px 0 0 0}
+
+.form-row {margin:21px 0}
+.form-row:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.form-label {float:left; width:176px; color:#546279; padding:8px 0 0 0}
+.form-field {float:left; width:864px}
+
+.form-input input {border:2px solid #00a1e4; border-radius:20px; font:15px/20px v33r, sans-serif; color:#546279; vertical-align:top; margin:0; padding:6px 14px 7px 14px; width:100%; height:39px; box-sizing:border-box; outline:none; box-shadow:none; background:transparent; -webkit-appearance:none}
+.form-input input.error {border-color:#f00}
+
+.form-textarea textarea {border:2px solid #00a1e4; border-radius:20px; font:15px/20px v33r, sans-serif; color:#546279; vertical-align:top; margin:0; padding:5px 14px 8px 14px; width:100%; height:120px; box-sizing:border-box; outline:none; box-shadow:none; background:transparent; overflow:auto; resize:none; -webkit-appearance:none}
+.form-textarea textarea.error {border-color:#f00}
+
+.form-input label.error,
+.form-textarea label.error {display:none !important}
+
+.form-submit {margin:24px 0; padding:0 0 0 176px}
+.form-submit input {vertical-align:top; border:none; border-radius:20px; background:#00a1e4; overflow:visible; margin:0; padding:0 50px; outline:none; height:40px; color:#fff; text-align:center; cursor:pointer; font:18px/38px v31r, sans-serif; -webkit-appearance:none; box-shadow:0 1px 0 #136085}
+.form-submit input:hover {background:#44c1f5}
+.form-submit input:active {background:#148bbd}
