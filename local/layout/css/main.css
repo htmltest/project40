@@ -1119,7 +1119,7 @@ div.gazeta-grp-inner {
 .new-search-checkbox:before {content:""; display:block; width:19px; height:19px; position:absolute; left:0; top:7px; border:2px solid #8c416b; box-sizing:border-box; border-radius:2px}
 .new-search-checkbox.checked:before  {background:#8c416b url(../images/central/new-search-checkbox.png) no-repeat 1px 2px}
 .new-search-checkbox input {display:none}
-.new-search-slider {float:left; width:188px; margin:14px 0 0 120px}
+.new-search-slider {float:left; width:288px; margin:14px 0 0 120px}
 .new-search-or {float:left; font-size:15px; line-height:30px; color:#546279; margin:0 20px 0 0}
 .new-search-to {float:left; font-size:18px; line-height:30px; color:#000; margin:0 20px 0 10px}
 .new-search-flat-tbl-title {float:left; color:#8c416b; font-size:30px; line-height:30px; width:350px}

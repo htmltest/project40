@@ -1257,7 +1257,7 @@ function ShowKorpusOnMap()
 
         $('.flat-map-bg').click(function() {
             $('.flat-map').removeClass('open');
-            $('.add-basket-flat-btn a').removeClass('open');
+            $('.flat-btn-floor').removeClass('active');
         });
 
         $('.new-map-item-icon').click(function(e) {
@@ -1282,6 +1282,31 @@ function ShowKorpusOnMap()
             $('.flats-plans-filter-radio input[name="' + curName + '"]').parent().removeClass('checked');
             $(this).addClass('checked');
             $(this).find('input').prop('checked', true).trigger('change');
+        });
+
+        $('.header-opt-link').click(function(e) {
+            $('.opt-window-overlay').addClass('open');
+            $('.opt-window').addClass('open');
+            $('.opt-window').css({'margin-top': -$('.opt-window').outerHeight() / 2});
+            e.preventDefault();
+        });
+
+        $('body').bind('keyup', function(e) {
+            if (e.keyCode == 27) {
+                $('.opt-window-overlay').removeClass('open');
+                $('.opt-window').removeClass('open');
+            }
+        });
+
+        $('.opt-window-overlay').click(function() {
+            $('.opt-window-overlay').removeClass('open');
+            $('.opt-window').removeClass('open');
+        });
+
+        $('.opt-window-close').click(function(e) {
+            $('.opt-window-overlay').removeClass('open');
+            $('.opt-window').removeClass('open');
+            e.preventDefault();
         });
 
     });

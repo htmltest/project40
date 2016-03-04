@@ -341,7 +341,7 @@ function ChangeK(o)
                     decimals: 0,
                     postfix: ' м&sup2;'
                 })
-            }).on('update', function(values, handle) {
+            }).on('change', function(values, handle) {
                 $('#sizeRangeRadio').each(function() {
                     var curName = $(this).find('input').attr('name');
                     $('.new-search-radio input[name="' + curName + '"]').parent().removeClass('checked');
@@ -355,9 +355,6 @@ function ChangeK(o)
                 } else {
                     $('#sizeRangeFrom').val(value.replace(/ м&sup2;/g, ''));
                 }
-            });
-
-            document.getElementById('new-search-slider-size').noUiSlider.on('change', function(values, handle) {
                 showResultsPreview($('#new-search-slider-size'));
             });
         }
@@ -375,7 +372,7 @@ function ChangeK(o)
                     thousand: ',',
                     postfix: '.-',
                 })
-            }).on('update', function(values, handle) {
+            }).on('change', function(values, handle) {
                 $('#priceRangeRadio').each(function() {
                     var curName = $(this).find('input').attr('name');
                     $('.new-search-radio input[name="' + curName + '"]').parent().removeClass('checked');
@@ -389,9 +386,6 @@ function ChangeK(o)
                 } else {
                     $('#priceRangeFrom').val(value.replace(/.-/g, '').replace(/,/g, ''));
                 }
-            });
-
-            document.getElementById('new-search-slider-price').noUiSlider.on('change', function(values, handle) {
                 showResultsPreview($('#new-search-slider-price'));
             });
         }
