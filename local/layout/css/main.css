@@ -1071,7 +1071,7 @@ div.gazeta-grp-inner {
 .flat-tbl-new td.active a {color:#8c416b; font-size:18px; font-family:v33r, sans-serif}
 .flat-tbl-new td.flat-tbl-new-price {text-align:left; white-space:nowrap; width:1%}
 .flat-tbl-new tr:first-child td {border-top:2px solid #8c416b}
-.flat-tbl-new tbody tr:hover {background:#fff}
+.flat-tbl-new tbody tr:hover {background:#f2f1f5}
 
 .pager {text-align:center; font-size:0; line-height:0; letter-spacing:-1px; padding:41px 0 35px 0; position:relative}
 .pager a {display:inline-block; vertical-align:middle; margin:0 6px; position:relative; border:2px solid #8f466f; border-radius:17px; width:29px; height:29px; font:15px/29px v31r, sans-serif; letter-spacing:0; text-align:center; text-decoration:none; color:#8f466f}
@@ -1094,6 +1094,8 @@ div.gazeta-grp-inner {
 .new-search-radio-building:before {display:none}
 .new-search-radio.checked:before  {border-width:6px}
 .new-search-radio-building.checked {color:#fff; background:#8c416b}
+.new-search-radio-building:hover,
+.new-search-radio-building.checked:hover {background:#ba2076; color:#fff}
 .new-search-radio input {display:none}
 .new-search-hint {float:left; margin:7px 0 0 0; position:relative}
 .new-search-radio+.new-search-hint {margin-right:30px; margin-left:-23px}
@@ -1128,8 +1130,10 @@ div.gazeta-grp-inner {
 .new-search-submit {float:left}
 .new-search.closed .new-search-submit {display:none}
 .new-search-submit input {vertical-align:top; margin:0; padding:0 32px 0 57px; outline:none; color:#fff; background:#8c416b url(../images/central/new-search-submit.png) no-repeat 32px 12px; border:none; border:none; border-radius:20px; overflow:visible; height:40px; font:18px/38xp v31r, sans-serif; cursor:pointer; -webkit-appearance:none; box-shadow:0 1px 0 #51253e}
+.new-search-submit input:hover {background-color:#ba2076}
 .new-search-close-link {float:right}
 .new-search-close-link a {display:inline-block; vertical-align:top; font-size:18px; line-height:40px; position:relative; padding:0 0 0 21px; text-decoration:none; color:#8c416b}
+.new-search-close-link a:hover {color:#ba2076}
 .new-search-close-link a:before {content:""; display:block; width:13px; height:8px; background:url(../images/main/new-search-close.png); position:absolute; left:0; top:50%; margin-top:-4px}
 .new-search.closed .new-search-close-link {float:left}
 .new-search.closed .new-search-close-link a {padding:0 30px; background:#8c416b; color:#fff; border-radius:20px}
@@ -1152,6 +1156,7 @@ div.gazeta-grp-inner {
 .new-search-results-preview-bottom {float:left; width:100%; height:40px; background:url(../images/central/new-search-popup.png) -606px top}
 .new-search-results-preview-close {display:block; width:35px; height:35px; background:url(../images/central/new-search-results.png); position:absolute; right:-8px; top:3px}
 .new-search-results-preview-link {display:block; width:240px; height:40px; margin:32px auto 0 auto; font-size:18px; line-height:40px; background:#8c416b; color:#fff; border-radius:20px; box-shadow:0 1px 0 #51253e; text-align:center; text-decoration:none}
+.new-search-results-preview-link:hover {background:#ba2076}
 
 .flat-tbl-new-header {padding:0 0 25px 0}
 .flat-tbl-new-header:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
@@ -1167,6 +1172,8 @@ div.gazeta-grp-inner {
 .flat-tbl-header-results a {color:#8b416b; text-decoration:none; font-size:15px}
 .flat-tbl-header-results span {color:#636f84; font-size:15px}
 .flat-tbl-header-results small {display:inline-block; vertical-align:middle; width:15px; height:19px; background:url(../images/main/flat-tbl-header-results.png); margin:-2px 5px 0 0}
+.flat-tbl-header-results a:hover {color:#ba2076}
 .flat-tbl-header-send {float:left; font:15px/18px v31r, sans-serif; padding:8px 0 0 0}
 .flat-tbl-header-send a {color:#8b416b; text-decoration:none; font-size:15px}
+.flat-tbl-header-send a:hover {color:#ba2076}
 .flat-tbl-header-send small {display:inline-block; vertical-align:middle; width:22px; height:16px; background:url(../images/main/flat-tbl-header-send.png); margin:-4px 5px 0 0}

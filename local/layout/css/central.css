@@ -994,7 +994,7 @@ div.floor-polus {
 }
 
 table.print-flat-btn {
-	background:#9bafd1 url('../images/print_btn.gif') no-repeat 13px 8px;
+	background:#9bafd1 url('../images/central/print_btn.png') no-repeat 13px 8px;
 	border-radius:24px;
 	border-top-left-radius:24px;
 	border-top-right-radius:24px;
@@ -1004,7 +1004,7 @@ table.print-flat-btn {
 }
 
 table.karta-flat-btn {
-	background:#9bafd1 url('../images/karta_btn.gif') no-repeat 13px 7px;
+	background:#9bafd1 url('../images/central/karta_btn.png') no-repeat 13px 7px;
 	border-radius:24px;
 	border-top-left-radius:24px;
 	border-top-right-radius:24px;
@@ -1013,6 +1013,10 @@ table.karta-flat-btn {
 	box-shadow:0 1px 0px rgba(153,153,153,1.0);
 	position:absolute;
 	margin:573px 0px 0px 0px;
+}
+
+table.karta-flat-btn:hover {
+	background-color:#6d7c94;
 }
 
 table.print-flat-btn td {
@@ -2263,9 +2267,11 @@ div.shadow {
 .flat-btns a.flat-btn-email {background-image:url(../images/central/flat-btn-email.png); background-position:17px 10px; padding:0 16px 0 41px}
 .flat-btns a.flat-btn-floor {background-image:url(../images/central/flat-btn-floor.png); background-position:15px 7px; padding:0 16px 0 43px}
 .flat-btns a.flat-btn-floor.active {background:#00a1e4 url('../images/central/karta_btn_close.png') no-repeat 15px 8px; z-index:200; position:relative}
+.flat-btns a:hover {background-color:#6d7c94}
 
 h1 .flat-btns {display:inline-block; vertical-align:middle}
 h1 .flat-btns a {background-color:#00a1e4}
+h1 .flat-btns a:hover {background-color:#6d7c94}
 
 .flat-btns-2 {position:absolute; margin:563px 0 0 147px}
 
@@ -2404,7 +2410,7 @@ h1 .flat-btns a {background-color:#00a1e4}
 .section-flats {padding:30px 0 45px 0}
 .section-flats:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .section-flats-title {float:left; color:#546279;font:22px/22px v33r, sans-serif; padding:0 40px 0 0}
-.section-flats-item {float:left; padding:0 60px 0 0}
+.section-flats-item {float:left; padding:0 45px 0 0}
 .section-flats-item-name {padding:0 0 0 32px; position:relative; font-size:18px; line-height:20px}
 .section-flats-item-name span {font-size:18px; font-family:v33r, sans-serif; color:#006da5}
 .section-flats-item-name a {display:block; width:19px; height:19px; position:absolute; left:2px; top:2px; background:url(../images/central/section-flats-item-name.png)}
@@ -2711,6 +2717,7 @@ table.flat-tbl-new-plans th.flat-tbl-new-plans-plans-header-left {width:100%}
 
 .header-opt-link {position:absolute; right:42px; top:66px; display:block; text-decoration:none; color:#00a1e4; background:#fff; text-align:center; width:158px; height:27px; font-size:15px; line-height:27px; border-radius:14px; box-shadow:0 1px 0 #0e5377}
 .header-opt-link:after {content:""; display:inline-block; vertical-align:middle; width:8px; height:13px; background:url(../images/central/header-opt-link.png); margin:-2px 0 0 9px}
+.header-opt-link:hover {background:#006da5; color:#fff}
 
 .typography {padding:12px 30px; font-size:15px; line-height:20px; color:#546279}
 .typography h1 {font-weight:normal; font-size:30px; line-height:30px; color:#00a1e4; margin:30px 0; padding:0}
