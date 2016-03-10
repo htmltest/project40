@@ -1004,7 +1004,7 @@ table.print-flat-btn {
 }
 
 table.karta-flat-btn {
-	background:#9bafd1 url('../images/central/karta_btn.png') no-repeat 13px 7px;
+	background:#9bafd1 url('../images/central/karta_btn.png') no-repeat 16px 0;
 	border-radius:24px;
 	border-top-left-radius:24px;
 	border-top-right-radius:24px;
@@ -1017,6 +1017,7 @@ table.karta-flat-btn {
 
 table.karta-flat-btn:hover {
 	background-color:#6d7c94;
+    background-position:16px -30px;
 }
 
 table.print-flat-btn td {
@@ -1155,7 +1156,7 @@ div.basket-shr-num {
 }
 
 table.bluebasket-btn {
-	background:#00a1e5 url('../images/central/flat_btn.gif') no-repeat 16px center;
+	background:#00a1e5 url('../images/central/flat_btn.png') no-repeat 16px top;
 	border-radius:24px;
 	border-top-left-radius:24px;
 	border-top-right-radius:24px;
@@ -1167,11 +1168,11 @@ table.bluebasket-btn {
 	margin-left:21px;
 }
 
-table.bluebasket-btn:hover {background-color:#44c1f5}
-table.bluebasket-btn:active {background-color:#148bbd}
+table.bluebasket-btn:hover {background-color:#47c9ff; background-position:16px -44px}
+table.bluebasket-btn:active {background-color:#148bbd; background-position:16px -88px}
 
 table.bluebasket-btn td {
-	padding:9px 22px 9px 46px;
+	padding:8px 22px 8px 46px;
 }
 
 table.bluebasket-btn td a, table.bluebasket-btn td a:hover {
@@ -1235,11 +1236,25 @@ table.num-same-tbl td {
 	padding-bottom:1px;
 }
 
+table.num-same-tbl td a {
+	color:#000;
+	font-size:17px;
+	line-height:18px;
+    text-decoration:none;
+}
+
 div.num-same {
 	color:#00a1e4;
 	font-size:41px;
 	line-height:30px;
 	padding-top:5px;
+}
+
+table.num-same-tbl td div.num-same a {
+	color:#00a1e4;
+	font-size:41px;
+	line-height:30px;
+    text-decoration:none;
 }
 
 div.last-view-flat {
@@ -2262,7 +2277,8 @@ div.shadow {
 .flat-btns:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .flat-btns a {float:left; text-decoration:none; color:#fff; height:30px; font:12px/30px v31r, sans-serif; background:#9bafd1; background-repeat:no-repeat; border-radius:15px; margin:0 0 0 5px; box-shadow:0 1px 0px rgba(153, 153, 153, 1)}
 .flat-btns a:first-child {margin:0}
-.flat-btns a.flat-btn-print {background-image:url(../images/central/flat-btn-print.png); background-position:13px 8px; padding:0 16px 0 46px}
+.flat-btns a.flat-btn-print {background-image:url(../images/central/flat-btn-print.png); background-position:15px top; padding:0 16px 0 46px}
+.flat-btns a.flat-btn-print:hover {background-position:15px -30px}
 .flat-btns a.flat-btn-pdf {background-image:url(../images/central/flat-btn-pdf.png); background-position:20px 7px; padding:0 16px 0 37px}
 .flat-btns a.flat-btn-email {background-image:url(../images/central/flat-btn-email.png); background-position:17px 10px; padding:0 16px 0 41px}
 .flat-btns a.flat-btn-floor {background-image:url(../images/central/flat-btn-floor.png); background-position:15px 7px; padding:0 16px 0 43px}
@@ -2291,6 +2307,8 @@ h1 .flat-btns a:hover {background-color:#6d7c94}
 .ipoteka-list td.ipoteka-col-5 {text-align:right}
 .ipoteka-order {text-align:center; padding:28px 0 0 0}
 .ipoteka-order a {display:inline-block; vertical-align:top; font:18px/38px v31r, sans-serif; color:#fefefe; padding:0 50px; height:40px; background:#00a1e4; text-decoration:none; border-radius:20px; box-shadow:0 1px 0 #136085}
+.ipoteka-order a:hover {background:#44c1f5}
+.ipoteka-order a:active {background:#148bbd}
 .ipoteka-text {min-height:587px; background:url(../images/central/ipotek.jpg) no-repeat right bottom; padding:0 530px 1px 0}
 .ipoteka-text,
 .ipoteka-text ul,
@@ -2306,12 +2324,16 @@ h1 .flat-btns a:hover {background-color:#6d7c94}
 .flat-tbl-new {width:100%; border-collapse:collapse; margin:0; border-bottom:2px solid #00a1e4}
 .flat-tbl-new th {text-align:center; font:10px/14px v31r, sans-serif; text-transform:uppercase; color:#546279; padding:13px 0}
 .flat-tbl-new th a {text-decoration:none; color:#546279; font-size:10px; line-height:14px}
-.flat-tbl-new th a:hover {text-decoration:underline}
+.flat-tbl-new th a:hover {color:#47c9ff}
 .flat-tbl-new th span {display:inline-block; vertical-align:middle; width:7px; height:9px; background:url(../images/central/flat-tbl-arrows.png); margin:0 0 0 2px}
+.flat-tbl-new th a:hover span {background-position:-14px top}
 .flat-tbl-new th.active a {color:#00a1e4}
 .flat-tbl-new th.active span {background-position:-7px top}
+.flat-tbl-new th.active a:hover span {background-position:-7px top}
 .flat-tbl-new th span.flat-tbl-new-sort-up {background-position:left -9px}
+.flat-tbl-new th a:hover span.flat-tbl-new-sort-up {background-position:-14px -9px}
 .flat-tbl-new th.active span.flat-tbl-new-sort-up {background-position:-7px -9px}
+.flat-tbl-new th.active a:hover span.flat-tbl-new-sort-up {background-position:-7px -9px}
 .flat-tbl-new th.flat-tbl-new-price {text-align:left; white-space:nowrap; width:1%}
 .flat-tbl-new td {text-align:center; font:15px/20px v31r, sans-serif; color:#000; border-top:1px solid #ded2dd; padding:18px 0 22px 0; color:#000; font-size:15px; line-height:20px}
 .flat-tbl-new td a {color:#000; text-decoration:none; font-size:15px; line-height:20px}
@@ -2321,15 +2343,15 @@ h1 .flat-btns a:hover {background-color:#6d7c94}
 .flat-tbl-new td.flat-tbl-new-price {text-align:left; white-space:nowrap; width:1%; color:#006da5; font-size:18px; font-family:v33r, sans-serif}
 .flat-tbl-new td.flat-tbl-new-price a {color:#006da5; font-size:18px; font-family:v33r, sans-serif}
 .flat-tbl-new tr:first-child td {border-top:2px solid #00a1e4}
-.flat-tbl-new tbody tr:hover {background:#fff}
+.flat-tbl-new tbody tr:hover {background:#e8ecef}
 
 .pager {text-align:center; font-size:0; line-height:0; letter-spacing:-1px; padding:41px 0 35px 0; position:relative}
 .pager a {display:inline-block; vertical-align:middle; margin:0 6px; position:relative; border:2px solid #00a1e4; border-radius:17px; width:29px; height:29px; font:15px/29px v31r, sans-serif; letter-spacing:0; text-align:center; text-decoration:none; color:#00a1e4}
-.pager a.active,
-.pager a:hover {background:#00a1e4; color:#fff}
+.pager a:hover {background:#47c9ff; color:#fff; border-color:#47c9ff}
+.pager a.active {background:#00a1e4; color:#fff; border-color:#00a1e4}
 .pager span {display:inline-block; vertical-align:middle; margin:0 6px; width:22px; height:6px; background:url(../images/central/pager-sep.png)}
 .pager a.pager-all {display:block; vertical-align:top; margin:0; top:41px; right:0; position:absolute; width:240px; background:#fff; color:#00a1e4}
-.pager a.pager-all:hover {background:#00a1e4; color:#fff; box-shadow:0 1px 0 #136085}
+.pager a.pager-all:hover {background:#47c9ff; color:#fff; border-color:#47c9ff}
 
 .flat-tbl-new-header {padding:0 0 25px 0}
 .flat-tbl-new-header:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
@@ -2338,7 +2360,9 @@ h1 .flat-btns a:hover {background-color:#6d7c94}
 .flat-tbl-new-views-title {float:left; color:#546279; font:15px/18px v31r, sans-serif; padding:0 10px 0 0}
 .flat-tbl-new-view {float:left; width:25px; height:18px; margin:0 0 0 10px; background:url(../images/central/flat-tbl-views.png); opacity:.25; filter:alpha(opacity=25)}
 .flat-tbl-new-view-1 {background-position:left top}
+.flat-tbl-new-view-1:hover {background-position:left -18px; opacity:1; filter:alpha(opacity=100)}
 .flat-tbl-new-view-2 {background-position:-25px top}
+.flat-tbl-new-view-2:hover {background-position:-25px -18px; opacity:1; filter:alpha(opacity=100)}
 .flat-tbl-new-view.active {opacity:1; filter:alpha(opacity=100)}
 
 .progress-big {width:1100px; position:relative; overflow:hidden; font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap}
@@ -2347,12 +2371,15 @@ h1 .flat-btns a:hover {background-color:#6d7c94}
 .progress-big-prev,
 .progress-big-next {position:absolute; top:50%; display:block; width:68px; height:68px; margin-top:-32px; background:url(../images/central/progress.png)}
 .progress-big-prev {display:none; left:30px; background-position:left top}
+.progress-big-prev:hover {background-position:left -91px}
 .progress-big-next {right:30px; background-position:-68px top}
+.progress-big-next:hover {background-position:-68px -91px}
 .progress-ctrl {background:#fff; padding:10px 30px 9px 30px; position:relative}
 .progress-ctrl-tabs {position:absolute; left:30px; top:-48px}
 .progress-ctrl-tabs ul {margin:0; padding:0; list-style:none}
 .progress-ctrl-tabs li {float:left; margin:0; padding:0 1px 0 0}
 .progress-ctrl-tabs li a {float:left; text-decoration:none; margin:4px 0 0 0; height:44px; font:18px/44px v31r, sans-serif; color:#fff; background:#00a1e4; padding:0 20px; border-radius:18px 18px 0 0; text-align:center; min-width:130px}
+.progress-ctrl-tabs li a:hover {background:#47c9ff}
 .progress-ctrl-tabs li.active a {background:#fff; color:#00a1e4; margin:0; padding-top:4px}
 .progress-ctrl-periods {position:relative; padding:8px 0; margin:0 -10px}
 .progress-ctrl-periods-inner {width:1050px; position:relative; overflow:hidden; font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap}
@@ -2360,21 +2387,28 @@ h1 .flat-btns a:hover {background-color:#6d7c94}
 .progress-ctrl-periods-inner ul li {display:inline-block; vertical-align:top; position:relative; margin:0; padding:0 10px; font:12px/23px v31r, sans-serif; letter-spacing:0; color:#dcdee1}
 .progress-ctrl-periods-inner ul li span {font:15px/23px v33r, sans-serif; color:#414e62}
 .progress-ctrl-periods-inner ul li a {float:left; margin:0 -10px; padding:0 10px; font:12px/23px v31r, sans-serif; color:#414e62; text-decoration:none; position:relative; border-radius:12px}
+.progress-ctrl-periods-inner ul li a:hover {background:#47c9ff; color:#fff}
 .progress-ctrl-periods-inner ul li.active a {color:#fff; background:#00a1e4}
 .progress-ctrl-periods-prev,
 .progress-ctrl-periods-next {position:absolute; top:50%; display:block; width:6px; height:10px; margin-top:-5px; background:url(../images/central/progress.png)}
 .progress-ctrl-periods-prev {display:none; left:-6px; background-position:-26px -68px}
+.progress-ctrl-periods-prev:hover {background-position:-26px -159px}
 .progress-ctrl-periods-next {right:-6px; background-position:-32px -68px}
+.progress-ctrl-periods-next:hover {background-position:-32px -159px}
 .progress-ctrl-preview {position:relative; padding:1px 0; margin:0 -10px}
 .progress-ctrl-preview-inner {width:1050px; position:relative; overflow:hidden; font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap}
 .progress-ctrl-preview-inner ul {display:inline-block; vertical-align:top; position:relative; margin:0; padding:0; list-style:none; left:0}
 .progress-ctrl-preview-inner ul li {display:inline-block; vertical-align:top; position:relative; width:156px; margin:0; padding:10px}
+.progress-ctrl-preview-inner ul li a:hover:before {content:""; display:block; width:100%; height:100%; position:absolute; left:-3px; top:-3px; padding:2px; border:1px solid #bfe7f8}
 .progress-ctrl-preview-inner ul li.active:before {content:""; display:block; width:160px; height:104px; position:absolute; left:6px; top:6px; border:2px solid #00a1e4}
-.progress-ctrl-preview-inner ul li a {position:relative}
+.progress-ctrl-preview-inner ul li.active a:hover:before {display:none}
+.progress-ctrl-preview-inner ul li a {display:block; position:relative}
 .progress-ctrl-preview-prev,
 .progress-ctrl-preview-next {position:absolute; top:50%; display:block; width:13px; height:23px; margin-top:-12px; background:url(../images/central/progress.png)}
 .progress-ctrl-preview-prev {display:none; left:-13px; background-position:left -68px}
+.progress-ctrl-preview-prev:hover {background-position:left -159px}
 .progress-ctrl-preview-next {right:-13px; background-position:-13px -68px}
+.progress-ctrl-preview-next:hover {background-position:-13px -159px}
 
 .flat-tbl-header-results {float:left; font:15px/18px v31r, sans-serif; padding:8px 42px 0 0}
 .flat-tbl-header-results a {color:#00a1e4; text-decoration:none; font-size:15px}
@@ -2685,13 +2719,17 @@ table.flat-tbl-new-plans th.flat-tbl-new-plans-plans-header-left {width:100%}
 .new-map-item-popup-r:after {border-bottom-color:#f2f6fa; left:auto; right:103px}
 .new-map-item-popup-t:after {border-bottom:none; border-top:17px solid #fff; top:auto; bottom:-17px}
 .new-map-item-popup-tr:after {border-bottom:none; border-top:17px solid #f2f6fa; top:auto; bottom:-17px; left:auto; right:103px}
-.new-map-item-popup-info {display:table-cell; vertical-align:top; width:244px; padding:29px 21px}
+.new-map-item-popup-with-boxes.new-map-item-popup-tr:after {border-top-color:#dfe6ed}
+.new-map-item-popup-container {width:100%; border-collapse:collapse; margin:0}
+.new-map-item-popup-info {width:244px; padding:29px 21px}
 .new-map-item-popup-photo {line-height:0}
 .new-map-item-popup-photo img {width:100%}
 .new-map-item-popup-title {color:#00a1e4; font-size:30px; line-height:30px; padding:18px 0 7px 0}
 .new-map-item-popup-text {font-size:15px; line-height:20px; color:#414e62; padding:10px 0 0 0}
 .new-map-item-popup-text span {font-size:15px; line-height:20px; color:#414e62; font-family:v33r, sans-serif}
-.new-map-item-popup-flats {display:table-cell; vertical-align:top; width:266px; background:#f2f6fa; border-radius:0 20px 20px 0; padding:10px 0 0 0}
+.new-map-item-popup-flats {width:266px; background:#f2f6fa; border-radius:0 20px 20px 0; padding:10px 0 0 0}
+.new-map-item-popup-with-boxes .new-map-item-popup-flats {border-radius:0 20px 0 0}
+.new-map-item-popup-flats-boxes {background:#dfe6ed; border-radius:0 0 20px 0}
 .new-map-item-popup-flats-block {border-top:1px solid #dfe6ed; padding:0 20px 19px 20px}
 .new-map-item-popup-flats-block:first-child {border:none}
 .new-map-item-popup-flats-block-title {font-size:19px; line-height:19px; color:#000; padding:16px 0 4px 0}
