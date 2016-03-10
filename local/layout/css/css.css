@@ -227,6 +227,10 @@ div.sandline a, div.sandline a:hover, div.sandline span {
 	text-decoration:none;
 }
 
+div.sandline a:hover {
+	text-decoration:underline;
+}
+
 div.sandline span {
 	color:#fff;
 }

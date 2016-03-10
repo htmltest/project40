@@ -1276,6 +1276,13 @@ function ShowKorpusOnMap()
             e.preventDefault();
         });
 
+        $(document).click(function(e) {
+            if ($(e.target).parents().filter('.new-map-item').length == 0) {
+                $('.new-map-item').removeClass('open');
+            }
+            e.preventDefault();
+        });
+
         $('.flats-plans-filter-radio input:checked').parent().addClass('checked');
         $('.flats-plans-filter-radio').click(function(e) {
             var curName = $(this).find('input').attr('name');
@@ -1308,6 +1315,27 @@ function ShowKorpusOnMap()
             $('.opt-window').removeClass('open');
             e.preventDefault();
         });
+
+        $('.new-central-park-menu-with-submenu').mouseover(function() {
+            var curItem = $(this);
+            if (curItem.find('ul').offset().left < $('.new-central-park-menu').offset().left) {
+                curItem.addClass('new-central-park-menu-with-submenu-right');
+            }
+        });
+
+        $('.flat-map-info-item-title a').hover(
+            function() {
+                var curItem = $(this).parent().parent();
+                var curIndex = $('.flat-map-info-item').index(curItem);
+                $('.flat-sheme-point div').hide();
+                $('.flat-sheme-point div').eq(curIndex).show();
+            },
+
+            function() {
+                $('.flat-sheme-point div').hide();
+                $('.flat-sheme-point div.current').show();
+            }
+        );
 
     });
 

@@ -2255,6 +2255,7 @@ div.shadow {
 .new-central-park-menu > ul > li:hover > a,
 .new-central-park-menu > ul > li.active > a {background:#fff; color:#0069b2}
 .new-central-park-menu > ul > li.new-central-park-menu-with-submenu:hover > a {border-radius:15px 15px 0 0; padding-bottom:6px}
+.new-central-park-menu > ul > li.new-central-park-menu-with-submenu-right > a {border-radius:15px 0 0 15px}
 .new-central-park-menu > ul > li.new-central-park-menu-with-submenu:hover > a:after {content:""; display:block; width:10px; height:11px; position:absolute; left:-10px; bottom:0; background:url(../images/central/new-central-park-menu-with-submenu.png)}
 .new-central-park-menu > ul > li.new-central-park-menu-with-submenu-right:hover > a:after {left:auto; right:-10px; background-position:-10px top}
 .new-central-park-menu > ul > li > ul {display:none; position:absolute; right:0; top:100%; margin:0; padding:0; white-space:nowrap; list-style:none; background:#fff; border-radius:0 0 15px 15px; z-index:101}
@@ -2412,10 +2413,12 @@ h1 .flat-btns a:hover {background-color:#6d7c94}
 
 .flat-tbl-header-results {float:left; font:15px/18px v31r, sans-serif; padding:8px 42px 0 0}
 .flat-tbl-header-results a {color:#00a1e4; text-decoration:none; font-size:15px}
+.flat-tbl-header-results a:hover {color:#47c9ff}
 .flat-tbl-header-results span {color:#636f84; font-size:15px}
 .flat-tbl-header-results small {display:inline-block; vertical-align:middle; width:15px; height:19px; background:url(../images/central/flat-tbl-header-results.png); margin:-2px 5px 0 0}
 .flat-tbl-header-send {float:left; font:15px/18px v31r, sans-serif; padding:8px 0 0 0}
 .flat-tbl-header-send a {color:#00a1e4; text-decoration:none; font-size:15px}
+.flat-tbl-header-send a:hover {color:#47c9ff}
 .flat-tbl-header-send small {display:inline-block; vertical-align:middle; width:22px; height:16px; background:url(../images/central/flat-tbl-header-send.png); margin:-4px 5px 0 0}
 
 .section-new-title {font:30px/30px v31r, sans-serif; color:#00a1e4; padding:22px 30px 30px 30px}
@@ -2452,6 +2455,7 @@ h1 .flat-btns a:hover {background-color:#6d7c94}
 .section-flats-item-price {font-size:12px; line-height:14px; padding:5px 0 0 32px; color:#546279}
 .section-flats-item-variants {padding:17px 0 0 0}
 .section-flats-item-variants a {display:block; min-width:187px; height:33px; text-decoration:none; color:#fff; background:#00a1e4; font-size:15px; line-height:33px; border-radius:17px; box-shadow:0 1px 0 #136085; text-align:center}
+.section-flats-item-variants a:hover {background:#47c9ff}
 
 .storages {background:#f2f6fa; padding:0 30px}
 .storages-title {font-size:30px; line-height:30px; color:#006da5; padding:22px 0 0 0}
@@ -2688,6 +2692,8 @@ table.flat-tbl-new-plans th.flat-tbl-new-plans-plans-header-left {width:100%}
 .flat-sheme-point {position:absolute; left:0; top:67px}
 .flat-sheme-point img {position:absolute; left:0; top:0}
 .flat-sheme-point div {position:absolute; left:0; top:0; width:53px; height:56px; background:url(../images/central/marker_korpus-2.png); color:#fff; font-family:'v33r'; font-size:21px; line-height:21px; text-align:center; padding-top:15px;}
+.flat-sheme-point div.current {display:block}
+.flat-sheme-point div.other {display:none}
 
 .flat-map-info {float:left; width:308px; height:611px; background:#f2f6fa; border-radius:0 20px 20px 0}
 .flat-map-info-text-1 {color:#00a1e4; font-size:30px; line-height:30px; padding:25px 0 0 30px}
@@ -2729,7 +2735,7 @@ table.flat-tbl-new-plans th.flat-tbl-new-plans-plans-header-left {width:100%}
 .new-map-item-popup-text span {font-size:15px; line-height:20px; color:#414e62; font-family:v33r, sans-serif}
 .new-map-item-popup-flats {width:266px; background:#f2f6fa; border-radius:0 20px 20px 0; padding:10px 0 0 0}
 .new-map-item-popup-with-boxes .new-map-item-popup-flats {border-radius:0 20px 0 0}
-.new-map-item-popup-flats-boxes {background:#dfe6ed; border-radius:0 0 20px 0}
+.new-map-item-popup-flats-boxes {background:#dfe6ed; border-radius:0 0 20px 0; height:1%}
 .new-map-item-popup-flats-block {border-top:1px solid #dfe6ed; padding:0 20px 19px 20px}
 .new-map-item-popup-flats-block:first-child {border:none}
 .new-map-item-popup-flats-block-title {font-size:19px; line-height:19px; color:#000; padding:16px 0 4px 0}
@@ -2745,8 +2751,10 @@ table.flat-tbl-new-plans th.flat-tbl-new-plans-plans-header-left {width:100%}
 .new-map-item-popup-close {display:block; position:absolute; width:35px; height:35px; background:url(../images/central/korpus_popup_close-new.png); right:-17px; top:-13px}
 
 .top-events:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
-.top-event {float:left; box-sizing:border-box; width:50%; border-left:1px solid #3c9ce1; text-decoration:none}
+.top-event {float:left; box-sizing:border-box; width:100%; border-left:1px solid #3c9ce1; text-decoration:none}
+.top-events-2 .top-event {width:50%}
 .top-events-3 .top-event {width:33.33%}
+.top-events-4 .top-event {width:25%}
 .top-event:first-child {border-left:none}
 .top-event-title {font-size:18px; line-height:40px; height:40px; text-transform:uppercase; font-family:v33r, sans-serif; color:#8c416b; padding:0 0 0 20px; background:#e4f222}
 .top-event-text {display:table; width:100%; background:#0080db}

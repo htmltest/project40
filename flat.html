@@ -37,7 +37,7 @@
 	</td><td class="c">
 
     <!-- top events -->
-    <div class="top-events">
+    <div class="top-events top-events-2">
         <a href="#" class="top-event">
             <div class="top-event-title">Акция! Приведи друга</div>
             <div class="top-event-text">
@@ -131,8 +131,20 @@
 
         <div class="new-central-park-menu">
             <ul>
-                <li><a href="/centralniy/about/">О нас</a></li>
-                <li><a href="/centralniy/genplan/">Генплан</a></li>
+                <li class="new-central-park-menu-with-submenu">
+                    <a href="/centralniy/about/">О нас</a>
+                    <ul>
+                        <li><a href="#">Как добраться</a></li>
+                        <li><a href="#">Реализующие компании</a></li>
+                    </ul>
+                </li>
+                <li class="new-central-park-menu-with-submenu">
+                    <a href="/centralniy/genplan/">Генплан</a>
+                    <ul>
+                        <li><a href="#">Как добраться</a></li>
+                        <li><a href="#">Реализующие компании</a></li>
+                    </ul>
+                </li>
                 <li class="active"><a href="/centralniy/apartments/">Квартиры</a></li>
                 <li><a href="#">Кладовые</a></li>
                 <li><a href="#">Документы</a></li>
@@ -204,7 +216,8 @@
             <div class="flat-map-scheme">
                 <div class="flat-sheme-point" style="left:92px">
                     <img src="files/flat-scheme.png" alt="" width="624" height="466" />
-                    <div style="left:239px; top:185px">49</div>
+                    <div style="left:239px; top:185px" class="current">49</div>
+                    <div style="left:200px; top:200px" class="other">50</div>
                 </div>
 
                 <div class="flat-btns">
