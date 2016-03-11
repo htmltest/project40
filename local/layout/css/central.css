@@ -2255,11 +2255,11 @@ div.shadow {
 .new-central-park-menu > ul > li > a {float:left; padding:0 19px; height:30px; text-decoration:none; border-radius:15px; color:#fff; position:relative}
 .new-central-park-menu > ul > li:hover > a,
 .new-central-park-menu > ul > li.active > a {background:#fff; color:#0069b2}
-.new-central-park-menu > ul > li.new-central-park-menu-with-submenu:hover > a {border-radius:15px 15px 0 0; padding-bottom:6px}
+.new-central-park-menu > ul > li.new-central-park-menu-with-submenu:hover > a {border-radius:15px 15px 0 0; padding-bottom:6px; z-index:102}
 .new-central-park-menu > ul > li.new-central-park-menu-with-submenu-right > a {border-radius:15px 0 0 15px}
 .new-central-park-menu > ul > li.new-central-park-menu-with-submenu:hover > a:after {content:""; display:block; width:10px; height:11px; position:absolute; left:-10px; bottom:0; background:url(../images/central/new-central-park-menu-with-submenu.png)}
 .new-central-park-menu > ul > li.new-central-park-menu-with-submenu-right:hover > a:after {left:auto; right:-10px; background-position:-10px top}
-.new-central-park-menu > ul > li > ul {display:none; position:absolute; right:0; top:100%; margin:0; padding:0; white-space:nowrap; list-style:none; background:#fff; border-radius:0 0 15px 15px; z-index:101}
+.new-central-park-menu > ul > li > ul {display:none; position:absolute; right:0; top:100%; margin:0; padding:0; white-space:nowrap; list-style:none; background:#fff; border-radius:0 0 15px 15px; z-index:101; box-shadow:0 2px 5px rgba(47, 55, 68, .5)}
 .new-central-park-menu > ul > li.new-central-park-menu-with-submenu-right > ul {right:auto; left:0}
 .new-central-park-menu > ul > li:hover > ul {display:block}
 .new-central-park-menu > ul > li > ul > li {display:inline-block; vertical-align:top; margin:0; padding:7px 14px}

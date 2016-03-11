@@ -1327,9 +1327,9 @@ function ShowKorpusOnMap()
             }
         });
 
-        $('.flat-map-info-item-title a').hover(
+        $('.flat-map-info-item').hover(
             function() {
-                var curItem = $(this).parent().parent();
+                var curItem = $(this);
                 var curIndex = $('.flat-map-info-item').index(curItem);
                 $('.flat-sheme-point div').hide();
                 $('.flat-sheme-point div').eq(curIndex).show();
