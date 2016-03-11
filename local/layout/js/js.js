@@ -182,6 +182,11 @@ function ChangeCanvas(p)
 		planlegend.style.display='block';
 		treedlegend.style.display='none';
 	}
+
+    $('.new-map-item-icon-2').each(function() {
+        var curIcon = $(this);
+        curIcon.css({'margin-left': -curIcon.outerWidth() / 2});
+    });
 }
 
 function ChangeCanvasUg(p)
@@ -1280,7 +1285,6 @@ function ShowKorpusOnMap()
             if ($(e.target).parents().filter('.new-map-item').length == 0) {
                 $('.new-map-item').removeClass('open');
             }
-            e.preventDefault();
         });
 
         $('.flats-plans-filter-radio input:checked').parent().addClass('checked');
@@ -1337,6 +1341,60 @@ function ShowKorpusOnMap()
             }
         );
 
+        $('.new-map-item-icon-2').click(function(e) {
+            var curItem = $(this).parent();
+            if (curItem.hasClass('open')) {
+                curItem.removeClass('open');
+            } else {
+                $('.new-map-item.open').removeClass('open');
+                curItem.addClass('open');
+            }
+            e.preventDefault();
+        });
+
+        $('.new-map-item-popup-2-close').click(function(e) {
+            $(this).parent().parent().removeClass('open');
+            e.preventDefault();
+        });
+
+        $('.flat-tbl-header-send a').click(function(e) {
+            var curLink = $(this).parent();
+            $('.window-send').toggle().css({'top': curLink.offset().top - $('.window-send').outerHeight() + 24, 'left': curLink.offset().left + curLink.width() / 2 - $('.window-send').outerWidth() / 2});
+            $('.window-send-loading').hide();
+            $('.window-send-form').show();
+            $('.window-send-form-input input').val('').blur();
+            $('.window-send-success').hide();
+            e.preventDefault();
+        });
+
+        $('.window-send-close').click(function(e) {
+            $('.window-send').hide();
+            e.preventDefault();
+        });
+
+        $(document).click(function(e) {
+            if ($(e.target).parents().filter('.window-send').length == 0 && !$(e.target).hasClass('window-send') && $(e.target).parents().filter('.flat-tbl-header-send').length == 0) {
+                $('.window-send').hide();
+            }
+        });
+
+        $('.window-send-form form').submit(function(e) {
+            var curForm = $('.window-send-form form');
+            $('.window-send-loading').show();
+            $.ajax({
+                type: 'POST',
+                url: curForm.attr('action'),
+                data: curForm.serialize(),
+                dataType: 'html',
+                cache: false
+            }).done(function(html) {
+                $('.window-send-loading').hide();
+                $('.window-send-form').hide();
+                $('.window-send-success').show();
+            });
+            e.preventDefault();
+        });
+
     });
 
     $(window).load(function() {
@@ -1364,6 +1422,10 @@ function ShowKorpusOnMap()
             });
         });
 
+        $('.new-map-item-icon-2').each(function() {
+            var curIcon = $(this);
+            curIcon.css({'margin-left': -curIcon.outerWidth() / 2});
+        });
     });
 
 })(jQuery);
