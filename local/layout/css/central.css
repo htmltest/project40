@@ -2701,6 +2701,7 @@ table.flat-tbl-new-plans th.flat-tbl-new-plans-plans-header-left {width:100%}
 .section-new-flats .flat-map-info-text-1 {padding-top:0}
 .flat-map-info-text-2 {color:#1d1f22; font:22px/20px v33r, sans-serif; padding:17px 40px 28px 30px}
 .flat-map-info-item {border-top:1px solid #d4dee8; padding:13px 0 28px 30px}
+.flat-map-info-item:hover {background:#f8f8fa}
 .flat-map-info-item > div {opacity:.5}
 .flat-map-info-item.active > div {opacity:1}
 .flat-map-info-item-title {font-size:19px; line-height:19px; color:#1d1f22}
