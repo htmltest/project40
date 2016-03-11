@@ -2872,7 +2872,9 @@ table.flat-tbl-new-plans th.flat-tbl-new-plans-plans-header-left {width:100%}
 .new-map-item-popup-2-right p:first-child {margin-top:0}
 
 .window-send {display:none; position:absolute; z-index:999; width:305px; height:217px; background:url(../images/window-send.png); padding:5px 9px 28px 9px}
+.window-send-down {padding:18px 9px 5px 9px; background:url(../images/window-send-down.png)}
 .window-send-close {display:block; width:35px; height:35px; background:url(../images/central/new-search-results.png); position:absolute; right:-8px; top:-12px}
+.window-send-down .window-send-close {top:11px}
 .window-send-form {display:block; position:relative; height:217px}
 .window-send-form form {margin:0 auto; padding:0; width:260px}
 .window-send-form-title {text-align:center; font-size:15px; line-height:20px; color:#414e62; padding:29px 0 0 0}
