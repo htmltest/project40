@@ -1476,6 +1476,11 @@ function ShowKorpusOnMap()
             var curIcon = $(this);
             curIcon.css({'margin-left': -curIcon.outerWidth() / 2});
         });
+
+        if ($('.flat-detail-plans-scroll').length > 0) {
+            $('.flat-detail-plans-scroll').css({'max-height': 'none', 'height': ($('.flat-detail').height() - $('.flat-detail-plans-title').outerHeight() - 29) + 'px'});
+            $('.flat-detail-plans-scroll').jScrollPane();
+        }
     });
 
 })(jQuery);
