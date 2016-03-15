@@ -1265,25 +1265,52 @@ function ShowKorpusOnMap()
             $('.flat-btn-floor').removeClass('active');
         });
 
+        $('.new-map-item-popup').each(function() {
+            var curItem = $(this);
+            if (curItem.find('.new-map-item-popup-flats-boxes').length > 0) {
+                curItem.addClass('new-map-item-popup-with-boxes');
+            }
+        });
+
         $('.new-map-item-icon').click(function(e) {
             var curItem = $(this).parent();
-            if (curItem.hasClass('open')) {
-                curItem.removeClass('open');
-            } else {
-                $('.new-map-item.open').removeClass('open');
-                curItem.addClass('open');
+            var curBuilding = curItem.data('building');
+
+            var curPopup = null;
+            $('.new-map-item-popup').each(function() {
+                if ($(this).data('building') == curBuilding) {
+                    curPopup = $(this);
+                }
+            });
+
+            if (curPopup) {
+                curPopup.removeClass('new-map-item-popup-r');
+
+                if (curPopup.hasClass('open')) {
+                    curPopup.removeClass('open');
+                } else {
+                    $('.new-map-item-popup.open').removeClass('open');
+                    curPopup.addClass('open');
+                    curPopup.css({'margin-top': curItem.css('margin-top'), 'margin-left': curItem.css('margin-left')});
+                    var curMap = curPopup.parent();
+                    if (curPopup.offset().left + curPopup.outerWidth() > curMap.offset().left + curMap.outerWidth()) {
+                        curPopup.addClass('new-map-item-popup-r');
+                        curPopup.css({'margin-left': Number(curItem.css('margin-left').replace(/px/, '')) - curPopup.outerWidth() + 266});
+                    }
+                }
             }
+
             e.preventDefault();
         });
 
         $('.new-map-item-popup-close').click(function(e) {
-            $(this).parent().parent().removeClass('open');
+            $(this).parent().removeClass('open');
             e.preventDefault();
         });
 
         $(document).click(function(e) {
-            if ($(e.target).parents().filter('.new-map-item').length == 0) {
-                $('.new-map-item').removeClass('open');
+            if ($(e.target).parents().filter('.new-map-item-popup').length == 0 && !$(e.target).hasClass('new-map-item-popup') && $(e.target).parents().filter('.new-map-item').length == 0) {
+                $('.new-map-item-popup').removeClass('open');
             }
         });
 
@@ -1343,18 +1370,37 @@ function ShowKorpusOnMap()
 
         $('.new-map-item-icon-2').click(function(e) {
             var curItem = $(this).parent();
-            if (curItem.hasClass('open')) {
-                curItem.removeClass('open');
-            } else {
-                $('.new-map-item.open').removeClass('open');
-                curItem.addClass('open');
+            var curBuilding = curItem.data('building');
+
+            var curPopup = null;
+            $('.new-map-item-popup-2').each(function() {
+                if ($(this).data('building') == curBuilding) {
+                    curPopup = $(this);
+                }
+            });
+
+            if (curPopup) {
+                if (curPopup.hasClass('open')) {
+                    curPopup.removeClass('open');
+                } else {
+                    $('.new-map-item-popup-2.open').removeClass('open');
+                    curPopup.addClass('open');
+                    curPopup.css({'margin-top': curItem.css('margin-top'), 'left': curItem.css('margin-left'), 'margin-left': -curPopup.outerWidth() / 2 - 1});
+                }
             }
+
             e.preventDefault();
         });
 
         $('.new-map-item-popup-2-close').click(function(e) {
-            $(this).parent().parent().removeClass('open');
+            $(this).parent().removeClass('open');
             e.preventDefault();
+        });
+
+        $(document).click(function(e) {
+            if ($(e.target).parents().filter('.new-map-item-popup-2').length == 0 && !$(e.target).hasClass('new-map-item-popup-2') && $(e.target).parents().filter('.new-map-item-2').length == 0) {
+                $('.new-map-item-popup-2').removeClass('open');
+            }
         });
 
         $('.flat-tbl-header-send a, .flat-btn-email').click(function(e) {
