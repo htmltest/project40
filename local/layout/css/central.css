@@ -2919,7 +2919,7 @@ table.flat-tbl-new-plans th.flat-tbl-new-plans-plans-header-left {width:100%}
 .flat-detail-plans {float:left; width:306px; background:#f2f6fa}
 .flat-detail-plans-title {text-align:center; font-size:19px; line-height:20px; color:#1d1f22; padding:28px 0 0 0}
 .flat-detail-plans-container {padding:10px 12px 19px 29px}
-.flat-detail-plans-scroll {position:relative; overflow:hidden; max-height:320px}
+.flat-detail-plans-scroll {position:relative; overflow:hidden; max-height:320px; width:100%; outline:none}
 .flat-detail-plans-list {width:247px}
 .flat-detail-plans-item {display:block; border-top:1px solid #dfe2e4; text-decoration:none; padding:21px 0}
 .flat-detail-plans-item:after {content:"."; display:block; clear:both; visibility:hidden; height:0}

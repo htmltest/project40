@@ -1479,7 +1479,7 @@ function ShowKorpusOnMap()
 
         if ($('.flat-detail-plans-scroll').length > 0) {
             $('.flat-detail-plans-scroll').css({'max-height': 'none', 'height': ($('.flat-detail').height() - $('.flat-detail-plans-title').outerHeight() - 29) + 'px'});
-            $('.flat-detail-plans-scroll').jScrollPane();
+            fleXenv.fleXcrollMain('flat-detail-plans-scroll');
         }
     });
 

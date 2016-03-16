@@ -10,9 +10,8 @@
 	<meta name="format-detection" content="telephone=no"/>
 	<script type="text/javascript" src="local/layout/js/jquery.js"></script>
 
-    <link rel="stylesheet" href="local/layout/js/jscollpane/jquery.jscrollpane.css" type="text/css">
-	<script type="text/javascript" src="local/layout/js/jscollpane/jquery.mousewheel.js"></script>
-	<script type="text/javascript" src="local/layout/js/jscollpane/jquery.jscrollpane.min.js"></script>
+    <link href="local/layout/js/flexcroll/flexcrollstyles.css" rel="stylesheet" type="text/css" />
+    <script type='text/javascript' src="local/layout/js/flexcroll/flexcroll.js"></script>
 
 	<script type="text/javascript" src="local/layout/js/js.js" language="JavaScript"></script>
 	<link rel="stylesheet" type="text/css" href="local/layout/css/jcarousel.connected-carousels.css">
@@ -230,7 +229,7 @@
             <div class="flat-detail-info-back"><a href="#">&larr; Вернуться к списку</a></div>
             <div class="flat-detail-info-rose"><img src="local/layout/images/central/polus-white.png" alt="" width="62" height="65" /></div>
             <div class="flat-detail-info-likes">
-            <script src="//yandex.st/share/share.js"></script>
+<!--            <script src="//yandex.st/share/share.js"></script>
                 <span id="ya_share_counter"></span>
                 <script>
                     var yaShareCounter = new Ya.share({
@@ -238,7 +237,7 @@
                         'elementStyle': {'quickServices':  ['vkontakte', 'facebook', 'twitter', 'gplus'], 'type': 'small'},
                         'theme': 'counter'
                      });
-                </script>
+                </script>-->
             </div>
         </div>
     </div>
@@ -246,7 +245,7 @@
     <div class="flat-detail-plans">
         <div class="flat-detail-plans-title">Похожие планировки</div>
         <div class="flat-detail-plans-container">
-            <div class="flat-detail-plans-scroll">
+            <div class="flat-detail-plans-scroll" id="flat-detail-plans-scroll">
                 <div class="flat-detail-plans-list">
                     <a href="#" class="flat-detail-plans-item">
                         <div class="flat-detail-plans-item-photo"><img src="files/flat-detail-plans-item-photo.png" alt="" width="69" height="57" /></div>
