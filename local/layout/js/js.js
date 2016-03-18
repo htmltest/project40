@@ -773,8 +773,6 @@ function ShowKorpusOnMap()
                 for (var j = startMonth; j <= endMonth; j++) {
                     if (hasDate(periodYears[i], j)) {
                         periodHTML = '<li><a href="#" data-year="' + periodYears[i] + '" data-month="' + j + '">' + monthsAll[j - 1] + '</a></li>' + periodHTML;
-                    } else {
-                        periodHTML = '<li>' + monthsAll[j - 1] + '</li>' + periodHTML;
                     }
                 }
             }
@@ -1347,12 +1345,18 @@ function ShowKorpusOnMap()
             e.preventDefault();
         });
 
-        $('.new-central-park-menu-with-submenu').mouseover(function() {
-            var curItem = $(this);
-            if (curItem.find('ul').offset().left < $('.new-central-park-menu').offset().left) {
-                curItem.addClass('new-central-park-menu-with-submenu-right');
+        $('.new-central-park-menu-with-submenu').hover(
+            function() {
+                var curItem = $(this);
+                if (curItem.find('ul').offset().left < $('.new-central-park-menu').offset().left) {
+                    curItem.addClass('new-central-park-menu-with-submenu-right');
+                }
+            },
+
+            function() {
+                $('.new-central-park-menu-with-submenu-right').removeClass('new-central-park-menu-with-submenu-right');
             }
-        });
+        );
 
         $('.flat-map-info-item').hover(
             function() {
