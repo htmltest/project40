@@ -451,6 +451,11 @@ function ChangeK(o)
             e.preventDefault();
         });
 
+        $('.gazeta-new-close').click(function(e) {
+            $('.gazeta-new').toggleClass('closed');
+            e.preventDefault();
+        });
+
     });
 
 })(jQuery);

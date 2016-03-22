@@ -56,7 +56,39 @@
 
 <table cellspacing="0" class="body">
 <tr valign="top"><td align="center">
-	<div id="gazeta-big" style="display:block">
+
+    <!-- gazeta new -->
+    <div class="gazeta-new">
+        <div class="gazeta-new-container">
+            <div class="gazeta-new-content">
+
+                <div class="gazeta-new-news">
+                    <div class="gazeta-new-news-title"><a href="/centralniy/news/">Новости</a></div>
+                    <div class="gazeta-new-news-list">
+                        <div class="gazeta-new-news-col">
+                            <a href="#"><span>20.08</span>СПОРТИВНЫЕ ЗАНЯТИЯ в Новых Ватутинках!</a>
+                            <a href="#"><span>15.08</span>Масленица в Новых Ватутинках удалась!</a>
+                            <a href="#"><span>08.08</span>Англия в Новых Ватутинках!</a>
+                        </div>
+
+                        <div class="gazeta-new-news-col">
+                            <a href="#"><span>20.08</span>Широкая Масленица в Новых Ватутинках!</a>
+                            <a href="#"><span>15.08</span>Застройщик Новых Ватутинок выполняет свои обязательства</a>
+                            <a href="#"><span>08.08</span>Наши детки в Андронном коллайдере!</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="/gazeta/" class="gazeta-new-archive"><img src="http://new-vatutinki.ru.images.1c-bitrix-cdn.ru/upload/iblock/339/g7_main.png?1441184718108231" alt="" width="305" height="219" /><span>Архив номеров газеты «Новые Ватутинки</span></a>
+
+                <a href="#" class="gazeta-new-close"><span></span></a>
+            </div>
+        </div>
+    </div>
+    <!-- gazeta new END -->
+
+
+	<div id="gazeta-big" style="display:none">
     <table cellspacing="0" class="gazeta-big">
     <tr valign="top"><td align="center" width="100%">
 
@@ -243,11 +275,27 @@
 			<tr valign="top"><td style="padding:21px 30px 0px 30px">
 				<a href="/"><img src="local/layout/images/nv.gif"></a><br>
 				<div class="copy">&copy; Новые Ватутинки 2016.<br>Все права защищены.</div>
-			</td><td width="100%"></td><td nowrap style="padding-right:30px">
+			</td><td width="100%"></td><td nowrap style="padding-right:30px" align="right">
 								<div class="phone-bottom" id="comagic_phone1">+7 (495) 660-05-60</div>
         <br><br>
-        <div id="social-btns" style="display:none;">
-                </div>
+        <div id="social-btns">
+
+                <script type="text/javascript">(function(w,doc) {
+                if (!w.__utlWdgt ) {
+                    w.__utlWdgt = true;
+                    var d = doc, s = d.createElement('script'), g = 'getElementsByTagName';
+                    s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+                    s.src = ('https:' == w.location.protocol ? 'https' : 'http')  + '://w.uptolike.com/widgets/v1/uptolike.js';
+                    var h=d[g]('body')[0];
+                    h.appendChild(s);
+                }})(window,document);
+                </script>
+                <div data-background-alpha="0.0" data-orientation="horizontal" data-text-color="#000000" data-share-shape="SHARP" data-buttons-color="#FFFFFF" data-sn-ids="fb.ok.gp." data-counter-background-color="#ffffff" data-share-size="LARGE" data-background-color="#ffffff" data-mobile-sn-ids="fb.ok.gp." data-preview-mobile="false" data-pid="1382290" data-counter-background-alpha="1.0" data-mode="like" data-following-enable="false" data-exclude-show-more="false" data-like-text-enable="false" data-selection-enable="true" data-mobile-view="true" data-icon-color="#ffffff" class="uptolike-buttons" ></div>
+
+                <a href="#" class="footer-vk">Мы вКонтакте</a>
+
+           </div>
+
 				<div style="padding:70px 0px 0px 0px" align="right">
     			<a href="http://www.bilingo.ru" target="_blank" style="color:#4e5159;font-size:10px;text-decoration:none">разработка сайта</a><br>				</div>
 			</td></tr>
