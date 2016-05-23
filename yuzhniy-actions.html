@@ -1,0 +1,361 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Акции  - Микрорайон «Центральный» Официальный сайт проекта</title>
+	<link href="local/layout/css/fonts.css" rel="stylesheet" type="text/css" />
+	<link href="local/layout/css/css.css" rel="stylesheet" type="text/css" />
+	<link href="local/layout/css/ug.css" rel="stylesheet" type="text/css" />
+		<link href="local/layout/css/print.css" rel="stylesheet" type="text/css" media="print"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<script type="text/javascript" src="local/layout/js/jquery.js"></script>
+	<script type="text/javascript" src="local/layout/js/js.js" language="JavaScript"></script>
+	<link rel="stylesheet" type="text/css" href="local/layout/css/jcarousel.connected-carousels.css">
+	<script type="text/javascript" src="local/layout/js/jquery.jcarousel.min.js"></script>
+	<script type="text/javascript" src="local/layout/js/jcarousel.connected-carousels.js"></script>
+
+	<link rel="stylesheet" href="local/layout/css/ug_jslider.css" type="text/css">
+	<script type="text/javascript" src="local/layout/js/jshashtable-2.1_src.js"></script>
+	<script type="text/javascript" src="local/layout/js/jquery.numberformatter-1.2.3.js"></script>
+	<script type="text/javascript" src="local/layout/js/tmpl.js"></script>
+	<script type="text/javascript" src="local/layout/js/jquery.dependClass-0.1.js"></script>
+	<script type="text/javascript" src="local/layout/js/draggable-0.1.js"></script>
+	<script type="text/javascript" src="local/layout/js/jquery.slider.js"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Новые Ватутинки" />
+<meta name="description" content="Новые Ватутинки" />
+</head>
+
+<body>
+<div id="panel"></div>
+
+<center>
+	<table cellspacing="0" class="bd">
+	<tr valign="top"><td class="l">
+		<img src="local/layout/images/left.gif"><br>
+	</td><td class="c">
+
+
+    <!-- new central top -->
+    <div class="new-central-top">
+        <a href="#" class="new-central-top-title">Объекты в продаже</a>
+        <div class="new-central-top-content">
+            <div class="new-central-top-menu">
+                <ul>
+                    <li class="active"><div><em class="new-central-top-icon-1"></em> Квартиры <span>523</span></div></li>
+                    <li><a href="#"><em class="new-central-top-icon-2"></em> Вторичка <span>25</span></a></li>
+                    <li><a href="http://parking.nv-servis.com/"><em class="new-central-top-icon-3"></em> Машиноместа</a> <span>25</span></a></li>
+                    <li><a href="http://www.adwill.ru/offers/new.vatutinki"><em class="new-central-top-icon-4"></em> Нежилые помещения</a> <span>9</span></a></li>
+                </ul>
+            </div>
+            <div class="new-central-top-form">
+                <form method="post" name="fullsearch" action="/centralniy/search/">
+                    <input type="hidden" name="search" value="1" />
+                    <input type="hidden" name="sq_param" value="1" />
+                    <input type="hidden" name="flor_param" value="1" />
+                    <input type="hidden" name="korpus_param" value="1" />
+
+                    <div class="new-central-top-field">
+                        <div class="new-central-top-label">Комнаты</div>
+                        <script>var kk=new Array();</script>
+                        <script>kk[0]=2;</script>
+                        <input type="hidden" name="k1" id="k1" value="2" />
+                        <script>kk[1]=1;</script>
+                        <input type="hidden" name="k2" id="k2" value="2" />
+                        <script>kk[2]=3;</script>
+                        <input type="hidden" name="k3" id="k3" value="2" />
+                        <div class="new-central-top-select">
+                            <select name="komnat" id="komnat">
+                                <option value="">Все</option>
+                                <option value="2">2</option>
+                                <option value="1">1</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="new-central-top-field">
+                        <div class="new-central-top-label">Цена</div>
+                        <input type="hidden" name="price_param" id="price_param" value="2" />
+                        <div class="layout-slider"><input id="price" type="slider" name="price" value="3939740;7677000" /></div>
+                        <script type="text/javascript">
+                            $('.new-central-top').addClass('open');
+                            jQuery("#price").slider({ from:3939740, to:7677000, step:10, smooth:true, round:0, dimension:".-", limits:false });
+                            $('.new-central-top').removeClass('open');
+                        </script>
+                    </div>
+
+                    <div class="new-central-top-adv-link"><a href="/centralniy/search/">Расширенный поиск</a></div>
+
+                    <div class="new-central-top-submit" onclick="SetKV();">Искать</div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- new central top END -->
+
+    <div id="print-head">
+        <div class="print-logo"><img src="local/layout/images/ug/logo-print.png" alt="" width="245" height="85" /></div>
+
+        <div class="print-contacts">
+            <div class="print-phone">+7 (495) 135-11-12</div>
+            <div class="print-link">new-vatutinki.ru</div>
+            <div class="print-link">info@new-vatutinki.ru</div>
+        </div>
+    </div>
+
+    <!-- new central park -->
+    <div class="new-central-park">
+        <div class="new-central-park-logo"><a href="/"><img src="local/layout/images/ug/logo_nv.png" alt="" width="127" height="50" /></a></div>
+        <div class="phone" id="comagic">+7 (495) 151-26-72</div>
+
+        <a href="#" class="header-opt-link">Оптовикам</a>
+
+        <div class="new-central-park-menu">
+            <ul>
+                <li><a href="/centralniy/about/">О нас</a></li>
+                <li><a href="/centralniy/genplan/">Генплан</a></li>
+                <li><a href="/centralniy/apartments/">Квартиры</a></li>
+                <li><a href="#">Кладовые</a></li>
+                <li><a href="#">Документы</a></li>
+                <li class="active"><a href="/centralniy/news/">Новости и Акции</a></li>
+                <li><a href="/centralniy/sales/">Как купить</a></li>
+                <li class="new-central-park-menu-with-submenu">
+                    <a href="/centralniy/contacts/">Контакты</a>
+                    <ul>
+                        <li><a href="#">Как добраться</a></li>
+                        <li><a href="#">Реализующие компании</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="new-central-park-district">
+            <div class="new-central-park-district-title"><a href="/centralniy/"><img src="local/layout/images/ug/new-central-park-district.png" alt="" width="201" height="59" /></a></div>
+            <div class="new-central-park-district-menu new-central-park-district-menu-district">
+                <div class="new-central-park-district-menu-icon"></div>
+                <div class="new-central-park-district-menu-list">
+                    <ul>
+                        <li class="active"><a href="#">Микрорайон «Центральный»</a></li>
+                        <li><a href="#">Квартал «Южный»</a></li>
+                        <li><a href="#">Посёлок «Синергия»</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="new-central-park-district-menu new-central-park-district-menu-video">
+                <div class="new-central-park-district-menu-icon"></div>
+                <div class="new-central-park-district-menu-list">
+                    <ul>
+                        <li><a href="#">Ход строительства</a></li>
+                        <li><a href="#">Видеотрансляция</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- new central park END -->
+
+    <div class="sandline">
+        <a href="/" title="Главная">Главная</a><span class="sep">/</span>
+        <a href="/centralniy/" title="Микрорайон «Центральный»">Микрорайон «Центральный»</a><span class="sep">/</span><span>Как купить</span>
+    </div>
+
+    <!-- events -->
+    <div class="events">
+        <div class="events-title">Акции</div>
+
+        <!-- events list -->
+        <div class="events-list">
+
+            <!-- events item -->
+            <div class="events-item">
+                <div class="events-item-inner">
+                    <div class="events-item-photo"><img src="files/event-1.jpg" alt="" /></div>
+                    <div class="events-item-container">
+                        <div class="events-item-title">Готовы для жизни</div>
+                        <div class="events-item-text">
+                            <p>Получить подробную консультацию и подать заявку в Сбербанк возможно в ЖК «Новые Ватутинки» по адресу: Нововатутинский проспект, дом 8.</p>
+                            <p>Контактный телефон: <strong>+7 (968) 712-33-25</strong> Овечкин Юлиан. Необходима предварительная запись.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- events item END -->
+
+            <!-- events item -->
+            <div class="events-item">
+                <div class="events-item-inner">
+                    <div class="events-item-photo"><img src="files/event-2.jpg" alt="" /></div>
+                    <div class="events-item-container">
+                        <div class="events-item-title">Рассрочка на 2 года по 9%</div>
+                        <div class="events-item-text">
+                            <ul>
+                                <li>Рассрочка по 9%.</li>
+                                <li>Срок на 2 лет.</li>
+                                <li>Первоначальный взнос 50%</li>
+                                <li>Ппредварительная запись.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- events item END -->
+
+            <!-- events item -->
+            <div class="events-item">
+                <div class="events-item-inner">
+                    <div class="events-item-photo"><img src="files/event-3.jpg" alt="" /></div>
+                    <div class="events-item-container">
+                        <div class="events-item-title">Ипотека 8%</div>
+                        <div class="events-item-text">
+                            <ul>
+                                <li>Первый год – 8% (компенсирующая скидка)</li>
+                                <li>Следующие годы – обычная ставка Банка выдающего кредит.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- events item END -->
+
+            <!-- events item -->
+            <div class="events-item">
+                <div class="events-item-inner">
+                    <div class="events-item-photo"><img src="files/event-4.jpg" alt="" /></div>
+                    <div class="events-item-container">
+                        <div class="events-item-title">Мат. капитал<br />за ПЕРВОГО ребенка</div>
+                        <div class="events-item-text">
+                            <ul>
+                                <li>При покупке 3 комнатной квартиры, вычитаем из цены квартиры величину мат капитала.</li>
+                                <li>На сегодня <strong>453 000 рублей</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- events item END -->
+
+            <!-- events item -->
+            <div class="events-item">
+                <div class="events-item-inner">
+                    <div class="events-item-photo"><img src="files/event-5.jpg" alt="" /></div>
+                    <div class="events-item-container">
+                        <div class="events-item-title">«Генеральский подарок» (спец условия для военных)</div>
+                        <div class="events-item-text">
+                            <p>Приведи сослуживца и получи в подарок кухню с техникой (общей стоимостью 200 тыс. руб.)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- events item END -->
+
+            <!-- events item -->
+            <div class="events-item">
+                <div class="events-item-inner">
+                    <div class="events-item-photo"><img src="files/event-6.jpg" alt="" /></div>
+                    <div class="events-item-container">
+                        <div class="events-item-title">Квартиры в ОТсрочку</div>
+                        <div class="events-item-text">
+                            <ul>
+                                <li>Первоначальный взнос – 500 тыс. Остальной транш через 2 месяца.</li>
+                                <li>Бронирование и оформление включено (4%)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- events item END -->
+
+            <!-- events item -->
+            <div class="events-item">
+                <div class="events-item-inner">
+                    <div class="events-item-photo"><img src="files/event-7.jpg" alt="" /></div>
+                    <div class="events-item-container">
+                        <div class="events-item-title">«Оснащай и живи» или «Техника в подарок»</div>
+                        <div class="events-item-text">
+                            <p>При покупке предоставляется сертификат от «ХХХХ» на 100-200 тыс. на приобретение техники для дома (холодильник, телевизор, пылесос, посудомойка, стиральная машина, плита, вытяжка)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- events item END -->
+
+        </div>
+        <!-- events list END -->
+
+    </div>
+    <!-- events END -->
+
+		<table cellspacing="0" class="foot">
+		<tr valign="top"><td>
+			<div class="clear"></div>
+
+			<table cellspacing="0" width="100%">
+			<tr valign="top"><td style="padding:21px 30px 0px 30px">
+				<a href="/"><img src="local/layout/images/nv.gif"></a><br>
+    		<div class="copy">&copy; Новые Ватутинки 2015.<br>Все права защищены.</div>
+			</td><td nowrap>
+
+				<div class="parent">Микрорайон «Центральный»</div>
+				<table cellspacing="0">
+				<tr valign="top"><td nowrap>
+					<div class="lnk"><a href="/">Главная</a></div>
+					            <div class="lnk"><a href="/centralniy/about/">О нас</a></div>
+                      <div class="lnk"><a href="/centralniy/news/">Новости</a></div>
+                      <div class="lnk"><a href="/centralniy/genplan/">Генплан</a></div>
+          </td><td style="padding-left:80px" nowrap>            <div class="lnk"><a href="/centralniy/apartments/">Квартиры</a></div>
+                      <div class="lnk"><a href="/centralniy/sales/">Как купить</a></div>
+                      <div class="lnk"><a href="/centralniy/contacts/">Контакты</a></div>
+          				</td></tr>
+				</table>
+
+				<div class="parent"><a href="/yuzhniy/">Квартал Южный</a></div>
+
+			</td><td width="100%">
+
+			</td><td nowrap style="padding-right:30px">
+								<div class="phone-bottom" id="comagic">+7 (495) 151-26-72</div>
+        <br><br>
+                <div data-background-alpha="0.0" data-orientation="horizontal" data-text-color="#000000" data-share-shape="SHARP" data-buttons-color="#FFFFFF" data-sn-ids="fb.vk.ok.gp." data-counter-background-color="#ffffff" data-share-size="LARGE" data-background-color="#ffffff" data-mobile-sn-ids="fb.vk.ok.gp." data-preview-mobile="false" data-pid="1382290" data-counter-background-alpha="1.0" data-mode="like" data-following-enable="false" data-exclude-show-more="false" data-like-text-enable="false" data-selection-enable="true" data-mobile-view="true" data-icon-color="#ffffff" class="uptolike-buttons" ></div>                				<div style="padding:70px 0px 0px 0px" align="right">
+    			<a href="http://www.bilingo.ru" target="_blank" style="color:#4e5159;font-size:10px;text-decoration:none">разработка сайта</a><br>				</div>
+			</td></tr>
+			</table>
+
+		</td></tr>
+		</table>
+
+	</td><td class="r">
+		<img src="local/layout/images/right.gif"><br>
+	</td></tr>
+	</table>
+</center>
+
+    <div id="print-foot">
+        <div class="print-logo"><img src="local/layout/images/ug/logo-print.png" alt="" width="245" height="85" /></div>
+
+        <div class="print-contacts">
+            <div class="print-phone">+7 (495) 135-11-12</div>
+            <div class="print-link">new-vatutinki.ru</div>
+            <div class="print-link">info@new-vatutinki.ru</div>
+        </div>
+    </div>
+
+    <div class="opt-window-overlay"></div>
+    <div class="opt-window">
+        <div class="opt-window-title">Специальное предложение оптовым покупателям</div>
+        <div class="opt-window-text">
+            <p>Покупая оптом квартиры в нашем микрорайоне, Вы получаете скидку 500%! Не упустите свой шанс!</p>
+            <p>Телефон оптового отдела: <strong>+7 495 999-88-77</strong><br /><br /></p>
+            <p><img src="files/opt-window.jpg" alt="" width="100%" /></p>
+        </div>
+        <div class="opt-window-link">
+            <a href="#">Скачать презентацию<span>PDF (132, КБ)</span></a>
+        </div>
+
+        <a href="#" class="opt-window-close"></a>
+    </div>
+
+</body>
+</html>

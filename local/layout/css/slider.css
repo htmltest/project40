@@ -1,0 +1,28 @@
+#slider ul, #slider li {
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+		
+#slider ul, #slider li { 
+	width:1100px;
+	height:658px;
+	overflow:hidden; 
+}	
+		
+#prevBtn, #nextBtn, #slider1next, #slider1prev { 
+	display:block;
+    width:30px;
+    height:31px;
+	position:absolute;
+	margin-left:20px;
+	margin-top:-340px;
+	z-index:1000;
+}	
+
+#nextBtn, #slider1next { 
+	margin-left:1040px;
+}				
+												
+
+
