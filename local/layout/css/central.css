@@ -2695,6 +2695,8 @@ table.flat-tbl-new-plans th.flat-tbl-new-plans-plans-header-left {width:100%}
 .flat-sheme-point div {position:absolute; left:0; top:0; width:53px; height:56px; background:url(../images/central/marker_korpus-2.png); color:#fff; font-family:'v33r'; font-size:21px; line-height:21px; text-align:center; padding-top:15px;}
 .flat-sheme-point div.current {display:block}
 .flat-sheme-point div.other {display:none}
+.flat-scheme-floor {position:relative; display:inline-block; vertical-align:top; margin:0 0 0 10px}
+.flat-scheme-floor-2 {position:absolute; right:70px; top:67px; margin:0}
 
 .flat-map-info {float:left; width:308px; height:611px; background:#f2f6fa; border-radius:0 20px 20px 0}
 .flat-map-info-text-1 {color:#00a1e4; font-size:30px; line-height:30px; padding:25px 0 0 30px}
@@ -2712,7 +2714,7 @@ table.flat-tbl-new-plans th.flat-tbl-new-plans-plans-header-left {width:100%}
 .flat-map-info-item-size-value sup {position:absolute}
 .flat-map-info-item-price {font:22px/20px v33r, sans-serif; color:#00a1e5; padding:14px 0 0 0}
 
-.flat-sheme-point-2 {position:relative; display:inline-block; left:auto; top:auto}
+.flat-sheme-point-2 {position:relative; display:inline-block; left:auto; top:auto; vertical-align:top}
 .flat-sheme-point-2 img {position:relative}
 
 .new-map-item {position:absolute}
