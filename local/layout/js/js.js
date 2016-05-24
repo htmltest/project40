@@ -183,10 +183,6 @@ function ChangeCanvas(p)
 		treedlegend.style.display='none';
 	}
 
-    $('.new-map-item-icon-2').each(function() {
-        var curIcon = $(this);
-        curIcon.css({'margin-left': -curIcon.outerWidth() / 2});
-    });
 }
 
 function ChangeCanvasUg(p)
@@ -1389,7 +1385,7 @@ function ShowKorpusOnMap()
                 } else {
                     $('.new-map-item-popup-2.open').removeClass('open');
                     curPopup.addClass('open');
-                    curPopup.css({'margin-top': curItem.css('margin-top'), 'left': curItem.css('margin-left'), 'margin-left': -curPopup.outerWidth() / 2 - 1});
+                    curPopup.css({'top': curItem.css('top'), 'left': curItem.css('left'), 'margin-left': -curPopup.outerWidth() / 2 + curItem.find('.new-map-item-icon-2').outerWidth() / 2, 'margin-top': curItem.find('.new-map-item-icon-2').outerHeight() + 24});
                 }
             }
 
@@ -1474,11 +1470,6 @@ function ShowKorpusOnMap()
                     }
                 });
             });
-        });
-
-        $('.new-map-item-icon-2').each(function() {
-            var curIcon = $(this);
-            curIcon.css({'margin-left': -curIcon.outerWidth() / 2});
         });
 
         if ($('.flat-detail-plans-scroll').length > 0) {

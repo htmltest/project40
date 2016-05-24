@@ -2850,7 +2850,7 @@ table.flat-tbl-new-plans th.flat-tbl-new-plans-plans-header-left {width:100%}
 .opt-window-close {display:block; position:absolute; right:10px; top:10px; width:35px; height:35px; background:url(../images/ug/korpus_popup_close-new.png)}
 
 .new-map-item-2 {position:absolute}
-.new-map-item-icon-2 {display:block; text-align:center; white-space:nowrap; position:absolute; left:50%; bottom:7px; text-decoration:none; background:#ff6c00; color:#fff; font-size:13px; line-height:16px; padding:4px 8px; border-radius:6px}
+.new-map-item-icon-2 {display:block; text-align:center; white-space:nowrap; position:absolute; left:0; top:0; text-decoration:none; background:#00a1e4; color:#fff; font-size:13px; line-height:16px; padding:4px 8px; border-radius:6px; min-width:140px; min-height:46px; box-sizing:border-box}
 .new-map-item-work .new-map-item-icon-2 {background:#fff355; color:#000}
 .new-map-item-icon-2 span {display:block; font-size:13px; line-height:16px; color:#82daff}
 .new-map-item-work .new-map-item-icon-2 span {color:#847e29}
