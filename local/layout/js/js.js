@@ -1344,13 +1344,20 @@ function ShowKorpusOnMap()
         $('.new-central-park-menu-with-submenu').hover(
             function() {
                 var curItem = $(this);
+                curItem.addClass('hover');
+                curItem.find('ul').stop().removeAttr('style').show();
                 if (curItem.find('ul').offset().left < $('.new-central-park-menu').offset().left) {
                     curItem.addClass('new-central-park-menu-with-submenu-right');
                 }
             },
 
             function() {
-                $('.new-central-park-menu-with-submenu-right').removeClass('new-central-park-menu-with-submenu-right');
+                var curItem = $(this);
+                curItem.find('ul').animate({'opacity': 0}, 300, function() {
+                    curItem.removeClass('new-central-park-menu-with-submenu-right');
+                    curItem.find('ul').css({'display': 'none'});
+                    curItem.removeClass('hover');
+                });
             }
         );
 
