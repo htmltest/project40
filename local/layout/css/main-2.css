@@ -80,7 +80,7 @@ table.main-select td.select div.select {
 table.main-select td div.select select {
 	background:none;
 	width:87px;
-	padding:0;
+	padding:0 0 0 10px;
 	border:0;
 	height:19px;
 	-webkit-appearance:none;
