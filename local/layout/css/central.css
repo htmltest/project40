@@ -2943,3 +2943,7 @@ table.flat-tbl-new-plans th.flat-tbl-new-plans-plans-header-left {width:100%}
 .flat-detail-plans-item-size {color:#546279; font-size:13px; line-height:15px}
 .flat-detail-plans-item-size span {display:block; color:#000; font:13px/15px v33r, sans-serif}
 .flat-detail-plans-item-price {color:#00a1e4; font:15px/15px v33r, sans-serif; padding:8px 0 0 0}
+
+.developer {position:absolute; color:#686c74; text-decoration:none; font-size:15px; margin-left:-165px; margin-top:24px}
+.developer:hover {text-decoration:underline}
+.developer:after {content:""; display:block; width:32px; height:40px; background:url(../images/bilingo.png); position:absolute; right:-42px; top:50%; margin-top:-20px}

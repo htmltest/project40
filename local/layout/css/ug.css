@@ -2597,7 +2597,7 @@ h1 .flat-btns {display:inline-block; vertical-align:middle}
 .flats-plans-list {border-bottom:2px solid #ff6c00}
 .flats-plans-list:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .flats-plans-item {float:left; width:344px; height:279px; position:relative; padding:0 0 0 15px; border-right:1px solid #dfe6ed; text-decoration:none; border-bottom:1px solid #dfe6ed; background:url(../images/ug/flats-plans-rose.png) no-repeat 15px 220px}
-.flats-plans-item:hover {background:#f8f8fa url(../images/ug/flats-plans-rose-hover.png) no-repeat 15px 220px}
+.flats-plans-item:hover {background-color:#f8f8fa}
 .flats-plans-item:hover:before {content:""; display:block; position:absolute; left:0; top:0; width:100%; height:100%; box-sizing:border-box; border:5px solid #fff}
 .flats-plans-item:nth-child(3n+1) {margin-left:-15px}
 .flats-plans-item:nth-child(3n+1):hover:before {border-left:none}
@@ -2939,3 +2939,7 @@ table.flat-tbl-new-plans th.flat-tbl-new-plans-plans-header-left {width:100%}
 .flat-detail-plans-item-size {color:#546279; font-size:13px; line-height:15px}
 .flat-detail-plans-item-size span {display:block; color:#000; font:13px/15px v33r, sans-serif}
 .flat-detail-plans-item-price {color:#ff6c00; font:15px/15px v33r, sans-serif; padding:8px 0 0 0}
+
+.developer {position:absolute; color:#686c74; text-decoration:none; font-size:15px; margin-left:-165px; margin-top:24px}
+.developer:hover {text-decoration:underline}
+.developer:after {content:""; display:block; width:32px; height:40px; background:url(../images/bilingo.png); position:absolute; right:-42px; top:50%; margin-top:-20px}
