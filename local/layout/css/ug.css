@@ -2062,8 +2062,6 @@ table.geo-btn td {
 }
 
 div.map {
-	width:504px;
-	height:504px;
 	position:absolute;
 	margin:-21px 0px 0px -44px;
 	z-index:200;
@@ -2071,6 +2069,7 @@ div.map {
     border-radius:20px;
     box-shadow:0 4px 10px rgba(12, 10, 5, .43);
     background:#f2f6fa;
+    line-height: 0;
 }
 
 div.map:after {
@@ -2086,6 +2085,7 @@ div.map:after {
 
 .map-img {
     border-radius:16px;
+    display: block;
 }
 
 .karta-flat-btn-bg {

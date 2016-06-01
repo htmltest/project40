@@ -685,6 +685,7 @@ function ShowKorpusOnMap()
 	{
 		km.style.display='block';
 		k.className='karta-flat-btn-act';
+        $(km).css({'margin-top': Number($(k).css('margin-top').replace(/px/, '')) - $(km).outerHeight() - 15});
 	}
 	else
 	{

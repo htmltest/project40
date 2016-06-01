@@ -89,6 +89,10 @@ table.main-select td div.select select {
 	line-height:19px;
 }
 
+table.main-select td div.select select option {
+    background: #fff;
+}
+
 table.main-search {
 	background:#e4f222 url('../images/main/search.png') no-repeat 33px 8px;
 	border-radius:15px;
