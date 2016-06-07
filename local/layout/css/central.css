@@ -2297,6 +2297,7 @@ h1 .flat-btns a:hover {background-color:#6d7c94}
 .flat-btns-2 {position:absolute; margin:563px 0 0 147px}
 
 .flat-likes {padding:31px 0 31px 29px; border-top:1px solid #dfe6ed}
+.flat-likes-2 {border-top:none}
 
 .popup-in-sell-link {text-decoration:none}
 
@@ -2947,3 +2948,10 @@ table.flat-tbl-new-plans th.flat-tbl-new-plans-plans-header-left {width:100%}
 .developer {position:absolute; color:#686c74; text-decoration:none; font-size:15px; margin-left:-165px; margin-top:24px}
 .developer:hover {text-decoration:underline}
 .developer:after {content:""; display:block; width:32px; height:40px; background:url(../images/bilingo.png); position:absolute; right:-42px; top:50%; margin-top:-20px}
+
+.flat-tbl-new-header .other-flat {float:left; padding-top:0}
+.flat-params-address {font:15px/20px v33r, sans-serif; color:#546279; padding:0 50px 20px 0}
+.flat-manager {background:#00a1e4; color:#fff; margin:15px 40px -20px 10px; padding:13px 0 17px 18px}
+.flat-manager-title {font:15px/20px v31r, sans-serif; color:#fff}
+.flat-manager-name {font:15px/20px v33r, sans-serif; color:#fff; margin:5px 0 0 0; padding:0 0 0 25px; background:url(../images/central/flat-manager-name.png) no-repeat left 5px}
+.flat-manager-phone {font:15px/20px v33r, sans-serif; color:#fff; margin:5px 0 0 0; padding:0 0 0 25px; background:url(../images/central/flat-manager-phone.png) no-repeat left 5px}
