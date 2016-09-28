@@ -2350,6 +2350,10 @@ h1 .flat-btns a:hover {background-color:#6d7c94}
 .flat-tbl-new td.flat-tbl-new-price a {color:#006da5; font-size:18px; font-family:v33r, sans-serif}
 .flat-tbl-new tr:first-child td {border-top:2px solid #00a1e4}
 .flat-tbl-new tbody tr:hover {background:#e8ecef}
+.flat-tbl-new tbody tr:hover td:first-child {position:relative}
+.flat-tbl-new tbody tr:hover td:first-child:before {content:""; display:block; width:10px; height:100%; background:#e8ecef; position:absolute; left:-10px; top:0}
+.flat-tbl-new tbody tr:hover td:last-child {position:relative}
+.flat-tbl-new tbody tr:hover td:last-child:before {content:""; display:block; width:10px; height:100%; background:#e8ecef; position:absolute; right:-10px; top:0}
 
 .pager {text-align:center; font-size:0; line-height:0; letter-spacing:-1px; padding:41px 0 35px 0; position:relative}
 .pager a {display:inline-block; vertical-align:middle; margin:0 6px; position:relative; border:2px solid #00a1e4; border-radius:17px; width:29px; height:29px; font:15px/29px v31r, sans-serif; letter-spacing:0; text-align:center; text-decoration:none; color:#00a1e4}

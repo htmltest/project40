@@ -1072,6 +1072,10 @@ div.gazeta-grp-inner {
 .flat-tbl-new td.flat-tbl-new-price {text-align:left; white-space:nowrap; width:1%}
 .flat-tbl-new tr:first-child td {border-top:2px solid #8c416b}
 .flat-tbl-new tbody tr:hover {background:#f2f1f5}
+.flat-tbl-new tbody tr:hover td:first-child {position:relative}
+.flat-tbl-new tbody tr:hover td:first-child:before {content:""; display:block; width:10px; height:100%; background:#f2f1f5; position:absolute; left:-10px; top:0}
+.flat-tbl-new tbody tr:hover td:last-child {position:relative}
+.flat-tbl-new tbody tr:hover td:last-child:before {content:""; display:block; width:10px; height:100%; background:#f2f1f5; position:absolute; right:-10px; top:0}
 
 .pager {text-align:center; font-size:0; line-height:0; letter-spacing:-1px; padding:41px 0 35px 0; position:relative}
 .pager a {display:inline-block; vertical-align:middle; margin:0 6px; position:relative; border:2px solid #8f466f; border-radius:17px; width:29px; height:29px; font:15px/29px v31r, sans-serif; letter-spacing:0; text-align:center; text-decoration:none; color:#8f466f}

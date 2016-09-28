@@ -98,6 +98,7 @@
 		<input type="hidden" name="k1" id="k1" value="1">
 		<input type="hidden" name="k2" id="k2" value="1">
 		<input type="hidden" name="k3" id="k3" value="1">
+		<input type="hidden" name="k4" id="k4" value="1">
 		<table cellspacing="0" width="100%">
 		<tr valign="top"><td width="100%" style="padding:0px 0px 0px 0px">
             <div class="new-main-search">
@@ -110,7 +111,7 @@
                         <table cellspacing="0" class="main-select">
                         <tr><td class="select">
                             <div class="select">
-                            <select onchange="ChangeK(this);">
+                            <select onchange="ChangeK(this);this.blur();">
                                 <option value="">Все</option>
                                                         <option value="1">1</option>
                                             <option value="2">2</option>
