@@ -322,6 +322,10 @@ function ChangeK(o)
             $('.new-search-select select').chosen({disable_search: true});
         }
 
+        if ($('.main-select select').length > 0) {
+            $('.main-select select').chosen({disable_search: true});
+        }
+
         $('.new-search-checkbox input:checked').parent().addClass('checked');
         $('.new-search-checkbox').click(function() {
             $(this).toggleClass('checked');
